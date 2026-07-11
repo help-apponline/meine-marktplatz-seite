@@ -1,16 +1,26 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink, Outlet, Link } from "react-router";
 import { useAuth } from "../context/AuthContext.jsx";
 import AuthModal from "./AuthModal.jsx";
 import VerificationBanner from "./VerificationBanner.jsx";
+import { pb } from "../lib/pb.js";
 import Menu from "icon:menu";
 import X from "icon:x";
+import Shield from "icon:shield";
 
 export default function Layout() {
-  const { loggedIn, userEmail, userRole, logout } = useAuth();
+  const { loggedIn, userEmail, userRole, logout, userId } = useAuth();
   const [showAuth, setShowAuth] = useState(false);
   const [authHint, setAuthHint] = useState("");
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
+
+  useEffect(() => {
+    if (!loggedIn || !userId) { setIsAdmin(false); return; }
+    pb.collection("users").getOne(userId)
+      .then(u => setIsAdmin(!!u.is_admin))
+      .catch(() => setIsAdmin(false));
+  }, [loggedIn, userId]);
 
   function requireLogin(hint) {
     if (loggedIn) return true;
@@ -115,15 +125,35 @@ export default function Layout() {
                 {label}
               </NavLink>
             ))}
+            {isAdmin && (
+              <NavLink to="/admin" onClick={() => setMobileOpen(false)}
+                className={({ isActive }) =>
+                  `text-sm px-3 py-2.5 rounded-xl border transition-all flex items-center gap-2 ${
+                    isActive ? "bg-[rgba(255,138,0,0.18)] border-[rgba(255,138,0,0.4)] text-white" : "border-transparent text-[#ff8a00]/80 hover:bg-white/10 hover:text-white"
+                  }`
+                }
+                style={{ textDecoration: "none" }}>
+                <Shield size={14} />
+                Admin-Bereich
+              </NavLink>
+            )}
           </nav>
         )}
 
-        {/* Logged-in indicator */}
+        {/* Logged-in indicator + admin link */}
         {loggedIn && (
-          <div className="hidden lg:flex items-center justify-end px-5 pb-1.5 gap-2">
+          <div className="hidden lg:flex items-center justify-end px-5 pb-1.5 gap-3">
             <span className="text-xs text-white/50">
-              {userEmail} · {userRole === "helper" ? "Helfer" : "Auftraggeber"}
+              {userEmail} · {userRole === "helper" ? "Auftragnehmer" : "Auftraggeber"}
             </span>
+            {isAdmin && (
+              <NavLink to="/admin" className={({ isActive }) =>
+                `flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full border transition-all ${isActive ? "bg-[rgba(255,138,0,0.2)] border-[rgba(255,138,0,0.5)] text-white" : "border-white/20 text-white/60 hover:text-white hover:border-white/40"}`
+              } style={{ textDecoration: "none" }}>
+                <Shield size={11} />
+                Admin
+              </NavLink>
+            )}
           </div>
         )}
       </header>

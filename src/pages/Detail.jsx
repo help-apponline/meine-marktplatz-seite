@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams, useSearchParams, Link, useNavigate } from "react-router";
 import { useAuth } from "../context/AuthContext.jsx";
+import { pb } from "../lib/pb.js";
+import Flag from "icon:flag";
 
 export default function Detail() {
   const { id } = useParams();
@@ -11,6 +13,8 @@ export default function Detail() {
   const [ad, setAd] = useState(null);
   const [loading, setLoading] = useState(!!id);
   const [contacting, setContacting] = useState(false);
+  const [reported, setReported] = useState(false);
+  const [reporting, setReporting] = useState(false);
 
   // Seed item via query params (for demo links that have no DB id)
   const seedTitle = searchParams.get("title");
@@ -23,6 +27,16 @@ export default function Detail() {
     if (!id) return;
     getAd(id).then(a => { setAd(a); setLoading(false); });
   }, [id]);
+
+  async function handleReport() {
+    if (!ad?.id) return;
+    setReporting(true);
+    try {
+      await pb.collection("ads").update(ad.id, { flagged: true });
+      setReported(true);
+    } catch {}
+    setReporting(false);
+  }
 
   async function handleKontakt() {
     if (!loggedIn) {
@@ -83,6 +97,13 @@ export default function Detail() {
         <Link to="/" className="px-6 py-3 border border-gray-200 text-gray-700 font-semibold rounded-xl hover:bg-gray-50 transition-colors text-sm" style={{ textDecoration: "none" }}>
           ← Zur Übersicht
         </Link>
+        {ad?.id && (
+          <button onClick={handleReport} disabled={reporting || reported}
+            className="flex items-center gap-1.5 px-4 py-3 border border-gray-200 text-gray-400 hover:text-red-500 hover:border-red-200 font-semibold rounded-xl transition-colors text-xs disabled:opacity-50 ml-auto">
+            <Flag size={13} />
+            {reported ? "Gemeldet" : "Anzeige melden"}
+          </button>
+        )}
       </div>
     </section>
   );
