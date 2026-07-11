@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router";
 import ExternalLink from "icon:external-link";
 import ArrowLeft from "icon:arrow-left";
 import Globe from "icon:globe";
+import X from "icon:x";
 
 const PARTNERS_KEY = "helpapp_partners_v2";
 
@@ -17,6 +18,7 @@ export default function PartnerProfil() {
   const { id } = useParams();
   const [partner, setPartner] = useState(null);
   const [notFound, setNotFound] = useState(false);
+  const [lightboxUrl, setLightboxUrl] = useState(null);
 
   useEffect(() => {
     const p = loadPartner(id);
@@ -94,9 +96,11 @@ export default function PartnerProfil() {
       {partner.photos?.length > 0 && (
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-8">
           {partner.photos.map((url, i) => (
-            <div key={i} className="rounded-xl overflow-hidden border border-gray-100 bg-gray-50 flex items-center justify-center" style={{ height: "140px" }}>
+            <button key={i} onClick={() => setLightboxUrl(url)}
+              className="rounded-xl overflow-hidden border border-gray-100 bg-gray-50 flex items-center justify-center hover:opacity-90 hover:scale-[1.02] transition-all cursor-zoom-in"
+              style={{ height: "140px" }}>
               <img src={url} alt={`Foto ${i + 1}`} className="w-full h-full object-contain" />
-            </div>
+            </button>
           ))}
         </div>
       )}
@@ -116,6 +120,21 @@ export default function PartnerProfil() {
           >
             Zur Website <ExternalLink size={14} />
           </a>
+        </div>
+      )}
+
+      {/* Lightbox */}
+      {lightboxUrl && (
+        <div className="fixed inset-0 z-50 bg-black/85 flex items-center justify-center p-4 cursor-zoom-out"
+          onClick={() => setLightboxUrl(null)}>
+          <img src={lightboxUrl} alt="Vergrößert"
+            className="max-w-full max-h-full rounded-xl shadow-2xl object-contain"
+            style={{ maxHeight: "90vh", maxWidth: "90vw" }}
+            onClick={e => e.stopPropagation()} />
+          <button onClick={() => setLightboxUrl(null)}
+            className="absolute top-4 right-4 w-9 h-9 bg-white/20 hover:bg-white/30 text-white rounded-full flex items-center justify-center transition-colors">
+            <X size={18} />
+          </button>
         </div>
       )}
 

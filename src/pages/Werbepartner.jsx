@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router";
 import { useAuth } from "../context/AuthContext.jsx";
 import ImagePlus from "icon:image-plus";
 import X from "icon:x";
@@ -80,6 +81,7 @@ export default function Werbepartner() {
   const [toast, setToast] = useState("");
   const [previewOpen, setPreviewOpen] = useState(false);
   const [lightboxUrl, setLightboxUrl] = useState(null);
+  const navigate = useNavigate();
   const logoRef = useRef(null);
   const photoRef = useRef(null);
 
@@ -515,15 +517,15 @@ export default function Werbepartner() {
                     <div className="font-bold text-gray-900 text-sm">{p.title}</div>
                     <div className="text-xs text-gray-500">{p.text?.slice(0, 100)}</div>
                   </div>
-                  {p.website && <a href={p.website} target="_blank" rel="noopener noreferrer" className="text-xs text-[#ff8a00] shrink-0">Website →</a>}
+                  <button onClick={() => navigate(`/partner/${p.id}`)}
+                    className="text-xs text-[#ff8a00] shrink-0 hover:underline">Mehr erfahren →</button>
                 </div>
                 {p.photos?.length > 0 && (
                   <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 mt-3">
                     {p.photos.map((url, i) => (
-                      <button key={i} onClick={() => setLightboxUrl(url)}
-                        className="aspect-video rounded-lg overflow-hidden border border-gray-100 hover:opacity-90 hover:scale-[1.03] transition-all cursor-zoom-in">
+                      <div key={i} className="aspect-video rounded-lg overflow-hidden border border-gray-100">
                         <img src={url} alt="" className="w-full h-full object-cover" />
-                      </button>
+                      </div>
                     ))}
                   </div>
                 )}
