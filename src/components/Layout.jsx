@@ -4,6 +4,7 @@ import { useAuth } from "../context/AuthContext.jsx";
 import AuthModal from "./AuthModal.jsx";
 import VerificationBanner from "./VerificationBanner.jsx";
 import { pb } from "../lib/pb.js";
+import NotificationBell from "./NotificationBell.jsx";
 import Menu from "icon:menu";
 import X from "icon:x";
 import Shield from "icon:shield";
@@ -79,6 +80,7 @@ export default function Layout() {
 
           {/* Actions */}
           <div className="flex items-center gap-2 shrink-0">
+            <NotificationBell />
             {loggedIn ? (
               <button
                 onClick={logout}

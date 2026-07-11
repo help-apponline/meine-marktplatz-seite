@@ -1,16 +1,45 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router";
 import { useAuth } from "../context/AuthContext.jsx";
+import { pb } from "../lib/pb.js";
+import { loadUnreadNotifications } from "../lib/notifications.js";
 
 export default function Inbox() {
   const { loggedIn, loadChats } = useAuth();
   const [chats, setChats] = useState([]);
+  const [unreadByChat, setUnreadByChat] = useState({});
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (!loggedIn) return;
     setLoading(true);
-    loadChats().then(c => { setChats(c); setLoading(false); }).catch(() => setLoading(false));
+
+    Promise.all([loadChats(), loadUnreadNotifications()])
+      .then(([c, notifs]) => {
+        setChats(c);
+        // Map chat IDs to unread count
+        const byChat = {};
+        notifs.filter(n => n.type === "new_message" && n.chat).forEach(n => {
+          byChat[n.chat] = (byChat[n.chat] || 0) + 1;
+        });
+        setUnreadByChat(byChat);
+        setLoading(false);
+      })
+      .catch(() => setLoading(false));
+
+    // Subscribe for live notification updates
+    let unsub = null;
+    pb.collection("notifications").subscribe("*", () => {
+      loadUnreadNotifications().then(notifs => {
+        const byChat = {};
+        notifs.filter(n => n.type === "new_message" && n.chat).forEach(n => {
+          byChat[n.chat] = (byChat[n.chat] || 0) + 1;
+        });
+        setUnreadByChat(byChat);
+      }).catch(() => {});
+    }).then(fn => { unsub = fn; }).catch(() => {});
+
+    return () => { if (unsub) pb.collection("notifications").unsubscribe("*").catch(() => {}); };
   }, [loggedIn]);
 
   if (!loggedIn) {
@@ -42,19 +71,30 @@ export default function Inbox() {
         </div>
       ) : (
         <div className="flex flex-col gap-3">
-          {chats.map(c => (
-            <Link key={c.id} to={`/chat/${c.id}`}
-              className="bg-gray-50 rounded-xl px-5 py-4 flex justify-between items-center gap-4 hover:shadow hover:-translate-y-0.5 transition-all"
-              style={{ textDecoration: "none", color: "inherit" }}>
-              <div>
-                <div className="font-bold text-gray-900">Chat zu: {c.ad_title || "Anzeige"}</div>
-                <div className="text-sm text-gray-500 mt-0.5">
-                  Zuletzt: {c.updated ? new Date(c.updated).toLocaleString("de-DE") : "—"}
+          {chats.map(c => {
+            const unread = unreadByChat[c.id] || 0;
+            return (
+              <Link key={c.id} to={`/chat/${c.id}`}
+                className="bg-gray-50 rounded-xl px-5 py-4 flex justify-between items-center gap-4 hover:shadow hover:-translate-y-0.5 transition-all"
+                style={{ textDecoration: "none", color: "inherit" }}>
+                <div className="flex-1 min-w-0">
+                  <div className={`font-bold truncate ${unread ? "text-gray-900" : "text-gray-700"}`}>
+                    Chat zu: {c.ad_title || "Anzeige"}
+                  </div>
+                  <div className="text-sm text-gray-500 mt-0.5">
+                    Zuletzt: {c.updated ? new Date(c.updated).toLocaleString("de-DE") : "—"}
+                  </div>
                 </div>
-              </div>
-              <span className="text-xs text-gray-400 shrink-0">→</span>
-            </Link>
-          ))}
+                {unread > 0 ? (
+                  <span className="shrink-0 min-w-[22px] h-5 bg-[#ff8a00] text-white text-xs font-bold rounded-full flex items-center justify-center px-1.5">
+                    {unread}
+                  </span>
+                ) : (
+                  <span className="text-xs text-gray-400 shrink-0">→</span>
+                )}
+              </Link>
+            );
+          })}
         </div>
       )}
     </section>

@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, useEffect, useCallback } from "react";
 import { pb } from "../lib/pb.js";
+import { createNotification } from "../lib/notifications.js";
 
 const AuthContext = createContext(null);
 
@@ -133,6 +134,8 @@ export function AuthProvider({ children }) {
   const getOrCreateChat = useCallback(async (adId, adTitle) => {
     if (!pb.authStore.record?.id) return null;
     const myId = pb.authStore.record.id;
+    const myEmail = pb.authStore.record.email || "Jemand";
+
     try {
       const existing = await pb.collection("chats").getFirstListItem(
         adId ? `ad = "${adId}"` : `ad_title = "${adTitle}"`
@@ -140,6 +143,17 @@ export function AuthProvider({ children }) {
       const parts = existing.participants || [];
       if (!parts.includes(myId)) {
         await pb.collection("chats").update(existing.id, { "participants+": [myId] });
+        // Notify existing participants about new contact
+        await Promise.all(parts.map(uid =>
+          createNotification({
+            userId: uid,
+            type: "new_chat",
+            title: `${myEmail} möchte Kontakt aufnehmen`,
+            body: `Bezüglich: ${existing.ad_title || adTitle || "Anzeige"}`,
+            link: `/chat/${existing.id}`,
+            chatId: existing.id,
+          })
+        ));
       }
       return existing.id;
     } catch {
@@ -148,6 +162,22 @@ export function AuthProvider({ children }) {
         ad_title: adTitle || "Anzeige",
         participants: [myId],
       });
+      // Notify ad owner if we know who they are
+      if (adId) {
+        try {
+          const ad = await pb.collection("ads").getOne(adId);
+          if (ad.owner && ad.owner !== myId) {
+            await createNotification({
+              userId: ad.owner,
+              type: "new_chat",
+              title: `${myEmail} möchte Kontakt aufnehmen`,
+              body: `Bezüglich deiner Anzeige: ${adTitle || ad.title || "Anzeige"}`,
+              link: `/chat/${chat.id}`,
+              chatId: chat.id,
+            });
+          }
+        } catch {}
+      }
       return chat.id;
     }
   }, []);
@@ -168,12 +198,34 @@ export function AuthProvider({ children }) {
 
   const sendMessage = useCallback(async (chatId, text) => {
     if (!pb.authStore.record?.id) return null;
+    const myId = pb.authStore.record.id;
+    const myEmail = pb.authStore.record.email || "Jemand";
+
     const msg = await pb.collection("messages").create({
       chat: chatId,
-      sender: pb.authStore.record.id,
+      sender: myId,
       text,
     });
+
+    // Update chat timestamp
     await pb.collection("chats").update(chatId, { updated: new Date().toISOString() }).catch(() => {});
+
+    // Notify all other participants
+    try {
+      const chat = await pb.collection("chats").getOne(chatId);
+      const others = (chat.participants || []).filter(uid => uid !== myId);
+      await Promise.all(others.map(uid =>
+        createNotification({
+          userId: uid,
+          type: "new_message",
+          title: `Neue Nachricht von ${myEmail}`,
+          body: text.length > 80 ? text.slice(0, 80) + "…" : text,
+          link: `/chat/${chatId}`,
+          chatId,
+        })
+      ));
+    } catch {}
+
     return msg;
   }, []);
 
