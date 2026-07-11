@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router";
+import PartnerBanner from "../components/PartnerBanner.jsx";
 import ExternalLink from "icon:external-link";
 import ArrowLeft from "icon:arrow-left";
 import Globe from "icon:globe";
@@ -143,22 +144,9 @@ export default function PartnerProfil() {
         Werbepartner-Eintrag · <Link to="/werbepartner" className="underline hover:text-gray-600">Selbst Werbepartner werden</Link>
       </p>
 
-      {/* Affiliate Banner */}
+      {/* Rotierender Werbebanner */}
       <div className="mt-4">
-        <Link to="/werbepartner" style={{ textDecoration: "none" }}>
-          <div className="bg-gradient-to-r from-orange-50 to-amber-50 border border-orange-100 rounded-2xl px-5 py-4 flex items-center justify-between gap-4 hover:shadow-sm transition-shadow">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#ff8a00]/10 flex items-center justify-center shrink-0 text-xl">📢</div>
-              <div>
-                <div className="font-bold text-gray-800 text-sm">Auch hier werben?</div>
-                <div className="text-xs text-gray-500 mt-0.5">Erreichen Sie täglich neue Kunden — ab 19,99 € / Monat</div>
-              </div>
-            </div>
-            <span className="text-xs font-bold text-white bg-[#ff8a00] px-3 py-1.5 rounded-full shrink-0 whitespace-nowrap">
-              Jetzt buchen →
-            </span>
-          </div>
-        </Link>
+        <PartnerBanner />
       </div>
     </section>
   );
