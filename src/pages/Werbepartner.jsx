@@ -84,6 +84,7 @@ export default function Werbepartner() {
   const navigate = useNavigate();
   const logoRef = useRef(null);
   const photoRef = useRef(null);
+  const formTopRef = useRef(null);
 
   useEffect(() => { setPartners(loadPartners()); }, []);
 
@@ -197,7 +198,11 @@ export default function Werbepartner() {
     setLogoDataUrl(p.logoDataUrl || "");
     setPhotos(p.photos || []);
     setPhotosOption(p.photosOption || 'none');
-    showToast("Eintrag geladen.");
+    // Scroll the form into view so the user sees it loaded
+    setTimeout(() => {
+      formTopRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 50);
+    showToast("Eintrag geladen — bitte oben bearbeiten und speichern.");
   }
 
   function handlePay() {
@@ -208,11 +213,12 @@ export default function Werbepartner() {
   }
 
   const myPartners = partners.filter(p => p.owner === (userEmail || "guest"));
-  const activePartners = partners.filter(p => p.status === "active" && (p.expiresAt || 0) > Date.now());
+  // Show all active partners — expiresAt check is optional (show even if not set yet)
+  const activePartners = partners.filter(p => p.status === "active");
 
   return (
     <section className="bg-white min-h-screen px-5 md:px-10 py-12 max-w-6xl mx-auto w-full">
-      <h2 className="text-3xl font-extrabold text-gray-900 mb-2">Werbepartner-Bereich</h2>
+      <h2 ref={formTopRef} className="text-3xl font-extrabold text-gray-900 mb-2">Werbepartner-Bereich</h2>
       <p className="text-gray-500 text-base mb-10 leading-relaxed">
         Wähle dein Paket, lade dein Logo hoch und werde auf allen Seiten der Help App sichtbar.
       </p>
