@@ -7,7 +7,7 @@ import Check from "icon:check";
 const PHOTOS_OPTIONS = [
   { key: "none",  label: "Keine Fotos",      maxPhotos: 0, price: 0 },
   { key: "s3",    label: "Bis zu 3 Fotos",   maxPhotos: 3, price: 4.99 },
-  { key: "s5",    label: "Bis zu 5 Fotos",   maxPhotos: 5, price: 9.99 },
+  { key: "s5",    label: "Bis zu 6 Fotos",   maxPhotos: 6, price: 9.99 },
 ];
 const MAX_LOGO = 2 * 1024 * 1024;
 const MAX_PHOTO = 5 * 1024 * 1024;
@@ -478,7 +478,7 @@ export default function Werbepartner() {
                   </div>
                 </div>
                 {p.photos?.length > 0 && (
-                  <div className="grid grid-cols-3 sm:grid-cols-5 gap-2 mb-3">
+                  <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 mb-3">
                     {p.photos.map((url, i) => (
                       <div key={i} className="aspect-video rounded-lg overflow-hidden border border-gray-100">
                         <img src={url} alt={`Foto ${i + 1}`} className="w-full h-full object-cover" />
@@ -516,7 +516,7 @@ export default function Werbepartner() {
                   {p.website && <a href={p.website} target="_blank" rel="noopener noreferrer" className="text-xs text-[#ff8a00] shrink-0">Website →</a>}
                 </div>
                 {p.photos?.length > 0 && (
-                  <div className="grid grid-cols-3 sm:grid-cols-5 gap-2 mt-3">
+                  <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 mt-3">
                     {p.photos.map((url, i) => (
                       <div key={i} className="aspect-video rounded-lg overflow-hidden border border-gray-100">
                         <img src={url} alt="" className="w-full h-full object-cover" />
