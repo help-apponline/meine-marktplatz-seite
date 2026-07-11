@@ -4,10 +4,13 @@ import ImagePlus from "icon:image-plus";
 import X from "icon:x";
 import Check from "icon:check";
 
-const PHOTOS_ADDON_PRICE = 4.99;
+const PHOTOS_OPTIONS = [
+  { key: "none",  label: "Keine Fotos",      maxPhotos: 0, price: 0 },
+  { key: "s3",    label: "Bis zu 3 Fotos",   maxPhotos: 3, price: 4.99 },
+  { key: "s5",    label: "Bis zu 5 Fotos",   maxPhotos: 5, price: 9.99 },
+];
 const MAX_LOGO = 2 * 1024 * 1024;
 const MAX_PHOTO = 5 * 1024 * 1024;
-const MAX_PHOTOS = 3;
 const PARTNERS_KEY = "helpapp_partners_v2";
 
 const PLANS = [
@@ -70,7 +73,7 @@ export default function Werbepartner() {
   const [text, setText] = useState("");
   const [logoDataUrl, setLogoDataUrl] = useState("");
   const [photos, setPhotos] = useState([]);
-  const [withPhotos, setWithPhotos] = useState(false);
+  const [photosOption, setPhotosOption] = useState("none"); // "none" | "s3" | "s5"
   const [terms, setTerms] = useState(false);
   const [editId, setEditId] = useState("");
   const [partners, setPartners] = useState([]);
@@ -82,7 +85,9 @@ export default function Werbepartner() {
   useEffect(() => { setPartners(loadPartners()); }, []);
 
   const plan = PLANS.find(p => p.key === selectedPlan) || PLANS[2];
-  const totalPrice = plan.price + (withPhotos ? PHOTOS_ADDON_PRICE : 0);
+  const photoOpt = PHOTOS_OPTIONS.find(o => o.key === photosOption) || PHOTOS_OPTIONS[0];
+  const maxPhotos = photoOpt.maxPhotos;
+  const totalPrice = plan.price + photoOpt.price;
 
   function showToast(msg) {
     setToast(msg);
@@ -96,8 +101,8 @@ export default function Werbepartner() {
   }
 
   async function handlePhotoAdd(files) {
-    const remaining = MAX_PHOTOS - photos.length;
-    if (remaining <= 0) { showToast(`Maximal ${MAX_PHOTOS} Fotos erlaubt.`); return; }
+    const remaining = maxPhotos - photos.length;
+    if (remaining <= 0) { showToast(`Maximal ${maxPhotos} Fotos erlaubt.`); return; }
     const toAdd = Array.from(files).slice(0, remaining);
     const urls = [];
     for (const f of toAdd) {
@@ -105,13 +110,13 @@ export default function Werbepartner() {
       urls.push(await readFile(f));
     }
     setPhotos(prev => [...prev, ...urls]);
-    if (!withPhotos && urls.length > 0) setWithPhotos(true);
+    // photos option stays as chosen
   }
 
   function removePhoto(idx) {
     setPhotos(prev => {
       const next = prev.filter((_, i) => i !== idx);
-      if (next.length === 0) setWithPhotos(false);
+      
       return next;
     });
   }
@@ -128,7 +133,7 @@ export default function Werbepartner() {
       text: text.trim(),
       logoDataUrl,
       photos,
-      withPhotos,
+      photosOption,
       totalPrice,
       owner: userEmail || "guest",
       createdAt: existing?.createdAt || now,
@@ -188,7 +193,7 @@ export default function Werbepartner() {
     setText(p.text || "");
     setLogoDataUrl(p.logoDataUrl || "");
     setPhotos(p.photos || []);
-    setWithPhotos(p.withPhotos || false);
+    setPhotosOption(p.photosOption || 'none');
     showToast("Eintrag geladen.");
   }
 
@@ -293,21 +298,26 @@ export default function Werbepartner() {
 
             {/* Foto-Option */}
             <div className="border border-gray-100 rounded-xl p-4 bg-gray-50">
-              <label className="flex items-start gap-3 cursor-pointer">
-                <input type="checkbox" checked={withPhotos} onChange={e => setWithPhotos(e.target.checked)}
-                  className="mt-0.5 accent-[#ff8a00]" />
-                <div className="flex-1">
-                  <div className="flex items-center justify-between gap-2 flex-wrap">
-                    <span className="font-semibold text-sm text-gray-900">Bis zu 3 Fotos hinzufügen</span>
-                    <span className="text-xs font-bold text-[#ff8a00] bg-orange-50 border border-orange-100 px-2.5 py-1 rounded-full">
-                      + {moneyDE(PHOTOS_ADDON_PRICE)} inkl. MwSt.
-                    </span>
-                  </div>
-                  <p className="text-xs text-gray-500 mt-0.5">Team, Arbeit oder Geschäft zeigen — max. 5 MB pro Foto.</p>
-                </div>
-              </label>
+              <p className="text-xs text-gray-500 font-medium mb-3">Foto-Erweiterung (optional)</p>
+              <div className="flex flex-col gap-2">
+                {PHOTOS_OPTIONS.map(opt => (
+                  <label key={opt.key} className="flex items-center gap-3 cursor-pointer">
+                    <input type="radio" name="photosOption" value={opt.key}
+                      checked={photosOption === opt.key}
+                      onChange={() => { setPhotosOption(opt.key); if (opt.maxPhotos === 0) setPhotos([]); }}
+                      className="accent-[#ff8a00]" />
+                    <span className="flex-1 text-sm text-gray-800">{opt.label}</span>
+                    {opt.price > 0 && (
+                      <span className="text-xs font-bold text-[#ff8a00] bg-orange-50 border border-orange-100 px-2 py-0.5 rounded-full shrink-0">
+                        + {moneyDE(opt.price)} inkl. MwSt.
+                      </span>
+                    )}
+                    {opt.price === 0 && <span className="text-xs text-gray-400 shrink-0">kostenlos</span>}
+                  </label>
+                ))}
+              </div>
 
-              {withPhotos && (
+              {maxPhotos > 0 && (
                 <div className="mt-4">
                   <div className="grid grid-cols-3 gap-2 mb-3">
                     {photos.map((url, i) => (
@@ -319,7 +329,7 @@ export default function Werbepartner() {
                         </button>
                       </div>
                     ))}
-                    {photos.length < MAX_PHOTOS && (
+                    {photos.length < maxPhotos && (
                       <button onClick={() => photoRef.current?.click()}
                         className="aspect-square rounded-xl border-2 border-dashed border-gray-200 flex flex-col items-center justify-center gap-1 hover:border-gray-400 transition-colors text-gray-400 hover:text-gray-600">
                         <ImagePlus size={20} />
@@ -329,7 +339,7 @@ export default function Werbepartner() {
                   </div>
                   <input type="file" accept="image/*" multiple ref={photoRef} className="hidden"
                     onChange={e => handlePhotoAdd(e.target.files)} />
-                  <p className="text-xs text-gray-400">{photos.length} / {MAX_PHOTOS} Fotos hochgeladen</p>
+                  <p className="text-xs text-gray-400">{photos.length} / {maxPhotos} Fotos hochgeladen · max. 5 MB pro Foto</p>
                 </div>
               )}
             </div>
@@ -346,10 +356,10 @@ export default function Werbepartner() {
                 <span className="text-sm text-gray-700">{plan.label} ({plan.duration})</span>
                 <span className="text-sm font-semibold text-gray-900">{moneyDE(plan.price)}</span>
               </div>
-              {withPhotos && (
+              {photoOpt.price > 0 && (
                 <div className="flex items-center justify-between mb-1">
-                  <span className="text-sm text-gray-700">Foto-Erweiterung (3 Fotos)</span>
-                  <span className="text-sm font-semibold text-gray-900">{moneyDE(PHOTOS_ADDON_PRICE)}</span>
+                  <span className="text-sm text-gray-700">{photoOpt.label}</span>
+                  <span className="text-sm font-semibold text-gray-900">{moneyDE(photoOpt.price)}</span>
                 </div>
               )}
               <div className="border-t border-orange-200 mt-2 pt-2 flex items-center justify-between">
@@ -402,19 +412,21 @@ export default function Werbepartner() {
           </div>
 
           <div className="border border-orange-100 rounded-2xl p-5 bg-orange-50">
-            <div className="flex items-center justify-between mb-2">
-              <h4 className="font-bold text-gray-900 text-sm">Foto-Erweiterung</h4>
-              <span className="text-sm font-extrabold text-[#ff8a00]">+ {moneyDE(PHOTOS_ADDON_PRICE)}</span>
-            </div>
-            <p className="text-xs text-gray-500 mb-3">inkl. MwSt. · einmalig pro Laufzeit</p>
-            <div className="flex flex-col gap-1.5 text-sm text-gray-600">
-              {["Bis zu 3 Fotos im Eintrag", "Ideal für Team, Produkte, Räume", "Jederzeit austauschbar"].map(f => (
-                <div key={f} className="flex items-center gap-2">
-                  <span className="text-[#ff8a00] font-bold text-base">✓</span>
-                  {f}
+            <h4 className="font-bold text-gray-900 text-sm mb-3">Foto-Erweiterungen</h4>
+            <div className="flex flex-col gap-3">
+              {PHOTOS_OPTIONS.filter(o => o.price > 0).map(opt => (
+                <div key={opt.key} className="flex items-center justify-between gap-2">
+                  <div>
+                    <span className="text-sm font-semibold text-gray-900">{opt.label}</span>
+                    <span className="text-xs text-gray-500 ml-1">· max. 5 MB/Foto</span>
+                  </div>
+                  <span className="text-xs font-bold text-[#ff8a00] bg-orange-50 border border-orange-200 px-2 py-0.5 rounded-full shrink-0">
+                    + {moneyDE(opt.price)}
+                  </span>
                 </div>
               ))}
             </div>
+            <p className="text-xs text-gray-500 mt-3">inkl. MwSt. · einmalig pro Laufzeit · jederzeit austauschbar</p>
           </div>
 
           <div className="border border-gray-100 rounded-2xl p-5 bg-gray-50">
@@ -462,7 +474,7 @@ export default function Werbepartner() {
                     </span>
                     <span className="text-[11px] text-gray-400">{p.planLabel || "Jahres-Paket"}</span>
                     <span className="text-[11px] text-gray-400">{p.views || 0} Views · {p.clicks || 0} Klicks</span>
-                    {p.withPhotos && <span className="text-[11px] text-[#ff8a00]">inkl. Fotos</span>}
+                    {p.photosOption && p.photosOption !== "none" && <span className="text-[11px] text-[#ff8a00]">inkl. Fotos</span>}
                   </div>
                 </div>
                 {p.photos?.length > 0 && (
