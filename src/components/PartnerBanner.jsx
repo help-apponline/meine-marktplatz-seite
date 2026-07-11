@@ -1,22 +1,28 @@
-import { useState, useEffect } from "react";
-import { pb } from "../lib/pb.js";
+import { useState, useEffect, useCallback } from "react";
+import { Link } from "react-router";
 
-function normalizePartner(p) {
-  if (!p || typeof p !== "object") return null;
-  const title = (p.title || "").trim();
-  const text = (p.text || "").trim();
-  const website = (p.website || "").trim();
-  const logo = (p.logo_data_url || "").trim();
-  const status = (p.status || "").toLowerCase();
-  const expiresAt = Number(p.expires_at || 0);
-  if (p.paused) return null;
-  if (status && status !== "active") return null;
-  if (expiresAt && expiresAt < Date.now()) return null;
-  if (!title && !text && !logo) return null;
-  return { id: p.id || title, title, text, website, logo };
+const INTERVAL = 10000; // 10 seconds
+
+// Placeholder shown when no partners are booked
+function Placeholder() {
+  return (
+    <Link to="/werbepartner" style={{ textDecoration: "none" }}>
+      <div className="bg-gradient-to-r from-gray-50 to-orange-50 border border-orange-100 rounded-xl px-5 py-4 flex items-center justify-between gap-4 hover:shadow-sm transition-shadow cursor-pointer">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-lg bg-[#ff8a00]/10 flex items-center justify-center shrink-0 text-lg">📢</div>
+          <div>
+            <div className="font-semibold text-gray-700 text-sm">Hier könnte Ihre Werbung stehen</div>
+            <div className="text-xs text-gray-500 mt-0.5">Mehr Informationen finden Sie in unserem Werbepartner-Bereich</div>
+          </div>
+        </div>
+        <span className="text-xs font-bold text-[#ff8a00] bg-orange-50 border border-orange-100 px-2.5 py-1 rounded-full shrink-0 whitespace-nowrap">
+          Jetzt buchen →
+        </span>
+      </div>
+    </Link>
+  );
 }
 
-// Also support localStorage fallback for partners entered via the Werbepartner form
 function loadLocalPartners() {
   try {
     const v2 = JSON.parse(localStorage.getItem("helpapp_partners_v2") || "[]");
@@ -24,57 +30,102 @@ function loadLocalPartners() {
   } catch { return []; }
 }
 
+function normalizePartner(p) {
+  if (!p || typeof p !== "object") return null;
+  const title = (p.title || "").trim();
+  const text = (p.text || "").trim();
+  const website = (p.website || p.website_url || "").trim();
+  const logo = (p.logoDataUrl || p.logo_data_url || "").trim();
+  const status = (p.status || "").toLowerCase();
+  const expiresAt = Number(p.expiresAt || p.expires_at || 0);
+  if (p.paused) return null;
+  if (status && status !== "active") return null;
+  if (expiresAt && expiresAt < Date.now()) return null;
+  if (!title && !text && !logo) return null;
+  return { id: p.id || title, title, text, website, logo };
+}
+
 export default function PartnerBanner() {
-  const [partner, setPartner] = useState(null);
+  const [partners, setPartners] = useState([]);
+  const [idx, setIdx] = useState(0);
+  const [fade, setFade] = useState(true);
 
-  function pick() {
-    // Merge local partners (from Werbepartner form) for now
-    const local = loadLocalPartners().map(p => ({
-      ...p,
-      logo_data_url: p.logoDataUrl || "",
-      expires_at: p.expiresAt || 0,
-    })).map(normalizePartner).filter(Boolean);
-
-    if (!local.length) { setPartner(null); return; }
-    setPartner(local[Math.floor(Math.random() * local.length)]);
-  }
-
-  useEffect(() => {
-    pick();
-    const t = setInterval(pick, 15000);
-    return () => clearInterval(t);
+  const loadAll = useCallback(() => {
+    const local = loadLocalPartners().map(normalizePartner).filter(Boolean);
+    setPartners(local);
   }, []);
 
-  if (!partner) {
-    return (
-      <div className="bg-gray-100 rounded-xl p-7 text-center text-gray-400 text-sm border border-gray-200">
-        Werbebanner (Platzhalter)
-      </div>
-    );
-  }
+  useEffect(() => {
+    loadAll();
+  }, []);
+
+  // Rotate every 10 seconds with a brief fade
+  useEffect(() => {
+    if (partners.length <= 1) return;
+    const t = setInterval(() => {
+      setFade(false);
+      setTimeout(() => {
+        setIdx(i => (i + 1) % partners.length);
+        setFade(true);
+      }, 300);
+    }, INTERVAL);
+    return () => clearInterval(t);
+  }, [partners.length]);
+
+  if (!partners.length) return <Placeholder />;
+
+  const p = partners[idx % partners.length];
 
   const inner = (
-    <div className="flex items-center gap-4">
-      <div className="w-16 h-16 rounded-xl border border-gray-100 bg-gray-50 flex items-center justify-center shrink-0 overflow-hidden">
-        {partner.logo ? <img src={partner.logo} alt={partner.title} className="w-full h-full object-cover" /> : <span className="text-xs text-gray-400">Logo</span>}
+    <div
+      className="flex items-center gap-4"
+      style={{ opacity: fade ? 1 : 0, transition: "opacity 0.3s ease" }}
+    >
+      {p.logo && (
+        <div className="w-14 h-14 rounded-xl border border-gray-100 bg-gray-50 flex items-center justify-center shrink-0 overflow-hidden">
+          <img src={p.logo} alt={p.title} className="w-full h-full object-cover" />
+        </div>
+      )}
+      <div className="flex-1 min-w-0">
+        <div className="font-bold text-gray-900 truncate">{p.title}</div>
+        {p.text && <div className="text-sm text-gray-500 leading-snug line-clamp-2 mt-0.5">{p.text}</div>}
+        <div className="text-xs text-[#ff8a00] mt-1 font-medium">
+          {p.website ? "Mehr erfahren →" : "Werbepartner"}
+        </div>
       </div>
-      <div>
-        <div className="font-bold text-gray-900">{partner.title}</div>
-        <div className="text-sm text-gray-500 leading-snug">{partner.text?.slice(0, 140)}</div>
-        <div className="text-xs text-gray-400 mt-1">{partner.website ? "Mehr erfahren →" : "Werbepartner →"}</div>
-      </div>
+      {/* Dot indicators */}
+      {partners.length > 1 && (
+        <div className="flex gap-1 shrink-0">
+          {partners.map((_, i) => (
+            <button
+              key={i}
+              onClick={e => { e.preventDefault(); e.stopPropagation(); setFade(false); setTimeout(() => { setIdx(i); setFade(true); }, 200); }}
+              className={`w-1.5 h-1.5 rounded-full transition-colors ${i === idx % partners.length ? "bg-[#ff8a00]" : "bg-gray-200"}`}
+              aria-label={`Partner ${i + 1}`}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 
-  if (partner.website) {
+  if (p.website) {
     return (
-      <a href={partner.website} target="_blank" rel="noopener noreferrer"
-        className="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow transition-shadow"
-        style={{ textDecoration: "none" }}>
+      <a
+        href={p.website}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-sm transition-shadow"
+        style={{ textDecoration: "none" }}
+      >
         {inner}
       </a>
     );
   }
 
-  return <div className="bg-white border border-gray-200 rounded-xl p-4">{inner}</div>;
+  return (
+    <div className="bg-white border border-gray-200 rounded-xl p-4">
+      {inner}
+    </div>
+  );
 }
