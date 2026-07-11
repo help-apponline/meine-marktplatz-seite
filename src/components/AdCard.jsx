@@ -2,15 +2,23 @@ import { Link } from "react-router";
 
 export default function AdCard({ ad, seedItem }) {
   if (ad) {
+    const thumb = ad.photos?.[0];
     return (
       <Link
         to={`/detail/${ad.id}`}
         className="bg-gray-50 rounded-xl px-5 py-4 flex justify-between items-center gap-4 hover:-translate-y-0.5 hover:shadow transition-all"
         style={{ textDecoration: "none", color: "inherit" }}
       >
-        <div>
-          <div className="font-bold text-gray-900">{ad.title}</div>
-          <div className="text-sm text-gray-500 mt-0.5">{ad.city} · {ad.when || "—"}</div>
+        <div className="flex items-center gap-3 min-w-0 flex-1">
+          {thumb && (
+            <div className="w-12 h-12 rounded-lg overflow-hidden border border-gray-200 shrink-0">
+              <img src={thumb} alt="" className="w-full h-full object-cover" />
+            </div>
+          )}
+          <div className="min-w-0">
+            <div className="font-bold text-gray-900 truncate">{ad.title}</div>
+            <div className="text-sm text-gray-500 mt-0.5">{ad.city} · {ad.when || "—"}</div>
+          </div>
         </div>
         <span className="bg-[#2b2b2b] text-white text-xs font-semibold px-3 py-1.5 rounded-full shrink-0">
           {ad.priceLabel || ad.price || "—"}

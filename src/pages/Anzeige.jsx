@@ -1,7 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router";
 import { useAuth } from "../context/AuthContext.jsx";
 import PartnerBanner from "../components/PartnerBanner.jsx";
+import ImagePlus from "icon:image-plus";
+import X from "icon:x";
+
+const MAX_PHOTOS = 5;
+const MAX_PHOTO_SIZE = 8 * 1024 * 1024; // 8 MB
 
 export default function Anzeige() {
   const { loggedIn, verified, userRole: accountRole, loadMyAds, createAd, uid } = useAuth();
@@ -19,15 +24,49 @@ export default function Anzeige() {
   const [price, setPrice] = useState("");
   const [preisart, setPreisart] = useState("");
   const [desc, setDesc] = useState("");
+  const [photos, setPhotos] = useState([]); // File objects
+  const [photoPreviews, setPhotoPreviews] = useState([]); // data URLs for preview
   const [myAds, setMyAds] = useState([]);
   const [msg, setMsg] = useState("");
   const [error, setError] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [loadingAds, setLoadingAds] = useState(false);
+  const photoRef = useRef(null);
 
   useEffect(() => {
     setFormRole(accountRole || "customer");
   }, [accountRole]);
+
+  function addPhotos(files) {
+    const remaining = MAX_PHOTOS - photos.length;
+    if (remaining <= 0) { setError(`Maximal ${MAX_PHOTOS} Fotos erlaubt.`); return; }
+    const toAdd = Array.from(files).slice(0, remaining);
+    const newFiles = [];
+    const newPreviews = [];
+    let hadError = false;
+    let loaded = 0;
+    if (toAdd.length === 0) return;
+    toAdd.forEach(f => {
+      if (f.size > MAX_PHOTO_SIZE) { hadError = true; loaded++; if (loaded === toAdd.length && newFiles.length) { setPhotos(p => [...p, ...newFiles]); setPhotoPreviews(p => [...p, ...newPreviews]); } return; }
+      newFiles.push(f);
+      const reader = new FileReader();
+      reader.onload = e => {
+        newPreviews.push(e.target.result);
+        loaded++;
+        if (loaded === toAdd.length) {
+          setPhotos(p => [...p, ...newFiles]);
+          setPhotoPreviews(p => [...p, ...newPreviews]);
+          if (hadError) setError("Einige Fotos waren zu groß (max. 8 MB) und wurden übersprungen.");
+        }
+      };
+      reader.readAsDataURL(f);
+    });
+  }
+
+  function removePhoto(idx) {
+    setPhotos(p => p.filter((_, i) => i !== idx));
+    setPhotoPreviews(p => p.filter((_, i) => i !== idx));
+  }
 
   useEffect(() => {
     if (!loggedIn) return;
@@ -51,13 +90,13 @@ export default function Anzeige() {
     const chosenWhen = formRole === "helper" ? helperWhen : when;
     const priceLabel = price ? `${price} (${preisart || "—"})` : (preisart || "—");
     try {
-      await createAd({ role: formRole, name, zip, city, title, when: chosenWhen, price, preisart, priceLabel, desc });
+      await createAd({ role: formRole, name, zip, city, title, when: chosenWhen, price, preisart, priceLabel, desc, photos });
       const updated = await loadMyAds();
       setMyAds(updated);
       setMsg("Anzeige veröffentlicht!");
       setName(""); setNeed(""); setWhen(""); setBudget(""); setSkills("");
       setHelperWhen(""); setRadius(""); setZip(""); setCity("");
-      setPrice(""); setPreisart(""); setDesc("");
+      setPrice(""); setPreisart(""); setDesc(""); setPhotos([]); setPhotoPreviews([]);
       setTimeout(() => setMsg(""), 3000);
     } catch (e) {
       setError("Fehler beim Speichern. Bitte versuche es erneut.");
@@ -160,6 +199,34 @@ export default function Anzeige() {
 
         <textarea placeholder="Beschreibung" rows={5} value={desc} onChange={e => setDesc(e.target.value)}
           className="w-full px-4 py-3.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-gray-700 transition-colors resize-y min-h-[140px]" />
+
+        {/* Photo upload */}
+        <div>
+          <p className="text-xs text-gray-500 mb-2 font-medium">Fotos hinzufügen (optional, max. {MAX_PHOTOS})</p>
+          <div className="grid grid-cols-3 sm:grid-cols-5 gap-2">
+            {photoPreviews.map((url, i) => (
+              <div key={i} className="relative aspect-square rounded-xl overflow-hidden border border-gray-200 bg-gray-50">
+                <img src={url} alt={`Foto ${i + 1}`} className="w-full h-full object-cover" />
+                <button type="button" onClick={() => removePhoto(i)}
+                  className="absolute top-1 right-1 w-5 h-5 bg-black/60 text-white rounded-full flex items-center justify-center hover:bg-black transition-colors">
+                  <X size={10} />
+                </button>
+              </div>
+            ))}
+            {photos.length < MAX_PHOTOS && (
+              <button type="button" onClick={() => photoRef.current?.click()}
+                className="aspect-square rounded-xl border-2 border-dashed border-gray-200 flex flex-col items-center justify-center gap-1 hover:border-gray-400 transition-colors text-gray-400 hover:text-gray-600">
+                <ImagePlus size={20} />
+                <span className="text-[10px] font-medium">Foto</span>
+              </button>
+            )}
+          </div>
+          <input type="file" accept="image/*" multiple ref={photoRef} className="hidden"
+            onChange={e => { addPhotos(e.target.files); e.target.value = ""; }} />
+          {photos.length > 0 && (
+            <p className="text-xs text-gray-400 mt-1">{photos.length} / {MAX_PHOTOS} Fotos ausgewählt</p>
+          )}
+        </div>
 
         <button type="submit" disabled={submitting}
           className="px-6 py-3.5 bg-gray-900 text-white font-bold rounded-xl hover:bg-gray-700 transition-colors text-sm disabled:opacity-60">

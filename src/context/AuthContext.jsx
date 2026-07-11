@@ -91,20 +91,41 @@ export function AuthProvider({ children }) {
   }, []);
 
   const createAd = useCallback(async (data) => {
-    const record = await pb.collection("ads").create({
-      owner: pb.authStore.record?.id,
-      role: data.role,
-      name: data.name || "",
-      title: data.title,
-      city: data.city || "",
-      zip: data.zip || "",
-      when_time: data.when || "",
-      price: data.price || "",
-      preisart: data.preisart || "",
-      price_label: data.priceLabel || "",
-      desc: data.desc || "",
-      status: "offen",
-    });
+    // Build FormData when photos are present (multipart upload)
+    let body;
+    if (data.photos && data.photos.length > 0) {
+      const fd = new FormData();
+      fd.append("owner", pb.authStore.record?.id);
+      fd.append("role", data.role);
+      fd.append("name", data.name || "");
+      fd.append("title", data.title);
+      fd.append("city", data.city || "");
+      fd.append("zip", data.zip || "");
+      fd.append("when_time", data.when || "");
+      fd.append("price", data.price || "");
+      fd.append("preisart", data.preisart || "");
+      fd.append("price_label", data.priceLabel || "");
+      fd.append("desc", data.desc || "");
+      fd.append("status", "offen");
+      for (const file of data.photos) fd.append("photos", file);
+      body = fd;
+    } else {
+      body = {
+        owner: pb.authStore.record?.id,
+        role: data.role,
+        name: data.name || "",
+        title: data.title,
+        city: data.city || "",
+        zip: data.zip || "",
+        when_time: data.when || "",
+        price: data.price || "",
+        preisart: data.preisart || "",
+        price_label: data.priceLabel || "",
+        desc: data.desc || "",
+        status: "offen",
+      };
+    }
+    const record = await pb.collection("ads").create(body);
     return adaptAd(record);
   }, []);
 
@@ -246,6 +267,10 @@ export function AuthProvider({ children }) {
 }
 
 function adaptAd(record) {
+  // Build photo URLs from file names stored in the record
+  const photoUrls = (record.photos || []).map(filename =>
+    pb.files.getURL(record, filename, { thumb: "400x300" })
+  );
   return {
     id: record.id,
     owner: record.owner,
@@ -260,6 +285,7 @@ function adaptAd(record) {
     priceLabel: record.price_label || record.price || "—",
     desc: record.desc,
     status: record.status,
+    photos: photoUrls,
     createdAt: new Date(record.created).getTime(),
     updatedAt: new Date(record.updated).getTime(),
   };

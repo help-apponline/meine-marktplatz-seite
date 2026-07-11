@@ -88,7 +88,18 @@ export default function Detail() {
         <span className="bg-gray-800 text-white text-xs font-semibold px-3 py-1.5 rounded-full">Status: {status}</span>
         {createdAt && <span className="bg-gray-700 text-white text-xs font-semibold px-3 py-1.5 rounded-full">erstellt: {createdAt}</span>}
       </div>
-      <p className="text-gray-600 leading-relaxed max-w-2xl mb-8">{desc}</p>
+      <p className="text-gray-600 leading-relaxed max-w-2xl mb-6">{desc}</p>
+
+      {ad?.photos?.length > 0 && (
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-2xl mb-8">
+          {ad.photos.map((url, i) => (
+            <a key={i} href={url.replace(/\?.*/, "")} target="_blank" rel="noopener noreferrer"
+              className="block aspect-video rounded-xl overflow-hidden border border-gray-100 bg-gray-50 hover:opacity-90 transition-opacity">
+              <img src={url} alt={`Foto ${i + 1}`} className="w-full h-full object-cover" />
+            </a>
+          ))}
+        </div>
+      )}
       <div className="flex gap-3 flex-wrap">
         <button onClick={handleKontakt} disabled={contacting}
           className="px-6 py-3 bg-gray-900 text-white font-bold rounded-xl hover:bg-gray-700 transition-colors text-sm disabled:opacity-60">
