@@ -138,10 +138,29 @@ export default function PartnerProfil() {
         </div>
       )}
 
-      {/* Label */}
+      {/* Label + Affiliate Banner */}
       <p className="text-xs text-gray-400 mt-6 text-center">
         Werbepartner-Eintrag · <Link to="/werbepartner" className="underline hover:text-gray-600">Selbst Werbepartner werden</Link>
       </p>
+
+      {/* Affiliate Banner */}
+      <div className="mt-4">
+        <p className="text-[10px] text-gray-400 mb-1.5 text-center tracking-wide uppercase">Werbeanzeige</p>
+        <Link to="/werbepartner" style={{ textDecoration: "none" }}>
+          <div className="bg-gradient-to-r from-orange-50 to-amber-50 border border-orange-100 rounded-2xl px-5 py-4 flex items-center justify-between gap-4 hover:shadow-sm transition-shadow">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-[#ff8a00]/10 flex items-center justify-center shrink-0 text-xl">📢</div>
+              <div>
+                <div className="font-bold text-gray-800 text-sm">Auch hier werben?</div>
+                <div className="text-xs text-gray-500 mt-0.5">Erreichen Sie täglich neue Kunden — ab 19,99 € / Monat</div>
+              </div>
+            </div>
+            <span className="text-xs font-bold text-white bg-[#ff8a00] px-3 py-1.5 rounded-full shrink-0 whitespace-nowrap">
+              Jetzt buchen →
+            </span>
+          </div>
+        </Link>
+      </div>
     </section>
   );
 }
