@@ -12,24 +12,16 @@ import Shield from "icon:shield";
 import UserCircle from "icon:user-circle";
 
 export default function Layout() {
-  const { loggedIn, userEmail, userRole, logout, userId } = useAuth();
+  const { loggedIn, userEmail, userRole, logout, userId, isAdmin } = useAuth();
   const location = useLocation();
   const [showAuth, setShowAuth] = useState(false);
   const [authHint, setAuthHint] = useState("");
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [isAdmin, setIsAdmin] = useState(false);
 
   // Track page views on every route change
   useEffect(() => {
     trackPageView(location.pathname);
   }, [location.pathname]);
-
-  useEffect(() => {
-    if (!loggedIn || !userId) { setIsAdmin(false); return; }
-    pb.collection("users").getOne(userId)
-      .then(u => setIsAdmin(!!u.is_admin))
-      .catch(() => setIsAdmin(false));
-  }, [loggedIn, userId]);
 
   function requireLogin(hint) {
     if (loggedIn) return true;

@@ -10,6 +10,7 @@ export function AuthProvider({ children }) {
   const [userRole, setUserRole] = useState(() => pb.authStore.record?.role || "customer");
   const [userId, setUserId] = useState(() => pb.authStore.record?.id || "");
   const [verified, setVerified] = useState(() => pb.authStore.record?.verified || false);
+  const [isAdmin, setIsAdmin] = useState(() => !!pb.authStore.record?.is_admin);
 
   useEffect(() => {
     const unsub = pb.authStore.onChange(() => {
@@ -19,6 +20,7 @@ export function AuthProvider({ children }) {
       setUserRole(pb.authStore.record?.role || "customer");
       setUserId(pb.authStore.record?.id || "");
       setVerified(pb.authStore.record?.verified || false);
+      setIsAdmin(!!pb.authStore.record?.is_admin);
     });
     return () => unsub();
   }, []);
@@ -26,9 +28,20 @@ export function AuthProvider({ children }) {
   useEffect(() => {
     if (!pb.authStore.isValid) return;
     pb.collection("users").authRefresh()
-      .then(() => setVerified(pb.authStore.record?.verified || false))
+      .then(() => {
+        setVerified(pb.authStore.record?.verified || false);
+        setIsAdmin(!!pb.authStore.record?.is_admin);
+      })
       .catch(() => pb.authStore.clear());
   }, []);
+
+  // Fetch is_admin from server (authRefresh may not include custom fields)
+  useEffect(() => {
+    if (!pb.authStore.isValid || !pb.authStore.record?.id) return;
+    pb.collection("users").getOne(pb.authStore.record.id)
+      .then(u => setIsAdmin(!!u.is_admin))
+      .catch(() => {});
+  }, [loggedIn]);
 
   const login = useCallback(async (email, password) => {
     try {
@@ -282,7 +295,7 @@ export function AuthProvider({ children }) {
 
   return (
     <AuthContext.Provider value={{
-      loggedIn, userEmail, userRole, userId, verified,
+      loggedIn, userEmail, userRole, userId, verified, isAdmin,
       login, register, logout,
       resendVerification, requestPasswordReset,
       loadAds, createAd, loadMyAds, getAd, updateAd, deleteAd, setAdStatus,

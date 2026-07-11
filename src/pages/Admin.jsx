@@ -12,8 +12,7 @@ import RefreshCw from "icon:refresh-cw";
 import BarChart2 from "icon:bar-chart-2";
 
 export default function Admin() {
-  const { loggedIn, userId } = useAuth();
-  const [isAdmin, setIsAdmin] = useState(false);
+  const { loggedIn, userId, isAdmin } = useAuth();
   const [checking, setChecking] = useState(true);
   const [tab, setTab] = useState("ads");
 
@@ -38,13 +37,10 @@ export default function Admin() {
     setTimeout(() => setToast(""), 3000);
   }
 
-  // Check admin status
+  // Stop showing loading spinner once we know login state
   useEffect(() => {
-    if (!loggedIn || !userId) { setChecking(false); return; }
-    pb.collection("users").getOne(userId)
-      .then(u => { setIsAdmin(!!u.is_admin); setChecking(false); })
-      .catch(() => setChecking(false));
-  }, [loggedIn, userId]);
+    if (loggedIn !== undefined) setChecking(false);
+  }, [loggedIn, isAdmin]);
 
   // Load ads
   useEffect(() => {
