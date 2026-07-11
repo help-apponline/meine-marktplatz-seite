@@ -145,6 +145,34 @@ export function AuthProvider({ children }) {
     } catch { return null; }
   }, []);
 
+  const updateAd = useCallback(async (id, data, newPhotos = []) => {
+    let body;
+    if (newPhotos.length > 0) {
+      const fd = new FormData();
+      if (data.title !== undefined) fd.append("title", data.title);
+      if (data.city !== undefined) fd.append("city", data.city);
+      if (data.desc !== undefined) fd.append("desc", data.desc);
+      if (data.price !== undefined) fd.append("price", data.price);
+      if (data.preisart !== undefined) fd.append("preisart", data.preisart);
+      if (data.status !== undefined) fd.append("status", data.status);
+      for (const f of newPhotos) fd.append("photos", f);
+      body = fd;
+    } else {
+      body = data;
+    }
+    const record = await pb.collection("ads").update(id, body);
+    return adaptAd(record);
+  }, []);
+
+  const deleteAd = useCallback(async (id) => {
+    await pb.collection("ads").delete(id);
+  }, []);
+
+  const setAdStatus = useCallback(async (id, status) => {
+    const record = await pb.collection("ads").update(id, { status });
+    return adaptAd(record);
+  }, []);
+
   // Chats
   const loadChats = useCallback(async () => {
     if (!pb.authStore.record?.id) return [];
@@ -257,7 +285,7 @@ export function AuthProvider({ children }) {
       loggedIn, userEmail, userRole, userId, verified,
       login, register, logout,
       resendVerification, requestPasswordReset,
-      loadAds, createAd, loadMyAds, getAd,
+      loadAds, createAd, loadMyAds, getAd, updateAd, deleteAd, setAdStatus,
       loadChats, getOrCreateChat, getChat, loadMessages, sendMessage,
       uid, pb,
     }}>
