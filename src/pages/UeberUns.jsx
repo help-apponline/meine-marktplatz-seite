@@ -1,7 +1,6 @@
 import { Link } from "react-router";
-import { lazy, Suspense } from "react";
 import ArrowLeft from "icon:arrow-left";
-const PartnerBanner = lazy(() => import("../components/PartnerBanner.jsx"));
+import PartnerBanner from "../components/PartnerBanner.jsx";
 import Heart from "icon:heart";
 import Users from "icon:users";
 import MapPin from "icon:map-pin";
@@ -97,9 +96,7 @@ export default function UeberUns() {
 
       {/* Werbebanner ganz unten */}
       <div className="mt-10">
-        <Suspense fallback={null}>
-          <PartnerBanner />
-        </Suspense>
+        <PartnerBanner />
       </div>
 
     </section>
