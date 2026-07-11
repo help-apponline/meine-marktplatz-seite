@@ -8,6 +8,7 @@ import NotificationBell from "./NotificationBell.jsx";
 import Menu from "icon:menu";
 import X from "icon:x";
 import Shield from "icon:shield";
+import UserCircle from "icon:user-circle";
 
 export default function Layout() {
   const { loggedIn, userEmail, userRole, logout, userId } = useAuth();
@@ -127,6 +128,18 @@ export default function Layout() {
                 {label}
               </NavLink>
             ))}
+            {loggedIn && (
+              <NavLink to="/profil" onClick={() => setMobileOpen(false)}
+                className={({ isActive }) =>
+                  `text-sm px-3 py-2.5 rounded-xl border transition-all flex items-center gap-2 ${
+                    isActive ? "bg-[rgba(255,138,0,0.18)] border-[rgba(255,138,0,0.4)] text-white" : "border-transparent text-white/70 hover:bg-white/10 hover:text-white"
+                  }`
+                }
+                style={{ textDecoration: "none" }}>
+                <UserCircle size={14} />
+                Mein Profil
+              </NavLink>
+            )}
             {isAdmin && (
               <NavLink to="/admin" onClick={() => setMobileOpen(false)}
                 className={({ isActive }) =>
@@ -148,6 +161,12 @@ export default function Layout() {
             <span className="text-xs text-white/50">
               {userEmail} · {userRole === "helper" ? "Auftragnehmer" : "Auftraggeber"}
             </span>
+            <NavLink to="/profil" className={({ isActive }) =>
+              `flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full border transition-all ${isActive ? "bg-[rgba(255,138,0,0.2)] border-[rgba(255,138,0,0.5)] text-white" : "border-white/20 text-white/60 hover:text-white hover:border-white/40"}`
+            } style={{ textDecoration: "none" }}>
+              <UserCircle size={13} />
+              Profil
+            </NavLink>
             {isAdmin && (
               <NavLink to="/admin" className={({ isActive }) =>
                 `flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full border transition-all ${isActive ? "bg-[rgba(255,138,0,0.2)] border-[rgba(255,138,0,0.5)] text-white" : "border-white/20 text-white/60 hover:text-white hover:border-white/40"}`
