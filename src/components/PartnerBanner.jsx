@@ -1,29 +1,42 @@
 import { useState, useEffect } from "react";
-import { useAuth } from "../context/AuthContext.jsx";
+import { pb } from "../lib/pb.js";
 
 function normalizePartner(p) {
   if (!p || typeof p !== "object") return null;
-  const title = (p.title || p.headline || p.name || "").toString().trim();
-  const text = (p.text || p.desc || p.description || "").toString().trim();
-  const website = (p.website || p.url || p.link || "").toString().trim();
-  const logo = (p.logoDataUrl || p.logo || p.logoUrl || "").toString().trim();
+  const title = (p.title || "").trim();
+  const text = (p.text || "").trim();
+  const website = (p.website || "").trim();
+  const logo = (p.logo_data_url || "").trim();
   const status = (p.status || "").toLowerCase();
-  const expiresAt = Number(p.expiresAt || p.paidUntil || 0);
+  const expiresAt = Number(p.expires_at || 0);
   if (p.paused) return null;
   if (status && status !== "active") return null;
   if (expiresAt && expiresAt < Date.now()) return null;
   if (!title && !text && !logo) return null;
-  return { id: p.id || title || Math.random().toString(36), title, text, website, logo };
+  return { id: p.id || title, title, text, website, logo };
+}
+
+// Also support localStorage fallback for partners entered via the Werbepartner form
+function loadLocalPartners() {
+  try {
+    const v2 = JSON.parse(localStorage.getItem("helpapp_partners_v2") || "[]");
+    return Array.isArray(v2) ? v2 : [];
+  } catch { return []; }
 }
 
 export default function PartnerBanner() {
-  const { loadPartners } = useAuth();
   const [partner, setPartner] = useState(null);
 
   function pick() {
-    const list = loadPartners().map(normalizePartner).filter(Boolean);
-    if (!list.length) { setPartner(null); return; }
-    setPartner(list[Math.floor(Math.random() * list.length)]);
+    // Merge local partners (from Werbepartner form) for now
+    const local = loadLocalPartners().map(p => ({
+      ...p,
+      logo_data_url: p.logoDataUrl || "",
+      expires_at: p.expiresAt || 0,
+    })).map(normalizePartner).filter(Boolean);
+
+    if (!local.length) { setPartner(null); return; }
+    setPartner(local[Math.floor(Math.random() * local.length)]);
   }
 
   useEffect(() => {
@@ -43,11 +56,7 @@ export default function PartnerBanner() {
   const inner = (
     <div className="flex items-center gap-4">
       <div className="w-16 h-16 rounded-xl border border-gray-100 bg-gray-50 flex items-center justify-center shrink-0 overflow-hidden">
-        {partner.logo ? (
-          <img src={partner.logo} alt={partner.title} className="w-full h-full object-cover" />
-        ) : (
-          <span className="text-xs text-gray-400">Logo</span>
-        )}
+        {partner.logo ? <img src={partner.logo} alt={partner.title} className="w-full h-full object-cover" /> : <span className="text-xs text-gray-400">Logo</span>}
       </div>
       <div>
         <div className="font-bold text-gray-900">{partner.title}</div>
@@ -59,15 +68,13 @@ export default function PartnerBanner() {
 
   if (partner.website) {
     return (
-      <a href={partner.website} target="_blank" rel="noopener noreferrer" className="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow transition-shadow" style={{ textDecoration: "none" }}>
+      <a href={partner.website} target="_blank" rel="noopener noreferrer"
+        className="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow transition-shadow"
+        style={{ textDecoration: "none" }}>
         {inner}
       </a>
     );
   }
 
-  return (
-    <div className="bg-white border border-gray-200 rounded-xl p-4">
-      {inner}
-    </div>
-  );
+  return <div className="bg-white border border-gray-200 rounded-xl p-4">{inner}</div>;
 }

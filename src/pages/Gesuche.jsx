@@ -1,36 +1,33 @@
-import { useState, useMemo } from "react";
+import { useState, useEffect } from "react";
 import { useAuth } from "../context/AuthContext.jsx";
 import AdCard from "../components/AdCard.jsx";
 import PartnerBanner from "../components/PartnerBanner.jsx";
 
-const SEED = [
-  { type: "gesuch", title: "Wohnung reinigen", place: "Berlin", price: "Pauschal", meta: "Diese Woche", desc: "Suche Hilfe beim Reinigen einer 2-Zimmer-Wohnung. Putzmittel vorhanden." },
-  { type: "gesuch", title: "Umzugskartons tragen", place: "Leipzig", price: "Verhandelbar", meta: "Wochenende", desc: "2–3 Stunden helfen Kartons zu tragen, Aufzug vorhanden." },
-  { type: "gesuch", title: "Rasen mähen", place: "Stuttgart", price: "20€/Stunde", meta: "Morgen", desc: "Rasen mähen im kleinen Garten. Gerät vorhanden, Hilfe gesucht." },
-];
-
 export default function Gesuche() {
   const { loadAds } = useAuth();
+  const [ads, setAds] = useState([]);
   const [query, setQuery] = useState("");
+  const [loading, setLoading] = useState(true);
 
-  const dbAds = useMemo(() => loadAds().filter(a => a.role === "customer"), []);
+  useEffect(() => {
+    const controller = new AbortController();
+    setLoading(true);
+    loadAds('role = "customer"')
+      .then(items => { if (!controller.signal.aborted) { setAds(items); setLoading(false); } })
+      .catch(e => { if (!e?.isAbort) setLoading(false); });
+    return () => controller.abort();
+  }, []);
 
-  const filteredDb = useMemo(() => {
+  const filtered = ads.filter(a => {
     const q = query.toLowerCase();
-    if (!q) return dbAds;
-    return dbAds.filter(a => (a.title + a.city + a.when).toLowerCase().includes(q));
-  }, [dbAds, query]);
-
-  const filteredSeed = useMemo(() => {
-    const q = query.toLowerCase();
-    if (!q) return SEED;
-    return SEED.filter(x => (x.title + x.place + x.meta).toLowerCase().includes(q));
-  }, [query]);
+    if (!q) return true;
+    return (a.title + a.city + a.when).toLowerCase().includes(q);
+  });
 
   return (
     <section className="bg-white min-h-screen px-5 md:px-10 py-12 max-w-5xl mx-auto w-full">
       <h2 className="text-3xl font-extrabold text-gray-900 mb-2">Anzeigen Gesuche</h2>
-      <p className="text-gray-500 text-base mb-8 leading-relaxed">Hier finden Sie die Hilfegesuche von Nutzern, die Unterstützung benötigen.</p>
+      <p className="text-gray-500 text-base mb-8 leading-relaxed">Hier findest du Nutzer, die Hilfe suchen.</p>
 
       <input
         type="text"
@@ -41,13 +38,15 @@ export default function Gesuche() {
       />
 
       <h3 className="font-bold text-gray-800 mb-3">Neueste Gesuche</h3>
-      <div className="flex flex-col gap-3">
-        {filteredDb.map(ad => <AdCard key={ad.id} ad={ad} />)}
-        {filteredSeed.map((item, i) => <AdCard key={i} seedItem={item} />)}
-        {!filteredDb.length && !filteredSeed.length && (
-          <p className="text-gray-400 text-sm">Keine Treffer für „{query}".</p>
-        )}
-      </div>
+      {loading ? (
+        <p className="text-gray-400 text-sm">Wird geladen…</p>
+      ) : filtered.length === 0 ? (
+        <p className="text-gray-400 text-sm">{query ? `Keine Treffer für „${query}".` : "Noch keine Gesuche vorhanden."}</p>
+      ) : (
+        <div className="flex flex-col gap-3">
+          {filtered.map(ad => <AdCard key={ad.id} ad={ad} />)}
+        </div>
+      )}
 
       <div className="mt-10">
         <PartnerBanner />

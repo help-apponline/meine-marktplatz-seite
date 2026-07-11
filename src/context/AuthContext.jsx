@@ -1,136 +1,209 @@
 import { createContext, useContext, useState, useEffect, useCallback } from "react";
-
-const AUTH_KEY = "helpapp_logged_in_v1";
-const USER_KEY = "helpapp_user_email_v1";
-const ROLE_KEY = "helpapp_role_v1";
-const USERS_KEY = "helpapp_users_v1";
-const ADS_KEY = "helpapp_ads_v1";
-const CHATS_KEY = "helpapp_chats_v1";
-const PARTNERS_KEY = "helpapp_partners_v2";
-
-function seedDemoData() {
-  try {
-    const users = JSON.parse(localStorage.getItem(USERS_KEY) || "{}");
-    let changed = false;
-    if (!users["demo@helpapp.local"]) {
-      users["demo@helpapp.local"] = { password: "demo1234", role: "customer", createdAt: Date.now() };
-      changed = true;
-    }
-    if (!users["helper@helpapp.local"]) {
-      users["helper@helpapp.local"] = { password: "demo1234", role: "helper", createdAt: Date.now() };
-      changed = true;
-    }
-    if (changed) localStorage.setItem(USERS_KEY, JSON.stringify(users));
-
-    const ads = JSON.parse(localStorage.getItem(ADS_KEY) || "[]");
-    if (!ads.length) {
-      const now = Date.now();
-      localStorage.setItem(ADS_KEY, JSON.stringify([
-        { id: "a_demo_1", role: "customer", title: "Wohnung reinigen", city: "Berlin", zip: "10115", when: "Diese Woche", price: "Pauschal", preisart: "Pauschal", priceLabel: "Pauschal", desc: "Suche Hilfe beim Reinigen einer 2-Zimmer-Wohnung. Putzmittel vorhanden.", owner: "demo@helpapp.local", status: "offen", createdAt: now, updatedAt: now },
-        { id: "a_demo_2", role: "helper", title: "Gartenhilfe", city: "München", zip: "80331", when: "Heute", price: "15€/Stunde", preisart: "Pro Stunde", priceLabel: "15€/Stunde (Pro Stunde)", desc: "Biete Unterstützung im Garten (Rasen mähen, Unkraut jäten).", owner: "helper@helpapp.local", status: "offen", createdAt: now, updatedAt: now },
-        { id: "a_demo_3", role: "helper", title: "Einkaufshilfe", city: "Hamburg", zip: "20095", when: "Diese Woche", price: "Festpreis", preisart: "Festpreis", priceLabel: "Festpreis", desc: "Einkäufe erledigen, Besorgungen, Begleitung – zuverlässig und freundlich.", owner: "helper@helpapp.local", status: "offen", createdAt: now - 3600000, updatedAt: now - 3600000 },
-        { id: "a_demo_4", role: "customer", title: "Umzugskartons tragen", city: "Leipzig", zip: "04103", when: "Wochenende", price: "Verhandelbar", preisart: "Verhandelbar", priceLabel: "Verhandelbar", desc: "2–3 Stunden helfen Kartons zu tragen, Aufzug vorhanden.", owner: "demo@helpapp.local", status: "offen", createdAt: now - 7200000, updatedAt: now - 7200000 },
-      ]));
-    }
-
-    const chats = JSON.parse(localStorage.getItem(CHATS_KEY) || "{}");
-    if (!Object.keys(chats).length) {
-      const id = "c_a_demo_1";
-      chats[id] = {
-        id, adId: "a_demo_1", adTitle: "Wohnung reinigen",
-        participants: ["demo@helpapp.local", "helper@helpapp.local"],
-        messages: [
-          { id: "m1", from: "demo@helpapp.local", text: "Hi! Kannst du mir diese Woche helfen?", ts: Date.now() - 1000 * 60 * 60 * 5 },
-          { id: "m2", from: "helper@helpapp.local", text: "Klar 🙂 Wann passt es dir?", ts: Date.now() - 1000 * 60 * 60 * 4 },
-        ],
-        createdAt: Date.now() - 1000 * 60 * 60 * 6,
-        updatedAt: Date.now() - 1000 * 60 * 60 * 4,
-      };
-      localStorage.setItem(CHATS_KEY, JSON.stringify(chats));
-    }
-  } catch {}
-}
+import { pb } from "../lib/pb.js";
 
 const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
-  const [loggedIn, setLoggedIn] = useState(() => localStorage.getItem(AUTH_KEY) === "true");
-  const [userEmail, setUserEmail] = useState(() => localStorage.getItem(USER_KEY) || "");
-  const [userRole, setUserRole] = useState(() => localStorage.getItem(ROLE_KEY) || "customer");
+  const [loggedIn, setLoggedIn] = useState(() => pb.authStore.isValid);
+  const [userEmail, setUserEmail] = useState(() => pb.authStore.record?.email || "");
+  const [userRole, setUserRole] = useState(() => pb.authStore.record?.role || "customer");
+  const [userId, setUserId] = useState(() => pb.authStore.record?.id || "");
 
-  useEffect(() => { seedDemoData(); }, []);
-
-  const login = useCallback((email, password) => {
-    const users = JSON.parse(localStorage.getItem(USERS_KEY) || "{}");
-    if (!users[email] || users[email].password !== password) return "E-Mail oder Passwort ist falsch.";
-    localStorage.setItem(AUTH_KEY, "true");
-    localStorage.setItem(USER_KEY, email);
-    localStorage.setItem(ROLE_KEY, users[email].role || "customer");
-    setLoggedIn(true);
-    setUserEmail(email);
-    setUserRole(users[email].role || "customer");
-    return null;
+  // Keep state in sync with PocketBase auth store
+  useEffect(() => {
+    const unsub = pb.authStore.onChange(() => {
+      const valid = pb.authStore.isValid;
+      setLoggedIn(valid);
+      setUserEmail(pb.authStore.record?.email || "");
+      setUserRole(pb.authStore.record?.role || "customer");
+      setUserId(pb.authStore.record?.id || "");
+    });
+    return () => unsub();
   }, []);
 
-  const register = useCallback((email, password, password2, role) => {
+  // Refresh token on startup
+  useEffect(() => {
+    if (!pb.authStore.isValid) return;
+    pb.collection("users").authRefresh().catch(() => pb.authStore.clear());
+  }, []);
+
+  const login = useCallback(async (email, password) => {
+    try {
+      await pb.collection("users").authWithPassword(email, password);
+      return null;
+    } catch (e) {
+      return "E-Mail oder Passwort ist falsch.";
+    }
+  }, []);
+
+  const register = useCallback(async (email, password, password2, role) => {
     if (password.length < 6) return "Passwort muss mindestens 6 Zeichen haben.";
     if (password !== password2) return "Passwörter stimmen nicht überein.";
-    const users = JSON.parse(localStorage.getItem(USERS_KEY) || "{}");
-    if (users[email]) return "Diese E-Mail ist bereits registriert.";
-    users[email] = { password, role, createdAt: Date.now() };
-    localStorage.setItem(USERS_KEY, JSON.stringify(users));
-    localStorage.setItem(AUTH_KEY, "true");
-    localStorage.setItem(USER_KEY, email);
-    localStorage.setItem(ROLE_KEY, role);
-    setLoggedIn(true);
-    setUserEmail(email);
-    setUserRole(role);
-    return null;
+    try {
+      await pb.collection("users").create({
+        email,
+        password,
+        passwordConfirm: password2,
+        role,
+      });
+      await pb.collection("users").authWithPassword(email, password);
+      return null;
+    } catch (e) {
+      const msg = e?.response?.data;
+      if (msg?.email?.message) return "Diese E-Mail ist bereits registriert.";
+      return "Registrierung fehlgeschlagen. Bitte versuche es erneut.";
+    }
   }, []);
 
   const logout = useCallback(() => {
-    localStorage.setItem(AUTH_KEY, "false");
-    localStorage.removeItem(USER_KEY);
-    localStorage.removeItem(ROLE_KEY);
-    setLoggedIn(false);
-    setUserEmail("");
-    setUserRole("customer");
+    pb.authStore.clear();
   }, []);
 
-  // Ads helpers
-  const loadAds = useCallback(() => {
-    try { return JSON.parse(localStorage.getItem(ADS_KEY) || "[]"); } catch { return []; }
+  // Ads
+  const loadAds = useCallback(async (filter = "") => {
+    const result = await pb.collection("ads").getList(1, 100, {
+      sort: "-created",
+      filter: filter || "",
+      expand: "owner",
+    });
+    return result.items.map(adaptAd);
   }, []);
 
-  const saveAds = useCallback((list) => {
-    localStorage.setItem(ADS_KEY, JSON.stringify(list));
+  const createAd = useCallback(async (data) => {
+    const record = await pb.collection("ads").create({
+      owner: pb.authStore.record?.id,
+      role: data.role,
+      name: data.name || "",
+      title: data.title,
+      city: data.city || "",
+      zip: data.zip || "",
+      when_time: data.when || "",
+      price: data.price || "",
+      preisart: data.preisart || "",
+      price_label: data.priceLabel || "",
+      desc: data.desc || "",
+      status: "offen",
+    });
+    return adaptAd(record);
   }, []);
 
-  // Chats helpers
-  const loadChats = useCallback(() => {
-    try { return JSON.parse(localStorage.getItem(CHATS_KEY) || "{}"); } catch { return {}; }
+  const loadMyAds = useCallback(async () => {
+    if (!pb.authStore.record?.id) return [];
+    const result = await pb.collection("ads").getList(1, 100, {
+      sort: "-created",
+      filter: `owner.id = "${pb.authStore.record.id}"`,
+    });
+    return result.items.map(adaptAd);
   }, []);
 
-  const saveChats = useCallback((obj) => {
-    localStorage.setItem(CHATS_KEY, JSON.stringify(obj));
+  const getAd = useCallback(async (id) => {
+    try {
+      const record = await pb.collection("ads").getOne(id, { expand: "owner" });
+      return adaptAd(record);
+    } catch {
+      return null;
+    }
   }, []);
 
-  // Partners helpers
-  const loadPartners = useCallback(() => {
-    try { return JSON.parse(localStorage.getItem(PARTNERS_KEY) || "[]"); } catch { return []; }
+  // Chats
+  const loadChats = useCallback(async () => {
+    if (!pb.authStore.record?.id) return [];
+    const result = await pb.collection("chats").getList(1, 100, {
+      sort: "-updated",
+    });
+    return result.items;
   }, []);
 
-  const savePartners = useCallback((list) => {
-    localStorage.setItem(PARTNERS_KEY, JSON.stringify(list));
+  const getOrCreateChat = useCallback(async (adId, adTitle) => {
+    if (!pb.authStore.record?.id) return null;
+    const myId = pb.authStore.record.id;
+    try {
+      // Try to find existing chat for this ad
+      const existing = await pb.collection("chats").getFirstListItem(
+        adId ? `ad = "${adId}"` : `ad_title = "${adTitle}"`
+      );
+      // Add me as participant if not already
+      const parts = existing.participants || [];
+      if (!parts.includes(myId)) {
+        await pb.collection("chats").update(existing.id, {
+          "participants+": [myId],
+        });
+      }
+      return existing.id;
+    } catch {
+      // Create new chat
+      const chat = await pb.collection("chats").create({
+        ad: adId || undefined,
+        ad_title: adTitle || "Anzeige",
+        participants: [myId],
+      });
+      return chat.id;
+    }
+  }, []);
+
+  const getChat = useCallback(async (chatId) => {
+    try {
+      return await pb.collection("chats").getOne(chatId);
+    } catch {
+      return null;
+    }
+  }, []);
+
+  const loadMessages = useCallback(async (chatId) => {
+    const result = await pb.collection("messages").getList(1, 200, {
+      sort: "created",
+      filter: `chat = "${chatId}"`,
+      expand: "sender",
+    });
+    return result.items;
+  }, []);
+
+  const sendMessage = useCallback(async (chatId, text) => {
+    if (!pb.authStore.record?.id) return null;
+    const msg = await pb.collection("messages").create({
+      chat: chatId,
+      sender: pb.authStore.record.id,
+      text,
+    });
+    // Update chat's updated timestamp
+    await pb.collection("chats").update(chatId, { updated: new Date().toISOString() }).catch(() => {});
+    return msg;
   }, []);
 
   const uid = () => Math.random().toString(36).slice(2, 10) + Date.now().toString(36);
 
   return (
-    <AuthContext.Provider value={{ loggedIn, userEmail, userRole, login, register, logout, loadAds, saveAds, loadChats, saveChats, loadPartners, savePartners, uid }}>
+    <AuthContext.Provider value={{
+      loggedIn, userEmail, userRole, userId,
+      login, register, logout,
+      loadAds, createAd, loadMyAds, getAd,
+      loadChats, getOrCreateChat, getChat, loadMessages, sendMessage,
+      uid,
+      pb,
+    }}>
       {children}
     </AuthContext.Provider>
   );
+}
+
+function adaptAd(record) {
+  return {
+    id: record.id,
+    owner: record.owner,
+    role: record.role,
+    name: record.name,
+    title: record.title,
+    city: record.city,
+    zip: record.zip,
+    when: record.when_time,
+    price: record.price,
+    preisart: record.preisart,
+    priceLabel: record.price_label || record.price || "—",
+    desc: record.desc,
+    status: record.status,
+    createdAt: new Date(record.created).getTime(),
+    updatedAt: new Date(record.updated).getTime(),
+  };
 }
 
 export function useAuth() {
