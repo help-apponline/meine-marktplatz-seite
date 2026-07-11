@@ -92,10 +92,10 @@ export default function PartnerProfil() {
 
       {/* Photos gallery */}
       {partner.photos?.length > 0 && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-8">
           {partner.photos.map((url, i) => (
-            <div key={i} className={`rounded-2xl overflow-hidden border border-gray-100 ${i === 0 && partner.photos.length > 1 ? "sm:col-span-2" : ""}`}>
-              <img src={url} alt={`Foto ${i + 1}`} className="w-full h-52 object-cover" />
+            <div key={i} className="rounded-xl overflow-hidden border border-gray-100 bg-gray-50 flex items-center justify-center" style={{ height: "140px" }}>
+              <img src={url} alt={`Foto ${i + 1}`} className="w-full h-full object-contain" />
             </div>
           ))}
         </div>
