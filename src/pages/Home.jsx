@@ -19,7 +19,7 @@ export default function Home() {
         {[
           { emoji: "🛠️", label: "Angebote", to: "/angebote" },
           { emoji: "🔍", label: "Gesuche", to: "/gesuche" },
-          { emoji: "📝", label: "Anzeige aufgeben", to: "/anzeige" },
+          { emoji: "📝", label: "Anzeige kostenlos aufgeben", to: "/anzeige" },
           { emoji: "🤝", label: "Werbepartner-Bereich", to: "/werbepartner" },
         ].map(({ emoji, label, to }) => (
           <Link
