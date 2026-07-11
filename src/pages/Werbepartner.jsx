@@ -375,6 +375,9 @@ export default function Werbepartner() {
             <p className="text-[11px] text-gray-400 text-center">
               Zahlung über Stripe — kommt bald. Dein Entwurf wird bis dahin gespeichert.
             </p>
+            <p className="text-[11px] text-gray-400 text-center -mt-1">
+              Das Abonnement verlängert sich automatisch zum Ende der Laufzeit. Jederzeit kündbar.
+            </p>
           </div>
         </div>
 
