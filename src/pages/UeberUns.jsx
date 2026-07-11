@@ -1,5 +1,7 @@
 import { Link } from "react-router";
+import { lazy, Suspense } from "react";
 import ArrowLeft from "icon:arrow-left";
+const PartnerBanner = lazy(() => import("../components/PartnerBanner.jsx"));
 import Heart from "icon:heart";
 import Users from "icon:users";
 import MapPin from "icon:map-pin";
@@ -80,32 +82,6 @@ export default function UeberUns() {
         </p>
       </div>
 
-      {/* Affiliate / Werbeanzeige Banner – externer Link wird noch hinterlegt */}
-      <div className="mt-10 mb-10">
-        <p className="text-[10px] text-gray-400 mb-1.5 text-center tracking-wide uppercase">Werbeanzeige</p>
-        <a
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer sponsored"
-          className="block w-full bg-gradient-to-r from-gray-50 to-orange-50 border border-orange-100 rounded-2xl px-5 py-4 hover:shadow-sm transition-shadow"
-          style={{ textDecoration: "none" }}
-          onClick={e => e.preventDefault()}
-        >
-          <div className="flex items-center justify-between gap-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#ff8a00]/10 flex items-center justify-center shrink-0 text-xl">📢</div>
-              <div>
-                <div className="font-bold text-gray-800 text-sm">Werbung schalten — Ihr Unternehmen hier</div>
-                <div className="text-xs text-gray-500 mt-0.5">Dieser Werbeplatz ist noch verfügbar — externer Link folgt</div>
-              </div>
-            </div>
-            <span className="text-xs font-bold text-white bg-[#ff8a00] px-3 py-1.5 rounded-full shrink-0 whitespace-nowrap">
-              Mehr erfahren →
-            </span>
-          </div>
-        </a>
-      </div>
-
       {/* CTA */}
       <div className="bg-gradient-to-r from-orange-50 to-amber-50 border border-orange-100 rounded-2xl px-6 py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
@@ -117,6 +93,13 @@ export default function UeberUns() {
           style={{ textDecoration: "none" }}>
           Anzeige aufgeben →
         </Link>
+      </div>
+
+      {/* Werbebanner ganz unten */}
+      <div className="mt-10">
+        <Suspense fallback={null}>
+          <PartnerBanner />
+        </Suspense>
       </div>
 
     </section>
