@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router";
 import { useAuth } from "../context/AuthContext.jsx";
 import AdCard from "../components/AdCard.jsx";
 import AdFilter from "../components/AdFilter.jsx";
@@ -45,6 +46,15 @@ export default function Angebote() {
     <section className="bg-white min-h-screen px-5 md:px-10 py-12 max-w-5xl mx-auto w-full">
       <h2 className="text-3xl font-extrabold text-gray-900 mb-2">Angebote</h2>
       <p className="text-gray-500 text-base mb-8 leading-relaxed">Hier findest du die Hilfeangebote anderer Nutzer.</p>
+
+      {/* Fester Hinweis-Banner */}
+      <Link to="/anzeige" style={{ textDecoration: "none" }}>
+        <div className="flex items-center justify-between gap-3 bg-orange-50 border border-orange-100 rounded-xl px-4 py-3 mb-6 hover:shadow-sm transition-shadow">
+          <span className="text-sm text-gray-700">
+            Kein passendes Angebot gefunden? <span className="font-semibold text-[#ff8a00]">Gib kostenlos ein Gesuch auf →</span>
+          </span>
+        </div>
+      </Link>
 
       <AdFilter
         query={query} setQuery={setQuery}
