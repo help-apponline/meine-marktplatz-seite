@@ -189,6 +189,7 @@ export default function Layout() {
       {/* Footer */}
       <footer className="bg-[#2b2b2b] text-[#aaa] text-sm text-center py-5">
         © 2026 Help App ·{" "}
+        <Link to="/ueber-uns" className="text-[#aaa] hover:text-white no-underline mx-1" style={{ textDecoration: "none" }}>Über uns</Link> ·{" "}
         <Link to="/impressum" className="text-[#aaa] hover:text-white no-underline mx-1" style={{ textDecoration: "none" }}>Impressum</Link> ·{" "}
         <Link to="/datenschutz" className="text-[#aaa] hover:text-white no-underline mx-1" style={{ textDecoration: "none" }}>Datenschutz</Link> ·{" "}
         <Link to="/agb" className="text-[#aaa] hover:text-white no-underline mx-1" style={{ textDecoration: "none" }}>AGB</Link>
