@@ -319,21 +319,21 @@ export default function Werbepartner() {
 
               {maxPhotos > 0 && (
                 <div className="mt-4">
-                  <div className="grid grid-cols-3 gap-2 mb-3">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-3">
                     {photos.map((url, i) => (
-                      <div key={i} className="relative aspect-square rounded-xl overflow-hidden border border-gray-100 bg-gray-100">
+                      <div key={i} className="relative aspect-video rounded-xl overflow-hidden border border-gray-100 bg-gray-100">
                         <img src={url} alt={`Foto ${i + 1}`} className="w-full h-full object-cover" />
                         <button onClick={() => removePhoto(i)}
-                          className="absolute top-1 right-1 w-5 h-5 bg-black/60 text-white rounded-full flex items-center justify-center hover:bg-black transition-colors">
-                          <X size={10} />
+                          className="absolute top-1.5 right-1.5 w-6 h-6 bg-black/60 text-white rounded-full flex items-center justify-center hover:bg-black transition-colors">
+                          <X size={11} />
                         </button>
                       </div>
                     ))}
                     {photos.length < maxPhotos && (
                       <button onClick={() => photoRef.current?.click()}
-                        className="aspect-square rounded-xl border-2 border-dashed border-gray-200 flex flex-col items-center justify-center gap-1 hover:border-gray-400 transition-colors text-gray-400 hover:text-gray-600">
-                        <ImagePlus size={20} />
-                        <span className="text-[10px] font-medium">Foto hinzufügen</span>
+                        className="aspect-video rounded-xl border-2 border-dashed border-gray-200 flex flex-col items-center justify-center gap-1.5 hover:border-gray-400 transition-colors text-gray-400 hover:text-gray-600">
+                        <ImagePlus size={24} />
+                        <span className="text-xs font-medium">Foto hinzufügen</span>
                       </button>
                     )}
                   </div>
@@ -478,9 +478,9 @@ export default function Werbepartner() {
                   </div>
                 </div>
                 {p.photos?.length > 0 && (
-                  <div className="flex gap-2 mb-3 flex-wrap">
+                  <div className="grid grid-cols-3 sm:grid-cols-5 gap-2 mb-3">
                     {p.photos.map((url, i) => (
-                      <div key={i} className="w-16 h-16 rounded-lg overflow-hidden border border-gray-100 shrink-0">
+                      <div key={i} className="aspect-video rounded-lg overflow-hidden border border-gray-100">
                         <img src={url} alt={`Foto ${i + 1}`} className="w-full h-full object-cover" />
                       </div>
                     ))}
@@ -516,9 +516,9 @@ export default function Werbepartner() {
                   {p.website && <a href={p.website} target="_blank" rel="noopener noreferrer" className="text-xs text-[#ff8a00] shrink-0">Website →</a>}
                 </div>
                 {p.photos?.length > 0 && (
-                  <div className="flex gap-2 mt-3 flex-wrap">
+                  <div className="grid grid-cols-3 sm:grid-cols-5 gap-2 mt-3">
                     {p.photos.map((url, i) => (
-                      <div key={i} className="w-14 h-14 rounded-lg overflow-hidden border border-gray-100 shrink-0">
+                      <div key={i} className="aspect-video rounded-lg overflow-hidden border border-gray-100">
                         <img src={url} alt="" className="w-full h-full object-cover" />
                       </div>
                     ))}
@@ -548,9 +548,9 @@ export default function Werbepartner() {
                 </div>
               </div>
               {photos.length > 0 && (
-                <div className="flex gap-2 flex-wrap">
+                <div className="grid grid-cols-3 gap-2 mt-3">
                   {photos.map((url, i) => (
-                    <div key={i} className="w-20 h-20 rounded-lg overflow-hidden border border-gray-100">
+                    <div key={i} className="aspect-video rounded-lg overflow-hidden border border-gray-100">
                       <img src={url} alt="" className="w-full h-full object-cover" />
                     </div>
                   ))}
