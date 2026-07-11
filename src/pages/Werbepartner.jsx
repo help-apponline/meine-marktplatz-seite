@@ -383,8 +383,8 @@ export default function Werbepartner() {
                 Vorschau
               </button>
               <button onClick={() => saveDraft("draft")}
-                className="px-5 py-2.5 border border-gray-200 text-gray-700 font-semibold rounded-xl text-sm hover:bg-gray-50 transition-colors">
-                Entwurf speichern
+                className="px-5 py-2.5 bg-gray-800 text-white font-bold rounded-xl text-sm hover:bg-gray-700 transition-colors">
+                Speichern
               </button>
               <button onClick={handlePay}
                 className="flex-1 px-5 py-2.5 bg-[#ff8a00] text-white font-bold rounded-xl text-sm hover:bg-[#e67600] transition-colors text-center">
