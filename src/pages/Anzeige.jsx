@@ -35,6 +35,7 @@ export default function Anzeige() {
   const [submitting, setSubmitting] = useState(false);
   const [loadingAds, setLoadingAds] = useState(false);
   const photoRef = useRef(null);
+  const editCardRefs = useRef({});
 
   // Edit mode
   const [editingId, setEditingId] = useState(null);
@@ -123,6 +124,10 @@ export default function Anzeige() {
     setEditDesc(ad.desc || "");
     setEditPrice(ad.priceLabel || "");
     setEditMsg("");
+    // Scroll the card into view after state update
+    setTimeout(() => {
+      editCardRefs.current[ad.id]?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }, 50);
   }
 
   async function handleSaveEdit(adId) {
@@ -306,7 +311,9 @@ export default function Anzeige() {
           ) : (
             <div className="flex flex-col gap-4 max-w-2xl">
               {[...myAds].map(ad => (
-                <div key={ad.id} className="bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden">
+                <div key={ad.id}
+                  ref={el => { editCardRefs.current[ad.id] = el; }}
+                  className={`bg-gray-50 rounded-2xl border overflow-hidden transition-colors ${editingId === ad.id ? "border-[#ff8a00] ring-2 ring-[#ff8a00]/20" : "border-gray-100"}`}>
                   {editingId === ad.id ? (
                     <div className="p-5 flex flex-col gap-3">
                       <p className="text-xs text-gray-500 font-medium">Anzeige bearbeiten</p>
@@ -366,7 +373,7 @@ export default function Anzeige() {
                         </div>
                       )}
                       <div className="flex gap-2 flex-wrap">
-                        <button onClick={() => startEdit(ad)}
+                        <button type="button" onClick={() => startEdit(ad)}
                           className="flex items-center gap-1.5 text-xs px-3 py-1.5 border border-gray-200 rounded-lg hover:bg-gray-100 transition-colors text-gray-700">
                           <Pencil size={11} /> Bearbeiten
                         </button>
