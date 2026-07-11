@@ -4,15 +4,7 @@ import { Link, useNavigate } from "react-router";
 const INTERVAL = 10000; // 10 seconds per slide
 
 // Fixed partners — always in the rotation, not visible in any list or admin view
-const FIXED_PARTNERS = [
-  {
-    id: "__kiddy_smile__",
-    title: "Kiddy-Smile",
-    text: "Liebevolle Kinderbetreuung und pädagogische Förderung — für glückliche Kinder und entspannte Eltern.",
-    website: "",
-    logo: "",
-  },
-];
+const FIXED_PARTNERS = [];
 
 // Promotional slot shown when no paid partners are booked
 const PROMO_PARTNER = {
