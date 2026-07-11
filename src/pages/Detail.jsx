@@ -5,7 +5,7 @@ import { useAuth } from "../context/AuthContext.jsx";
 export default function Detail() {
   const { id } = useParams();
   const [searchParams] = useSearchParams();
-  const { getAd, getOrCreateChat, loggedIn } = useAuth();
+  const { getAd, getOrCreateChat, loggedIn, verified } = useAuth();
   const navigate = useNavigate();
 
   const [ad, setAd] = useState(null);
@@ -27,6 +27,10 @@ export default function Detail() {
   async function handleKontakt() {
     if (!loggedIn) {
       window.__helpAppRequireLogin?.("Bitte anmelden, um Kontakt aufzunehmen.");
+      return;
+    }
+    if (!verified) {
+      window.__helpAppRequireLogin?.("Bitte bestätige zuerst deine E-Mail-Adresse, um Kontakt aufnehmen zu können.");
       return;
     }
     setContacting(true);

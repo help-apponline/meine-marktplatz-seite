@@ -4,7 +4,7 @@ import { useAuth } from "../context/AuthContext.jsx";
 import PartnerBanner from "../components/PartnerBanner.jsx";
 
 export default function Anzeige() {
-  const { loggedIn, userRole: accountRole, loadMyAds, createAd, uid } = useAuth();
+  const { loggedIn, verified, userRole: accountRole, loadMyAds, createAd, uid } = useAuth();
 
   const [formRole, setFormRole] = useState(accountRole || "customer");
   const [name, setName] = useState("");
@@ -41,6 +41,10 @@ export default function Anzeige() {
       window.__helpAppRequireLogin?.("Bitte logge dich ein, um eine Anzeige zu veröffentlichen.");
       return;
     }
+    if (!verified) {
+      setError("Bitte bestätige zuerst deine E-Mail-Adresse. Den Bestätigungslink findest du in deinem Posteingang.");
+      return;
+    }
     setSubmitting(true);
     setError("");
     const title = formRole === "helper" ? (skills || "Hilfe anbieten") : (need || "Hilfe gesucht");
@@ -73,6 +77,12 @@ export default function Anzeige() {
             anmelden
           </button>
           , um eine Anzeige aufzugeben.
+        </div>
+      )}
+
+      {loggedIn && !verified && (
+        <div className="mb-6 p-4 bg-amber-50 border border-amber-200 rounded-xl text-amber-800 text-sm">
+          Bitte bestätige zuerst deine E-Mail-Adresse, bevor du eine Anzeige aufgibst. Den Link haben wir dir bei der Registrierung geschickt.
         </div>
       )}
 

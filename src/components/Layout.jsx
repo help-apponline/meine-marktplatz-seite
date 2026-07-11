@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink, Outlet, Link } from "react-router";
 import { useAuth } from "../context/AuthContext.jsx";
 import AuthModal from "./AuthModal.jsx";
+import VerificationBanner from "./VerificationBanner.jsx";
 import Menu from "icon:menu";
 import X from "icon:x";
 
@@ -126,6 +127,9 @@ export default function Layout() {
           </div>
         )}
       </header>
+
+      {/* Verification banner */}
+      <VerificationBanner />
 
       {/* Page content */}
       <main className="flex-1">
