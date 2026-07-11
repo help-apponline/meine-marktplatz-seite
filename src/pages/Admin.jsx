@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useAuth } from "../context/AuthContext.jsx";
 import { pb } from "../lib/pb.js";
+import { loadPageviewStats } from "../lib/pageviews.js";
 import Shield from "icon:shield";
 import Trash2 from "icon:trash-2";
 import Flag from "icon:flag";
@@ -8,6 +9,7 @@ import Eye from "icon:eye";
 import UserX from "icon:user-x";
 import UserCheck from "icon:user-check";
 import RefreshCw from "icon:refresh-cw";
+import BarChart2 from "icon:bar-chart-2";
 
 export default function Admin() {
   const { loggedIn, userId } = useAuth();
@@ -23,6 +25,10 @@ export default function Admin() {
   // Users state
   const [users, setUsers] = useState([]);
   const [usersLoading, setUsersLoading] = useState(false);
+
+  // Stats state
+  const [stats, setStats] = useState(null);
+  const [statsLoading, setStatsLoading] = useState(false);
 
   // Toast
   const [toast, setToast] = useState("");
@@ -57,6 +63,13 @@ export default function Admin() {
     pb.collection("users").getList(1, 200, { sort: "-created" })
       .then(r => { setUsers(r.items); setUsersLoading(false); })
       .catch(() => setUsersLoading(false));
+  }, [isAdmin, tab]);
+
+  // Load stats
+  useEffect(() => {
+    if (!isAdmin || tab !== "stats") return;
+    setStatsLoading(true);
+    loadPageviewStats().then(s => { setStats(s); setStatsLoading(false); });
   }, [isAdmin, tab]);
 
   async function deleteAd(id) {
@@ -150,6 +163,7 @@ export default function Admin() {
         {[
           { key: "ads", label: "Anzeigen" },
           { key: "users", label: "Nutzer" },
+          { key: "stats", label: "Besucher" },
         ].map(({ key, label }) => (
           <button key={key} onClick={() => setTab(key)}
             className={`px-4 py-2 rounded-t-lg text-sm font-semibold transition-colors ${
@@ -292,6 +306,78 @@ export default function Admin() {
                 </div>
               ))}
             </div>
+          )}
+        </div>
+      )}
+
+      {/* Stats tab */}
+      {tab === "stats" && (
+        <div>
+          {statsLoading ? (
+            <p className="text-gray-400 text-sm">Wird geladen…</p>
+          ) : !stats ? null : (
+            <>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                <div className="bg-gray-50 border border-gray-100 rounded-2xl px-5 py-5">
+                  <div className="text-xs text-gray-400 mb-1">Gesamte Seitenaufrufe</div>
+                  <div className="text-3xl font-extrabold text-gray-900">{stats.totalViews.toLocaleString("de-DE")}</div>
+                </div>
+                <div className="bg-gray-50 border border-gray-100 rounded-2xl px-5 py-5">
+                  <div className="text-xs text-gray-400 mb-1">Aufrufe heute</div>
+                  <div className="text-3xl font-extrabold text-gray-900">
+                    {(stats.last30[stats.last30.length - 1]?.count || 0).toLocaleString("de-DE")}
+                  </div>
+                </div>
+                <div className="bg-gray-50 border border-gray-100 rounded-2xl px-5 py-5">
+                  <div className="text-xs text-gray-400 mb-1">Ø pro Tag (30 Tage)</div>
+                  <div className="text-3xl font-extrabold text-gray-900">
+                    {Math.round(stats.last30.reduce((s, d) => s + d.count, 0) / 30).toLocaleString("de-DE")}
+                  </div>
+                </div>
+              </div>
+
+              <div className="border border-gray-100 rounded-2xl p-5 mb-6">
+                <h4 className="font-bold text-gray-800 mb-4 text-sm flex items-center gap-2">
+                  <BarChart2 size={15} /> Letzte 30 Tage
+                </h4>
+                {(() => {
+                  const maxVal = Math.max(...stats.last30.map(d => d.count), 1);
+                  return (
+                    <div className="flex items-end gap-0.5 h-24 mb-5">
+                      {stats.last30.map((d, i) => (
+                        <div key={i} className="flex-1 flex flex-col items-end group relative" title={`${d.day}: ${d.count}`}>
+                          <div
+                            className="w-full bg-[#ff8a00]/70 rounded-sm group-hover:bg-[#ff8a00] transition-colors"
+                            style={{ height: `${Math.max(2, Math.round((d.count / maxVal) * 96))}px` }}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  );
+                })()}
+              </div>
+
+              {stats.perPage.length > 0 && (
+                <div className="border border-gray-100 rounded-2xl p-5">
+                  <h4 className="font-bold text-gray-800 mb-4 text-sm">Beliebteste Seiten</h4>
+                  <div className="flex flex-col gap-2">
+                    {stats.perPage.slice(0, 10).map(({ page, count }) => {
+                      const maxP = stats.perPage[0].count;
+                      const pct = Math.round((count / maxP) * 100);
+                      return (
+                        <div key={page} className="flex items-center gap-3">
+                          <div className="w-28 text-xs text-gray-600 truncate shrink-0">{page || "/"}</div>
+                          <div className="flex-1 bg-gray-100 rounded-full h-2 overflow-hidden">
+                            <div className="h-2 bg-[#ff8a00] rounded-full" style={{ width: `${pct}%` }} />
+                          </div>
+                          <div className="text-xs text-gray-500 w-12 text-right shrink-0">{count.toLocaleString("de-DE")}</div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+            </>
           )}
         </div>
       )}

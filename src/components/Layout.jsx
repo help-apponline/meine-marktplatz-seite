@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
-import { NavLink, Outlet, Link } from "react-router";
+import { NavLink, Outlet, Link, useLocation } from "react-router";
 import { useAuth } from "../context/AuthContext.jsx";
 import AuthModal from "./AuthModal.jsx";
 import VerificationBanner from "./VerificationBanner.jsx";
 import { pb } from "../lib/pb.js";
 import NotificationBell from "./NotificationBell.jsx";
+import { trackPageView } from "../lib/pageviews.js";
 import Menu from "icon:menu";
 import X from "icon:x";
 import Shield from "icon:shield";
@@ -12,10 +13,16 @@ import UserCircle from "icon:user-circle";
 
 export default function Layout() {
   const { loggedIn, userEmail, userRole, logout, userId } = useAuth();
+  const location = useLocation();
   const [showAuth, setShowAuth] = useState(false);
   const [authHint, setAuthHint] = useState("");
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
+
+  // Track page views on every route change
+  useEffect(() => {
+    trackPageView(location.pathname);
+  }, [location.pathname]);
 
   useEffect(() => {
     if (!loggedIn || !userId) { setIsAdmin(false); return; }
