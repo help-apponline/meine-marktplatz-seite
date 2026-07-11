@@ -52,9 +52,8 @@ export default function PartnerBanner() {
 
   const loadAll = useCallback(() => {
     const real = loadLocalPartners().map(normalizePartner).filter(Boolean);
-    // Fixed partners always included; promo slot only when no paid partners exist
-    const promo = real.length === 0 ? [PROMO_PARTNER] : [];
-    setPartners([...real, ...FIXED_PARTNERS, ...promo]);
+    // Order: 1. Kiddy-Smile (always), 2. "Hier Werben" (always), 3. real paid partners
+    setPartners([...FIXED_PARTNERS, PROMO_PARTNER, ...real]);
   }, []);
 
   useEffect(() => {
