@@ -1,38 +1,54 @@
-import { Globe } from "lucide-react";
-import { Slot } from "@radix-ui/react-slot";
-import { twMerge } from "tailwind-merge";
+import { Routes, Route } from "react-router";
+import { AuthProvider } from "./context/AuthContext.jsx";
+import Layout from "./components/Layout.jsx";
+import Home from "./pages/Home.jsx";
+import Angebote from "./pages/Angebote.jsx";
+import Gesuche from "./pages/Gesuche.jsx";
+import Anzeige from "./pages/Anzeige.jsx";
+import Detail from "./pages/Detail.jsx";
+import Inbox from "./pages/Inbox.jsx";
+import Chat from "./pages/Chat.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
+import Werbepartner from "./pages/Werbepartner.jsx";
+import Impressum from "./pages/Impressum.jsx";
+import Datenschutz from "./pages/Datenschutz.jsx";
+import AGB from "./pages/AGB.jsx";
 
-function Button({ className, asChild = false, variant = "primary", ...props }) {
-  const Comp = asChild ? Slot : "button";
+function NotFound() {
   return (
-    <Comp
-      className={twMerge(
-        "inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors",
-        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
-        "disabled:pointer-events-none disabled:opacity-50",
-        variant === "primary" && "bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-600",
-        variant === "outline" && "border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 focus-visible:ring-gray-400",
-        className
-      )}
-      {...props}
-    />
-  );
-}
-
-function App() {
-  return (
-    <div className="min-h-screen bg-white dark:bg-gray-950 flex items-center justify-center px-4">
+    <section className="bg-white min-h-screen flex items-center justify-center px-5">
       <div className="text-center">
-        <Globe className="w-10 h-10 mx-auto text-gray-400 dark:text-gray-600" strokeWidth={1.5} />
-        <h1 className="mt-6 text-xl font-semibold tracking-tight text-gray-900 dark:text-gray-50">
-          We're setting up your site
-        </h1>
-        <p className="mt-2 text-sm text-gray-400 dark:text-gray-500">
-          This won't take long.
-        </p>
+        <h2 className="text-4xl font-extrabold text-gray-900 mb-4">404</h2>
+        <p className="text-gray-500 mb-6">Seite nicht gefunden.</p>
+        <a href="/" className="px-5 py-2.5 bg-gray-900 text-white rounded-xl text-sm font-semibold hover:bg-gray-700 transition-colors" style={{ textDecoration: "none" }}>
+          Zur Startseite
+        </a>
       </div>
-    </div>
+    </section>
   );
 }
 
-export default App;
+export default function App() {
+  return (
+    <AuthProvider>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/angebote" element={<Angebote />} />
+          <Route path="/gesuche" element={<Gesuche />} />
+          <Route path="/anzeige" element={<Anzeige />} />
+          <Route path="/detail/:id" element={<Detail />} />
+          <Route path="/detail" element={<Detail />} />
+          <Route path="/inbox" element={<Inbox />} />
+          <Route path="/chat/:chatId" element={<Chat />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/werbepartner" element={<Werbepartner />} />
+          <Route path="/impressum" element={<Impressum />} />
+          <Route path="/datenschutz" element={<Datenschutz />} />
+          <Route path="/agb" element={<AGB />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </AuthProvider>
+  );
+}
