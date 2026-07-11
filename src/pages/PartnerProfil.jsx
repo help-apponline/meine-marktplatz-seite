@@ -145,7 +145,6 @@ export default function PartnerProfil() {
 
       {/* Affiliate Banner */}
       <div className="mt-4">
-        <p className="text-[10px] text-gray-400 mb-1.5 text-center tracking-wide uppercase">Werbeanzeige</p>
         <Link to="/werbepartner" style={{ textDecoration: "none" }}>
           <div className="bg-gradient-to-r from-orange-50 to-amber-50 border border-orange-100 rounded-2xl px-5 py-4 flex items-center justify-between gap-4 hover:shadow-sm transition-shadow">
             <div className="flex items-center gap-3">
