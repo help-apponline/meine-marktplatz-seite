@@ -18,7 +18,7 @@ export default function Home() {
       <section className="px-5 md:px-10 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto w-full">
         {[
           { emoji: "🛠️", label: "Angebote", to: "/angebote" },
-          { emoji: "🔍", label: "Anzeigen Gesuche", to: "/gesuche" },
+          { emoji: "🔍", label: "Gesuche", to: "/gesuche" },
           { emoji: "📝", label: "Anzeige aufgeben", to: "/anzeige" },
           { emoji: "🤝", label: "Werbepartner-Bereich", to: "/werbepartner" },
         ].map(({ emoji, label, to }) => (
