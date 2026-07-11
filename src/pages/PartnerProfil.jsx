@@ -82,6 +82,14 @@ export default function PartnerProfil() {
         </div>
       </div>
 
+      {/* Description */}
+      {partner.text && (
+        <div className="bg-gray-50 rounded-2xl px-6 py-5 mb-8">
+          <h2 className="font-bold text-gray-900 mb-2 text-sm">Über uns</h2>
+          <p className="text-gray-700 text-sm leading-relaxed whitespace-pre-line">{partner.text}</p>
+        </div>
+      )}
+
       {/* Photos gallery */}
       {partner.photos?.length > 0 && (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
@@ -90,14 +98,6 @@ export default function PartnerProfil() {
               <img src={url} alt={`Foto ${i + 1}`} className="w-full h-52 object-cover" />
             </div>
           ))}
-        </div>
-      )}
-
-      {/* Description */}
-      {partner.text && (
-        <div className="bg-gray-50 rounded-2xl px-6 py-5 mb-8">
-          <h2 className="font-bold text-gray-900 mb-2 text-sm">Über uns</h2>
-          <p className="text-gray-700 text-sm leading-relaxed whitespace-pre-line">{partner.text}</p>
         </div>
       )}
 
