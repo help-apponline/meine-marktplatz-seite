@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 const INTERVAL = 10000; // 10 seconds
 
@@ -49,6 +49,7 @@ export default function PartnerBanner() {
   const [partners, setPartners] = useState([]);
   const [idx, setIdx] = useState(0);
   const [fade, setFade] = useState(true);
+  const navigate = useNavigate();
 
   const loadAll = useCallback(() => {
     const local = loadLocalPartners().map(normalizePartner).filter(Boolean);
@@ -90,7 +91,7 @@ export default function PartnerBanner() {
         <div className="font-bold text-gray-900 truncate">{p.title}</div>
         {p.text && <div className="text-sm text-gray-500 leading-snug line-clamp-2 mt-0.5">{p.text}</div>}
         <div className="text-xs text-[#ff8a00] mt-1 font-medium">
-          {p.website ? "Mehr erfahren →" : "Werbepartner"}
+          Mehr erfahren →
         </div>
       </div>
       {/* Dot indicators */}
@@ -109,23 +110,12 @@ export default function PartnerBanner() {
     </div>
   );
 
-  if (p.website) {
-    return (
-      <a
-        href={p.website}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-sm transition-shadow"
-        style={{ textDecoration: "none" }}
-      >
-        {inner}
-      </a>
-    );
-  }
-
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-4">
+    <button
+      onClick={() => navigate(`/partner/${p.id}`)}
+      className="w-full text-left bg-white border border-gray-200 rounded-xl p-4 hover:shadow-sm transition-shadow cursor-pointer"
+    >
       {inner}
-    </div>
+    </button>
   );
 }

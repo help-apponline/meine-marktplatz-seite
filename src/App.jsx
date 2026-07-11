@@ -12,6 +12,7 @@ import Dashboard from "./pages/Dashboard.jsx";
 import Werbepartner from "./pages/Werbepartner.jsx";
 import Admin from "./pages/Admin.jsx";
 import Profil from "./pages/Profil.jsx";
+import PartnerProfil from "./pages/PartnerProfil.jsx";
 import Impressum from "./pages/Impressum.jsx";
 import Datenschutz from "./pages/Datenschutz.jsx";
 import AGB from "./pages/AGB.jsx";
@@ -45,6 +46,7 @@ export default function App() {
           <Route path="/chat/:chatId" element={<Chat />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/werbepartner" element={<Werbepartner />} />
+          <Route path="/partner/:id" element={<PartnerProfil />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/profil" element={<Profil />} />
           <Route path="/impressum" element={<Impressum />} />
