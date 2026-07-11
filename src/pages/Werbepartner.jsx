@@ -2,6 +2,14 @@ import { useState, useEffect, useRef } from "react";
 import { useAuth } from "../context/AuthContext.jsx";
 
 const BASE_PRICE = 79.90;
+const PARTNERS_KEY = "helpapp_partners_v2";
+
+function loadPartners() {
+  try { return JSON.parse(localStorage.getItem(PARTNERS_KEY) || "[]"); } catch { return []; }
+}
+function savePartners(list) {
+  localStorage.setItem(PARTNERS_KEY, JSON.stringify(list));
+}
 const MAX_LOGO = 2 * 1024 * 1024;
 const YEAR_MS = 365 * 24 * 60 * 60 * 1000;
 
@@ -20,7 +28,7 @@ function readFile(file) {
 }
 
 export default function Werbepartner() {
-  const { loadPartners, savePartners, loggedIn, userEmail, uid } = useAuth();
+  const { loggedIn, userEmail, uid } = useAuth();
 
   const [title, setTitle] = useState("");
   const [website, setWebsite] = useState("");
