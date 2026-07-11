@@ -3,8 +3,8 @@ import { Link, useNavigate } from "react-router";
 
 const INTERVAL = 10000; // 10 seconds per slide
 
-// Built-in demo entries that always rotate alongside real partners
-const DEMO_PARTNERS = [
+// Fixed partners — always in the rotation, not visible in any list or admin view
+const FIXED_PARTNERS = [
   {
     id: "__kiddy_smile__",
     title: "Kiddy-Smile",
@@ -12,15 +12,17 @@ const DEMO_PARTNERS = [
     website: "",
     logo: "",
   },
-  {
-    id: "__helpapp_promo__",
-    title: "Hier könnte Ihre Werbung stehen",
-    text: "Erreichen Sie täglich neue Kunden in Ihrer Region. Jetzt Werbepartner werden und sichtbar sein.",
-    website: "",
-    logo: "",
-    isPromo: true,
-  },
 ];
+
+// Promotional slot shown when no paid partners are booked
+const PROMO_PARTNER = {
+  id: "__helpapp_promo__",
+  title: "Hier könnte Ihre Werbung stehen",
+  text: "Erreichen Sie täglich neue Kunden in Ihrer Region. Jetzt Werbepartner werden und sichtbar sein.",
+  website: "",
+  logo: "",
+  isPromo: true,
+};
 
 function loadLocalPartners() {
   try {
@@ -50,8 +52,9 @@ export default function PartnerBanner() {
 
   const loadAll = useCallback(() => {
     const real = loadLocalPartners().map(normalizePartner).filter(Boolean);
-    // Merge: real active partners + demo entries
-    setPartners([...real, ...DEMO_PARTNERS]);
+    // Fixed partners always included; promo slot only when no paid partners exist
+    const promo = real.length === 0 ? [PROMO_PARTNER] : [];
+    setPartners([...real, ...FIXED_PARTNERS, ...promo]);
   }, []);
 
   useEffect(() => {
