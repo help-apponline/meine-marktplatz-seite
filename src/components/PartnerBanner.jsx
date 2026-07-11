@@ -1,27 +1,26 @@
 import { useState, useEffect, useCallback } from "react";
 import { Link, useNavigate } from "react-router";
 
-const INTERVAL = 10000; // 10 seconds
+const INTERVAL = 10000; // 10 seconds per slide
 
-// Placeholder shown when no partners are booked
-function Placeholder() {
-  return (
-    <Link to="/werbepartner" style={{ textDecoration: "none" }}>
-      <div className="bg-gradient-to-r from-gray-50 to-orange-50 border border-orange-100 rounded-xl px-5 py-4 flex items-center justify-between gap-4 hover:shadow-sm transition-shadow cursor-pointer">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-lg bg-[#ff8a00]/10 flex items-center justify-center shrink-0 text-lg">📢</div>
-          <div>
-            <div className="font-semibold text-gray-700 text-sm">Hier könnte Ihre Werbung stehen</div>
-            <div className="text-xs text-gray-500 mt-0.5">Mehr Informationen finden Sie in unserem Werbepartner-Bereich</div>
-          </div>
-        </div>
-        <span className="text-xs font-bold text-[#ff8a00] bg-orange-50 border border-orange-100 px-2.5 py-1 rounded-full shrink-0 whitespace-nowrap">
-          Jetzt buchen →
-        </span>
-      </div>
-    </Link>
-  );
-}
+// Built-in demo entries that always rotate alongside real partners
+const DEMO_PARTNERS = [
+  {
+    id: "__kiddy_smile__",
+    title: "Kiddy-Smile",
+    text: "Liebevolle Kinderbetreuung und pädagogische Förderung — für glückliche Kinder und entspannte Eltern.",
+    website: "",
+    logo: "",
+  },
+  {
+    id: "__helpapp_promo__",
+    title: "Hier könnte Ihre Werbung stehen",
+    text: "Erreichen Sie täglich neue Kunden in Ihrer Region. Jetzt Werbepartner werden und sichtbar sein.",
+    website: "",
+    logo: "",
+    isPromo: true,
+  },
+];
 
 function loadLocalPartners() {
   try {
@@ -37,10 +36,8 @@ function normalizePartner(p) {
   const website = (p.website || p.website_url || "").trim();
   const logo = (p.logoDataUrl || p.logo_data_url || "").trim();
   const status = (p.status || "").toLowerCase();
-  const expiresAt = Number(p.expiresAt || p.expires_at || 0);
   if (p.paused) return null;
   if (status && status !== "active") return null;
-  if (expiresAt && expiresAt < Date.now()) return null;
   if (!title && !text && !logo) return null;
   return { id: p.id || title, title, text, website, logo };
 }
@@ -52,15 +49,16 @@ export default function PartnerBanner() {
   const navigate = useNavigate();
 
   const loadAll = useCallback(() => {
-    const local = loadLocalPartners().map(normalizePartner).filter(Boolean);
-    setPartners(local);
+    const real = loadLocalPartners().map(normalizePartner).filter(Boolean);
+    // Merge: real active partners + demo entries
+    setPartners([...real, ...DEMO_PARTNERS]);
   }, []);
 
   useEffect(() => {
     loadAll();
   }, []);
 
-  // Rotate every 10 seconds with a brief fade
+  // Rotate every 10 seconds
   useEffect(() => {
     if (partners.length <= 1) return;
     const t = setInterval(() => {
@@ -73,25 +71,30 @@ export default function PartnerBanner() {
     return () => clearInterval(t);
   }, [partners.length]);
 
-  if (!partners.length) return <Placeholder />;
+  if (!partners.length) return null;
 
   const p = partners[idx % partners.length];
+  const isPromo = !!p.isPromo;
 
   const inner = (
     <div
       className="flex items-center gap-4"
       style={{ opacity: fade ? 1 : 0, transition: "opacity 0.3s ease" }}
     >
-      {p.logo && (
+      {p.logo ? (
         <div className="w-14 h-14 rounded-xl border border-gray-100 bg-gray-50 flex items-center justify-center shrink-0 overflow-hidden">
           <img src={p.logo} alt={p.title} className="w-full h-full object-cover" />
         </div>
+      ) : isPromo ? (
+        <div className="w-10 h-10 rounded-lg bg-[#ff8a00]/10 flex items-center justify-center shrink-0 text-lg">📢</div>
+      ) : (
+        <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center shrink-0 text-lg">🤝</div>
       )}
       <div className="flex-1 min-w-0">
         <div className="font-bold text-gray-900 truncate">{p.title}</div>
         {p.text && <div className="text-sm text-gray-500 leading-snug line-clamp-2 mt-0.5">{p.text}</div>}
         <div className="text-xs text-[#ff8a00] mt-1 font-medium">
-          Mehr erfahren →
+          {isPromo ? "Jetzt Werbepartner werden →" : "Mehr erfahren →"}
         </div>
       </div>
       {/* Dot indicators */}
@@ -100,9 +103,15 @@ export default function PartnerBanner() {
           {partners.map((_, i) => (
             <button
               key={i}
-              onClick={e => { e.preventDefault(); e.stopPropagation(); setFade(false); setTimeout(() => { setIdx(i); setFade(true); }, 200); }}
+              type="button"
+              onClick={e => {
+                e.preventDefault();
+                e.stopPropagation();
+                setFade(false);
+                setTimeout(() => { setIdx(i); setFade(true); }, 200);
+              }}
               className={`w-1.5 h-1.5 rounded-full transition-colors ${i === idx % partners.length ? "bg-[#ff8a00]" : "bg-gray-200"}`}
-              aria-label={`Partner ${i + 1}`}
+              aria-label={`Eintrag ${i + 1}`}
             />
           ))}
         </div>
@@ -110,12 +119,36 @@ export default function PartnerBanner() {
     </div>
   );
 
+  // Promo card links to werbepartner page
+  if (isPromo) {
+    return (
+      <Link
+        to="/werbepartner"
+        className="block w-full bg-gradient-to-r from-gray-50 to-orange-50 border border-orange-100 rounded-xl p-4 hover:shadow-sm transition-shadow"
+        style={{ textDecoration: "none" }}
+      >
+        {inner}
+      </Link>
+    );
+  }
+
+  // Real partner or Kiddy-Smile → internal profile page (or just display if no real id)
+  if (p.id && !p.id.startsWith("__")) {
+    return (
+      <button
+        type="button"
+        onClick={() => navigate(`/partner/${p.id}`)}
+        className="w-full text-left bg-white border border-gray-200 rounded-xl p-4 hover:shadow-sm transition-shadow cursor-pointer"
+      >
+        {inner}
+      </button>
+    );
+  }
+
+  // Kiddy-Smile demo (no profile page yet) — non-clickable display
   return (
-    <button
-      onClick={() => navigate(`/partner/${p.id}`)}
-      className="w-full text-left bg-white border border-gray-200 rounded-xl p-4 hover:shadow-sm transition-shadow cursor-pointer"
-    >
+    <div className="bg-white border border-gray-200 rounded-xl p-4">
       {inner}
-    </button>
+    </div>
   );
 }
