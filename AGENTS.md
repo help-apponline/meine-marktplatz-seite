@@ -1,6 +1,6 @@
 # Project Setup
 
-Last updated: <!-- update this after each change -->
+Last updated: 2026-07-11
 
 Factual state of this project, for the assistant's reference. Record project
 state here only — structure, installed packages, active patterns. Keep it brief.
