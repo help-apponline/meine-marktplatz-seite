@@ -83,7 +83,7 @@ export default function Angebote() {
       )}
 
       <div className="mt-10">
-        <PartnerBanner />
+        <PartnerBanner visitorCity={city} />
       </div>
     </section>
   );

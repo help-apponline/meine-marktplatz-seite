@@ -3,16 +3,14 @@ import { Link, useNavigate } from "react-router";
 
 const INTERVAL = 10000; // 10 seconds per slide
 
-// Fixed partners — always in the rotation, not visible in any list or admin view
-const FIXED_PARTNERS = [];
-
-// Promotional slot shown when no paid partners are booked
+// Promotional slot — always shown when no paid partners match
 const PROMO_PARTNER = {
   id: "__helpapp_promo__",
   title: "Hier könnte Ihre Werbung stehen",
   text: "Erreichen Sie täglich neue Kunden in Ihrer Region. Jetzt Werbepartner werden und sichtbar sein.",
   website: "",
   logo: "",
+  region: "",
   isPromo: true,
 };
 
@@ -29,28 +27,52 @@ function normalizePartner(p) {
   const text = (p.text || "").trim();
   const website = (p.website || p.website_url || "").trim();
   const logo = (p.logoDataUrl || p.logo_data_url || "").trim();
+  const region = (p.region || "").trim().toLowerCase();
   const status = (p.status || "").toLowerCase();
   if (p.paused) return null;
   if (status && status !== "active") return null;
   if (!title && !text && !logo) return null;
-  return { id: p.id || title, title, text, website, logo };
+  return { id: p.id || title, title, text, website, logo, region };
 }
 
-export default function PartnerBanner() {
+/**
+ * Check if a partner's region matches the visitor's location.
+ * A partner with no region set is shown everywhere (deutschlandweit).
+ * A partner with a region set is shown when the visitor's city/region
+ * contains or is contained in the partner's region string.
+ */
+function regionMatches(partnerRegion, visitorCity) {
+  if (!partnerRegion) return true; // no region = show everywhere
+  if (!visitorCity) return true;   // visitor location unknown = show all
+  const pr = partnerRegion.toLowerCase();
+  const vc = visitorCity.toLowerCase();
+  // Simple substring match in both directions
+  return pr.includes(vc) || vc.includes(pr) ||
+    pr.split(/[,/\s]+/).some(token => token.length > 2 && vc.includes(token)) ||
+    vc.split(/[,/\s]+/).some(token => token.length > 2 && pr.includes(token));
+}
+
+// Props: visitorCity (optional string) — e.g. passed from the current ad's city
+export default function PartnerBanner({ visitorCity = "" }) {
   const [partners, setPartners] = useState([]);
   const [idx, setIdx] = useState(0);
   const [fade, setFade] = useState(true);
   const navigate = useNavigate();
 
   const loadAll = useCallback(() => {
-    const real = loadLocalPartners().map(normalizePartner).filter(Boolean);
-    // Order: 1. Kiddy-Smile (always), 2. "Hier Werben" (always), 3. real paid partners
-    setPartners([...FIXED_PARTNERS, PROMO_PARTNER, ...real]);
-  }, []);
+    const allReal = loadLocalPartners().map(normalizePartner).filter(Boolean);
+
+    // Filter: partners whose region matches visitor city, plus any without a region set
+    const matched = allReal.filter(p => regionMatches(p.region, visitorCity));
+
+    // If no real partners match at all, show promo. Always append promo at end.
+    setPartners([...matched, PROMO_PARTNER]);
+  }, [visitorCity]);
 
   useEffect(() => {
     loadAll();
-  }, []);
+    setIdx(0);
+  }, [loadAll]);
 
   // Rotate every 10 seconds
   useEffect(() => {
@@ -87,6 +109,9 @@ export default function PartnerBanner() {
       <div className="flex-1 min-w-0">
         <div className="font-bold text-gray-900 truncate">{p.title}</div>
         {p.text && <div className="text-sm text-gray-500 leading-snug line-clamp-2 mt-0.5">{p.text}</div>}
+        {p.region && !isPromo && (
+          <div className="text-[11px] text-gray-400 mt-0.5">📍 {p.region}</div>
+        )}
         <div className="text-xs text-[#ff8a00] mt-1 font-medium">
           {isPromo ? "Jetzt Werbepartner werden →" : "Mehr erfahren →"}
         </div>
@@ -113,7 +138,7 @@ export default function PartnerBanner() {
     </div>
   );
 
-  // Promo card links to werbepartner page
+  // Promo card → werbepartner page
   if (isPromo) {
     return (
       <Link
@@ -126,20 +151,21 @@ export default function PartnerBanner() {
     );
   }
 
-  // Real partner or Kiddy-Smile → internal profile page (or just display if no real id)
+  // Real partner → internal profile page
   if (p.id && !p.id.startsWith("__")) {
     return (
-      <button
-        type="button"
+      <div
+        role="button"
+        tabIndex={0}
         onClick={() => navigate(`/partner/${p.id}`)}
+        onKeyDown={e => { if (e.key === "Enter" || e.key === " ") navigate(`/partner/${p.id}`); }}
         className="w-full text-left bg-white border border-gray-200 rounded-xl p-4 hover:shadow-sm transition-shadow cursor-pointer"
       >
         {inner}
-      </button>
+      </div>
     );
   }
 
-  // Kiddy-Smile demo (no profile page yet) — non-clickable display
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-4">
       {inner}

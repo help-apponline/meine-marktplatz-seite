@@ -83,7 +83,7 @@ export default function Gesuche() {
       )}
 
       <div className="mt-10">
-        <PartnerBanner />
+        <PartnerBanner visitorCity={city} />
       </div>
     </section>
   );

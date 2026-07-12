@@ -70,6 +70,7 @@ export default function Werbepartner() {
 
   const [selectedPlan, setSelectedPlan] = useState("year");
   const [title, setTitle] = useState("");
+  const [region, setRegion] = useState("");
   const [website, setWebsite] = useState("");
   const [text, setText] = useState("");
   const [logoDataUrl, setLogoDataUrl] = useState("");
@@ -133,6 +134,7 @@ export default function Werbepartner() {
       plan: plan.key,
       planLabel: plan.label,
       title: title.trim(),
+      region: region.trim(),
       website: website.trim() ? (website.startsWith("http") ? website.trim() : "https://" + website.trim()) : "",
       text: text.trim(),
       logoDataUrl,
@@ -193,6 +195,7 @@ export default function Werbepartner() {
     setEditId(p.id);
     setSelectedPlan(p.plan || "year");
     setTitle(p.title || "");
+    setRegion(p.region || "");
     setWebsite(p.website || "");
     setText(p.text || "");
     setLogoDataUrl(p.logoDataUrl || "");
@@ -295,6 +298,9 @@ export default function Werbepartner() {
                 className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-gray-700 transition-colors" />
               <div className="text-xs text-gray-400 text-right mt-1">{title.length}/60</div>
             </div>
+            <input type="text" placeholder="Region / Ort (z.B. Hamburg, NRW, deutschlandweit)" value={region}
+              onChange={e => setRegion(e.target.value)} maxLength={60}
+              className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-gray-700 transition-colors" />
             <input type="url" placeholder="https://www.firma.de (optional)" value={website}
               onChange={e => setWebsite(e.target.value)}
               className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-gray-700 transition-colors" />
