@@ -17,8 +17,10 @@ export default function Chat() {
 
   // Auftrag annehmen
   const [showDealModal, setShowDealModal] = useState(false);
+  const [dealName, setDealName] = useState("");
   const [dealEmail, setDealEmail] = useState("");
   const [dealPhone, setDealPhone] = useState("");
+  const [dealErrors, setDealErrors] = useState({});
   const [dealSaving, setDealSaving] = useState(false);
 
   const bottomRef = useRef(null);
@@ -70,21 +72,37 @@ export default function Chat() {
     setSending(false);
   }
 
+  function validateDeal() {
+    const errs = {};
+    if (!dealName.trim()) errs.name = "Bitte gib deinen Namen ein.";
+    if (!dealEmail.trim()) {
+      errs.email = "Bitte gib deine E-Mail-Adresse ein.";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(dealEmail.trim())) {
+      errs.email = "Bitte gib eine gültige E-Mail-Adresse ein.";
+    }
+    if (dealPhone.trim() && !/^[+\d\s\-()]{6,}$/.test(dealPhone.trim())) {
+      errs.phone = "Bitte gib eine gültige Telefonnummer ein.";
+    }
+    return errs;
+  }
+
   async function handleAcceptDeal(e) {
     e.preventDefault();
-    if (!dealEmail.trim() && !dealPhone.trim()) return;
+    const errs = validateDeal();
+    if (Object.keys(errs).length > 0) { setDealErrors(errs); return; }
+    setDealErrors({});
     setDealSaving(true);
     try {
       const updated = await updateChatDeal(chatId, {
         deal_status: "accepted",
+        contact_name: dealName.trim(),
         contact_email: dealEmail.trim(),
         contact_phone: dealPhone.trim(),
       });
       if (updated) {
         setChatMeta(prev => ({ ...prev, ...updated }));
-        // Send a system message in the chat
         await sendMessage(chatId,
-          `✅ Auftrag angenommen!\n\nKontaktdaten:\n📧 ${dealEmail.trim() || "—"}\n📱 ${dealPhone.trim() || "—"}`
+          `✅ Auftrag angenommen!\n\nKontaktdaten:\n👤 ${dealName.trim()}\n📧 ${dealEmail.trim()}\n📱 ${dealPhone.trim() || "—"}`
         );
         const msgs = await loadMessages(chatId);
         setMessages(msgs);
@@ -154,9 +172,10 @@ export default function Chat() {
       </div>
 
       {/* Accepted contact info banner */}
-      {isAccepted && (chatMeta.contact_email || chatMeta.contact_phone) && (
+      {isAccepted && (chatMeta.contact_name || chatMeta.contact_email || chatMeta.contact_phone) && (
         <div className="bg-green-50 border border-green-200 rounded-xl px-5 py-4 mb-5 text-sm">
           <div className="font-bold text-green-800 mb-1">Kontaktdaten wurden ausgetauscht</div>
+          {chatMeta.contact_name  && <p className="text-green-700">👤 {chatMeta.contact_name}</p>}
           {chatMeta.contact_email && <p className="text-green-700">📧 {chatMeta.contact_email}</p>}
           {chatMeta.contact_phone && <p className="text-green-700">📱 {chatMeta.contact_phone}</p>}
         </div>
@@ -221,16 +240,25 @@ export default function Chat() {
             </p>
             <form onSubmit={handleAcceptDeal} className="flex flex-col gap-4">
               <div>
-                <label className="block text-xs font-semibold text-gray-700 mb-1.5">E-Mail-Adresse</label>
-                <input type="email" value={dealEmail} onChange={e => setDealEmail(e.target.value)}
-                  placeholder="deine@email.de"
-                  className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-gray-700 transition-colors" />
+                <label className="block text-xs font-semibold text-gray-700 mb-1.5">Name <span className="text-red-400">*</span></label>
+                <input type="text" value={dealName} onChange={e => { setDealName(e.target.value); setDealErrors(p=>({...p,name:""})); }}
+                  placeholder="Vor- und Nachname"
+                  className={`w-full px-4 py-2.5 border rounded-xl text-sm focus:outline-none transition-colors ${dealErrors.name ? "border-red-400 focus:border-red-500" : "border-gray-200 focus:border-gray-700"}`} />
+                {dealErrors.name && <p className="text-xs text-red-500 mt-1">{dealErrors.name}</p>}
               </div>
               <div>
-                <label className="block text-xs font-semibold text-gray-700 mb-1.5">Telefonnummer (optional)</label>
-                <input type="tel" value={dealPhone} onChange={e => setDealPhone(e.target.value)}
+                <label className="block text-xs font-semibold text-gray-700 mb-1.5">E-Mail-Adresse <span className="text-red-400">*</span></label>
+                <input type="email" value={dealEmail} onChange={e => { setDealEmail(e.target.value); setDealErrors(p=>({...p,email:""})); }}
+                  placeholder="deine@email.de"
+                  className={`w-full px-4 py-2.5 border rounded-xl text-sm focus:outline-none transition-colors ${dealErrors.email ? "border-red-400 focus:border-red-500" : "border-gray-200 focus:border-gray-700"}`} />
+                {dealErrors.email && <p className="text-xs text-red-500 mt-1">{dealErrors.email}</p>}
+              </div>
+              <div>
+                <label className="block text-xs font-semibold text-gray-700 mb-1.5">Telefonnummer <span className="text-gray-400 font-normal">(optional)</span></label>
+                <input type="tel" value={dealPhone} onChange={e => { setDealPhone(e.target.value); setDealErrors(p=>({...p,phone:""})); }}
                   placeholder="+49 123 456789"
-                  className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-gray-700 transition-colors" />
+                  className={`w-full px-4 py-2.5 border rounded-xl text-sm focus:outline-none transition-colors ${dealErrors.phone ? "border-red-400 focus:border-red-500" : "border-gray-200 focus:border-gray-700"}`} />
+                {dealErrors.phone && <p className="text-xs text-red-500 mt-1">{dealErrors.phone}</p>}
               </div>
               <div className="flex gap-3 mt-2">
                 <button type="button" onClick={() => setShowDealModal(false)}
