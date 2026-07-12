@@ -249,6 +249,11 @@ export function AuthProvider({ children }) {
     catch { return null; }
   }, []);
 
+  const updateChatDeal = useCallback(async (chatId, data) => {
+    try { return await pb.collection("chats").update(chatId, data); }
+    catch { return null; }
+  }, []);
+
   const loadMessages = useCallback(async (chatId) => {
     const result = await pb.collection("messages").getList(1, 200, {
       sort: "created",
@@ -299,7 +304,7 @@ export function AuthProvider({ children }) {
       login, register, logout,
       resendVerification, requestPasswordReset,
       loadAds, createAd, loadMyAds, getAd, updateAd, deleteAd, setAdStatus,
-      loadChats, getOrCreateChat, getChat, loadMessages, sendMessage,
+      loadChats, getOrCreateChat, getChat, updateChatDeal, loadMessages, sendMessage,
       uid, pb,
     }}>
       {children}
