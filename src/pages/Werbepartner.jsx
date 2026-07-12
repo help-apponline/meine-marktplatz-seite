@@ -7,7 +7,7 @@ import Check from "icon:check";
 
 const PHOTOS_OPTIONS = [
   { key: "none",  label: "Keine Fotos",      maxPhotos: 0, price: 0 },
-  { key: "s3",    label: "Bis zu 3 Fotos",   maxPhotos: 3, price: 4.99 },
+  { key: "s3",    label: "Bis zu 3 Fotos",   maxPhotos: 3, price: 6.99 },
   { key: "s5",    label: "Bis zu 6 Fotos",   maxPhotos: 6, price: 9.99 },
 ];
 const MAX_LOGO = 2 * 1024 * 1024;
