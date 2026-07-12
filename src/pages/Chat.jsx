@@ -15,6 +15,20 @@ export default function Chat() {
   const [loading, setLoading] = useState(true);
   const [sending, setSending] = useState(false);
 
+  const [sendError, setSendError] = useState("");
+
+  // Prüft ob eine Nachricht Kontaktdaten enthält
+  function containsContactData(msg) {
+    const t = msg.toLowerCase();
+    // E-Mail
+    if (/[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}/.test(t)) return true;
+    // Telefonnummer: mindestens 6 aufeinanderfolgende Ziffern (auch mit +, Leerzeichen, Bindestrichen)
+    if (/(\+?\d[\d\s\-\/]{4,}\d)/.test(t)) return true;
+    // Straße/Adresse: Straße, Str., Weg, Platz, Allee + Hausnummer
+    if (/(stra[sß]e|str\.|weg|platz|allee|gasse|ring)\s+\d|\d+\s+(stra[sß]e|str\.|weg|platz|allee|gasse|ring)/i.test(t)) return true;
+    return false;
+  }
+
   // Auftrag annehmen
   const [showDealModal, setShowDealModal] = useState(false);
   const [dealName, setDealName] = useState("");
@@ -62,6 +76,11 @@ export default function Chat() {
     e.preventDefault();
     const t = text.trim();
     if (!t || !loggedIn || sending) return;
+    if (containsContactData(t)) {
+      setSendError('Kontaktdaten (E-Mail, Telefon, Adresse) d\u00fcrfen hier nicht ausgetauscht werden. Bitte nutze den Button \u201eAuftrag annehmen\u201c.');
+      return;
+    }
+    setSendError("");
     setSending(true);
     setText("");
     try {
@@ -204,8 +223,14 @@ export default function Chat() {
       </div>
 
       {/* Message form */}
+      {sendError && (
+        <div className="mb-3 px-4 py-3 bg-red-50 border border-red-200 rounded-xl text-sm text-red-700 flex items-start gap-2">
+          <span className="shrink-0 mt-0.5">⚠️</span>
+          <span>{sendError}</span>
+        </div>
+      )}
       <form onSubmit={handleSend} className="flex gap-3 items-start flex-wrap mt-auto">
-        <textarea value={text} onChange={e => setText(e.target.value)}
+        <textarea value={text} onChange={e => { setText(e.target.value); if (sendError) setSendError(""); }}
           placeholder="Nachricht schreiben…"
           rows={2}
           className="flex-1 min-w-[200px] px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-gray-700 resize-y transition-colors"
