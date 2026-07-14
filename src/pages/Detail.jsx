@@ -4,6 +4,7 @@ import { useAuth } from "../context/AuthContext.jsx";
 import { pb } from "../lib/pb.js";
 import Flag from "icon:flag";
 import StarDisplay from "../components/StarDisplay.jsx";
+import FavoriteButton from "../components/FavoriteButton.jsx";
 
 export default function Detail() {
   const { id } = useParams();
@@ -123,7 +124,8 @@ export default function Detail() {
           ))}
         </div>
       )}
-      <div className="flex gap-3 flex-wrap">
+      <div className="flex gap-3 flex-wrap items-center">
+        {ad?.id && <FavoriteButton adId={ad.id} />}
         <button onClick={handleKontakt} disabled={contacting}
           className="px-6 py-3 bg-gray-900 text-white font-bold rounded-xl hover:bg-gray-700 transition-colors text-sm disabled:opacity-60">
           {contacting ? "Wird geöffnet…" : "Kontakt aufnehmen"}

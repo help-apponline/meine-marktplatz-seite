@@ -40,6 +40,7 @@ export default function Layout() {
     { to: "/anzeige", label: "Anzeige aufgeben" },
     { to: "/werbepartner", label: "Werbepartner" },
     { to: "/inbox", label: "Meine Chats" },
+    { to: "/merkliste", label: "Merkliste" },
     { to: "/dashboard", label: "Übersicht" },
   ];
 

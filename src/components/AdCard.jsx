@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import { categoryLabel } from "../lib/categories.js";
+import FavoriteButton from "./FavoriteButton.jsx";
 
 export default function AdCard({ ad, seedItem }) {
   if (ad) {
@@ -29,9 +30,12 @@ export default function AdCard({ ad, seedItem }) {
             </div>
           </div>
         </div>
-        <span className="bg-[#2b2b2b] text-white text-xs font-semibold px-3 py-1.5 rounded-full shrink-0">
-          {ad.priceLabel || ad.price || "—"}
-        </span>
+        <div className="flex items-center gap-2 shrink-0">
+          <span className="bg-[#2b2b2b] text-white text-xs font-semibold px-3 py-1.5 rounded-full">
+            {ad.priceLabel || ad.price || "—"}
+          </span>
+          <FavoriteButton adId={ad.id} size="sm" />
+        </div>
       </Link>
     );
   }

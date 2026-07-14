@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router";
 import { AuthProvider } from "./context/AuthContext.jsx";
+import { FavoritesProvider } from "./context/FavoritesContext.jsx";
 import Layout from "./components/Layout.jsx";
 import Home from "./pages/Home.jsx";
 import Angebote from "./pages/Angebote.jsx";
@@ -12,6 +13,7 @@ import Dashboard from "./pages/Dashboard.jsx";
 import Werbepartner from "./pages/Werbepartner.jsx";
 import Admin from "./pages/Admin.jsx";
 import Profil from "./pages/Profil.jsx";
+import Merkliste from "./pages/Merkliste.jsx";
 import PartnerProfil from "./pages/PartnerProfil.jsx";
 import UeberUns from "./pages/UeberUns.jsx";
 import Impressum from "./pages/Impressum.jsx";
@@ -35,28 +37,31 @@ function NotFound() {
 export default function App() {
   return (
     <AuthProvider>
-      <Routes>
-        <Route element={<Layout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/angebote" element={<Angebote />} />
-          <Route path="/gesuche" element={<Gesuche />} />
-          <Route path="/anzeige" element={<Anzeige />} />
-          <Route path="/detail/:id" element={<Detail />} />
-          <Route path="/detail" element={<Detail />} />
-          <Route path="/inbox" element={<Inbox />} />
-          <Route path="/chat/:chatId" element={<Chat />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/werbepartner" element={<Werbepartner />} />
-          <Route path="/partner/:id" element={<PartnerProfil />} />
-          <Route path="/admin" element={<Admin />} />
-          <Route path="/profil" element={<Profil />} />
-          <Route path="/ueber-uns" element={<UeberUns />} />
-          <Route path="/impressum" element={<Impressum />} />
-          <Route path="/datenschutz" element={<Datenschutz />} />
-          <Route path="/agb" element={<AGB />} />
-          <Route path="*" element={<NotFound />} />
-        </Route>
-      </Routes>
+      <FavoritesProvider>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/angebote" element={<Angebote />} />
+            <Route path="/gesuche" element={<Gesuche />} />
+            <Route path="/anzeige" element={<Anzeige />} />
+            <Route path="/detail/:id" element={<Detail />} />
+            <Route path="/detail" element={<Detail />} />
+            <Route path="/inbox" element={<Inbox />} />
+            <Route path="/chat/:chatId" element={<Chat />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/werbepartner" element={<Werbepartner />} />
+            <Route path="/partner/:id" element={<PartnerProfil />} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/profil" element={<Profil />} />
+            <Route path="/merkliste" element={<Merkliste />} />
+            <Route path="/ueber-uns" element={<UeberUns />} />
+            <Route path="/impressum" element={<Impressum />} />
+            <Route path="/datenschutz" element={<Datenschutz />} />
+            <Route path="/agb" element={<AGB />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
+        </Routes>
+      </FavoritesProvider>
     </AuthProvider>
   );
 }
