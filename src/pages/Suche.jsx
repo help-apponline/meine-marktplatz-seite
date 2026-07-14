@@ -10,7 +10,8 @@ function matchesQuery(ad, q) {
   const catInfo = ad.category ? categoryLabel(ad.category) : null;
   const haystack = [ad.title, ad.city, ad.zip, ad.when, ad.desc, catInfo?.label]
     .filter(Boolean).join(" ").toLowerCase();
-  return haystack.includes(q.toLowerCase().trim());
+  // Every word must appear somewhere in the haystack
+  return q.trim().toLowerCase().split(/\s+/).every(word => haystack.includes(word));
 }
 
 export default function Suche() {

@@ -36,7 +36,7 @@ export default function Gesuche() {
     if (q) {
       const catInfo = a.category ? categoryLabel(a.category) : null;
       const haystack = [a.title, a.city, a.zip, a.when, a.desc, catInfo?.label].filter(Boolean).join(" ").toLowerCase();
-      if (!haystack.includes(q)) return false;
+      if (!q.split(/\s+/).every(word => haystack.includes(word))) return false;
     }
     if (city.trim() && !(a.city + " " + a.zip).toLowerCase().includes(city.trim().toLowerCase())) return false;
     if (maxPrice) {
