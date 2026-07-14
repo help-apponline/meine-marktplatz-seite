@@ -3,6 +3,7 @@ import { useParams, useSearchParams, Link, useNavigate } from "react-router";
 import { useAuth } from "../context/AuthContext.jsx";
 import { pb } from "../lib/pb.js";
 import Flag from "icon:flag";
+import StarDisplay from "../components/StarDisplay.jsx";
 
 export default function Detail() {
   const { id } = useParams();
@@ -15,6 +16,7 @@ export default function Detail() {
   const [contacting, setContacting] = useState(false);
   const [reported, setReported] = useState(false);
   const [reporting, setReporting] = useState(false);
+  const [ownerRating, setOwnerRating] = useState(null); // { avg, count }
 
   // Seed item via query params (for demo links that have no DB id)
   const seedTitle = searchParams.get("title");
@@ -25,7 +27,23 @@ export default function Detail() {
 
   useEffect(() => {
     if (!id) return;
-    getAd(id).then(a => { setAd(a); setLoading(false); });
+    getAd(id).then(a => {
+      setAd(a);
+      setLoading(false);
+      // Load owner ratings
+      if (a?.owner) {
+        const ownerId = typeof a.owner === "object" ? a.owner.id : a.owner;
+        pb.collection("ratings").getList(1, 200, {
+          filter: `ratee = "${ownerId}"`,
+          sort: "-created",
+        }).then(res => {
+          if (res.totalItems > 0) {
+            const avg = res.items.reduce((s, r) => s + (r.stars || 0), 0) / res.totalItems;
+            setOwnerRating({ avg, count: res.totalItems });
+          }
+        }).catch(() => {});
+      }
+    });
   }, [id]);
 
   async function handleReport() {
@@ -83,10 +101,15 @@ export default function Detail() {
     <section className="bg-white min-h-screen px-5 md:px-10 py-12 max-w-5xl mx-auto w-full">
       <h2 className="text-3xl font-extrabold text-gray-900 mb-2">{title}</h2>
       <p className="text-gray-500 mb-5">{meta}</p>
-      <div className="flex flex-wrap gap-2 mb-5">
+      <div className="flex flex-wrap gap-2 mb-5 items-center">
         <span className="bg-gray-900 text-white text-xs font-semibold px-3 py-1.5 rounded-full">{priceLabel}</span>
         <span className="bg-gray-800 text-white text-xs font-semibold px-3 py-1.5 rounded-full">Status: {status}</span>
         {createdAt && <span className="bg-gray-700 text-white text-xs font-semibold px-3 py-1.5 rounded-full">erstellt: {createdAt}</span>}
+        {ownerRating && (
+          <span className="flex items-center gap-1.5 bg-amber-50 border border-amber-100 px-3 py-1.5 rounded-full">
+            <StarDisplay stars={ownerRating.avg} count={ownerRating.count} size={14} />
+          </span>
+        )}
       </div>
       <p className="text-gray-600 leading-relaxed max-w-2xl mb-6">{desc}</p>
 

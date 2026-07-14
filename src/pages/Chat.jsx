@@ -5,6 +5,8 @@ import { pb } from "../lib/pb.js";
 import Send from "icon:send";
 import CheckCircle from "icon:check-circle";
 import X from "icon:x";
+import RatingModal from "../components/RatingModal.jsx";
+import StarDisplay from "../components/StarDisplay.jsx";
 
 export default function Chat() {
   const { chatId } = useParams();
@@ -30,6 +32,8 @@ export default function Chat() {
   }
 
   // Auftrag annehmen
+  const [showRatingModal, setShowRatingModal] = useState(false);
+  const [myRating, setMyRating] = useState(null); // null = not yet loaded, false = not rated, object = rated
   const [showDealModal, setShowDealModal] = useState(false);
   const [dealName, setDealName] = useState("");
   const [dealEmail, setDealEmail] = useState("");
@@ -49,6 +53,19 @@ export default function Chat() {
       setMessages(msgs);
       setLoading(false);
       bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+
+      // Check if I've already rated this chat
+      try {
+        const myId = pb.authStore.record?.id;
+        if (myId) {
+          const existing = await pb.collection("ratings").getFirstListItem(
+            `chat = "${chatId}" && rater = "${myId}"`
+          );
+          setMyRating(existing);
+        }
+      } catch {
+        setMyRating(false); // no rating yet
+      }
 
       try {
         unsub = await pb.collection("messages").subscribe("*", (e) => {
@@ -193,10 +210,30 @@ export default function Chat() {
       {/* Accepted contact info banner */}
       {isAccepted && (chatMeta.contact_name || chatMeta.contact_email || chatMeta.contact_phone) && (
         <div className="bg-green-50 border border-green-200 rounded-xl px-5 py-4 mb-5 text-sm">
-          <div className="font-bold text-green-800 mb-1">Kontaktdaten wurden ausgetauscht</div>
-          {chatMeta.contact_name  && <p className="text-green-700">👤 {chatMeta.contact_name}</p>}
-          {chatMeta.contact_email && <p className="text-green-700">📧 {chatMeta.contact_email}</p>}
-          {chatMeta.contact_phone && <p className="text-green-700">📱 {chatMeta.contact_phone}</p>}
+          <div className="flex items-start justify-between gap-3 flex-wrap">
+            <div>
+              <div className="font-bold text-green-800 mb-1">Kontaktdaten wurden ausgetauscht</div>
+              {chatMeta.contact_name  && <p className="text-green-700">👤 {chatMeta.contact_name}</p>}
+              {chatMeta.contact_email && <p className="text-green-700">📧 {chatMeta.contact_email}</p>}
+              {chatMeta.contact_phone && <p className="text-green-700">📱 {chatMeta.contact_phone}</p>}
+            </div>
+            <div className="shrink-0">
+              {myRating ? (
+                <div className="flex flex-col items-end gap-1">
+                  <span className="text-xs text-gray-500 font-medium">Deine Bewertung</span>
+                  <StarDisplay stars={myRating.stars} size={18} />
+                </div>
+              ) : myRating === false ? (
+                <button
+                  type="button"
+                  onClick={() => setShowRatingModal(true)}
+                  className="flex items-center gap-1.5 px-4 py-2 bg-white border border-green-300 text-green-700 font-semibold rounded-xl text-xs hover:bg-green-100 transition-colors"
+                >
+                  ⭐ Bewertung abgeben
+                </button>
+              ) : null}
+            </div>
+          </div>
         </div>
       )}
 
@@ -298,6 +335,22 @@ export default function Chat() {
             </form>
           </div>
         </div>
+      )}
+
+      {/* Rating modal */}
+      {showRatingModal && (
+        <RatingModal
+          chatId={chatId}
+          rateeId={(chatMeta?.participants || []).find(p => p !== userId) || null}
+          rateeLabel={chatMeta?.contact_name || chatMeta?.ad_title || "den anderen Nutzer"}
+          onClose={() => setShowRatingModal(false)}
+          onDone={() => {
+            setShowRatingModal(false);
+            pb.collection("ratings").getFirstListItem(
+              `chat = "${chatId}" && rater = "${userId}"`
+            ).then(r => setMyRating(r)).catch(() => {});
+          }}
+        />
       )}
 
     </section>
