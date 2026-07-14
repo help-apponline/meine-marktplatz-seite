@@ -4,6 +4,7 @@ import { useFavoritesContext } from "../context/FavoritesContext.jsx";
 import { categoryLabel } from "../lib/categories.js";
 import FavoriteButton from "../components/FavoriteButton.jsx";
 import { pb } from "../lib/pb.js";
+import PartnerBanner from "../components/PartnerBanner.jsx";
 
 export default function Merkliste() {
   const ctx = useFavoritesContext();
@@ -97,6 +98,10 @@ export default function Merkliste() {
           </div>
         </div>
       ) : (
+        <div>
+        <div className="mb-6">
+          <PartnerBanner />
+        </div>
         <div className="flex flex-col gap-3">
           {ads.map(ad => {
             const thumb = ad.photos?.[0];
@@ -137,6 +142,7 @@ export default function Merkliste() {
               </div>
             );
           })}
+        </div>
         </div>
       )}
     </section>
