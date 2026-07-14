@@ -3,6 +3,7 @@ import { useParams, useSearchParams, Link, useNavigate } from "react-router";
 import { useAuth } from "../context/AuthContext.jsx";
 import { pb } from "../lib/pb.js";
 import { trackPageView, loadAdViews } from "../lib/pageviews.js";
+import AdCard from "../components/AdCard.jsx";
 import Flag from "icon:flag";
 import Trash2 from "icon:trash-2";
 import Share2 from "icon:share-2";
@@ -25,6 +26,7 @@ export default function Detail() {
   const [shared, setShared] = useState(false);
   const [ownerRating, setOwnerRating] = useState(null); // { avg, count }
   const [adViews, setAdViews] = useState(null);
+  const [similarAds, setSimilarAds] = useState([]);
 
   // Seed item via query params (for demo links that have no DB id)
   const seedTitle = searchParams.get("title");
@@ -41,6 +43,26 @@ export default function Detail() {
       setLoading(false);
       // Load view count for this ad
       loadAdViews(id).then(v => setAdViews(v)).catch(() => {});
+      // Load similar ads — same category & role, exclude this one
+      if (a?.category && a?.role) {
+        pb.collection("ads").getList(1, 4, {
+          filter: `category = "${a.category}" && role = "${a.role}" && status = "offen" && id != "${id}"`,
+          sort: "-created",
+        }).then(res => {
+          const items = res.items.map(r => {
+            const photoUrls = (r.photos || []).map(f => pb.files.getURL(r, f, { thumb: "400x300" }));
+            return {
+              id: r.id, title: r.title, city: r.city, when: r.when_time,
+              priceLabel: r.price_label || r.price || "—",
+              category: r.category || "", role: r.role, status: r.status,
+              ownerId: r.owner, photos: photoUrls,
+              createdAt: new Date(r.created).getTime(),
+              expiresAt: r.expires_at ? new Date(r.expires_at).getTime() : null,
+            };
+          });
+          setSimilarAds(items);
+        }).catch(() => {});
+      }
       // Load owner ratings
       if (a?.owner) {
         const ownerId = typeof a.owner === "object" ? a.owner.id : a.owner;
@@ -207,6 +229,16 @@ export default function Detail() {
           </button>
         ) : null}
       </div>
+
+      {/* Similar ads */}
+      {similarAds.length > 0 && (
+        <div className="mt-12 pt-8 border-t border-gray-100">
+          <h3 className="text-lg font-extrabold text-gray-900 mb-4">Ähnliche Anzeigen</h3>
+          <div className="flex flex-col gap-3">
+            {similarAds.map(a => <AdCard key={a.id} ad={a} />)}
+          </div>
+        </div>
+      )}
     </section>
   );
 }
