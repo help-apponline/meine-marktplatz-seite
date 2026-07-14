@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router";
 import { useAuth } from "../context/AuthContext.jsx";
+import PartnerBanner from "../components/PartnerBanner.jsx";
 
 export default function Dashboard() {
   const { loggedIn, userEmail, userRole, loadMyAds, loadChats } = useAuth();
@@ -72,6 +73,10 @@ export default function Dashboard() {
           ))}
         </div>
       )}
+
+      <div className="mt-10">
+        <PartnerBanner />
+      </div>
     </section>
   );
 }
