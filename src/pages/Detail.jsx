@@ -5,6 +5,7 @@ import { pb } from "../lib/pb.js";
 import Flag from "icon:flag";
 import StarDisplay from "../components/StarDisplay.jsx";
 import FavoriteButton from "../components/FavoriteButton.jsx";
+import User from "icon:user";
 
 export default function Detail() {
   const { id } = useParams();
@@ -126,6 +127,15 @@ export default function Detail() {
       )}
       <div className="flex gap-3 flex-wrap items-center">
         {ad?.id && <FavoriteButton adId={ad.id} />}
+        {ad?.role === "helper" && ad?.ownerId && (
+          <Link
+            to={`/helfer/${ad.ownerId}`}
+            className="inline-flex items-center gap-1.5 px-4 py-3 border border-gray-200 text-gray-600 font-semibold rounded-xl hover:bg-gray-50 transition-colors text-sm"
+            style={{ textDecoration: "none" }}
+          >
+            <User size={14} /> Helfer-Profil
+          </Link>
+        )}
         <button onClick={handleKontakt} disabled={contacting}
           className="px-6 py-3 bg-gray-900 text-white font-bold rounded-xl hover:bg-gray-700 transition-colors text-sm disabled:opacity-60">
           {contacting ? "Wird geöffnet…" : "Kontakt aufnehmen"}

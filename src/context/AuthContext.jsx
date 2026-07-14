@@ -329,6 +329,7 @@ function adaptAd(record) {
   return {
     id: record.id,
     owner: record.owner,
+    ownerId: record.expand?.owner?.id || (typeof record.owner === "string" ? record.owner : record.owner?.id) || "",
     role: record.role,
     name: record.name,
     title: record.title,

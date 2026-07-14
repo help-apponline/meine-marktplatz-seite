@@ -1,24 +1,25 @@
 import { Link } from "react-router";
 import { categoryLabel } from "../lib/categories.js";
 import FavoriteButton from "./FavoriteButton.jsx";
+import User from "icon:user";
 
 export default function AdCard({ ad, seedItem }) {
   if (ad) {
     const thumb = ad.photos?.[0];
     const cat = ad.category ? categoryLabel(ad.category) : null;
     return (
-      <Link
-        to={`/detail/${ad.id}`}
-        className="bg-gray-50 rounded-xl px-5 py-4 flex justify-between items-center gap-4 hover:-translate-y-0.5 hover:shadow transition-all"
-        style={{ textDecoration: "none", color: "inherit" }}
-      >
-        <div className="flex items-center gap-3 min-w-0 flex-1">
+      <div className="bg-gray-50 rounded-xl border border-gray-100 hover:border-gray-200 hover:shadow-sm transition-all">
+        <Link
+          to={`/detail/${ad.id}`}
+          className="flex items-center gap-4 px-5 py-4"
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
           {thumb && (
             <div className="w-12 h-12 rounded-lg overflow-hidden border border-gray-200 shrink-0">
               <img src={thumb} alt="" className="w-full h-full object-cover" />
             </div>
           )}
-          <div className="min-w-0">
+          <div className="min-w-0 flex-1">
             <div className="font-bold text-gray-900 truncate">{ad.title}</div>
             <div className="flex items-center gap-2 flex-wrap mt-0.5">
               <span className="text-sm text-gray-500">{ad.city} · {ad.when || "—"}</span>
@@ -29,14 +30,27 @@ export default function AdCard({ ad, seedItem }) {
               )}
             </div>
           </div>
-        </div>
-        <div className="flex items-center gap-2 shrink-0">
-          <span className="bg-[#2b2b2b] text-white text-xs font-semibold px-3 py-1.5 rounded-full">
-            {ad.priceLabel || ad.price || "—"}
-          </span>
-          <FavoriteButton adId={ad.id} size="sm" />
-        </div>
-      </Link>
+          <div className="flex items-center gap-2 shrink-0">
+            <span className="bg-[#2b2b2b] text-white text-xs font-semibold px-3 py-1.5 rounded-full hidden sm:block">
+              {ad.priceLabel || ad.price || "—"}
+            </span>
+            <FavoriteButton adId={ad.id} size="sm" />
+          </div>
+        </Link>
+        {/* Helper profile link */}
+        {ad.role === "helper" && ad.ownerId && (
+          <div className="border-t border-gray-100 px-5 py-2">
+            <Link
+              to={`/helfer/${ad.ownerId}`}
+              className="inline-flex items-center gap-1 text-xs text-gray-400 hover:text-[#ff8a00] transition-colors font-medium"
+              style={{ textDecoration: "none" }}
+              onClick={e => e.stopPropagation()}
+            >
+              <User size={11} /> Helfer-Profil ansehen
+            </Link>
+          </div>
+        )}
+      </div>
     );
   }
 
