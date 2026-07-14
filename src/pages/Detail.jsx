@@ -76,10 +76,6 @@ export default function Detail() {
             });
             return items;
           })
-          .then(items => {
-            if (items.length < 2) return tryFetch(baseFilter);
-            return items;
-          })
           .then(items => setSimilarAds(items.slice(0, 4)))
           .catch(() => {});
       }
