@@ -7,6 +7,7 @@ import X from "icon:x";
 import Pencil from "icon:pencil";
 import Trash2 from "icon:trash-2";
 import CheckCircle from "icon:check-circle";
+import { CATEGORIES } from "../lib/categories.js";
 
 const MAX_PHOTOS = 5;
 const MAX_PHOTO_SIZE = 8 * 1024 * 1024; // 8 MB
@@ -26,6 +27,7 @@ export default function Anzeige() {
   const [city, setCity] = useState("");
   const [price, setPrice] = useState("");
   const [preisart, setPreisart] = useState("");
+  const [category, setCategory] = useState("");
   const [desc, setDesc] = useState("");
   const [photos, setPhotos] = useState([]); // File objects
   const [photoPreviews, setPhotoPreviews] = useState([]); // data URLs for preview
@@ -103,13 +105,13 @@ export default function Anzeige() {
     const chosenWhen = formRole === "helper" ? helperWhen : when;
     const priceLabel = price ? `${price} (${preisart || "—"})` : (preisart || "—");
     try {
-      await createAd({ role: formRole, name, zip, city, title, when: chosenWhen, price, preisart, priceLabel, desc, photos });
+      await createAd({ role: formRole, name, zip, city, title, when: chosenWhen, price, preisart, priceLabel, category, desc, photos });
       const updated = await loadMyAds();
       setMyAds(updated);
       setMsg("Anzeige veröffentlicht!");
       setName(""); setNeed(""); setWhen(""); setBudget(""); setSkills("");
       setHelperWhen(""); setRadius(""); setZip(""); setCity("");
-      setPrice(""); setPreisart(""); setDesc(""); setPhotos([]); setPhotoPreviews([]);
+      setPrice(""); setPreisart(""); setCategory(""); setDesc(""); setPhotos([]); setPhotoPreviews([]);
       setTimeout(() => setMsg(""), 3000);
     } catch (e) {
       setError("Fehler beim Speichern. Bitte versuche es erneut.");

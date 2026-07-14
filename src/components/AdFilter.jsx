@@ -1,8 +1,9 @@
 import Search from "icon:search";
 import X from "icon:x";
+import { CATEGORIES } from "../lib/categories.js";
 
-export default function AdFilter({ query, setQuery, city, setCity, maxPrice, setMaxPrice, onReset }) {
-  const hasFilters = query || city || maxPrice;
+export default function AdFilter({ query, setQuery, city, setCity, maxPrice, setMaxPrice, category, setCategory, onReset }) {
+  const hasFilters = query || city || maxPrice || category;
 
   return (
     <div className="bg-gray-50 border border-gray-100 rounded-2xl p-5 mb-8 flex flex-col gap-3">
@@ -29,16 +30,33 @@ export default function AdFilter({ query, setQuery, city, setCity, maxPrice, set
         />
 
         {/* Max price */}
-        <div className="relative">
-          <input
-            type="number"
-            placeholder="Max. Preis (€)"
-            value={maxPrice}
-            min={0}
-            onChange={e => setMaxPrice(e.target.value)}
-            className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-900 focus:outline-none focus:border-gray-700 transition-colors bg-white"
-          />
-        </div>
+        <input
+          type="number"
+          placeholder="Max. Preis (€)"
+          value={maxPrice}
+          min={0}
+          onChange={e => setMaxPrice(e.target.value)}
+          className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-900 focus:outline-none focus:border-gray-700 transition-colors bg-white"
+        />
+      </div>
+
+      {/* Category chips */}
+      <div className="flex flex-wrap gap-2">
+        {CATEGORIES.map(c => (
+          <button
+            key={c.value}
+            type="button"
+            onClick={() => setCategory(category === c.value ? "" : c.value)}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold border transition-colors ${
+              category === c.value
+                ? "bg-gray-900 text-white border-gray-900"
+                : "bg-white text-gray-600 border-gray-200 hover:border-gray-400"
+            }`}
+          >
+            <span>{c.emoji}</span>
+            {c.label}
+          </button>
+        ))}
       </div>
 
       {hasFilters && (

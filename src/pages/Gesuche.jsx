@@ -11,6 +11,7 @@ export default function Gesuche() {
   const [query, setQuery] = useState("");
   const [city, setCity] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
+  const [category, setCategory] = useState("");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -37,10 +38,11 @@ export default function Gesuche() {
       const cap = parseFloat(maxPrice);
       if (!isNaN(cap) && adPrice !== null && adPrice > cap) return false;
     }
+    if (category && a.category !== category) return false;
     return true;
   });
 
-  function reset() { setQuery(""); setCity(""); setMaxPrice(""); }
+  function reset() { setQuery(""); setCity(""); setMaxPrice(""); setCategory(""); }
 
   return (
     <section className="bg-white min-h-screen px-5 md:px-10 py-12 max-w-5xl mx-auto w-full">
@@ -60,6 +62,7 @@ export default function Gesuche() {
         query={query} setQuery={setQuery}
         city={city} setCity={setCity}
         maxPrice={maxPrice} setMaxPrice={setMaxPrice}
+        category={category} setCategory={setCategory}
         onReset={reset}
       />
 

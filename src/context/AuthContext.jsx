@@ -119,6 +119,7 @@ export function AuthProvider({ children }) {
       fd.append("preisart", data.preisart || "");
       fd.append("price_label", data.priceLabel || "");
       fd.append("desc", data.desc || "");
+      fd.append("category", data.category || "");
       fd.append("status", "offen");
       for (const file of data.photos) fd.append("photos", file);
       body = fd;
@@ -135,6 +136,7 @@ export function AuthProvider({ children }) {
         preisart: data.preisart || "",
         price_label: data.priceLabel || "",
         desc: data.desc || "",
+        category: data.category || "",
         status: "offen",
       };
     }
@@ -331,6 +333,7 @@ function adaptAd(record) {
     priceLabel: record.price_label || record.price || "—",
     desc: record.desc,
     status: record.status,
+    category: record.category || "",
     photos: photoUrls,
     createdAt: new Date(record.created).getTime(),
     updatedAt: new Date(record.updated).getTime(),
