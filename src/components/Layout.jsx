@@ -12,7 +12,7 @@ import Shield from "icon:shield";
 import UserCircle from "icon:user-circle";
 
 export default function Layout() {
-  const { loggedIn, userEmail, userRole, logout, userId, isAdmin } = useAuth();
+  const { loggedIn, userEmail, userRole, logout, userId, isAdmin, avatarUrl } = useAuth();
   const location = useLocation();
   const [showAuth, setShowAuth] = useState(false);
   const [authHint, setAuthHint] = useState("");
@@ -136,7 +136,9 @@ export default function Layout() {
                   }`
                 }
                 style={{ textDecoration: "none" }}>
-                <UserCircle size={14} />
+                {avatarUrl
+                  ? <img src={avatarUrl} alt="" className="w-5 h-5 rounded-full object-cover border border-white/30" />
+                  : <UserCircle size={14} />}
                 Mein Profil
               </NavLink>
             )}
@@ -162,9 +164,11 @@ export default function Layout() {
               {userEmail} · {userRole === "helper" ? "Auftragnehmer" : "Auftraggeber"}
             </span>
             <NavLink to="/profil" className={({ isActive }) =>
-              `flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full border transition-all ${isActive ? "bg-[rgba(255,138,0,0.2)] border-[rgba(255,138,0,0.5)] text-white" : "border-white/20 text-white/60 hover:text-white hover:border-white/40"}`
+              `flex items-center gap-1.5 text-xs font-semibold px-2 py-1 rounded-full border transition-all ${isActive ? "bg-[rgba(255,138,0,0.2)] border-[rgba(255,138,0,0.5)] text-white" : "border-white/20 text-white/60 hover:text-white hover:border-white/40"}`
             } style={{ textDecoration: "none" }}>
-              <UserCircle size={13} />
+              {avatarUrl
+                ? <img src={avatarUrl} alt="" className="w-5 h-5 rounded-full object-cover border border-white/30" />
+                : <UserCircle size={13} />}
               Profil
             </NavLink>
             {isAdmin && (

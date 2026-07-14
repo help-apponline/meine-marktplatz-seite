@@ -1,12 +1,20 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useAuth } from "../context/AuthContext.jsx";
 import { pb } from "../lib/pb.js";
 import User from "icon:user";
 import Lock from "icon:lock";
 import Check from "icon:check";
+import Camera from "icon:camera";
 
 export default function Profil() {
-  const { loggedIn, userEmail, userRole, userId, verified } = useAuth();
+  const { loggedIn, userEmail, userRole, userId, verified, avatarUrl, setAvatarUrl, getAvatarUrl } = useAuth();
+
+  // Avatar state
+  const avatarRef = useRef(null);
+  const [avatarPreview, setAvatarPreview] = useState(avatarUrl || "");
+  const [avatarLoading, setAvatarLoading] = useState(false);
+  const [avatarMsg, setAvatarMsg] = useState("");
+  const [avatarError, setAvatarError] = useState("");
 
   // Password change state
   const [oldPw, setOldPw] = useState("");
@@ -24,6 +32,55 @@ export default function Profil() {
 
   function roleLabel(r) {
     return r === "helper" ? "Auftragnehmer" : "Auftraggeber";
+  }
+
+  function handleAvatarPick(e) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    if (file.size > 5 * 1024 * 1024) {
+      setAvatarError("Bild zu groß (max. 5 MB).");
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = ev => setAvatarPreview(ev.target.result);
+    reader.readAsDataURL(file);
+  }
+
+  async function handleAvatarSave() {
+    const file = avatarRef.current?.files?.[0];
+    if (!file) return;
+    setAvatarLoading(true);
+    setAvatarError("");
+    setAvatarMsg("");
+    try {
+      const fd = new FormData();
+      fd.append("avatar", file);
+      const updated = await pb.collection("users").update(userId, fd);
+      const url = getAvatarUrl(updated);
+      setAvatarUrl(url);
+      setAvatarPreview(url);
+      setAvatarMsg("Profilbild gespeichert.");
+      setTimeout(() => setAvatarMsg(""), 3000);
+      avatarRef.current.value = "";
+    } catch {
+      setAvatarError("Profilbild konnte nicht gespeichert werden.");
+    }
+    setAvatarLoading(false);
+  }
+
+  async function handleAvatarRemove() {
+    setAvatarLoading(true);
+    setAvatarError("");
+    try {
+      await pb.collection("users").update(userId, { "avatar": null });
+      setAvatarUrl("");
+      setAvatarPreview("");
+      setAvatarMsg("Profilbild entfernt.");
+      setTimeout(() => setAvatarMsg(""), 3000);
+    } catch {
+      setAvatarError("Profilbild konnte nicht entfernt werden.");
+    }
+    setAvatarLoading(false);
   }
 
   async function handleNameSave(e) {
@@ -57,7 +114,6 @@ export default function Profil() {
       });
       setPwMsg("Passwort erfolgreich geändert. Bitte melde dich erneut an.");
       setOldPw(""); setNewPw(""); setNewPw2("");
-      // Re-auth after password change
       setTimeout(() => {
         pb.authStore.clear();
         window.location.reload();
@@ -83,25 +139,82 @@ export default function Profil() {
     );
   }
 
+  const initials = (pb.authStore.record?.name || userEmail || "?")[0].toUpperCase();
+  const hasNewFile = !!avatarRef.current?.files?.[0];
+
   return (
     <section className="bg-white min-h-screen px-5 md:px-10 py-12 max-w-2xl mx-auto w-full">
       <h2 className="text-3xl font-extrabold text-gray-900 mb-2">Mein Profil</h2>
       <p className="text-gray-500 text-base mb-8">Deine persönlichen Einstellungen.</p>
 
-      {/* Account info */}
+      {/* Avatar */}
       <div className="border border-gray-100 rounded-2xl p-6 bg-gray-50 mb-6">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-base shrink-0">
-            {userEmail?.[0]?.toUpperCase() || "?"}
+        <div className="flex items-center gap-5 flex-wrap">
+          {/* Avatar circle */}
+          <div className="relative shrink-0">
+            <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-gray-200 bg-gray-900 flex items-center justify-center">
+              {avatarPreview ? (
+                <img src={avatarPreview} alt="Profilbild" className="w-full h-full object-cover" />
+              ) : (
+                <span className="text-white font-extrabold text-2xl">{initials}</span>
+              )}
+            </div>
+            <button
+              type="button"
+              onClick={() => avatarRef.current?.click()}
+              className="absolute -bottom-1 -right-1 w-7 h-7 bg-[#ff8a00] text-white rounded-full flex items-center justify-center shadow hover:bg-[#e67a00] transition-colors"
+              title="Bild ändern"
+            >
+              <Camera size={13} />
+            </button>
+            <input
+              ref={avatarRef}
+              type="file"
+              accept="image/jpeg,image/png,image/webp"
+              className="hidden"
+              onChange={handleAvatarPick}
+            />
           </div>
-          <div>
-            <div className="font-bold text-gray-900">{userEmail}</div>
-            <div className="text-xs text-gray-500 mt-0.5 flex items-center gap-2">
+
+          <div className="flex-1 min-w-0">
+            <div className="font-bold text-gray-900 mb-0.5">{pb.authStore.record?.name || userEmail}</div>
+            <div className="text-xs text-gray-500 flex items-center gap-2">
               {roleLabel(userRole)}
               {verified
                 ? <span className="flex items-center gap-0.5 text-green-600"><Check size={11} strokeWidth={3} /> Bestätigt</span>
                 : <span className="text-amber-600">E-Mail nicht bestätigt</span>}
             </div>
+            <div className="flex gap-2 mt-3 flex-wrap">
+              <button
+                type="button"
+                onClick={() => avatarRef.current?.click()}
+                className="text-xs px-3 py-1.5 border border-gray-200 rounded-lg hover:bg-gray-100 transition-colors text-gray-700 font-medium"
+              >
+                Bild auswählen
+              </button>
+              {avatarPreview && (
+                <button
+                  type="button"
+                  onClick={handleAvatarRemove}
+                  disabled={avatarLoading}
+                  className="text-xs px-3 py-1.5 border border-red-100 rounded-lg hover:bg-red-50 transition-colors text-red-600 font-medium disabled:opacity-50"
+                >
+                  Entfernen
+                </button>
+              )}
+              {avatarRef.current?.files?.[0] && (
+                <button
+                  type="button"
+                  onClick={handleAvatarSave}
+                  disabled={avatarLoading}
+                  className="text-xs px-3 py-1.5 bg-gray-900 text-white rounded-lg hover:bg-gray-700 transition-colors font-bold disabled:opacity-50"
+                >
+                  {avatarLoading ? "Wird gespeichert…" : "Speichern"}
+                </button>
+              )}
+            </div>
+            {avatarMsg && <p className="text-green-600 text-xs mt-2">{avatarMsg}</p>}
+            {avatarError && <p className="text-red-600 text-xs mt-2">{avatarError}</p>}
           </div>
         </div>
       </div>
@@ -109,7 +222,7 @@ export default function Profil() {
       {/* Name */}
       <div className="border border-gray-100 rounded-2xl p-6 mb-6">
         <h3 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
-          <User size={16} /> Name anzeigen
+          <User size={16} /> Anzeigename
         </h3>
         <form onSubmit={handleNameSave} className="flex flex-col gap-3">
           <input

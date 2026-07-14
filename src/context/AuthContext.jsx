@@ -12,6 +12,12 @@ export function AuthProvider({ children }) {
   const [verified, setVerified] = useState(() => pb.authStore.record?.verified || false);
   const [isAdmin, setIsAdmin] = useState(() => !!pb.authStore.record?.is_admin);
 
+  function getAvatarUrl(record) {
+    if (!record?.avatar) return "";
+    try { return pb.files.getURL(record, record.avatar, { thumb: "100x100" }); } catch { return ""; }
+  }
+  const [avatarUrl, setAvatarUrl] = useState(() => getAvatarUrl(pb.authStore.record));
+
   useEffect(() => {
     const unsub = pb.authStore.onChange(() => {
       const valid = pb.authStore.isValid;
@@ -21,6 +27,7 @@ export function AuthProvider({ children }) {
       setUserId(pb.authStore.record?.id || "");
       setVerified(pb.authStore.record?.verified || false);
       setIsAdmin(!!pb.authStore.record?.is_admin);
+      setAvatarUrl(getAvatarUrl(pb.authStore.record));
     });
     return () => unsub();
   }, []);
@@ -302,7 +309,7 @@ export function AuthProvider({ children }) {
 
   return (
     <AuthContext.Provider value={{
-      loggedIn, userEmail, userRole, userId, verified, isAdmin,
+      loggedIn, userEmail, userRole, userId, verified, isAdmin, avatarUrl, setAvatarUrl, getAvatarUrl,
       login, register, logout,
       resendVerification, requestPasswordReset,
       loadAds, createAd, loadMyAds, getAd, updateAd, deleteAd, setAdStatus,
