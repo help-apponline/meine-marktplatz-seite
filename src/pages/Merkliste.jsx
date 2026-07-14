@@ -76,10 +76,6 @@ export default function Merkliste() {
         Anzeigen, die du gespeichert hast — immer griffbereit.
       </p>
 
-      <div className="mb-6">
-        <PartnerBanner />
-      </div>
-
       {isLoading ? (
         <p className="text-gray-400 text-sm">Wird geladen…</p>
       ) : ads.length === 0 ? (
@@ -146,6 +142,10 @@ export default function Merkliste() {
         </div>
         </div>
       )}
+
+      <div className="mt-10">
+        <PartnerBanner />
+      </div>
     </section>
   );
 }
