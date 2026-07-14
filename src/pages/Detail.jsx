@@ -4,6 +4,7 @@ import { useAuth } from "../context/AuthContext.jsx";
 import { pb } from "../lib/pb.js";
 import Flag from "icon:flag";
 import Trash2 from "icon:trash-2";
+import Share2 from "icon:share-2";
 import StarDisplay from "../components/StarDisplay.jsx";
 import FavoriteButton from "../components/FavoriteButton.jsx";
 import User from "icon:user";
@@ -20,6 +21,7 @@ export default function Detail() {
   const [reported, setReported] = useState(false);
   const [reporting, setReporting] = useState(false);
   const [deleting, setDeleting] = useState(false);
+  const [shared, setShared] = useState(false);
   const [ownerRating, setOwnerRating] = useState(null); // { avg, count }
 
   // Seed item via query params (for demo links that have no DB id)
@@ -49,6 +51,23 @@ export default function Detail() {
       }
     });
   }, [id]);
+
+  async function handleShare() {
+    const title = ad?.title || seedTitle || "Anzeige";
+    const url = window.location.href;
+    const text = `${title} – auf der Help App`;
+    if (navigator.share) {
+      try { await navigator.share({ title, text, url }); } catch { /* user cancelled */ }
+    } else {
+      try {
+        await navigator.clipboard.writeText(url);
+        setShared(true);
+        setTimeout(() => setShared(false), 2500);
+      } catch {
+        window.open(`https://wa.me/?text=${encodeURIComponent(text + "\n" + url)}`, "_blank");
+      }
+    }
+  }
 
   async function handleDelete() {
     if (!ad?.id) return;
@@ -158,6 +177,11 @@ export default function Detail() {
         <Link to="/" className="px-6 py-3 border border-gray-200 text-gray-700 font-semibold rounded-xl hover:bg-gray-50 transition-colors text-sm" style={{ textDecoration: "none" }}>
           ← Zur Übersicht
         </Link>
+        <button onClick={handleShare}
+          className="flex items-center gap-1.5 px-4 py-3 border border-gray-200 text-gray-600 hover:border-gray-400 font-semibold rounded-xl transition-colors text-sm">
+          <Share2 size={14} />
+          {shared ? "Link kopiert!" : "Teilen"}
+        </button>
         {/* Owner sees delete; others see report */}
         {ad?.id && userId && ad?.ownerId && ad.ownerId === userId ? (
           <button onClick={handleDelete} disabled={deleting}
