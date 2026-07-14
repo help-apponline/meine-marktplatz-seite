@@ -15,6 +15,7 @@ import Admin from "./pages/Admin.jsx";
 import Profil from "./pages/Profil.jsx";
 import Merkliste from "./pages/Merkliste.jsx";
 import HelferProfil from "./pages/HelferProfil.jsx";
+import Suche from "./pages/Suche.jsx";
 import PartnerProfil from "./pages/PartnerProfil.jsx";
 import UeberUns from "./pages/UeberUns.jsx";
 import Impressum from "./pages/Impressum.jsx";
@@ -56,6 +57,7 @@ export default function App() {
             <Route path="/profil" element={<Profil />} />
             <Route path="/merkliste" element={<Merkliste />} />
             <Route path="/helfer/:userId" element={<HelferProfil />} />
+            <Route path="/suche" element={<Suche />} />
             <Route path="/ueber-uns" element={<UeberUns />} />
             <Route path="/impressum" element={<Impressum />} />
             <Route path="/datenschutz" element={<Datenschutz />} />

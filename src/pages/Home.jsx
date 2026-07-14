@@ -12,7 +12,7 @@ export default function Home() {
     const q = searchInput.trim();
     if (!q) return;
     // Navigate to Angebote with city pre-filled via query string
-    navigate(`/angebote?q=${encodeURIComponent(q)}`);
+    navigate(`/suche?q=${encodeURIComponent(q)}`);
   }
 
   return (
