@@ -3,6 +3,7 @@ import { useParams, useSearchParams, Link, useNavigate } from "react-router";
 import { useAuth } from "../context/AuthContext.jsx";
 import { pb } from "../lib/pb.js";
 import Flag from "icon:flag";
+import Trash2 from "icon:trash-2";
 import StarDisplay from "../components/StarDisplay.jsx";
 import FavoriteButton from "../components/FavoriteButton.jsx";
 import User from "icon:user";
@@ -10,7 +11,7 @@ import User from "icon:user";
 export default function Detail() {
   const { id } = useParams();
   const [searchParams] = useSearchParams();
-  const { getAd, getOrCreateChat, loggedIn, verified } = useAuth();
+  const { getAd, getOrCreateChat, loggedIn, verified, userId, deleteAd } = useAuth();
   const navigate = useNavigate();
 
   const [ad, setAd] = useState(null);
@@ -18,6 +19,7 @@ export default function Detail() {
   const [contacting, setContacting] = useState(false);
   const [reported, setReported] = useState(false);
   const [reporting, setReporting] = useState(false);
+  const [deleting, setDeleting] = useState(false);
   const [ownerRating, setOwnerRating] = useState(null); // { avg, count }
 
   // Seed item via query params (for demo links that have no DB id)
@@ -47,6 +49,19 @@ export default function Detail() {
       }
     });
   }, [id]);
+
+  async function handleDelete() {
+    if (!ad?.id) return;
+    if (!confirm("Anzeige wirklich löschen? Das kann nicht rückgängig gemacht werden.")) return;
+    setDeleting(true);
+    try {
+      await deleteAd(ad.id);
+      navigate("/anzeige");
+    } catch {
+      setDeleting(false);
+      alert("Löschen fehlgeschlagen. Bitte versuche es erneut.");
+    }
+  }
 
   async function handleReport() {
     if (!ad?.id) return;
