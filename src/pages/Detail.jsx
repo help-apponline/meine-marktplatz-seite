@@ -151,6 +151,11 @@ export default function Detail() {
             <StarDisplay stars={ownerRating.avg} count={ownerRating.count} size={14} />
           </span>
         )}
+        {ad?.ownerId && userId && ad.ownerId === userId && adViews !== null && (
+          <span className="flex items-center gap-1.5 bg-blue-50 border border-blue-100 text-blue-700 text-xs font-semibold px-3 py-1.5 rounded-full">
+            👁 {adViews} {adViews === 1 ? "Aufruf" : "Aufrufe"}
+          </span>
+        )}
       </div>
       <p className="text-gray-600 leading-relaxed max-w-2xl mb-6">{desc}</p>
 

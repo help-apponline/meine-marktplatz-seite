@@ -8,6 +8,7 @@ import Pencil from "icon:pencil";
 import Trash2 from "icon:trash-2";
 import CheckCircle from "icon:check-circle";
 import { CATEGORIES } from "../lib/categories.js";
+import { loadAdViews } from "../lib/pageviews.js";
 
 const MAX_PHOTOS = 5;
 const MAX_PHOTO_SIZE = 8 * 1024 * 1024; // 8 MB
@@ -32,6 +33,7 @@ export default function Anzeige() {
   const [photos, setPhotos] = useState([]); // File objects
   const [photoPreviews, setPhotoPreviews] = useState([]); // data URLs for preview
   const [myAds, setMyAds] = useState([]);
+  const [adViewCounts, setAdViewCounts] = useState({}); // { [adId]: number }
   const [msg, setMsg] = useState("");
   const [error, setError] = useState("");
   const [submitting, setSubmitting] = useState(false);
@@ -86,7 +88,16 @@ export default function Anzeige() {
   useEffect(() => {
     if (!loggedIn) return;
     setLoadingAds(true);
-    loadMyAds().then(ads => { setMyAds(ads); setLoadingAds(false); }).catch(() => setLoadingAds(false));
+    loadMyAds().then(ads => {
+      setMyAds(ads);
+      setLoadingAds(false);
+      // Load view counts for each ad
+      ads.forEach(a => {
+        loadAdViews(a.id).then(count => {
+          setAdViewCounts(prev => ({ ...prev, [a.id]: count }));
+        }).catch(() => {});
+      });
+    }).catch(() => setLoadingAds(false));
   }, [loggedIn]);
 
   async function handleSubmit(e) {
