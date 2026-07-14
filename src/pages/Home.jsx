@@ -27,20 +27,20 @@ export default function Home() {
         </p>
 
         {/* Quick search */}
-        <form onSubmit={handleSearch} className="flex gap-2 max-w-md mx-auto">
+        <form onSubmit={handleSearch} className="flex gap-0 max-w-sm mx-auto rounded-xl overflow-hidden border border-gray-200 shadow-sm focus-within:border-gray-400 transition-colors">
           <div className="relative flex-1">
-            <Search size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+            <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
             <input
               type="text"
-              placeholder="Ort oder PLZ eingeben…"
+              placeholder="Ort oder PLZ…"
               value={searchInput}
               onChange={e => setSearchInput(e.target.value)}
-              className="w-full pl-10 pr-4 py-3.5 border border-gray-200 rounded-xl text-sm text-gray-900 focus:outline-none focus:border-gray-700 transition-colors shadow-sm"
+              className="w-full pl-8 pr-3 py-2.5 text-sm text-gray-900 focus:outline-none bg-white"
             />
           </div>
           <button
             type="submit"
-            className="px-5 py-3.5 bg-[#ff8a00] text-white font-bold rounded-xl text-sm hover:bg-[#e67a00] transition-colors shadow-sm shrink-0"
+            className="px-4 py-2.5 bg-[#ff8a00] text-white font-semibold text-sm hover:bg-[#e67a00] transition-colors shrink-0"
           >
             Suchen
           </button>
