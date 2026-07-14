@@ -22,9 +22,24 @@ export default function PartnerProfil() {
   const [lightboxUrl, setLightboxUrl] = useState(null);
 
   useEffect(() => {
+    const originalTitle = document.title;
+    return () => { document.title = originalTitle; };
+  }, []);
+
+  useEffect(() => {
     const p = loadPartner(id);
     if (p) {
       setPartner(p);
+      // SEO: dynamic title and meta per partner
+      const pageTitle = `${p.title}${p.region ? " · " + p.region : ""} – Help App`;
+      document.title = pageTitle;
+      const desc = [p.text, p.region ? `Region: ${p.region}` : ""].filter(Boolean).join(" · ").slice(0, 155);
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc && desc) metaDesc.setAttribute("content", desc);
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle) ogTitle.setAttribute("content", pageTitle);
+      const ogDesc = document.querySelector('meta[property="og:description"]');
+      if (ogDesc && desc) ogDesc.setAttribute("content", desc);
     } else {
       setNotFound(true);
     }
@@ -49,8 +64,22 @@ export default function PartnerProfil() {
     );
   }
 
+  // Inject structured data (LocalBusiness) for Google
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": partner.title,
+    ...(partner.text ? { "description": partner.text } : {}),
+    ...(partner.region ? { "areaServed": partner.region } : {}),
+    ...(partner.website_url ? { "url": partner.website_url } : {}),
+  };
+
   return (
     <section className="bg-white min-h-screen px-5 md:px-10 py-10 max-w-3xl mx-auto w-full">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
 
       {/* Back link */}
       <Link to="/" className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-800 transition-colors mb-8"
