@@ -218,6 +218,28 @@ export default function Anzeige() {
           </div>
         </div>
 
+        {/* Category picker */}
+        <div>
+          <p className="text-xs text-gray-500 mb-2 font-medium">Kategorie <span className="text-gray-400 font-normal">(optional)</span></p>
+          <div className="flex flex-wrap gap-2">
+            {CATEGORIES.map(c => (
+              <button
+                key={c.value}
+                type="button"
+                onClick={() => setCategory(prev => prev === c.value ? "" : c.value)}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold border transition-colors ${
+                  category === c.value
+                    ? "bg-gray-900 text-white border-gray-900"
+                    : "bg-white text-gray-600 border-gray-200 hover:border-gray-400"
+                }`}
+              >
+                <span>{c.emoji}</span>
+                {c.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
         {formRole === "customer" && (
           <>
             <input type="text" placeholder="Wobei brauchst du Hilfe? (z.B. Umzug, Garten, Montage)" value={need} onChange={e => setNeed(e.target.value)}
