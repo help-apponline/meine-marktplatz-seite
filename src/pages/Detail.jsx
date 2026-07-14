@@ -158,13 +158,20 @@ export default function Detail() {
         <Link to="/" className="px-6 py-3 border border-gray-200 text-gray-700 font-semibold rounded-xl hover:bg-gray-50 transition-colors text-sm" style={{ textDecoration: "none" }}>
           ← Zur Übersicht
         </Link>
-        {ad?.id && (
+        {/* Owner sees delete; others see report */}
+        {ad?.id && userId && ad?.ownerId && ad.ownerId === userId ? (
+          <button onClick={handleDelete} disabled={deleting}
+            className="flex items-center gap-1.5 px-4 py-3 border border-red-100 text-red-500 hover:bg-red-50 hover:border-red-300 font-semibold rounded-xl transition-colors text-xs disabled:opacity-50 ml-auto">
+            <Trash2 size={13} />
+            {deleting ? "Wird gelöscht…" : "Anzeige löschen"}
+          </button>
+        ) : ad?.id ? (
           <button onClick={handleReport} disabled={reporting || reported}
             className="flex items-center gap-1.5 px-4 py-3 border border-gray-200 text-gray-400 hover:text-red-500 hover:border-red-200 font-semibold rounded-xl transition-colors text-xs disabled:opacity-50 ml-auto">
             <Flag size={13} />
             {reported ? "Gemeldet" : "Anzeige melden"}
           </button>
-        )}
+        ) : null}
       </div>
     </section>
   );
