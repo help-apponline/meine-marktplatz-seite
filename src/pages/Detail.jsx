@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, useSearchParams, Link, useNavigate } from "react-router";
 import { useAuth } from "../context/AuthContext.jsx";
 import { pb } from "../lib/pb.js";
+import { trackPageView, loadAdViews } from "../lib/pageviews.js";
 import Flag from "icon:flag";
 import Trash2 from "icon:trash-2";
 import Share2 from "icon:share-2";
@@ -23,6 +24,7 @@ export default function Detail() {
   const [deleting, setDeleting] = useState(false);
   const [shared, setShared] = useState(false);
   const [ownerRating, setOwnerRating] = useState(null); // { avg, count }
+  const [adViews, setAdViews] = useState(null);
 
   // Seed item via query params (for demo links that have no DB id)
   const seedTitle = searchParams.get("title");
@@ -33,9 +35,12 @@ export default function Detail() {
 
   useEffect(() => {
     if (!id) return;
+    trackPageView(`ad:${id}`);
     getAd(id).then(a => {
       setAd(a);
       setLoading(false);
+      // Load view count for this ad
+      loadAdViews(id).then(v => setAdViews(v)).catch(() => {});
       // Load owner ratings
       if (a?.owner) {
         const ownerId = typeof a.owner === "object" ? a.owner.id : a.owner;

@@ -21,6 +21,18 @@ export async function trackPageView(page) {
   }
 }
 
+// Load total views for a specific ad (page key = "ad:<id>")
+export async function loadAdViews(adId) {
+  try {
+    const records = await pb.collection("pageviews").getFullList({
+      filter: `page="ad:${adId}"`,
+    });
+    return records.reduce((s, r) => s + (r.count || 0), 0);
+  } catch {
+    return 0;
+  }
+}
+
 // Load stats: total views, per-page totals, last 30 days daily totals
 export async function loadPageviewStats() {
   try {
