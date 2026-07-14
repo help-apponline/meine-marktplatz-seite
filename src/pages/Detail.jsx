@@ -43,25 +43,45 @@ export default function Detail() {
       setLoading(false);
       // Load view count for this ad
       loadAdViews(id).then(v => setAdViews(v)).catch(() => {});
-      // Load similar ads — same category & role, exclude this one
+      // Load similar ads — same category & role, same city first, fallback to same PLZ prefix (region)
       if (a?.category && a?.role) {
-        pb.collection("ads").getList(1, 4, {
-          filter: `category = "${a.category}" && role = "${a.role}" && status = "offen" && id != "${id}"`,
-          sort: "-created",
-        }).then(res => {
-          const items = res.items.map(r => {
-            const photoUrls = (r.photos || []).map(f => pb.files.getURL(r, f, { thumb: "400x300" }));
-            return {
-              id: r.id, title: r.title, city: r.city, when: r.when_time,
-              priceLabel: r.price_label || r.price || "—",
-              category: r.category || "", role: r.role, status: r.status,
-              ownerId: r.owner, photos: photoUrls,
-              createdAt: new Date(r.created).getTime(),
-              expiresAt: r.expires_at ? new Date(r.expires_at).getTime() : null,
-            };
-          });
-          setSimilarAds(items);
-        }).catch(() => {});
+        function adaptSimilar(r) {
+          const photoUrls = (r.photos || []).map(f => pb.files.getURL(r, f, { thumb: "400x300" }));
+          return {
+            id: r.id, title: r.title, city: r.city, when: r.when_time,
+            priceLabel: r.price_label || r.price || "—",
+            category: r.category || "", role: r.role, status: r.status,
+            ownerId: r.owner, photos: photoUrls,
+            createdAt: new Date(r.created).getTime(),
+            expiresAt: r.expires_at ? new Date(r.expires_at).getTime() : null,
+          };
+        }
+        const baseFilter = `category = "${a.category}" && role = "${a.role}" && status = "offen" && id != "${id}"`;
+        const cityFilter = a.city ? `${baseFilter} && city = "${a.city.replace(/"/g, '')}"` : null;
+        const zipPrefix = a.zip ? a.zip.slice(0, 2) : null;
+        const regionFilter = zipPrefix ? `${baseFilter} && zip ~ "${zipPrefix}"` : null;
+
+        const tryFetch = (filter) =>
+          pb.collection("ads").getList(1, 4, { filter, sort: "-created" })
+            .then(res => res.items.map(adaptSimilar));
+
+        (cityFilter ? tryFetch(cityFilter) : Promise.resolve([]))
+          .then(items => {
+            if (items.length >= 2) return items;
+            // not enough in same city — try region (zip prefix)
+            if (regionFilter) return tryFetch(regionFilter).then(regional => {
+              const seen = new Set(items.map(i => i.id));
+              const merged = [...items, ...regional.filter(r => !seen.has(r.id))].slice(0, 4);
+              return merged;
+            });
+            return items;
+          })
+          .then(items => {
+            if (items.length < 2) return tryFetch(baseFilter);
+            return items;
+          })
+          .then(items => setSimilarAds(items.slice(0, 4)))
+          .catch(() => {});
       }
       // Load owner ratings
       if (a?.owner) {
