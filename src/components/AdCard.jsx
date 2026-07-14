@@ -7,8 +7,14 @@ export default function AdCard({ ad, seedItem }) {
   if (ad) {
     const thumb = ad.photos?.[0];
     const cat = ad.category ? categoryLabel(ad.category) : null;
+    const isNew = ad.createdAt && (Date.now() - ad.createdAt) < 48 * 60 * 60 * 1000;
+    const now = Date.now();
+    const daysLeft = ad.expiresAt ? Math.ceil((ad.expiresAt - now) / (1000 * 60 * 60 * 24)) : null;
+    const expiringSoon = daysLeft !== null && daysLeft <= 7 && daysLeft > 0;
+    const expired = daysLeft !== null && daysLeft <= 0;
+
     return (
-      <div className="bg-gray-50 rounded-xl border border-gray-100 hover:border-gray-200 hover:shadow-sm transition-all">
+      <div className={`bg-gray-50 rounded-xl border hover:shadow-sm transition-all ${expired ? "opacity-60 border-gray-200" : "border-gray-100 hover:border-gray-200"}`}>
         <Link
           to={`/detail/${ad.id}`}
           className="flex items-center gap-4 px-5 py-4"
@@ -20,13 +26,26 @@ export default function AdCard({ ad, seedItem }) {
             </div>
           )}
           <div className="min-w-0 flex-1">
-            <div className="font-bold text-gray-900 truncate">{ad.title}</div>
+            <div className="flex items-center gap-2 flex-wrap mb-0.5">
+              <span className="font-bold text-gray-900 truncate">{ad.title}</span>
+              {isNew && (
+                <span className="text-[10px] font-extrabold px-1.5 py-0.5 bg-[#ff8a00] text-white rounded-full uppercase tracking-wide shrink-0">
+                  Neu
+                </span>
+              )}
+            </div>
             <div className="flex items-center gap-2 flex-wrap mt-0.5">
               <span className="text-sm text-gray-500">{ad.city} · {ad.when || "—"}</span>
               {cat && (
                 <span className="text-xs px-2 py-0.5 bg-orange-50 border border-orange-100 text-orange-700 rounded-full font-medium">
                   {cat.emoji} {cat.label}
                 </span>
+              )}
+              {expiringSoon && (
+                <span className="text-xs text-amber-600 font-medium">⏳ läuft in {daysLeft} Tag{daysLeft === 1 ? "" : "en"} ab</span>
+              )}
+              {expired && (
+                <span className="text-xs text-gray-400 font-medium">abgelaufen</span>
               )}
             </div>
           </div>

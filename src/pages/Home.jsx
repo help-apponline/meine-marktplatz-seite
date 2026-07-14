@@ -1,7 +1,20 @@
-import { Link } from "react-router";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router";
 import PartnerBanner from "../components/PartnerBanner.jsx";
+import Search from "icon:search";
 
 export default function Home() {
+  const [searchInput, setSearchInput] = useState("");
+  const navigate = useNavigate();
+
+  function handleSearch(e) {
+    e.preventDefault();
+    const q = searchInput.trim();
+    if (!q) return;
+    // Navigate to Angebote with city pre-filled via query string
+    navigate(`/angebote?ort=${encodeURIComponent(q)}`);
+  }
+
   return (
     <>
       {/* Hero */}
@@ -9,9 +22,29 @@ export default function Home() {
         <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight mb-4">
           Finde Hilfe. Werde Helfer.
         </h1>
-        <p className="text-lg text-gray-500 max-w-xl mx-auto leading-relaxed">
+        <p className="text-lg text-gray-500 max-w-xl mx-auto leading-relaxed mb-8">
           Die Help App verbindet Menschen, die Unterstützung suchen, mit Helfern aus der Nähe – schnell und unkompliziert.
         </p>
+
+        {/* Quick search */}
+        <form onSubmit={handleSearch} className="flex gap-2 max-w-md mx-auto">
+          <div className="relative flex-1">
+            <Search size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+            <input
+              type="text"
+              placeholder="Ort oder PLZ eingeben…"
+              value={searchInput}
+              onChange={e => setSearchInput(e.target.value)}
+              className="w-full pl-10 pr-4 py-3.5 border border-gray-200 rounded-xl text-sm text-gray-900 focus:outline-none focus:border-gray-700 transition-colors shadow-sm"
+            />
+          </div>
+          <button
+            type="submit"
+            className="px-5 py-3.5 bg-[#ff8a00] text-white font-bold rounded-xl text-sm hover:bg-[#e67a00] transition-colors shadow-sm shrink-0"
+          >
+            Suchen
+          </button>
+        </form>
       </section>
 
       {/* Cards */}

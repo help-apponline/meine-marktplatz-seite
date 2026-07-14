@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router";
+import { Link, useSearchParams } from "react-router";
 import { useAuth } from "../context/AuthContext.jsx";
 import AdCard from "../components/AdCard.jsx";
 import AdFilter from "../components/AdFilter.jsx";
@@ -7,9 +7,10 @@ import PartnerBanner from "../components/PartnerBanner.jsx";
 
 export default function Gesuche() {
   const { loadAds } = useAuth();
+  const [searchParams] = useSearchParams();
   const [ads, setAds] = useState([]);
   const [query, setQuery] = useState("");
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState(() => searchParams.get("ort") || "");
   const [maxPrice, setMaxPrice] = useState("");
   const [category, setCategory] = useState("");
   const [loading, setLoading] = useState(true);
