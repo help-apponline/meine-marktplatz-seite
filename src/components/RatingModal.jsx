@@ -24,8 +24,14 @@ export default function RatingModal({ chatId, rateeId, rateeLabel, onClose, onDo
         comment: comment.trim(),
       });
       onDone?.();
-    } catch {
-      setError("Bewertung konnte nicht gespeichert werden. Bitte versuche es erneut.");
+    } catch (e) {
+      // Unique constraint violation → already rated
+      const msg = e?.response?.message || e?.message || "";
+      if (msg.toLowerCase().includes("unique") || e?.status === 400) {
+        setError("Du hast diesen Auftrag bereits bewertet.");
+      } else {
+        setError("Bewertung konnte nicht gespeichert werden. Bitte versuche es erneut.");
+      }
     }
     setSaving(false);
   }
