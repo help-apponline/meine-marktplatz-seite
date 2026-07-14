@@ -12,7 +12,7 @@ export default function Home() {
     const q = searchInput.trim();
     if (!q) return;
     // Navigate to Angebote with city pre-filled via query string
-    navigate(`/angebote?ort=${encodeURIComponent(q)}`);
+    navigate(`/angebote?q=${encodeURIComponent(q)}`);
   }
 
   return (
@@ -32,7 +32,7 @@ export default function Home() {
             <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
             <input
               type="text"
-              placeholder="Ort oder PLZ…"
+              placeholder="Stichwort, Ort oder PLZ…"
               value={searchInput}
               onChange={e => setSearchInput(e.target.value)}
               className="w-full pl-8 pr-3 py-2.5 text-sm text-gray-900 focus:outline-none bg-white"

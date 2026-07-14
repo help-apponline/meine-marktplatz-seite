@@ -4,13 +4,14 @@ import { useAuth } from "../context/AuthContext.jsx";
 import AdCard from "../components/AdCard.jsx";
 import AdFilter from "../components/AdFilter.jsx";
 import PartnerBanner from "../components/PartnerBanner.jsx";
+import { categoryLabel } from "../lib/categories.js";
 
 export default function Angebote() {
   const { loadAds } = useAuth();
   const [searchParams] = useSearchParams();
   const [ads, setAds] = useState([]);
-  const [query, setQuery] = useState("");
-  const [city, setCity] = useState(() => searchParams.get("ort") || "");
+  const [query, setQuery] = useState(() => searchParams.get("q") || "");
+  const [city, setCity] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
   const [category, setCategory] = useState("");
   const [loading, setLoading] = useState(true);
@@ -32,7 +33,11 @@ export default function Angebote() {
 
   const filtered = ads.filter(a => {
     const q = query.trim().toLowerCase();
-    if (q && !(a.title + " " + a.city + " " + a.when + " " + a.desc).toLowerCase().includes(q)) return false;
+    if (q) {
+      const catInfo = a.category ? categoryLabel(a.category) : null;
+      const haystack = [a.title, a.city, a.zip, a.when, a.desc, catInfo?.label].filter(Boolean).join(" ").toLowerCase();
+      if (!haystack.includes(q)) return false;
+    }
     if (city.trim() && !(a.city + " " + a.zip).toLowerCase().includes(city.trim().toLowerCase())) return false;
     if (maxPrice) {
       const adPrice = parsePrice(a.price);
