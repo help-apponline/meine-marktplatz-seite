@@ -36,11 +36,37 @@ export default function Detail() {
   const seedDesc = searchParams.get("desc");
 
   useEffect(() => {
+    const originalTitle = document.title;
+    return () => { document.title = originalTitle; };
+  }, []);
+
+  useEffect(() => {
     if (!id) return;
     trackPageView(`ad:${id}`);
     getAd(id).then(a => {
       setAd(a);
       setLoading(false);
+      // Update page title and meta description for SEO
+      if (a?.title) {
+        const pageTitle = `${a.title}${a.city ? " in " + a.city : ""} – Help App`;
+        document.title = pageTitle;
+        const desc = [
+          a.title,
+          a.city ? `in ${a.city}` : "",
+          a.priceLabel || a.price || "",
+          a.desc ? a.desc.slice(0, 100) : "",
+        ].filter(Boolean).join(" · ").slice(0, 155);
+        let metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) metaDesc.setAttribute("content", desc);
+        let ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute("content", pageTitle);
+        let ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute("content", desc);
+        let twTitle = document.querySelector('meta[name="twitter:title"]');
+        if (twTitle) twTitle.setAttribute("content", pageTitle);
+        let twDesc = document.querySelector('meta[name="twitter:description"]');
+        if (twDesc) twDesc.setAttribute("content", desc);
+      }
       // Load view count for this ad
       loadAdViews(id).then(v => setAdViews(v)).catch(() => {});
       // Load similar ads — same category & role, same city first, fallback to same PLZ prefix (region)
