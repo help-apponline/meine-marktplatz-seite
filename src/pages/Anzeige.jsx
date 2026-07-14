@@ -384,9 +384,11 @@ export default function Anzeige() {
                             style={{ textDecoration: "none" }}>
                             {ad.title}
                           </Link>
-                          <div className="text-xs text-gray-500 mt-0.5">
-                            {ad.city} · {new Date(ad.createdAt).toLocaleDateString("de-DE")} ·{" "}
-                            {ad.role === "helper" ? "Auftragnehmer" : "Auftraggeber"}
+                          <div className="text-xs text-gray-500 mt-0.5 flex items-center gap-2 flex-wrap">
+                            <span>{ad.city} · {new Date(ad.createdAt).toLocaleDateString("de-DE")} · {ad.role === "helper" ? "Auftragnehmer" : "Auftraggeber"}</span>
+                            {adViewCounts[ad.id] !== undefined && (
+                              <span className="text-blue-600 font-medium">👁 {adViewCounts[ad.id]} {adViewCounts[ad.id] === 1 ? "Aufruf" : "Aufrufe"}</span>
+                            )}
                           </div>
                         </div>
                         <span className={`text-xs font-semibold px-2.5 py-1 rounded-full shrink-0 ${
