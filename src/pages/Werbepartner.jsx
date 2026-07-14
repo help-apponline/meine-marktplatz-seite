@@ -221,13 +221,8 @@ export default function Werbepartner() {
 
   return (
     <section className="bg-white min-h-screen px-5 md:px-10 py-12 max-w-6xl mx-auto w-full">
-      <h2 ref={formTopRef} className="text-3xl font-extrabold text-gray-900 mb-2">Werbepartner-Bereich</h2>
-      <p className="text-gray-500 text-base mb-6 leading-relaxed">
-        Wähle dein Paket, lade dein Logo hoch und werde auf allen Seiten der Help App sichtbar.
-      </p>
-
-      {/* SEO highlight banner */}
-      <div className="bg-gradient-to-r from-orange-50 to-amber-50 border border-orange-100 rounded-2xl p-5 mb-10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+      {/* SEO highlight banner — prime position */}
+      <div className="bg-gradient-to-r from-orange-50 to-amber-50 border border-orange-100 rounded-2xl p-5 mb-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
         <div className="text-3xl shrink-0">🔍</div>
         <div>
           <h3 className="font-extrabold text-gray-900 text-base mb-1">Dein Unternehmen — bei Google sichtbar</h3>
@@ -239,6 +234,11 @@ export default function Werbepartner() {
           </p>
         </div>
       </div>
+
+      <h2 ref={formTopRef} className="text-3xl font-extrabold text-gray-900 mb-2">Werbepartner-Bereich</h2>
+      <p className="text-gray-500 text-base mb-10 leading-relaxed">
+        Wähle dein Paket, lade dein Logo hoch und werde auf allen Seiten der Help App sichtbar.
+      </p>
 
       {/* ── Plan Selector ── */}
       <div className="mb-8">
