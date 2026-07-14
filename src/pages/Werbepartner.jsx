@@ -222,9 +222,23 @@ export default function Werbepartner() {
   return (
     <section className="bg-white min-h-screen px-5 md:px-10 py-12 max-w-6xl mx-auto w-full">
       <h2 ref={formTopRef} className="text-3xl font-extrabold text-gray-900 mb-2">Werbepartner-Bereich</h2>
-      <p className="text-gray-500 text-base mb-10 leading-relaxed">
+      <p className="text-gray-500 text-base mb-6 leading-relaxed">
         Wähle dein Paket, lade dein Logo hoch und werde auf allen Seiten der Help App sichtbar.
       </p>
+
+      {/* SEO highlight banner */}
+      <div className="bg-gradient-to-r from-orange-50 to-amber-50 border border-orange-100 rounded-2xl p-5 mb-10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <div className="text-3xl shrink-0">🔍</div>
+        <div>
+          <h3 className="font-extrabold text-gray-900 text-base mb-1">Dein Unternehmen — bei Google sichtbar</h3>
+          <p className="text-sm text-gray-600 leading-relaxed">
+            Jeder Werbepartner bekommt eine <strong>eigene Profilseite</strong> auf der Help App — 
+            mit Firmenname, Region und Beschreibung, die Google als lokales Unternehmen erkennt. 
+            Wenn jemand in deiner Region nach deiner Branche sucht, kann dein Eintrag direkt in den Suchergebnissen auftauchen. 
+            Kein technisches Wissen nötig — wir erledigen das automatisch für dich.
+          </p>
+        </div>
+      </div>
 
       {/* ── Plan Selector ── */}
       <div className="mb-8">
@@ -415,6 +429,7 @@ export default function Werbepartner() {
                 "Logo + Überschrift + Beschreibung",
                 "Direktlink zur eigenen Website",
                 "Rotation in allen Werbebanners",
+                "Eigene Profilseite – von Google indexiert",
                 "Klick-Tracking (anonym)",
                 `Laufzeit: ${plan.duration}`,
               ].map(f => (
