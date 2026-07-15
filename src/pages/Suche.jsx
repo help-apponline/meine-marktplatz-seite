@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useSearchParams, Link } from "react-router";
 import { useAuth } from "../context/AuthContext.jsx";
 import AdCard from "../components/AdCard.jsx";
@@ -28,12 +28,9 @@ export default function Suche() {
   const [allGesuche, setAllGesuche] = useState([]);
   const [loading, setLoading] = useState(true);
   const [tab, setTab] = useState("alle");
-  const loaded = useRef(false);
 
   // Load all ads once — filter client-side
   useEffect(() => {
-    if (loaded.current) return;
-    loaded.current = true;
     setLoading(true);
     Promise.all([
       loadAds('role = "helper"'),
