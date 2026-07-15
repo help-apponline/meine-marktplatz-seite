@@ -11,7 +11,7 @@ function matchesQuery(ad, q) {
   const haystack = [ad.title, ad.city, ad.zip, ad.when, ad.desc, catInfo?.label]
     .filter(Boolean).join(" ").toLowerCase();
   // Every word must appear somewhere in the haystack
-  return q.trim().toLowerCase().split(/\s+/).every(word => haystack.includes(word));
+  return q.trim().toLowerCase().split(/\s+/).filter(Boolean).every(word => haystack.split(/\s+/).some(hw => hw.includes(word)));
 }
 
 export default function Suche() {
