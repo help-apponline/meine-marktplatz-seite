@@ -30,18 +30,16 @@ export default function Suche() {
 
   useEffect(() => {
     if (!query) return;
-    let active = true;
     setLoading(true);
+    const q = query;
     Promise.all([
       loadAds('role = "helper"'),
       loadAds('role = "customer"'),
     ]).then(([a, g]) => {
-      if (!active) return;
-      setAngebote(a.filter(ad => matchesQuery(ad, query)));
-      setGesuche(g.filter(ad => matchesQuery(ad, query)));
+      setAngebote(a.filter(ad => matchesQuery(ad, q)));
+      setGesuche(g.filter(ad => matchesQuery(ad, q)));
       setLoading(false);
-    }).catch(() => { if (active) setLoading(false); });
-    return () => { active = false; };
+    }).catch(() => setLoading(false));
   }, [query]);
 
   function handleSubmit(e) {
