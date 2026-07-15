@@ -1,10 +1,14 @@
 import { useState, useRef } from "react";
+import { Link } from "react-router";
 import { useAuth } from "../context/AuthContext.jsx";
 import { pb } from "../lib/pb.js";
 import User from "icon:user";
 import Lock from "icon:lock";
 import Check from "icon:check";
 import Camera from "icon:camera";
+import LayoutDashboard from "icon:layout-dashboard";
+import Heart from "icon:heart";
+import MessageCircle from "icon:message-circle";
 
 export default function Profil() {
   const { loggedIn, userEmail, userRole, userId, verified, avatarUrl, setAvatarUrl, getAvatarUrl } = useAuth();
@@ -145,7 +149,26 @@ export default function Profil() {
   return (
     <section className="bg-white min-h-screen px-5 md:px-10 py-12 max-w-2xl mx-auto w-full">
       <h2 className="text-3xl font-extrabold text-gray-900 mb-2">Mein Profil</h2>
-      <p className="text-gray-500 text-base mb-8">Deine persönlichen Einstellungen.</p>
+      <p className="text-gray-500 text-base mb-6">Deine persönlichen Einstellungen.</p>
+
+      {/* Quick nav links */}
+      <div className="flex flex-wrap gap-3 mb-8">
+        <Link to="/dashboard"
+          className="flex items-center gap-2 px-4 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold rounded-xl text-sm transition-colors"
+          style={{ textDecoration: "none" }}>
+          <LayoutDashboard size={15} /> Übersicht
+        </Link>
+        <Link to="/merkliste"
+          className="flex items-center gap-2 px-4 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold rounded-xl text-sm transition-colors"
+          style={{ textDecoration: "none" }}>
+          <Heart size={15} /> Merkliste
+        </Link>
+        <Link to="/inbox"
+          className="flex items-center gap-2 px-4 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold rounded-xl text-sm transition-colors"
+          style={{ textDecoration: "none" }}>
+          <MessageCircle size={15} /> Meine Chats
+        </Link>
+      </div>
 
       {/* Avatar */}
       <div className="border border-gray-100 rounded-2xl p-6 bg-gray-50 mb-6">
