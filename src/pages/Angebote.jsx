@@ -17,12 +17,12 @@ export default function Angebote() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const controller = new AbortController();
+    let active = true;
     setLoading(true);
     loadAds('role = "helper"')
-      .then(items => { if (!controller.signal.aborted) { setAds(items); setLoading(false); } })
-      .catch(e => { if (!e?.isAbort) setLoading(false); });
-    return () => controller.abort();
+      .then(items => { if (active) { setAds(items); setLoading(false); } })
+      .catch(() => { if (active) setLoading(false); });
+    return () => { active = false; };
   }, []);
 
   function parsePrice(str) {
