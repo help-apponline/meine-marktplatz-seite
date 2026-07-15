@@ -36,7 +36,8 @@ export default function Angebote() {
     if (q) {
       const catInfo = a.category ? categoryLabel(a.category) : null;
       const haystack = [a.title, a.city, a.zip, a.when, a.desc, catInfo?.label, a.category].filter(Boolean).join(" ").toLowerCase();
-      if (!q.split(/\s+/).filter(Boolean).every(word => haystack.includes(word))) return false;
+      const hwWords = haystack.split(/[\s,&.()+\-]+/).filter(Boolean);
+      if (!q.split(/\s+/).filter(Boolean).every(word => hwWords.some(hw => hw.startsWith(word) || word.startsWith(hw)))) return false;
     }
     if (city.trim() && !(a.city + " " + a.zip).toLowerCase().includes(city.trim().toLowerCase())) return false;
     if (maxPrice) {
