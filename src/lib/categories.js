@@ -7,6 +7,7 @@ export const CATEGORIES = [
   { value: "begleitung", label: "Begleitung",    emoji: "🤝" },
   { value: "pflege",     label: "Pflege",        emoji: "❤️" },
   { value: "transport",  label: "Transport",     emoji: "🚗" },
+  { value: "tier",       label: "Tier",          emoji: "🐾" },
   { value: "sonstiges",  label: "Sonstiges",     emoji: "✨" },
 ];
 
