@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useSearchParams, Link } from "react-router";
 import { useAuth } from "../context/AuthContext.jsx";
+import { pb } from "../lib/pb.js";
 import AdCard from "../components/AdCard.jsx";
 import PartnerBanner from "../components/PartnerBanner.jsx";
 import { categoryLabel } from "../lib/categories.js";
@@ -29,21 +30,41 @@ export default function Suche() {
   const [loading, setLoading] = useState(true);
   const [tab, setTab] = useState("alle");
 
-  // Load all ads — filter client-side. Use a flag so only the last mount's result wins.
+  // Load all ads directly — filter client-side
   useEffect(() => {
     let cancelled = false;
     setLoading(true);
-    Promise.all([
-      loadAds('role = "helper"'),
-      loadAds('role = "customer"'),
-    ]).then(([a, g]) => {
-      if (cancelled) return;
-      setAllAngebote(a);
-      setAllGesuche(g);
-      setLoading(false);
-    }).catch(() => { if (!cancelled) setLoading(false); });
+    pb.collection("ads").getList(1, 200, { sort: "-created", expand: "owner" })
+      .then(result => {
+        if (cancelled) return;
+        const all = result.items.map(r => ({
+          id: r.id,
+          owner: r.owner,
+          ownerId: r.expand?.owner?.id || r.owner || "",
+          role: r.role,
+          name: r.name,
+          title: r.title,
+          city: r.city,
+          zip: r.zip || "",
+          when: r.when_time || "",
+          price: r.price,
+          preisart: r.preisart,
+          priceLabel: r.price_label || r.price || "—",
+          desc: r.desc,
+          status: r.status,
+          category: r.category || "",
+          photos: (r.photos || []).map(f => pb.files.getURL(r, f, { thumb: "400x300" })),
+          expiresAt: r.expires_at ? new Date(r.expires_at).getTime() : null,
+          createdAt: new Date(r.created).getTime(),
+          updatedAt: new Date(r.updated).getTime(),
+        }));
+        setAllAngebote(all.filter(a => a.role === "helper"));
+        setAllGesuche(all.filter(a => a.role === "customer"));
+        setLoading(false);
+      })
+      .catch(() => { if (!cancelled) setLoading(false); });
     return () => { cancelled = true; };
-  }, [loadAds]);
+  }, []);
 
   function handleSubmit(e) {
     e.preventDefault();
