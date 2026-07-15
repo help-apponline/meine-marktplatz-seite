@@ -29,18 +29,21 @@ export default function Suche() {
   const [loading, setLoading] = useState(true);
   const [tab, setTab] = useState("alle");
 
-  // Load all ads once — filter client-side
+  // Load all ads — filter client-side. Use a flag so only the last mount's result wins.
   useEffect(() => {
+    let cancelled = false;
     setLoading(true);
     Promise.all([
       loadAds('role = "helper"'),
       loadAds('role = "customer"'),
     ]).then(([a, g]) => {
+      if (cancelled) return;
       setAllAngebote(a);
       setAllGesuche(g);
       setLoading(false);
-    }).catch(() => setLoading(false));
-  }, []);
+    }).catch(() => { if (!cancelled) setLoading(false); });
+    return () => { cancelled = true; };
+  }, [loadAds]);
 
   function handleSubmit(e) {
     e.preventDefault();
