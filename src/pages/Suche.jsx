@@ -8,10 +8,9 @@ import Search from "icon:search";
 function matchesQuery(ad, q) {
   if (!q) return true;
   const catInfo = ad.category ? categoryLabel(ad.category) : null;
-  const haystack = [ad.title, ad.city, ad.zip, ad.when, ad.desc, catInfo?.label]
+  const haystack = [ad.title, ad.city, ad.zip, ad.when, ad.desc, catInfo?.label, ad.category]
     .filter(Boolean).join(" ").toLowerCase();
-  // Every word must appear somewhere in the haystack
-  return q.trim().toLowerCase().split(/\s+/).filter(Boolean).every(word => haystack.split(/\s+/).some(hw => hw.includes(word)));
+  return q.trim().toLowerCase().split(/\s+/).filter(Boolean).every(word => haystack.includes(word));
 }
 
 export default function Suche() {
@@ -26,15 +25,18 @@ export default function Suche() {
 
   useEffect(() => {
     if (!query) return;
+    let active = true;
     setLoading(true);
     Promise.all([
       loadAds('role = "helper"'),
       loadAds('role = "customer"'),
     ]).then(([a, g]) => {
+      if (!active) return;
       setAngebote(a.filter(ad => matchesQuery(ad, query)));
       setGesuche(g.filter(ad => matchesQuery(ad, query)));
       setLoading(false);
-    }).catch(() => setLoading(false));
+    }).catch(() => { if (active) setLoading(false); });
+    return () => { active = false; };
   }, [query]);
 
   function handleSubmit(e) {
