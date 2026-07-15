@@ -57,9 +57,20 @@ export default function NotificationBell() {
     setNotifications(prev => prev.filter(n => n.id !== id));
   }
 
-  if (!loggedIn) return null;
-
   const count = notifications.length;
+
+  // Update browser tab title with unread count
+  useEffect(() => {
+    if (!loggedIn) return;
+    const base = "Help App – Finde Hilfe. Werde Helfer.";
+    if (count > 0) {
+      document.title = `(${count}) ${base}`;
+    } else {
+      if (document.title.startsWith("(")) document.title = base;
+    }
+  }, [count, loggedIn]);
+
+  if (!loggedIn) return null;
 
   return (
     <div className="relative" ref={panelRef}>
