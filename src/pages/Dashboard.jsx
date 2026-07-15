@@ -26,17 +26,28 @@ export default function Dashboard() {
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
         {[
-          { label: "Status", value: loggedIn ? "Angemeldet" : "Gast", sub: loggedIn ? userEmail : "" },
-          { label: "Meine Anzeigen", value: ads.length, sub: "veröffentlicht" },
-          { label: "Meine Chats", value: chats.length, sub: "Unterhaltungen" },
-        ].map(({ label, value, sub }) => (
-          <div key={label} className="bg-gray-50 rounded-xl px-5 py-5 flex justify-between items-center gap-4 border border-gray-100">
-            <div>
-              <div className="font-bold text-gray-900">{label}</div>
-              {sub && <div className="text-xs text-gray-400 mt-0.5 truncate max-w-[180px]">{sub}</div>}
+          { label: "Status", value: loggedIn ? "Angemeldet" : "Gast", sub: loggedIn ? userEmail : "", to: null },
+          { label: "Meine Anzeigen", value: ads.length, sub: "veröffentlicht", to: "/anzeige" },
+          { label: "Meine Chats", value: chats.length, sub: "Unterhaltungen", to: "/inbox" },
+        ].map(({ label, value, sub, to }) => (
+          to ? (
+            <Link key={label} to={to} style={{ textDecoration: "none" }}
+              className="bg-gray-50 rounded-xl px-5 py-5 flex justify-between items-center gap-4 border border-gray-100 hover:border-gray-300 hover:shadow-sm transition-all">
+              <div>
+                <div className="font-bold text-gray-900">{label}</div>
+                {sub && <div className="text-xs text-gray-400 mt-0.5 truncate max-w-[180px]">{sub}</div>}
+              </div>
+              <span className="bg-gray-900 text-white text-sm font-bold px-3 py-1.5 rounded-full shrink-0">{value}</span>
+            </Link>
+          ) : (
+            <div key={label} className="bg-gray-50 rounded-xl px-5 py-5 flex justify-between items-center gap-4 border border-gray-100">
+              <div>
+                <div className="font-bold text-gray-900">{label}</div>
+                {sub && <div className="text-xs text-gray-400 mt-0.5 truncate max-w-[180px]">{sub}</div>}
+              </div>
+              <span className="bg-gray-900 text-white text-sm font-bold px-3 py-1.5 rounded-full shrink-0">{value}</span>
             </div>
-            <span className="bg-gray-900 text-white text-sm font-bold px-3 py-1.5 rounded-full shrink-0">{value}</span>
-          </div>
+          )
         ))}
       </div>
 
