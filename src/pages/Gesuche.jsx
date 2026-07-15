@@ -17,12 +17,10 @@ export default function Gesuche() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    let active = true;
     setLoading(true);
     loadAds('role = "customer"')
-      .then(items => { if (active) { setAds(items); setLoading(false); } })
-      .catch(() => { if (active) setLoading(false); });
-    return () => { active = false; };
+      .then(items => { setAds(items); setLoading(false); })
+      .catch(() => setLoading(false));
   }, []);
 
   function parsePrice(str) {
