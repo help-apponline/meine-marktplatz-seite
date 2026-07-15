@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import { useAuth } from "../context/AuthContext.jsx";
 import { pb } from "../lib/pb.js";
 import { loadUnreadNotifications } from "../lib/notifications.js";
+import PartnerBanner from "../components/PartnerBanner.jsx";
 
 export default function Inbox() {
   const { loggedIn, loadChats } = useAuth();
@@ -97,6 +98,9 @@ export default function Inbox() {
           })}
         </div>
       )}
+      <div className="mt-10">
+        <PartnerBanner />
+      </div>
     </section>
   );
 }

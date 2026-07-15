@@ -440,7 +440,7 @@ export default function Anzeige() {
         </>
       )}
 
-      <div className="mt-10 max-w-2xl">
+      <div className="mt-12 max-w-2xl">
         <PartnerBanner />
       </div>
     </section>
