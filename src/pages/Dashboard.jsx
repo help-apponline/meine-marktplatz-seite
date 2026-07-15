@@ -26,7 +26,7 @@ export default function Dashboard() {
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
         {[
-          { label: "Status", value: loggedIn ? "Angemeldet" : "Gast", sub: loggedIn ? userEmail : "", to: null },
+          { label: "Status", value: loggedIn ? "Aktiv" : "Gast", sub: loggedIn ? userEmail : "", to: null },
           { label: "Meine Anzeigen", value: ads.length, sub: "veröffentlicht", to: "/anzeige" },
           { label: "Meine Chats", value: chats.length, sub: "Unterhaltungen", to: "/inbox" },
         ].map(({ label, value, sub, to }) => (
@@ -40,12 +40,12 @@ export default function Dashboard() {
               <span className="bg-gray-900 text-white text-sm font-bold px-3 py-1.5 rounded-full shrink-0">{value}</span>
             </Link>
           ) : (
-            <div key={label} className="bg-gray-50 rounded-xl px-5 py-5 flex justify-between items-center gap-4 border border-gray-100">
-              <div>
+            <div key={label} className="bg-gray-50 rounded-xl px-5 py-5 flex flex-col gap-2 border border-gray-100">
+              <div className="flex justify-between items-center gap-2">
                 <div className="font-bold text-gray-900">{label}</div>
-                {sub && <div className="text-xs text-gray-400 mt-0.5 truncate max-w-[180px]">{sub}</div>}
+                <span className="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full shrink-0">{value}</span>
               </div>
-              <span className="bg-gray-900 text-white text-sm font-bold px-3 py-1.5 rounded-full shrink-0">{value}</span>
+              {sub && <div className="text-xs text-gray-400 truncate">{sub}</div>}
             </div>
           )
         ))}
