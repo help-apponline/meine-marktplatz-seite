@@ -10,8 +10,12 @@ function matchesQuery(ad, q) {
   const catInfo = ad.category ? categoryLabel(ad.category) : null;
   const haystack = [ad.title, ad.city, ad.zip, ad.when, ad.desc, catInfo?.label, ad.category]
     .filter(Boolean).join(" ").toLowerCase();
-  const hwWords = haystack.split(/[\s,&.()+\-]+/).filter(Boolean);
-  return q.trim().toLowerCase().split(/\s+/).filter(Boolean).every(word => hwWords.some(hw => hw.startsWith(word) || word.startsWith(hw)));
+  const wordMatches = (word) => {
+    if (haystack.includes(word)) return true;
+    if (word.length >= 5 && haystack.includes(word.slice(0, word.length - 2))) return true;
+    return false;
+  };
+  return q.trim().toLowerCase().split(/\s+/).filter(Boolean).every(wordMatches);
 }
 
 export default function Suche() {
