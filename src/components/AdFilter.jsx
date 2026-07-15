@@ -23,7 +23,7 @@ export default function AdFilter({ query, setQuery, city, setCity, maxPrice, set
         <button
           type="button"
           onClick={() => {}}
-          className="flex items-center gap-1.5 px-4 py-3 bg-gray-900 text-white font-semibold rounded-xl text-sm hover:bg-gray-700 transition-colors shrink-0"
+          className="flex items-center gap-1.5 px-4 py-3 bg-[#ff8a00] text-white font-semibold rounded-xl text-sm hover:bg-[#e67a00] transition-colors shrink-0"
         >
           <Search size={14} /> Suchen
         </button>
