@@ -253,8 +253,11 @@ export default function Anzeige() {
 
         {formRole === "customer" && (
           <>
-            <input type="text" placeholder="Wobei brauchst du Hilfe? (z.B. Umzug, Garten, Montage)" value={need} onChange={e => setNeed(e.target.value)}
-              className="w-full px-4 py-3.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-gray-700 transition-colors" />
+            <div>
+              <input type="text" placeholder="Wobei brauchst du Hilfe? (z.B. Umzug, Garten, Montage)" value={need} onChange={e => setNeed(e.target.value)}
+                className="w-full px-4 py-3.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-gray-700 transition-colors" />
+              <p className="text-xs text-gray-400 mt-1.5 ml-1">Tipp: 1 bis 4 starke Stichworte reichen — z.B. „Umzug", „Rasenmähen" oder „Einkaufen gehen".</p>
+            </div>
             <div className="flex gap-3 flex-wrap">
               <input type="text" placeholder="Wann? (z.B. Samstag 14 Uhr)" value={when} onChange={e => setWhen(e.target.value)}
                 className="flex-1 min-w-[160px] px-4 py-3.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-gray-700 transition-colors" />
