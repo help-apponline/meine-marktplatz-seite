@@ -7,8 +7,12 @@ export const CATEGORIES = [
   { value: "begleitung", label: "Begleitung",    emoji: "🤝" },
   { value: "pflege",     label: "Pflege",        emoji: "❤️" },
   { value: "transport",  label: "Transport",     emoji: "🚗" },
-  { value: "tier",       label: "Tier",          emoji: "🐾" },
-  { value: "sonstiges",  label: "Sonstiges",     emoji: "✨" },
+  { value: "tier",            label: "Tier",             emoji: "🐾" },
+  { value: "kinderbetreuung",label: "Kinderbetreuung",  emoji: "🧒" },
+  { value: "technik",        label: "Computer & Technik",emoji: "💻" },
+  { value: "nachhilfe",      label: "Nachhilfe",        emoji: "📚" },
+  { value: "renovierung",    label: "Renovierung",      emoji: "🚿" },
+  { value: "sonstiges",      label: "Sonstiges",        emoji: "✨" },
 ];
 
 export function categoryLabel(value) {
