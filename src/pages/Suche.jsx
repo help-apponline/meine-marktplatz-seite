@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useSearchParams, Link } from "react-router";
 import { useAuth } from "../context/AuthContext.jsx";
 import AdCard from "../components/AdCard.jsx";
+import PartnerBanner from "../components/PartnerBanner.jsx";
 import { categoryLabel } from "../lib/categories.js";
 import Search from "icon:search";
 
@@ -23,24 +24,26 @@ export default function Suche() {
   const { loadAds } = useAuth();
   const [inputVal, setInputVal] = useState(() => searchParams.get("q") || "");
   const [query, setQuery] = useState(() => searchParams.get("q") || "");
-  const [angebote, setAngebote] = useState([]);
-  const [gesuche, setGesuche] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [tab, setTab] = useState("alle"); // alle | angebote | gesuche
+  const [allAngebote, setAllAngebote] = useState([]);
+  const [allGesuche, setAllGesuche] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [tab, setTab] = useState("alle");
+  const loaded = useRef(false);
 
+  // Load all ads once — filter client-side
   useEffect(() => {
-    if (!query) return;
+    if (loaded.current) return;
+    loaded.current = true;
     setLoading(true);
-    const q = query;
     Promise.all([
       loadAds('role = "helper"'),
       loadAds('role = "customer"'),
     ]).then(([a, g]) => {
-      setAngebote(a.filter(ad => matchesQuery(ad, q)));
-      setGesuche(g.filter(ad => matchesQuery(ad, q)));
+      setAllAngebote(a);
+      setAllGesuche(g);
       setLoading(false);
     }).catch(() => setLoading(false));
-  }, [query]);
+  }, []);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -49,8 +52,10 @@ export default function Suche() {
     setSearchParams(q ? { q } : {});
   }
 
+  const angebote = query ? allAngebote.filter(ad => matchesQuery(ad, query)) : allAngebote;
+  const gesuche  = query ? allGesuche.filter(ad => matchesQuery(ad, query))  : allGesuche;
   const filteredAngebote = tab === "gesuche" ? [] : angebote;
-  const filteredGesuche = tab === "angebote" ? [] : gesuche;
+  const filteredGesuche  = tab === "angebote" ? [] : gesuche;
   const total = filteredAngebote.length + filteredGesuche.length;
 
   return (
@@ -78,7 +83,7 @@ export default function Suche() {
       </form>
 
       {/* Tabs */}
-      {query && !loading && (
+      {!loading && (
         <div className="flex gap-2 mb-6 flex-wrap">
           {[
             { key: "alle", label: `Alle (${angebote.length + gesuche.length})` },
@@ -101,21 +106,19 @@ export default function Suche() {
       )}
 
       {/* Results */}
-      {!query ? (
-        <div className="text-center py-16 text-gray-400">
-          <div className="text-5xl mb-4">🔍</div>
-          <p className="text-sm">Gib einen Suchbegriff ein, um Angebote und Gesuche zu finden.</p>
-        </div>
-      ) : loading ? (
-        <p className="text-gray-400 text-sm">Wird gesucht…</p>
+      {loading ? (
+        <p className="text-gray-400 text-sm">Wird geladen…</p>
       ) : total === 0 ? (
         <div className="text-center py-16">
-          <p className="text-gray-500 text-sm mb-4">Keine Treffer für „{query}".</p>
+          <div className="text-5xl mb-4">🔍</div>
+          <p className="text-gray-500 text-sm mb-4">
+            {query ? `Keine Treffer für „${query}".` : "Gib einen Suchbegriff ein, um Angebote und Gesuche zu finden."}
+          </p>
           <div className="flex gap-3 justify-center flex-wrap">
-            <Link to="/angebote" className="text-sm text-[#ff8a00] underline" style={{ textDecoration: "none" }}>
+            <Link to="/angebote" className="text-sm text-[#ff8a00]" style={{ textDecoration: "none" }}>
               Alle Angebote ansehen
             </Link>
-            <Link to="/gesuche" className="text-sm text-[#ff8a00] underline" style={{ textDecoration: "none" }}>
+            <Link to="/gesuche" className="text-sm text-[#ff8a00]" style={{ textDecoration: "none" }}>
               Alle Gesuche ansehen
             </Link>
           </div>
@@ -151,6 +154,10 @@ export default function Suche() {
           )}
         </div>
       )}
+
+      <div className="mt-10">
+        <PartnerBanner />
+      </div>
     </section>
   );
 }
