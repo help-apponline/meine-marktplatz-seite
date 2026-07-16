@@ -54,8 +54,8 @@ export default function Layout() {
             <img
               src="/static/logo.jpg"
               alt="help-app.online"
-              className="h-9 w-auto object-contain"
-              style={{ maxWidth: "160px" }}
+              className="h-14 w-auto object-contain"
+              style={{ maxWidth: "220px" }}
             />
           </Link>
 
