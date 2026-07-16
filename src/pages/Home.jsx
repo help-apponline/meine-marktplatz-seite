@@ -19,6 +19,13 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="bg-white text-center px-6 pt-14 pb-10">
+        <div className="flex justify-center mb-6">
+          <img
+            src="/static/logo.jpg"
+            alt="help-app.online"
+            className="h-36 md:h-44 w-auto object-contain"
+          />
+        </div>
         <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight mb-4">
           Finde Hilfe. Werde Helfer.
         </h1>
