@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-white text-center px-6 pt-14 pb-10">
+      <section className="bg-white text-center px-6 pt-0 pb-10">
         <div className="flex justify-center mb-6">
           <img
             src="/static/logo.jpg"
