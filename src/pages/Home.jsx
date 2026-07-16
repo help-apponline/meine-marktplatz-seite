@@ -19,16 +19,16 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="bg-white text-center px-6 pt-0 pb-10">
-        <div className="flex justify-center mb-6">
+        <div className="flex flex-col items-center mb-6">
           <img
             src="/static/logo.jpg"
             alt="help-app.online"
-            className="h-48 md:h-56 w-auto object-contain"
+            className="h-48 md:h-56 w-auto object-contain mb-3"
           />
+          <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight">
+            Finde Hilfe. Werde Helfer.
+          </h1>
         </div>
-        <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight mb-4">
-          Finde Hilfe. Werde Helfer.
-        </h1>
         <p className="text-lg text-gray-500 max-w-xl mx-auto leading-relaxed mb-8">
           help-app.online verbindet Menschen, die Unterstützung suchen, mit Helfern aus der Nähe – schnell und unkompliziert.
         </p>
