@@ -31,7 +31,7 @@ export default function PartnerProfil() {
     if (p) {
       setPartner(p);
       // SEO: dynamic title and meta per partner
-      const pageTitle = `${p.title}${p.region ? " · " + p.region : ""} – Help App`;
+      const pageTitle = `${p.title}${p.region ? " · " + p.region : ""} – help-app.online`;
       document.title = pageTitle;
       const desc = [p.text, p.region ? `Region: ${p.region}` : ""].filter(Boolean).join(" · ").slice(0, 155);
       const metaDesc = document.querySelector('meta[name="description"]');
@@ -140,7 +140,7 @@ export default function PartnerProfil() {
         <div className="border border-orange-100 bg-orange-50 rounded-2xl px-6 py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
             <div className="font-bold text-gray-900 text-sm">Website besuchen</div>
-            <div className="text-xs text-gray-500 mt-0.5">Du verlässt jetzt die Help App und wirst zur Website des Partners weitergeleitet.</div>
+            <div className="text-xs text-gray-500 mt-0.5">Du verlässt jetzt die help-app.online und wirst zur Website des Partners weitergeleitet.</div>
           </div>
           <a
             href={partner.website.startsWith("http") ? partner.website : `https://${partner.website}`}

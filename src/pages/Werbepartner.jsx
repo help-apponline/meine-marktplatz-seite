@@ -223,7 +223,7 @@ export default function Werbepartner() {
     <section className="bg-white min-h-screen px-5 md:px-10 py-12 max-w-6xl mx-auto w-full">
       <h2 ref={formTopRef} className="text-3xl font-extrabold text-gray-900 mb-2">Werbepartner-Bereich</h2>
       <p className="text-gray-500 text-base mb-6 leading-relaxed">
-        Wähle dein Paket, lade dein Logo hoch und werde auf allen Seiten der Help App sichtbar.
+        Wähle dein Paket, lade dein Logo hoch und werde auf allen Seiten der help-app.online sichtbar.
       </p>
 
       {/* SEO highlight banner */}
@@ -232,7 +232,7 @@ export default function Werbepartner() {
         <div>
           <h3 className="font-extrabold text-gray-900 text-base mb-1">Dein Unternehmen — bei Google sichtbar</h3>
           <p className="text-sm text-gray-600 leading-relaxed">
-            Jeder Werbepartner bekommt eine <strong>eigene Profilseite</strong> auf der Help App — 
+            Jeder Werbepartner bekommt eine <strong>eigene Profilseite</strong> auf der help-app.online — 
             mit Firmenname, Region und Beschreibung, die Google als lokales Unternehmen erkennt. 
             Wenn jemand in deiner Region nach deiner Branche sucht, kann dein Eintrag direkt in den Suchergebnissen auftauchen. 
             Kein technisches Wissen nötig — wir erledigen das automatisch für dich.

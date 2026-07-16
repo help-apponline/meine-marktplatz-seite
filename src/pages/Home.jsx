@@ -23,7 +23,7 @@ export default function Home() {
           Finde Hilfe. Werde Helfer.
         </h1>
         <p className="text-lg text-gray-500 max-w-xl mx-auto leading-relaxed mb-8">
-          Die Help App verbindet Menschen, die Unterstützung suchen, mit Helfern aus der Nähe – schnell und unkompliziert.
+          help-app.online verbindet Menschen, die Unterstützung suchen, mit Helfern aus der Nähe – schnell und unkompliziert.
         </p>
 
         {/* Quick search */}

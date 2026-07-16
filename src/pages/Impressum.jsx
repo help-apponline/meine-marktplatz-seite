@@ -8,7 +8,7 @@ export default function Impressum() {
         <div>
           <h3 className="font-bold text-gray-900 mb-1">Diensteanbieter</h3>
           <p>
-            Help App<br />
+            help-app.online<br />
             Inhaber: Heinz-Peter Bacha<br />
             Paßmannstr. 12<br />
             45899 Gelsenkirchen<br />

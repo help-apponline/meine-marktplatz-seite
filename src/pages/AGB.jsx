@@ -1,13 +1,13 @@
 export default function AGB() {
   const sections = [
-    { h: "1. Geltungsbereich", p: "Diese Allgemeinen Geschaeftsbedingungen gelten fuer die Nutzung der Plattform Help App durch registrierte und nicht registrierte Nutzer." },
-    { h: "2. Leistungen der Help App", p: "Help App stellt eine technische Plattform bereit, ueber die Personen Hilfeleistungen anbieten und suchen koennen. Help App ist nicht Partei eines Vertrages zwischen Helfer und Auftraggeber." },
-    { h: "3. Registrierung und Nutzerkonto", p: "Einige Funktionen koennen eine Registrierung erfordern. Nutzer sind verpflichtet, wahrheitsgemaesse Angaben zu machen und Zugangsdaten vertraulich zu behandeln. Help App kann Nutzerkonten bei begruendetem Verdacht auf Missbrauch sperren." },
-    { h: "4. Nutzerinhalte", p: "Nutzer sind fuer die von ihnen veroeffentlichten Inhalte allein verantwortlich. Unzulaessig sind Inhalte, die gegen Gesetze, Rechte Dritter oder die guten Sitten verstossen. Help App kann Inhalte bei Rechtsverletungen entfernen." },
+    { h: "1. Geltungsbereich", p: "Diese Allgemeinen Geschaeftsbedingungen gelten fuer die Nutzung der Plattform help-app.online durch registrierte und nicht registrierte Nutzer." },
+    { h: "2. Leistungen von help-app.online", p: "help-app.online stellt eine technische Plattform bereit, ueber die Personen Hilfeleistungen anbieten und suchen koennen. help-app.online ist nicht Partei eines Vertrages zwischen Helfer und Auftraggeber." },
+    { h: "3. Registrierung und Nutzerkonto", p: "Einige Funktionen koennen eine Registrierung erfordern. Nutzer sind verpflichtet, wahrheitsgemaesse Angaben zu machen und Zugangsdaten vertraulich zu behandeln. help-app.online kann Nutzerkonten bei begruendetem Verdacht auf Missbrauch sperren." },
+    { h: "4. Nutzerinhalte", p: "Nutzer sind fuer die von ihnen veroeffentlichten Inhalte allein verantwortlich. Unzulaessig sind Inhalte, die gegen Gesetze, Rechte Dritter oder die guten Sitten verstossen. help-app.online kann Inhalte bei Rechtsverletungen entfernen." },
     { h: "5. Verbotene Nutzung", p: "Es ist untersagt, die Plattform fuer Belaestigung, Betrug, Taeuschung oder Spam zu nutzen sowie technische Schutzmassnahmen zu umgehen oder rechtswidrige Inhalte einzustellen." },
-    { h: "6. Verfuegbarkeit", p: "Help App bemueht sich um hohe Verfuegbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Stoerungen koennen zu Ausfaellen fuehren." },
-    { h: "7. Haftung", p: "Help App haftet unbeschraenkt bei Vorsatz und grober Fahrlaessigkeit. Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten ist die Haftung auf den vertragstypischen Schaden begrenzt." },
-    { h: "8. Werbepartner", p: "Werbepartner erhalten gegen Zahlung der Jahresgebuehr einen Eintrag auf der Plattform. Help App uebernimmt keine Haftung fuer die Richtigkeit der Angaben von Werbepartnern." },
+    { h: "6. Verfuegbarkeit", p: "help-app.online bemueht sich um hohe Verfuegbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Stoerungen koennen zu Ausfaellen fuehren." },
+    { h: "7. Haftung", p: "help-app.online haftet unbeschraenkt bei Vorsatz und grober Fahrlaessigkeit. Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten ist die Haftung auf den vertragstypischen Schaden begrenzt." },
+    { h: "8. Werbepartner", p: "Werbepartner erhalten gegen Zahlung der Jahresgebuehr einen Eintrag auf der Plattform. help-app.online uebernimmt keine Haftung fuer die Richtigkeit der Angaben von Werbepartnern." },
     { h: "9. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die uebrigen Bestimmungen wirksam." },
   ];
 

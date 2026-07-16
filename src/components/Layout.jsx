@@ -55,7 +55,7 @@ export default function Layout() {
               className="w-2.5 h-2.5 rounded-full bg-[#ff8a00] shrink-0"
               style={{ boxShadow: "0 0 0 3px rgba(255,138,0,0.22)" }}
             />
-            <span className="text-base">Help App</span>
+            <span className="text-base">help-app.online</span>
           </Link>
 
           {/* Desktop Nav */}
@@ -193,7 +193,7 @@ export default function Layout() {
 
       {/* Footer */}
       <footer className="bg-[#2b2b2b] text-[#aaa] text-sm text-center py-5">
-        © 2026 Help App ·{" "}
+        © 2026 help-app.online ·{" "}
         <Link to="/ueber-uns" className="text-[#aaa] hover:text-white no-underline mx-1" style={{ textDecoration: "none" }}>Über uns</Link> ·{" "}
         <Link to="/impressum" className="text-[#aaa] hover:text-white no-underline mx-1" style={{ textDecoration: "none" }}>Impressum</Link> ·{" "}
         <Link to="/datenschutz" className="text-[#aaa] hover:text-white no-underline mx-1" style={{ textDecoration: "none" }}>Datenschutz</Link> ·{" "}

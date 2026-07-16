@@ -62,7 +62,7 @@ export default function NotificationBell() {
   // Update browser tab title with unread count
   useEffect(() => {
     if (!loggedIn) return;
-    const base = "Help App – Finde Hilfe. Werde Helfer.";
+    const base = "help-app.online – Finde Hilfe. Werde Helfer.";
     if (count > 0) {
       document.title = `(${count}) ${base}`;
     } else {

@@ -48,7 +48,7 @@ export default function Detail() {
       setLoading(false);
       // Update page title and meta description for SEO
       if (a?.title) {
-        const pageTitle = `${a.title}${a.city ? " in " + a.city : ""} – Help App`;
+        const pageTitle = `${a.title}${a.city ? " in " + a.city : ""} – help-app.online`;
         document.title = pageTitle;
         const desc = [
           a.title,
@@ -124,7 +124,7 @@ export default function Detail() {
   async function handleShare() {
     const title = ad?.title || seedTitle || "Anzeige";
     const url = window.location.href;
-    const text = `${title} – auf der Help App`;
+    const text = `${title} – auf der help-app.online`;
     if (navigator.share) {
       try { await navigator.share({ title, text, url }); } catch { /* user cancelled */ }
     } else {
