@@ -50,12 +50,13 @@ export default function Layout() {
       <header className="sticky top-0 z-40 bg-[#2b2b2b] text-white shadow-sm">
         <div className="flex items-center justify-between px-5 py-3.5 gap-3">
           {/* Brand */}
-          <Link to="/" className="flex items-center gap-2.5 shrink-0 font-extrabold tracking-tight text-white no-underline" style={{ textDecoration: "none" }}>
-            <span
-              className="w-2.5 h-2.5 rounded-full bg-[#ff8a00] shrink-0"
-              style={{ boxShadow: "0 0 0 3px rgba(255,138,0,0.22)" }}
+          <Link to="/" className="flex items-center gap-2 shrink-0 no-underline" style={{ textDecoration: "none" }}>
+            <img
+              src="/static/logo.jpg"
+              alt="help-app.online"
+              className="h-9 w-auto object-contain"
+              style={{ maxWidth: "160px" }}
             />
-            <span className="text-base">help-app.online</span>
           </Link>
 
           {/* Desktop Nav */}
