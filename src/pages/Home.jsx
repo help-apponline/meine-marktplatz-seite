@@ -23,10 +23,10 @@ export default function Home() {
           <img
             src="/static/logo.jpg"
             alt="help-app.online"
-            className="h-36 md:h-44 w-auto object-contain"
+            className="h-48 md:h-56 w-auto object-contain"
           />
         </div>
-        <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight mb-4">
+        <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight mb-4">
           Finde Hilfe. Werde Helfer.
         </h1>
         <p className="text-lg text-gray-500 max-w-xl mx-auto leading-relaxed mb-8">
