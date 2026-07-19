@@ -17,7 +17,39 @@ Alle Nutzer sind verpflichtet, die geltenden Gesetze einzuhalten sowie die Recht
 Mit der Registrierung und Nutzung von help-app.online erkennen die Nutzer die jeweils gültigen Allgemeinen Geschäftsbedingungen sowie die Datenschutzerklärung in ihrer jeweils aktuellen Fassung an.
 
 Unser Ziel ist es, eine vertrauenswürdige Plattform zu schaffen, auf der Menschen unkompliziert Hilfe finden, Hilfe anbieten und gemeinsam von einer fairen und sicheren Vermittlung profitieren können.` },
-    { h: "2. Geltungsbereich", p: "Diese Allgemeinen Geschaeftsbedingungen gelten fuer die Nutzung der Plattform help-app.online durch registrierte und nicht registrierte Nutzer." },
+    { h: "2. Geltungsbereich", p: `2.1 Anwendungsbereich
+
+Diese Allgemeinen Geschäftsbedingungen (nachfolgend „AGB") regeln die Nutzung der Online-Plattform help-app.online sowie aller hierüber angebotenen Dienste und Funktionen.
+
+Die AGB gelten für sämtliche natürlichen und juristischen Personen sowie rechtsfähige Personengesellschaften, die die Plattform als Auftraggeber, Auftragnehmer (Helfer), Werbepartner oder in sonstiger Weise nutzen.
+
+Abweichende Allgemeine Geschäftsbedingungen von Nutzern finden keine Anwendung, es sei denn, help-app.online hat ihrer Geltung ausdrücklich schriftlich zugestimmt.
+
+2.2 Vertragsgegenstand
+
+help-app.online stellt eine technische Online-Plattform zur Verfügung, auf der Auftraggeber Dienstleistungen oder Hilfegesuche veröffentlichen und Auftragnehmer (Helfer) diese annehmen können.
+
+Die Plattform dient ausschließlich der Vermittlung und Kontaktaufnahme zwischen den Nutzern.
+
+Ein Vertrag über die Ausführung einer Dienstleistung kommt ausschließlich zwischen dem jeweiligen Auftraggeber und dem jeweiligen Auftragnehmer (Helfer) zustande.
+
+help-app.online wird weder Vertragspartner der vermittelten Leistungen noch Arbeitgeber, Personalvermittler, Zeitarbeitsunternehmen oder Erfüllungsgehilfe einer Vertragspartei.
+
+2.3 Geltungsbereich der Leistungen
+
+Diese AGB gelten für sämtliche gegenwärtigen und zukünftigen Funktionen von help-app.online, insbesondere für: die Registrierung und Verwaltung von Nutzerkonten, das Einstellen und Veröffentlichen von Aufträgen, das Annehmen von Aufträgen, die Nutzung des internen Nachrichtensystems, Bewertungsfunktionen, kostenpflichtige Premiumleistungen, Werbeanzeigen und Werbepartner, Affiliate-Werbung sowie sonstige digitale Dienstleistungen und zukünftige Erweiterungen der Plattform.
+
+2.4 Änderungen des Leistungsumfangs
+
+help-app.online entwickelt die Plattform kontinuierlich weiter.
+
+Der Betreiber ist berechtigt, Funktionen, Inhalte, technische Abläufe, Design, Benutzeroberflächen sowie angebotene Leistungen zu ergänzen, anzupassen oder einzustellen, soweit dadurch keine wesentlichen Rechte der Nutzer unangemessen beeinträchtigt werden.
+
+Ein Anspruch auf die dauerhafte Bereitstellung bestimmter Funktionen besteht nicht, sofern gesetzlich nichts anderes vorgeschrieben ist oder ausdrücklich eine abweichende Vereinbarung getroffen wurde.
+
+2.5 Rangfolge weiterer Regelungen
+
+Ergänzend zu diesen AGB gelten die Datenschutzerklärung, die Cookie-Richtlinie, die Nutzungsrichtlinien (Community-Regeln) sowie gegebenenfalls besondere Bedingungen für kostenpflichtige Leistungen oder Werbepartner. Soweit sich Regelungen widersprechen, gehen die spezielleren Bestimmungen den allgemeinen Regelungen dieser AGB vor.` },
     { h: "3. Leistungen von help-app.online", p: "help-app.online stellt eine technische Plattform bereit, ueber die Personen Hilfeleistungen anbieten und suchen koennen. help-app.online ist nicht Partei eines Vertrages zwischen Helfer und Auftraggeber." },
     { h: "4. Registrierung und Nutzerkonto", p: "Einige Funktionen koennen eine Registrierung erfordern. Nutzer sind verpflichtet, wahrheitsgemaesse Angaben zu machen und Zugangsdaten vertraulich zu behandeln. help-app.online kann Nutzerkonten bei begruendetem Verdacht auf Missbrauch sperren." },
     { h: "5. Nutzerinhalte", p: "Nutzer sind fuer die von ihnen veroeffentlichten Inhalte allein verantwortlich. Unzulaessig sind Inhalte, die gegen Gesetze, Rechte Dritter oder die guten Sitten verstossen. help-app.online kann Inhalte bei Rechtsverletungen entfernen." },
