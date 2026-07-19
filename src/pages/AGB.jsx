@@ -115,14 +115,81 @@ Für jeden vermittelten Auftrag kann grundsätzlich nur eine Bewertung je Vertra
 3.13 Inhalte
 
 Inhalte im Sinne dieser AGB sind sämtliche von Nutzern eingestellten oder hochgeladenen Informationen, insbesondere Texte, Bilder, Fotos, Grafiken, Logos, Dokumente, Videos, Bewertungen, Kommentare und sonstige Dateien.` },
-    { h: "4. Leistungen von help-app.online", p: "help-app.online stellt eine technische Plattform bereit, ueber die Personen Hilfeleistungen anbieten und suchen koennen. help-app.online ist nicht Partei eines Vertrages zwischen Helfer und Auftraggeber." },
-    { h: "5. Registrierung und Nutzerkonto", p: "Einige Funktionen koennen eine Registrierung erfordern. Nutzer sind verpflichtet, wahrheitsgemaesse Angaben zu machen und Zugangsdaten vertraulich zu behandeln. help-app.online kann Nutzerkonten bei begruendetem Verdacht auf Missbrauch sperren." },
-    { h: "6. Nutzerinhalte", p: "Nutzer sind fuer die von ihnen veroeffentlichten Inhalte allein verantwortlich. Unzulaessig sind Inhalte, die gegen Gesetze, Rechte Dritter oder die guten Sitten verstossen. help-app.online kann Inhalte bei Rechtsverletungen entfernen." },
-    { h: "7. Verbotene Nutzung", p: "Es ist untersagt, die Plattform fuer Belaestigung, Betrug, Taeuschung oder Spam zu nutzen sowie technische Schutzmassnahmen zu umgehen oder rechtswidrige Inhalte einzustellen." },
-    { h: "8. Verfügbarkeit", p: "help-app.online bemueht sich um hohe Verfuegbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Stoerungen koennen zu Ausfaellen fuehren." },
-    { h: "9. Haftung", p: "help-app.online haftet unbeschraenkt bei Vorsatz und grober Fahrlaessigkeit. Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten ist die Haftung auf den vertragstypischen Schaden begrenzt." },
-    { h: "10. Werbepartner", p: "Werbepartner erhalten gegen Zahlung der Jahresgebuehr einen Eintrag auf der Plattform. help-app.online uebernimmt keine Haftung fuer die Richtigkeit der Angaben von Werbepartnern." },
-    { h: "11. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die uebrigen Bestimmungen wirksam." },
+    { h: "4. Registrierung und Nutzerkonto", p: `4.1 Registrierung
+
+Die Nutzung bestimmter Funktionen von help-app.online, insbesondere das Erstellen von Aufträgen, das Annehmen von Aufträgen, die Kommunikation über das Nachrichtensystem sowie die Abgabe von Bewertungen, setzt eine vorherige Registrierung voraus.
+
+Mit der Registrierung kommt ein Nutzungsvertrag zwischen dem Nutzer und dem Betreiber von help-app.online auf Grundlage dieser Allgemeinen Geschäftsbedingungen zustande.
+
+Ein Anspruch auf Registrierung oder Nutzung der Plattform besteht nicht.
+
+4.2 Teilnahmeberechtigung
+
+Die Registrierung ist ausschließlich natürlichen Personen sowie juristischen Personen und rechtsfähigen Personengesellschaften gestattet.
+
+Natürliche Personen müssen zum Zeitpunkt der Registrierung mindestens 18 Jahre alt und unbeschränkt geschäftsfähig sein.
+
+Mit der Registrierung bestätigt der Nutzer, dass sämtliche gemachten Angaben vollständig und wahrheitsgemäß sind.
+
+4.3 Wahrheitsgemäße Angaben
+
+Der Nutzer verpflichtet sich, bei der Registrierung sowie während der gesamten Nutzungsdauer ausschließlich richtige, vollständige und aktuelle Angaben zu machen.
+
+Änderungen der persönlichen Daten, insbesondere Name, Anschrift, E-Mail-Adresse oder Telefonnummer, sind vom Nutzer unverzüglich im Nutzerkonto zu aktualisieren.
+
+4.4 Nutzerkonto
+
+Jeder Nutzer darf grundsätzlich nur ein persönliches Nutzerkonto führen.
+
+Mehrfachregistrierungen, Fake-Profile oder die Umgehung von Sperrungen durch die Erstellung weiterer Konten sind unzulässig.
+
+Der Betreiber behält sich vor, doppelte oder missbräuchlich angelegte Nutzerkonten zu sperren oder zu löschen.
+
+4.5 Zugangsdaten
+
+Der Nutzer ist verpflichtet, seine Zugangsdaten vertraulich zu behandeln und vor dem Zugriff unberechtigter Dritter zu schützen.
+
+Eine Weitergabe des Nutzerkontos oder der Zugangsdaten an andere Personen ist nicht gestattet.
+
+Werden Zugangsdaten missbräuchlich verwendet oder besteht der Verdacht eines unbefugten Zugriffs, hat der Nutzer dies help-app.online unverzüglich mitzuteilen und sein Passwort umgehend zu ändern.
+
+4.6 E-Mail-Verifizierung
+
+help-app.online kann verlangen, dass Nutzer ihre E-Mail-Adresse vor der vollständigen Nutzung der Plattform bestätigen.
+
+Der Betreiber behält sich außerdem vor, weitere geeignete Maßnahmen zur Überprüfung der Identität oder der angegebenen Daten einzuführen, sofern dies der Sicherheit oder der Missbrauchsprävention dient.
+
+Ein Anspruch auf eine Verifizierung besteht nicht.
+
+4.7 Unternehmenskonten und Werbepartner
+
+Unternehmen, Gewerbetreibende, Selbstständige sowie Werbepartner dürfen die Plattform im Rahmen ihrer geschäftlichen Tätigkeit nutzen.
+
+Der Betreiber kann geeignete Nachweise über die Unternehmereigenschaft oder Vertretungsberechtigung verlangen.
+
+4.8 Löschung und Sperrung von Nutzerkonten
+
+help-app.online ist berechtigt, Nutzerkonten vorübergehend zu sperren oder dauerhaft zu löschen, wenn: gegen diese Allgemeinen Geschäftsbedingungen verstoßen wird, unrichtige oder irreführende Angaben gemacht werden, der Verdacht auf Betrug, Missbrauch oder rechtswidrige Handlungen besteht, die Rechte anderer Nutzer oder Dritter verletzt werden, technische Sicherheit oder der ordnungsgemäße Betrieb der Plattform gefährdet werden oder sonstige wichtige Gründe vorliegen, die eine weitere Nutzung unzumutbar machen.
+
+Soweit gesetzlich oder aus Gründen der Gefahrenabwehr nicht ausgeschlossen, wird der betroffene Nutzer vor einer dauerhaften Sperrung oder Löschung über die Gründe informiert und erhält Gelegenheit zur Stellungnahme.
+
+4.9 Löschung durch den Nutzer
+
+Der Nutzer kann sein Nutzerkonto jederzeit nach den hierfür vorgesehenen Funktionen löschen oder die Löschung beim Betreiber beantragen.
+
+Die Löschung des Nutzerkontos berührt bereits bestehende vertragliche Verpflichtungen zwischen Auftraggebern und Auftragnehmern sowie gesetzliche Aufbewahrungspflichten nicht.
+
+4.10 Kein Anspruch auf dauerhafte Nutzung
+
+help-app.online ist bemüht, die Plattform möglichst unterbrechungsfrei bereitzustellen.
+
+Ein Anspruch auf eine jederzeitige oder ununterbrochene Verfügbarkeit der Plattform oder einzelner Funktionen besteht jedoch nicht. Insbesondere können Wartungsarbeiten, technische Störungen, Sicherheitsmaßnahmen oder gesetzliche Vorgaben vorübergehende Einschränkungen oder Unterbrechungen erforderlich machen.` },
+    { h: "5. Nutzerinhalte", p: "Nutzer sind für die von ihnen veröffentlichten Inhalte allein verantwortlich. Unzulässig sind Inhalte, die gegen Gesetze, Rechte Dritter oder die guten Sitten verstoßen. help-app.online kann Inhalte bei Rechtsverletzungen entfernen." },
+    { h: "6. Verbotene Nutzung", p: "Es ist untersagt, die Plattform für Belästigung, Betrug, Täuschung oder Spam zu nutzen sowie technische Schutzmaßnahmen zu umgehen oder rechtswidrige Inhalte einzustellen." },
+    { h: "7. Verfügbarkeit", p: "help-app.online bemüht sich um hohe Verfügbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Störungen können zu Ausfällen führen." },
+    { h: "8. Haftung", p: "help-app.online haftet unbeschränkt bei Vorsatz und grober Fahrlässigkeit. Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten ist die Haftung auf den vertragstypischen Schaden begrenzt." },
+    { h: "9. Werbepartner", p: "Werbepartner erhalten gegen Zahlung der vereinbarten Gebühr einen Eintrag auf der Plattform. help-app.online übernimmt keine Haftung für die Richtigkeit der Angaben von Werbepartnern." },
+    { h: "10. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die übrigen Bestimmungen wirksam." },
   ];
 
   return (
