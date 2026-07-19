@@ -1053,7 +1053,21 @@ Soweit gesetzlich zulässig, ist Gerichtsstand für sämtliche Streitigkeiten au
 
 Dies gilt ausschließlich gegenüber Kaufleuten, juristischen Personen des öffentlichen Rechts, öffentlich-rechtlichen Sondervermögen oder Nutzern, die keinen allgemeinen Gerichtsstand in der Bundesrepublik Deutschland haben.
 
-Für Verbraucher gelten die gesetzlichen Gerichtsstandsregelungen.` },
+Für Verbraucher gelten die gesetzlichen Gerichtsstandsregelungen.
+
+23.3 Verbraucherstreitbeilegung
+
+Der Betreiber ist grundsätzlich nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen, sofern keine gesetzliche Verpflichtung hierzu besteht.
+
+23.4 Salvatorische Klausel
+
+Sollten einzelne Bestimmungen dieser Allgemeinen Geschäftsbedingungen ganz oder teilweise unwirksam oder undurchführbar sein oder werden, bleibt die Wirksamkeit der übrigen Bestimmungen hiervon unberührt.
+
+An die Stelle der unwirksamen oder undurchführbaren Bestimmung tritt die gesetzliche Regelung. Entsprechendes gilt für etwaige Regelungslücken.
+
+23.5 Inkrafttreten
+
+Diese Allgemeinen Geschäftsbedingungen gelten ab ihrer Veröffentlichung auf help-app.online und ersetzen alle früheren Fassungen.` },
   ];
 
   return (
