@@ -520,12 +520,56 @@ Bewertungen geben ausschließlich die persönliche Meinung oder Erfahrung des je
 Nutzer können Bewertungen, die ihrer Ansicht nach gegen gesetzliche Vorschriften oder diese AGB verstoßen, über die hierfür vorgesehenen Meldefunktionen oder auf anderem geeigneten Weg an help-app.online melden.
 
 Der Betreiber wird gemeldete Bewertungen im Rahmen der gesetzlichen Vorgaben prüfen und gegebenenfalls geeignete Maßnahmen ergreifen.` },
-    { h: "11. Nutzerinhalte", p: "Nutzer sind für die von ihnen veröffentlichten Inhalte allein verantwortlich. Unzulässig sind Inhalte, die gegen Gesetze, Rechte Dritter oder die guten Sitten verstoßen. help-app.online kann Inhalte bei Rechtsverletzungen entfernen." },
-    { h: "13. Verbotene Nutzung", p: "Es ist untersagt, die Plattform für Belästigung, Betrug, Täuschung oder Spam zu nutzen sowie technische Schutzmaßnahmen zu umgehen oder rechtswidrige Inhalte einzustellen." },
-    { h: "14. Verfügbarkeit", p: "help-app.online bemüht sich um hohe Verfügbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Störungen können zu Ausfällen führen." },
-    { h: "15. Haftung", p: "help-app.online haftet unbeschränkt bei Vorsatz und grober Fahrlässigkeit. Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten ist die Haftung auf den vertragstypischen Schaden begrenzt." },
-    { h: "16. Werbepartner", p: "Werbepartner erhalten gegen Zahlung der vereinbarten Gebühr einen Eintrag auf der Plattform. help-app.online übernimmt keine Haftung für die Richtigkeit der Angaben von Werbepartnern." },
-    { h: "17. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die übrigen Bestimmungen wirksam." },
+    { h: "11. Inhalte, Fotos und Nutzungsrechte", p: `11.1 Verantwortung für Inhalte
+
+Jeder Nutzer ist ausschließlich selbst für die von ihm veröffentlichten oder hochgeladenen Inhalte verantwortlich.
+
+Hierzu zählen insbesondere Texte, Fotos, Bilder, Grafiken, Logos, Dokumente, Videos, Bewertungen, Kommentare sowie sonstige Dateien oder Informationen.
+
+Der Nutzer gewährleistet, dass sämtliche veröffentlichten Inhalte den geltenden gesetzlichen Vorschriften entsprechen und keine Rechte Dritter verletzen.
+
+11.2 Zulässige Inhalte
+
+Es dürfen ausschließlich Inhalte veröffentlicht werden, an denen der Nutzer die erforderlichen Rechte besitzt oder deren Nutzung ihm ausdrücklich gestattet wurde, die nicht gegen geltendes Recht verstoßen, die keine Urheber-, Marken-, Persönlichkeits-, Datenschutz- oder sonstigen Rechte Dritter verletzen, die wahrheitsgemäß sind und die nicht irreführend oder täuschend wirken.
+
+11.3 Unzulässige Inhalte
+
+Insbesondere dürfen folgende Inhalte nicht veröffentlicht oder hochgeladen werden: rechtswidrige Inhalte, beleidigende, diskriminierende, rassistische oder extremistische Inhalte, pornografische oder jugendgefährdende Inhalte, gewaltverherrlichende Inhalte, betrügerische oder irreführende Inhalte, Inhalte mit Schadsoftware oder schädlichen Programmcodes, Inhalte die Rechte Dritter verletzen, Werbung außerhalb der hierfür vorgesehenen Bereiche sowie Spam oder automatisiert erzeugte Inhalte.
+
+11.4 Fotos und Bilder
+
+Fotos und Bilder sind so auszuwählen, dass sie nicht gegen gesetzliche Vorschriften oder Rechte Dritter verstoßen. Insbesondere dürfen keine Bilder veröffentlicht werden, für deren Nutzung keine erforderlichen Rechte bestehen, die Persönlichkeitsrechte verletzen, auf denen Personen ohne erforderliche Einwilligung erkennbar abgebildet sind, die Marken-, Urheber- oder sonstige Schutzrechte verletzen oder die gegen gesetzliche Vorschriften oder die guten Sitten verstoßen.
+
+Der Nutzer trägt die alleinige Verantwortung für sämtliche von ihm hochgeladenen Bilder und Fotos.
+
+11.5 Einräumung von Nutzungsrechten
+
+Mit dem Hochladen oder Veröffentlichen von Inhalten räumt der Nutzer help-app.online ein einfaches, nicht ausschließliches, räumlich unbeschränktes und für die Dauer der Veröffentlichung bestehendes Recht ein, diese Inhalte zum Betrieb der Plattform zu speichern, zu vervielfältigen, technisch zu bearbeiten, öffentlich zugänglich zu machen und innerhalb der Plattform darzustellen.
+
+Dieses Nutzungsrecht dient ausschließlich dem Betrieb, der Darstellung und der technischen Bereitstellung der Plattform.
+
+Die Rechte an den Inhalten verbleiben im Übrigen beim jeweiligen Nutzer.
+
+11.6 Prüfung von Inhalten
+
+help-app.online ist grundsätzlich nicht verpflichtet, sämtliche Inhalte vor deren Veröffentlichung zu prüfen.
+
+Der Betreiber behält sich jedoch das Recht vor, Inhalte zu prüfen, auszublenden, zu sperren oder zu entfernen, wenn Anhaltspunkte für einen Verstoß gegen gesetzliche Vorschriften, diese AGB oder berechtigte Interessen Dritter bestehen.
+
+11.7 Entfernung von Inhalten
+
+Der Betreiber ist berechtigt, Inhalte insbesondere dann ganz oder teilweise zu entfernen oder deren Veröffentlichung zu verhindern, wenn gesetzliche Vorschriften verletzt werden, Rechte Dritter beeinträchtigt werden, diese AGB verletzt werden, behördliche oder gerichtliche Anordnungen vorliegen oder ein Missbrauch der Plattform festgestellt wird.
+
+11.8 Freistellung
+
+Der Nutzer stellt help-app.online von sämtlichen Ansprüchen Dritter frei, die aufgrund rechtswidrig veröffentlichter Inhalte gegen den Betreiber geltend gemacht werden, soweit der Nutzer die Rechtsverletzung zu vertreten hat.
+
+Dies umfasst auch angemessene Kosten der Rechtsverteidigung, soweit diese erforderlich sind.` },
+    { h: "12. Verbotene Nutzung", p: "Es ist untersagt, die Plattform für Belästigung, Betrug, Täuschung oder Spam zu nutzen sowie technische Schutzmaßnahmen zu umgehen oder rechtswidrige Inhalte einzustellen." },
+    { h: "13. Verfügbarkeit", p: "help-app.online bemüht sich um hohe Verfügbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Störungen können zu Ausfällen führen." },
+    { h: "14. Haftung", p: "help-app.online haftet unbeschränkt bei Vorsatz und grober Fahrlässigkeit. Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten ist die Haftung auf den vertragstypischen Schaden begrenzt." },
+    { h: "15. Werbepartner", p: "Werbepartner erhalten gegen Zahlung der vereinbarten Gebühr einen Eintrag auf der Plattform. help-app.online übernimmt keine Haftung für die Richtigkeit der Angaben von Werbepartnern." },
+    { h: "16. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die übrigen Bestimmungen wirksam." },
   ];
 
   return (
