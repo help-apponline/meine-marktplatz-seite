@@ -1006,8 +1006,36 @@ Der Betreiber behält sich vor, die Datenschutzerklärung anzupassen, soweit die
 19.4 Vorrang datenschutzrechtlicher Vorschriften
 
 Soweit Regelungen dieser Allgemeinen Geschäftsbedingungen und der Datenschutzerklärung dieselben Sachverhalte betreffen, gelten die datenschutzrechtlichen Bestimmungen der Datenschutzerklärung vorrangig, soweit zwingende datenschutzrechtliche Vorschriften dies erfordern.` },
-    { h: "20. Verfügbarkeit der Plattform", p: "help-app.online bemüht sich um hohe Verfügbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Störungen können zu Ausfällen führen." },
-    { h: "21. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die übrigen Bestimmungen wirksam." },
+    { h: "20. Änderungen dieser Allgemeinen Geschäftsbedingungen", p: `20.1 Änderungsrecht
+
+help-app.online entwickelt die Plattform kontinuierlich weiter und passt ihre Leistungen an technische, wirtschaftliche und gesetzliche Anforderungen an.
+
+Der Betreiber ist berechtigt, diese Allgemeinen Geschäftsbedingungen zu ändern oder zu ergänzen, soweit hierfür ein sachlicher Grund besteht und die Änderungen die Nutzer nicht unangemessen benachteiligen.
+
+Sachliche Gründe können insbesondere sein:
+
+- Änderungen der Rechtslage,
+- neue gerichtliche Entscheidungen,
+- technische Weiterentwicklungen,
+- Erweiterungen oder Änderungen des Leistungsumfangs,
+- Einführung neuer Funktionen,
+- Änderungen des Geschäftsmodells,
+- Sicherheitsanforderungen,
+- Missbrauchsprävention.
+
+20.2 Information der Nutzer
+
+Über wesentliche Änderungen der Allgemeinen Geschäftsbedingungen werden registrierte Nutzer rechtzeitig in geeigneter Weise informiert.
+
+Soweit gesetzlich erforderlich oder vertraglich vorgesehen, wird der Nutzer ausdrücklich auf sein Widerspruchs- oder Kündigungsrecht hingewiesen.
+
+20.3 Fortgesetzte Nutzung
+
+Soweit gesetzlich zulässig, gelten geänderte Allgemeine Geschäftsbedingungen als akzeptiert, wenn der Nutzer die Plattform nach Inkrafttreten der Änderungen weiterhin nutzt und hierauf zuvor hingewiesen wurde.
+
+Zwingende gesetzliche Vorschriften bleiben hiervon unberührt.` },
+    { h: "21. Verfügbarkeit der Plattform", p: "help-app.online bemüht sich um hohe Verfügbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Störungen können zu Ausfällen führen." },
+    { h: "22. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die übrigen Bestimmungen wirksam." },
   ];
 
   return (
