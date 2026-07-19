@@ -41,6 +41,12 @@ export default function AdCard({ ad, seedItem }) {
                   {cat.emoji} {cat.label}
                 </span>
               )}
+              {ad.nutzertyp === "gewerblich" && (
+                <span className="text-xs px-2 py-0.5 bg-blue-50 border border-blue-100 text-blue-700 rounded-full font-medium">🏢 Gewerblich</span>
+              )}
+              {ad.nutzertyp === "privat" && (
+                <span className="text-xs px-2 py-0.5 bg-gray-50 border border-gray-200 text-gray-500 rounded-full font-medium">👤 Privat</span>
+              )}
               {expiringSoon && (
                 <span className="text-xs text-amber-600 font-medium">⏳ läuft in {daysLeft} Tag{daysLeft === 1 ? "" : "en"} ab</span>
               )}

@@ -34,6 +34,11 @@ export default function Profil() {
   const [nameMsg, setNameMsg] = useState("");
   const [nameError, setNameError] = useState("");
 
+  // Nutzertyp state
+  const [nutzertyp, setNutzertyp] = useState(() => pb.authStore.record?.nutzertyp || "privat");
+  const [nutzertypMsg, setNutzertypMsg] = useState("");
+  const [nutzertypLoading, setNutzertypLoading] = useState(false);
+
   function roleLabel(r) {
     return r === "helper" ? "Auftragnehmer" : "Auftraggeber";
   }
@@ -263,6 +268,42 @@ export default function Profil() {
             {nameLoading ? "Wird gespeichert…" : "Name speichern"}
           </button>
         </form>
+      </div>
+
+      {/* Nutzertyp */}
+      <div className="border border-gray-100 rounded-2xl p-6">
+        <h3 className="font-bold text-gray-900 mb-1 flex items-center gap-2">
+          Art der Nutzung
+        </h3>
+        <p className="text-xs text-gray-400 mb-4">Wird auf deinen Anzeigen angezeigt, damit andere sofort sehen, ob du privat oder gewerblich tätig bist.</p>
+        <div className="flex gap-3">
+          {["privat", "gewerblich"].map(typ => (
+            <button
+              key={typ}
+              type="button"
+              onClick={async () => {
+                setNutzertypLoading(true);
+                setNutzertypMsg("");
+                try {
+                  await pb.collection("users").update(userId, { nutzertyp: typ });
+                  setNutzertyp(typ);
+                  setNutzertypMsg("Gespeichert.");
+                  setTimeout(() => setNutzertypMsg(""), 2000);
+                } catch { setNutzertypMsg("Konnte nicht gespeichert werden."); }
+                setNutzertypLoading(false);
+              }}
+              disabled={nutzertypLoading}
+              className={`px-5 py-2.5 rounded-xl text-sm font-semibold border transition-colors ${
+                nutzertyp === typ
+                  ? "bg-gray-900 text-white border-gray-900"
+                  : "bg-white text-gray-600 border-gray-200 hover:border-gray-400"
+              }`}
+            >
+              {typ === "privat" ? "👤 Privat" : "🏢 Gewerblich"}
+            </button>
+          ))}
+        </div>
+        {nutzertypMsg && <p className="text-green-600 text-xs mt-2">{nutzertypMsg}</p>}
       </div>
 
       {/* Password change */}

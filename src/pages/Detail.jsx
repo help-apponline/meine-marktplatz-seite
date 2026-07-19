@@ -210,6 +210,12 @@ export default function Detail() {
         <span className="bg-gray-900 text-white text-xs font-semibold px-3 py-1.5 rounded-full">{priceLabel}</span>
         <span className="bg-gray-800 text-white text-xs font-semibold px-3 py-1.5 rounded-full">Status: {status}</span>
         {createdAt && <span className="bg-gray-700 text-white text-xs font-semibold px-3 py-1.5 rounded-full">erstellt: {createdAt}</span>}
+        {ad?.nutzertyp === "gewerblich" && (
+          <span className="flex items-center gap-1.5 bg-blue-50 border border-blue-100 text-blue-700 text-xs font-semibold px-3 py-1.5 rounded-full">🏢 Gewerblich</span>
+        )}
+        {ad?.nutzertyp === "privat" && (
+          <span className="flex items-center gap-1.5 bg-gray-50 border border-gray-200 text-gray-500 text-xs font-semibold px-3 py-1.5 rounded-full">👤 Privat</span>
+        )}
         {ownerRating && (
           <span className="flex items-center gap-1.5 bg-amber-50 border border-amber-100 px-3 py-1.5 rounded-full">
             <StarDisplay stars={ownerRating.avg} count={ownerRating.count} size={14} />

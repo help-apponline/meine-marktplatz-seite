@@ -127,6 +127,7 @@ export function AuthProvider({ children }) {
       fd.append("price_label", data.priceLabel || "");
       fd.append("desc", data.desc || "");
       fd.append("category", data.category || "");
+      fd.append("nutzertyp", pb.authStore.record?.nutzertyp || "privat");
       fd.append("status", "offen");
       const exp = new Date(); exp.setDate(exp.getDate() + 60);
       fd.append("expires_at", exp.toISOString().slice(0,19).replace("T"," "));
@@ -146,6 +147,7 @@ export function AuthProvider({ children }) {
         price_label: data.priceLabel || "",
         desc: data.desc || "",
         category: data.category || "",
+        nutzertyp: pb.authStore.record?.nutzertyp || "privat",
         status: "offen",
         expires_at: (() => { const e = new Date(); e.setDate(e.getDate() + 60); return e.toISOString().slice(0,19).replace("T"," "); })(),
       };
@@ -345,6 +347,7 @@ function adaptAd(record) {
     desc: record.desc,
     status: record.status,
     category: record.category || "",
+    nutzertyp: record.nutzertyp || record.expand?.owner?.nutzertyp || "",
     photos: photoUrls,
     expiresAt: record.expires_at ? new Date(record.expires_at).getTime() : null,
     createdAt: new Date(record.created).getTime(),
