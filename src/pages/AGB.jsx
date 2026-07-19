@@ -940,8 +940,53 @@ Der Betreiber kann das Nutzerkonto deaktivieren sowie Inhalte löschen oder anon
 17.8 Gesetzliche Rechte
 
 Gesetzliche Rechte des Betreibers und der Nutzer bleiben von den vorstehenden Regelungen unberührt.` },
-    { h: "18. Verfügbarkeit der Plattform", p: "help-app.online bemüht sich um hohe Verfügbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Störungen können zu Ausfällen führen." },
-    { h: "19. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die übrigen Bestimmungen wirksam." },
+    { h: "18. Datenschutz", p: `18.1 Verarbeitung personenbezogener Daten
+
+Der Schutz personenbezogener Daten hat für help-app.online einen hohen Stellenwert.
+
+Personenbezogene Daten werden ausschließlich im Einklang mit den jeweils geltenden datenschutzrechtlichen Vorschriften, insbesondere der Datenschutz-Grundverordnung (DSGVO) sowie den anwendbaren nationalen Datenschutzgesetzen, verarbeitet.
+
+18.2 Datenschutzerklärung
+
+Einzelheiten über Art, Umfang, Zwecke und Rechtsgrundlagen der Verarbeitung personenbezogener Daten sowie Informationen über die Rechte der betroffenen Personen ergeben sich aus der jeweils aktuellen Datenschutzerklärung von help-app.online.
+
+Die Datenschutzerklärung ist Bestandteil des Informationsangebots der Plattform und kann jederzeit über die entsprechende Seite auf help-app.online eingesehen werden.
+
+18.3 Verarbeitung zur Vertragserfüllung
+
+Soweit dies für die Registrierung, Nutzung der Plattform, Vermittlung von Aufträgen, Kommunikation zwischen Nutzern, Zahlungsabwicklung oder die Erfüllung gesetzlicher Pflichten erforderlich ist, verarbeitet help-app.online personenbezogene Daten im erforderlichen Umfang.
+
+18.4 Zahlungsdienstleister
+
+Für kostenpflichtige Leistungen kann help-app.online externe Zahlungsdienstleister einsetzen.
+
+Soweit Nutzer kostenpflichtige Leistungen in Anspruch nehmen, erfolgt die Verarbeitung der hierfür erforderlichen Zahlungsdaten durch den jeweiligen Zahlungsdienstleister nach dessen eigenen Datenschutz- und Nutzungsbestimmungen.
+
+help-app.online speichert grundsätzlich keine vollständigen Kreditkarten- oder vergleichbaren Zahlungsdaten der Nutzer.
+
+18.5 Kommunikation
+
+Im Rahmen der Nutzung der Plattform können personenbezogene Daten verarbeitet werden, soweit dies für die Bereitstellung des Nachrichtensystems, die Kommunikation zwischen Nutzern oder die Bearbeitung von Supportanfragen erforderlich ist.
+
+18.6 Cookies und vergleichbare Technologien
+
+help-app.online verwendet Cookies sowie vergleichbare Technologien, soweit diese für den technischen Betrieb der Plattform erforderlich sind oder der Nutzer hierin eingewilligt hat.
+
+Nähere Informationen hierzu enthält die Cookie-Richtlinie sowie die Datenschutzerklärung.
+
+18.7 Betroffenenrechte
+
+Nutzer haben im Rahmen der gesetzlichen Bestimmungen insbesondere das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit sowie Widerspruch gegen die Verarbeitung ihrer personenbezogenen Daten.
+
+Darüber hinaus besteht das Recht, eine erteilte Einwilligung jederzeit mit Wirkung für die Zukunft zu widerrufen sowie eine Beschwerde bei einer zuständigen Datenschutzaufsichtsbehörde einzureichen.
+
+18.8 Datensicherheit
+
+help-app.online trifft angemessene technische und organisatorische Maßnahmen, um personenbezogene Daten vor Verlust, Missbrauch, unbefugtem Zugriff, Veränderung oder unberechtigter Offenlegung zu schützen.
+
+Trotz aller Sicherheitsmaßnahmen kann ein vollständiger Schutz bei der Datenübertragung über das Internet nicht garantiert werden.` },
+    { h: "19. Verfügbarkeit der Plattform", p: "help-app.online bemüht sich um hohe Verfügbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Störungen können zu Ausfällen führen." },
+    { h: "20. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die übrigen Bestimmungen wirksam." },
   ];
 
   return (
