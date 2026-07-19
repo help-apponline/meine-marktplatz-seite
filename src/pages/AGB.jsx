@@ -469,12 +469,63 @@ Erforderliche Genehmigungen, Zulassungen, Qualifikationen, Erlaubnisse oder Vers
 Verletzt ein Nutzer schuldhaft gesetzliche Pflichten und entstehen help-app.online hierdurch Ansprüche Dritter oder behördliche Maßnahmen, stellt der betreffende Nutzer den Betreiber im gesetzlichen Umfang von hieraus resultierenden Ansprüchen frei, soweit er die Pflichtverletzung zu vertreten hat.
 
 Weitergehende gesetzliche Ansprüche des Betreibers bleiben hiervon unberührt.` },
-    { h: "10. Nutzerinhalte", p: "Nutzer sind für die von ihnen veröffentlichten Inhalte allein verantwortlich. Unzulässig sind Inhalte, die gegen Gesetze, Rechte Dritter oder die guten Sitten verstoßen. help-app.online kann Inhalte bei Rechtsverletzungen entfernen." },
-    { h: "12. Verbotene Nutzung", p: "Es ist untersagt, die Plattform für Belästigung, Betrug, Täuschung oder Spam zu nutzen sowie technische Schutzmaßnahmen zu umgehen oder rechtswidrige Inhalte einzustellen." },
-    { h: "13. Verfügbarkeit", p: "help-app.online bemüht sich um hohe Verfügbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Störungen können zu Ausfällen führen." },
-    { h: "14. Haftung", p: "help-app.online haftet unbeschränkt bei Vorsatz und grober Fahrlässigkeit. Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten ist die Haftung auf den vertragstypischen Schaden begrenzt." },
-    { h: "15. Werbepartner", p: "Werbepartner erhalten gegen Zahlung der vereinbarten Gebühr einen Eintrag auf der Plattform. help-app.online übernimmt keine Haftung für die Richtigkeit der Angaben von Werbepartnern." },
-    { h: "16. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die übrigen Bestimmungen wirksam." },
+    { h: "10. Bewertungen und Bewertungssystem", p: `10.1 Zweck des Bewertungssystems
+
+help-app.online stellt ein Bewertungssystem zur Verfügung, um Auftraggebern und Auftragnehmern (Helfern) die Möglichkeit zu geben, ihre Erfahrungen nach Abschluss eines vermittelten Auftrags miteinander zu teilen.
+
+Das Bewertungssystem dient ausschließlich der Information anderer Nutzer sowie der Förderung von Transparenz und Vertrauen innerhalb der Plattform.
+
+10.2 Berechtigung zur Bewertung
+
+Eine Bewertung kann ausschließlich von den unmittelbar am jeweiligen Auftrag beteiligten Vertragsparteien abgegeben werden.
+
+Voraussetzung für die Abgabe einer Bewertung ist, dass der Auftrag über help-app.online vermittelt und als abgeschlossen gekennzeichnet wurde.
+
+10.3 Einmalige Bewertung
+
+Für jeden vermittelten Auftrag kann jede Vertragspartei grundsätzlich nur eine einmalige Bewertung abgeben.
+
+Nach Veröffentlichung kann eine Bewertung grundsätzlich nicht erneut abgegeben oder mehrfach verändert werden.
+
+10.4 Inhalt der Bewertungen
+
+Bewertungen müssen auf tatsächlichen eigenen Erfahrungen beruhen und sachlich, wahrheitsgemäß sowie fair erfolgen.
+
+Unzulässig sind insbesondere Bewertungen mit bewusst falschen Tatsachenbehauptungen, mit beleidigenden, diskriminierenden oder ehrverletzenden Inhalten, mit Drohungen oder Einschüchterungen, mit Werbung oder Eigenwerbung, mit personenbezogenen Daten Dritter ohne deren Einwilligung sowie Bewertungen, die gegen geltendes Recht oder diese AGB verstoßen.
+
+10.5 Verbot der Manipulation
+
+Es ist untersagt, Bewertungen zu kaufen oder zu verkaufen, andere Nutzer zu unzulässigen Bewertungen zu veranlassen, mehrere Nutzerkonten zur Beeinflussung des Bewertungssystems zu verwenden oder Bewertungen durch Täuschung oder sonstigen Missbrauch zu manipulieren.
+
+Der Betreiber ist berechtigt, manipulierte Bewertungen zu entfernen und betroffene Nutzerkonten einzuschränken oder zu sperren.
+
+10.6 Prüfung und Entfernung
+
+help-app.online ist grundsätzlich nicht verpflichtet, Bewertungen vor ihrer Veröffentlichung zu überprüfen.
+
+Der Betreiber behält sich jedoch das Recht vor, Bewertungen zu prüfen, auszublenden oder zu entfernen, wenn konkrete Anhaltspunkte für einen Verstoß gegen gesetzliche Vorschriften oder diese AGB bestehen.
+
+10.7 Kein Anspruch auf Veröffentlichung
+
+Es besteht kein Anspruch auf die dauerhafte Veröffentlichung einer Bewertung. Der Betreiber ist berechtigt, Bewertungen zu entfernen oder auszublenden, wenn sie gegen diese AGB verstoßen, Rechte Dritter verletzen, offensichtlich unwahr oder irreführend sind, ein Missbrauch des Bewertungssystems vorliegt oder eine gesetzliche Verpflichtung zur Entfernung besteht.
+
+10.8 Haftung für Bewertungen
+
+Für Inhalt und Richtigkeit einer Bewertung ist ausschließlich der jeweilige Verfasser verantwortlich.
+
+Bewertungen geben ausschließlich die persönliche Meinung oder Erfahrung des jeweiligen Nutzers wieder und stellen nicht die Auffassung von help-app.online dar.
+
+10.9 Meldung von Bewertungen
+
+Nutzer können Bewertungen, die ihrer Ansicht nach gegen gesetzliche Vorschriften oder diese AGB verstoßen, über die hierfür vorgesehenen Meldefunktionen oder auf anderem geeigneten Weg an help-app.online melden.
+
+Der Betreiber wird gemeldete Bewertungen im Rahmen der gesetzlichen Vorgaben prüfen und gegebenenfalls geeignete Maßnahmen ergreifen.` },
+    { h: "11. Nutzerinhalte", p: "Nutzer sind für die von ihnen veröffentlichten Inhalte allein verantwortlich. Unzulässig sind Inhalte, die gegen Gesetze, Rechte Dritter oder die guten Sitten verstoßen. help-app.online kann Inhalte bei Rechtsverletzungen entfernen." },
+    { h: "13. Verbotene Nutzung", p: "Es ist untersagt, die Plattform für Belästigung, Betrug, Täuschung oder Spam zu nutzen sowie technische Schutzmaßnahmen zu umgehen oder rechtswidrige Inhalte einzustellen." },
+    { h: "14. Verfügbarkeit", p: "help-app.online bemüht sich um hohe Verfügbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Störungen können zu Ausfällen führen." },
+    { h: "15. Haftung", p: "help-app.online haftet unbeschränkt bei Vorsatz und grober Fahrlässigkeit. Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten ist die Haftung auf den vertragstypischen Schaden begrenzt." },
+    { h: "16. Werbepartner", p: "Werbepartner erhalten gegen Zahlung der vereinbarten Gebühr einen Eintrag auf der Plattform. help-app.online übernimmt keine Haftung für die Richtigkeit der Angaben von Werbepartnern." },
+    { h: "17. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die übrigen Bestimmungen wirksam." },
   ];
 
   return (
