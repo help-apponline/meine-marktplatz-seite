@@ -1073,10 +1073,7 @@ Diese Allgemeinen Geschäftsbedingungen gelten ab ihrer Veröffentlichung auf he
   return (
     <section className="bg-white min-h-screen px-5 md:px-10 py-12 max-w-4xl mx-auto w-full">
       <h2 className="text-3xl font-extrabold text-gray-900 mb-2">AGB</h2>
-      <p className="text-gray-500 mb-8">Allgemeine Geschäftsbedingungen (Vorlage für den Prototyp)</p>
-      <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-8 text-amber-800 text-sm">
-        <strong>Wichtiger Hinweis:</strong> Diese AGB sind eine Vorlage und stellen keine Rechtsberatung dar. Für den Livebetrieb sollten sie angepasst und rechtlich geprüft werden.
-      </div>
+      <p className="text-gray-500 mb-8">Allgemeine Geschäftsbedingungen von help-app.online</p>
       <div className="max-w-3xl text-gray-600 leading-relaxed space-y-6 text-sm">
         {sections.map(({ h, p }) => (
           <div key={h}>
