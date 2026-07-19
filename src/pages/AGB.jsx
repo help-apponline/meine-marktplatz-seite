@@ -257,12 +257,65 @@ Werbepartner von help-app.online haben keinen Anspruch darauf, innerhalb solcher
 Der Betreiber ist berechtigt, Funktionen, Inhalte, Design, technische Abläufe sowie den Leistungsumfang der Plattform jederzeit weiterzuentwickeln, anzupassen oder zu verändern.
 
 Soweit gesetzlich nichts anderes vorgeschrieben ist, besteht kein Anspruch auf die dauerhafte Bereitstellung einzelner Funktionen oder Inhalte.` },
-    { h: "6. Nutzerinhalte", p: "Nutzer sind für die von ihnen veröffentlichten Inhalte allein verantwortlich. Unzulässig sind Inhalte, die gegen Gesetze, Rechte Dritter oder die guten Sitten verstoßen. help-app.online kann Inhalte bei Rechtsverletzungen entfernen." },
-    { h: "7. Verbotene Nutzung", p: "Es ist untersagt, die Plattform für Belästigung, Betrug, Täuschung oder Spam zu nutzen sowie technische Schutzmaßnahmen zu umgehen oder rechtswidrige Inhalte einzustellen." },
-    { h: "8. Verfügbarkeit", p: "help-app.online bemüht sich um hohe Verfügbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Störungen können zu Ausfällen führen." },
-    { h: "9. Haftung", p: "help-app.online haftet unbeschränkt bei Vorsatz und grober Fahrlässigkeit. Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten ist die Haftung auf den vertragstypischen Schaden begrenzt." },
-    { h: "10. Werbepartner", p: "Werbepartner erhalten gegen Zahlung der vereinbarten Gebühr einen Eintrag auf der Plattform. help-app.online übernimmt keine Haftung für die Richtigkeit der Angaben von Werbepartnern." },
-    { h: "11. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die übrigen Bestimmungen wirksam." },
+    { h: "6. Vertragsverhältnis zwischen Auftraggeber und Auftragnehmer (Helfer)", p: `6.1 Vertragspartner
+
+help-app.online stellt ausschließlich die technische Plattform zur Vermittlung von Kontakten zwischen Auftraggebern und Auftragnehmern (Helfern) zur Verfügung.
+
+Ein Vertrag über die Durchführung einer Dienstleistung oder eines Auftrags kommt ausschließlich zwischen dem jeweiligen Auftraggeber und dem jeweiligen Auftragnehmer (Helfer) zustande.
+
+help-app.online wird weder Vertragspartner der vermittelten Leistungen noch Vertreter, Erfüllungsgehilfe oder Bevollmächtigter einer Vertragspartei.
+
+6.2 Zustandekommen eines Vertrages
+
+Ein Auftraggeber kann über help-app.online einen Auftrag veröffentlichen.
+
+Ein Auftragnehmer (Helfer) kann sein Interesse an einem Auftrag bekunden oder einen Auftrag annehmen.
+
+Ein Vertrag zwischen Auftraggeber und Auftragnehmer kommt erst zustande, wenn sich beide Parteien über die Durchführung des Auftrags geeinigt haben. Die Einzelheiten, insbesondere Leistungsumfang, Vergütung, Einsatzort, Ausführungszeitpunkt und sonstige Bedingungen, vereinbaren die Parteien eigenverantwortlich.
+
+6.3 Eigenverantwortliche Durchführung
+
+Auftraggeber und Auftragnehmer führen ihre Vereinbarungen eigenverantwortlich durch. Sie sind insbesondere selbst verantwortlich für die vollständige Beschreibung des Auftrags, die Abstimmung aller Vertragsbedingungen, die Durchführung der vereinbarten Leistungen, die Einhaltung gesetzlicher Vorschriften, die vereinbarte Vergütung sowie die Erfüllung steuerlicher und sonstiger gesetzlicher Pflichten.
+
+help-app.online übernimmt keine Verantwortung für die Durchführung oder das Ergebnis eines vermittelten Auftrags.
+
+6.4 Kein Arbeitsverhältnis
+
+Durch die Nutzung von help-app.online entsteht weder zwischen help-app.online und den Nutzern noch zwischen Auftraggeber und Auftragnehmer automatisch ein Arbeitsverhältnis, Ausbildungsverhältnis, Dienstverhältnis, Handelsvertreterverhältnis, Zeitarbeitsverhältnis oder sonstiges Beschäftigungsverhältnis.
+
+Auftragnehmer handeln grundsätzlich selbstständig und eigenverantwortlich. Sie sind selbst dafür verantwortlich zu prüfen, ob und unter welchen rechtlichen Voraussetzungen sie eine angebotene Tätigkeit ausführen dürfen.
+
+6.5 Vergütung
+
+Die Höhe einer Vergütung wird ausschließlich zwischen Auftraggeber und Auftragnehmer vereinbart.
+
+Sofern für einen Auftrag keine Vergütung vorgesehen ist, handelt es sich um eine unentgeltliche Hilfeleistung.
+
+help-app.online nimmt auf die Preisgestaltung zwischen den Nutzern keinen Einfluss, soweit nicht ausdrücklich etwas anderes vereinbart oder über eine Plattformfunktion geregelt ist.
+
+6.6 Steuerliche und gesetzliche Pflichten
+
+Erhält ein Auftragnehmer (Helfer) für einen vermittelten Auftrag eine Vergütung oder sonstige geldwerte Vorteile, ist ausschließlich der Auftragnehmer für die ordnungsgemäße Erfüllung seiner steuerlichen, sozialversicherungsrechtlichen und sonstigen gesetzlichen Pflichten verantwortlich.
+
+help-app.online übernimmt keine steuerliche oder rechtliche Beratung und ist nicht verpflichtet, Einnahmen der Nutzer zu erfassen, zu melden oder steuerlich zu bewerten.
+
+6.7 Streitigkeiten zwischen Nutzern
+
+Kommt es im Zusammenhang mit einem vermittelten Auftrag zu Meinungsverschiedenheiten oder Streitigkeiten, sind Auftraggeber und Auftragnehmer verpflichtet, zunächst eigenständig eine einvernehmliche Lösung anzustreben.
+
+help-app.online ist nicht verpflichtet, Streitigkeiten zu schlichten oder Entscheidungen über gegenseitige Ansprüche zu treffen. Der Betreiber kann im Einzelfall freiwillig unterstützend tätig werden, ohne hierzu rechtlich verpflichtet zu sein.
+
+6.8 Haftung für vermittelte Leistungen
+
+Für Inhalt, Qualität, Rechtmäßigkeit, Durchführung oder Erfolg eines vermittelten Auftrags sind ausschließlich Auftraggeber und Auftragnehmer verantwortlich.
+
+help-app.online übernimmt hierfür keine Gewähr oder Haftung, soweit eine Haftung nicht gesetzlich zwingend vorgeschrieben ist.` },
+    { h: "7. Nutzerinhalte", p: "Nutzer sind für die von ihnen veröffentlichten Inhalte allein verantwortlich. Unzulässig sind Inhalte, die gegen Gesetze, Rechte Dritter oder die guten Sitten verstoßen. help-app.online kann Inhalte bei Rechtsverletzungen entfernen." },
+    { h: "9. Verbotene Nutzung", p: "Es ist untersagt, die Plattform für Belästigung, Betrug, Täuschung oder Spam zu nutzen sowie technische Schutzmaßnahmen zu umgehen oder rechtswidrige Inhalte einzustellen." },
+    { h: "10. Verfügbarkeit", p: "help-app.online bemüht sich um hohe Verfügbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Störungen können zu Ausfällen führen." },
+    { h: "11. Haftung", p: "help-app.online haftet unbeschränkt bei Vorsatz und grober Fahrlässigkeit. Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten ist die Haftung auf den vertragstypischen Schaden begrenzt." },
+    { h: "12. Werbepartner", p: "Werbepartner erhalten gegen Zahlung der vereinbarten Gebühr einen Eintrag auf der Plattform. help-app.online übernimmt keine Haftung für die Richtigkeit der Angaben von Werbepartnern." },
+    { h: "13. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die übrigen Bestimmungen wirksam." },
   ];
 
   return (
