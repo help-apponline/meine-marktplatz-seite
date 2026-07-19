@@ -565,11 +565,62 @@ Der Betreiber ist berechtigt, Inhalte insbesondere dann ganz oder teilweise zu e
 Der Nutzer stellt help-app.online von sämtlichen Ansprüchen Dritter frei, die aufgrund rechtswidrig veröffentlichter Inhalte gegen den Betreiber geltend gemacht werden, soweit der Nutzer die Rechtsverletzung zu vertreten hat.
 
 Dies umfasst auch angemessene Kosten der Rechtsverteidigung, soweit diese erforderlich sind.` },
-    { h: "12. Verbotene Nutzung", p: "Es ist untersagt, die Plattform für Belästigung, Betrug, Täuschung oder Spam zu nutzen sowie technische Schutzmaßnahmen zu umgehen oder rechtswidrige Inhalte einzustellen." },
-    { h: "13. Verfügbarkeit", p: "help-app.online bemüht sich um hohe Verfügbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Störungen können zu Ausfällen führen." },
-    { h: "14. Haftung", p: "help-app.online haftet unbeschränkt bei Vorsatz und grober Fahrlässigkeit. Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten ist die Haftung auf den vertragstypischen Schaden begrenzt." },
-    { h: "15. Werbepartner", p: "Werbepartner erhalten gegen Zahlung der vereinbarten Gebühr einen Eintrag auf der Plattform. help-app.online übernimmt keine Haftung für die Richtigkeit der Angaben von Werbepartnern." },
-    { h: "16. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die übrigen Bestimmungen wirksam." },
+    { h: "12. Werbung, Werbepartner und Affiliate-Programme", p: `12.1 Werbung auf der Plattform
+
+help-app.online finanziert sich unter anderem durch Werbeanzeigen sowie kostenpflichtige Werbeleistungen.
+
+Der Betreiber ist berechtigt, auf der Plattform eigene Werbung sowie Werbung von Werbepartnern und Affiliate-Partnern einzublenden.
+
+Die Platzierung von Werbeanzeigen erfolgt nach technischen, organisatorischen und wirtschaftlichen Gesichtspunkten.
+
+12.2 Werbepartner
+
+Unternehmen, Selbstständige, Gewerbetreibende sowie sonstige Organisationen können Werbeflächen auf help-app.online buchen.
+
+Der Umfang der Werbeleistungen richtet sich nach der jeweils gebuchten Leistung sowie den zum Zeitpunkt der Buchung geltenden Bedingungen.
+
+Ein Anspruch auf den Abschluss eines Werbevertrages besteht nicht.
+
+12.3 Rotierende Werbebanner
+
+Zur gleichmäßigen Darstellung gebuchter Werbeanzeigen kann help-app.online ein automatisiertes Rotationssystem einsetzen. Hierbei werden mehrere Werbeanzeigen innerhalb derselben Werbefläche wechselnd eingeblendet.
+
+Ein Anspruch auf eine dauerhafte, ausschließliche oder jederzeit sichtbare Darstellung besteht nicht, sofern keine ausdrücklich abweichende Vereinbarung getroffen wurde.
+
+Der Betreiber kann Reihenfolge, Einblendungshäufigkeit, Dauer und technische Darstellung der Werbeanzeigen jederzeit nach sachlichen und organisatorischen Kriterien anpassen.
+
+12.4 Affiliate-Werbung
+
+help-app.online ist berechtigt, insbesondere im Footer oder an anderen geeigneten Bereichen der Plattform Affiliate-Werbung oder Werbung externer Partner einzubinden.
+
+Diese Werbeanzeigen werden durch externe Affiliate-Netzwerke oder deren Vertragspartner bereitgestellt.
+
+Auf die Auswahl, Reihenfolge, Inhalte oder beworbenen Produkte und Dienstleistungen dieser Werbeanzeigen hat help-app.online grundsätzlich keinen Einfluss.
+
+Werbepartner von help-app.online haben keinen Anspruch darauf, innerhalb solcher Affiliate-Werbeflächen dargestellt oder bevorzugt berücksichtigt zu werden.
+
+12.5 Verantwortung für externe Werbung
+
+Für Inhalte, Produkte, Dienstleistungen oder Aussagen externer Werbepartner oder Affiliate-Partner übernimmt help-app.online keine Gewähr oder Haftung, soweit gesetzlich zulässig.
+
+Verträge über Produkte oder Dienstleistungen, die über externe Werbeanzeigen vermittelt werden, kommen ausschließlich zwischen dem jeweiligen Nutzer und dem jeweiligen Drittanbieter zustande.
+
+12.6 Änderungen des Werbekonzepts
+
+Der Betreiber ist berechtigt, das Werbekonzept der Plattform jederzeit weiterzuentwickeln. Dies umfasst insbesondere die Einführung neuer Werbeformate, zusätzliche Werbeflächen, Änderungen der Platzierung bestehender Werbeanzeigen, neue Premium-Werbemöglichkeiten, Affiliate-Programme, Sponsoring, Unternehmensprofile sowie zukünftige Werbe- und Vermarktungsmodelle.
+
+Soweit bestehende vertragliche Vereinbarungen mit Werbepartnern betroffen sind, werden diese berücksichtigt.
+
+12.7 Ablehnung und Entfernung von Werbung
+
+help-app.online behält sich das Recht vor, Werbeanzeigen oder Werbepartner ohne Angabe von Gründen abzulehnen, zu sperren oder zu entfernen, insbesondere wenn gesetzliche Vorschriften verletzt werden, Inhalte gegen diese AGB verstoßen, Rechte Dritter beeinträchtigt werden, irreführende oder unlautere Werbung vorliegt oder die Werbung dem Ansehen oder den Interessen der Plattform erheblich schadet.
+
+Bereits bestehende gesetzliche oder vertragliche Ansprüche bleiben hiervon unberührt.` },
+    { h: "13. Verbotene Nutzung", p: "Es ist untersagt, die Plattform für Belästigung, Betrug, Täuschung oder Spam zu nutzen sowie technische Schutzmaßnahmen zu umgehen oder rechtswidrige Inhalte einzustellen." },
+    { h: "14. Verfügbarkeit", p: "help-app.online bemüht sich um hohe Verfügbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Störungen können zu Ausfällen führen." },
+    { h: "15. Haftung", p: "help-app.online haftet unbeschränkt bei Vorsatz und grober Fahrlässigkeit. Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten ist die Haftung auf den vertragstypischen Schaden begrenzt." },
+    { h: "16. Werbepartner (allgemein)", p: "Werbepartner erhalten gegen Zahlung der vereinbarten Gebühr einen Eintrag auf der Plattform. help-app.online übernimmt keine Haftung für die Richtigkeit der Angaben von Werbepartnern." },
+    { h: "17. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die übrigen Bestimmungen wirksam." },
   ];
 
   return (
