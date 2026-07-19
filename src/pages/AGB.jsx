@@ -50,14 +50,79 @@ Ein Anspruch auf die dauerhafte Bereitstellung bestimmter Funktionen besteht nic
 2.5 Rangfolge weiterer Regelungen
 
 Ergänzend zu diesen AGB gelten die Datenschutzerklärung, die Cookie-Richtlinie, die Nutzungsrichtlinien (Community-Regeln) sowie gegebenenfalls besondere Bedingungen für kostenpflichtige Leistungen oder Werbepartner. Soweit sich Regelungen widersprechen, gehen die spezielleren Bestimmungen den allgemeinen Regelungen dieser AGB vor.` },
-    { h: "3. Leistungen von help-app.online", p: "help-app.online stellt eine technische Plattform bereit, ueber die Personen Hilfeleistungen anbieten und suchen koennen. help-app.online ist nicht Partei eines Vertrages zwischen Helfer und Auftraggeber." },
-    { h: "4. Registrierung und Nutzerkonto", p: "Einige Funktionen koennen eine Registrierung erfordern. Nutzer sind verpflichtet, wahrheitsgemaesse Angaben zu machen und Zugangsdaten vertraulich zu behandeln. help-app.online kann Nutzerkonten bei begruendetem Verdacht auf Missbrauch sperren." },
-    { h: "5. Nutzerinhalte", p: "Nutzer sind fuer die von ihnen veroeffentlichten Inhalte allein verantwortlich. Unzulaessig sind Inhalte, die gegen Gesetze, Rechte Dritter oder die guten Sitten verstossen. help-app.online kann Inhalte bei Rechtsverletungen entfernen." },
-    { h: "6. Verbotene Nutzung", p: "Es ist untersagt, die Plattform fuer Belaestigung, Betrug, Taeuschung oder Spam zu nutzen sowie technische Schutzmassnahmen zu umgehen oder rechtswidrige Inhalte einzustellen." },
-    { h: "7. Verfügbarkeit", p: "help-app.online bemueht sich um hohe Verfuegbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Stoerungen koennen zu Ausfaellen fuehren." },
-    { h: "8. Haftung", p: "help-app.online haftet unbeschraenkt bei Vorsatz und grober Fahrlaessigkeit. Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten ist die Haftung auf den vertragstypischen Schaden begrenzt." },
-    { h: "9. Werbepartner", p: "Werbepartner erhalten gegen Zahlung der Jahresgebuehr einen Eintrag auf der Plattform. help-app.online uebernimmt keine Haftung fuer die Richtigkeit der Angaben von Werbepartnern." },
-    { h: "10. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die uebrigen Bestimmungen wirksam." },
+    { h: "3. Begriffsbestimmungen", p: `Zur besseren Lesbarkeit und einheitlichen Auslegung dieser Allgemeinen Geschäftsbedingungen gelten die nachfolgenden Begriffsbestimmungen:
+
+3.1 Betreiber
+
+Betreiber der Plattform ist die natürliche oder juristische Person, die die Internetplattform help-app.online bereitstellt und deren technische sowie organisatorische Verwaltung übernimmt.
+
+3.2 Plattform
+
+„Plattform" bezeichnet das unter help-app.online erreichbare Online-Angebot einschließlich aller dazugehörigen Webseiten, mobilen Anwendungen, Funktionen, Kommunikationsdienste sowie zukünftiger Erweiterungen und technischer Weiterentwicklungen.
+
+3.3 Nutzer
+
+Nutzer ist jede natürliche oder juristische Person, die help-app.online besucht, ein Nutzerkonto erstellt oder die angebotenen Funktionen der Plattform verwendet.
+
+3.4 Auftraggeber
+
+Auftraggeber ist jeder Nutzer, der über help-app.online einen Auftrag, ein Hilfegesuch oder eine Dienstleistung veröffentlicht, um hierfür einen geeigneten Auftragnehmer (Helfer) zu finden.
+
+3.5 Auftragnehmer (Helfer)
+
+Auftragnehmer (Helfer) ist jeder Nutzer, der über help-app.online veröffentlichte Aufträge annimmt oder Dienstleistungen gegenüber Auftraggebern anbietet oder ausführt.
+
+Der Auftragnehmer handelt eigenverantwortlich und auf eigene Rechnung, sofern gesetzlich nichts anderes vorgeschrieben ist.
+
+3.6 Auftrag
+
+Ein Auftrag ist eine vom Auftraggeber veröffentlichte Beschreibung einer gewünschten Hilfeleistung oder Dienstleistung mit den dazugehörigen Angaben, insbesondere zur Art der Tätigkeit, dem Einsatzort, dem gewünschten Zeitraum sowie – soweit angegeben – zur Vergütung.
+
+3.7 Vermittlung
+
+Vermittlung bezeichnet ausschließlich die technische Möglichkeit, Auftraggeber und Auftragnehmer über help-app.online miteinander in Kontakt zu bringen.
+
+help-app.online vermittelt Kontakte, übernimmt jedoch weder die Durchführung der Dienstleistung noch wird help-app.online Vertragspartner der zwischen den Nutzern geschlossenen Vereinbarungen.
+
+3.8 Nutzerkonto
+
+Das Nutzerkonto ist der persönliche Zugang eines registrierten Nutzers zu den Funktionen von help-app.online. Es dient unter anderem der Verwaltung persönlicher Daten, der Veröffentlichung oder Annahme von Aufträgen, der Kommunikation über das Nachrichtensystem sowie der Nutzung weiterer Plattformfunktionen.
+
+3.9 Werbepartner
+
+Werbepartner sind Unternehmen, Selbstständige oder sonstige Personen, die auf help-app.online kostenpflichtige oder unentgeltliche Werbeflächen nutzen oder Werbeanzeigen schalten.
+
+Die Darstellung von Werbeanzeigen kann automatisiert erfolgen und insbesondere in rotierenden Werbebannern angezeigt werden.
+
+3.10 Affiliate-Partner
+
+Affiliate-Partner sind externe Unternehmen oder Werbenetzwerke, deren Werbeanzeigen oder Produktempfehlungen auf help-app.online eingebunden werden.
+
+Die Inhalte dieser Werbeanzeigen werden durch die jeweiligen Affiliate-Partner oder deren Werbenetzwerke bereitgestellt. help-app.online hat auf die konkrete Auswahl, Reihenfolge oder den Inhalt dieser Werbung grundsätzlich keinen Einfluss.
+
+3.11 Premium-Leistungen
+
+Premium-Leistungen sind sämtliche kostenpflichtigen Zusatzfunktionen oder Angebote von help-app.online, die über den kostenlosen Leistungsumfang hinausgehen.
+
+Hierzu können insbesondere hervorgehobene Anzeigen, zusätzliche Funktionen, Werbeleistungen oder kostenpflichtige Mitgliedschaften gehören.
+
+3.12 Bewertung
+
+Eine Bewertung ist die von einem Auftraggeber oder Auftragnehmer nach Abschluss eines vermittelten Auftrags abgegebene Einschätzung der Zusammenarbeit.
+
+Für jeden vermittelten Auftrag kann grundsätzlich nur eine Bewertung je Vertragspartei abgegeben werden.
+
+3.13 Inhalte
+
+Inhalte im Sinne dieser AGB sind sämtliche von Nutzern eingestellten oder hochgeladenen Informationen, insbesondere Texte, Bilder, Fotos, Grafiken, Logos, Dokumente, Videos, Bewertungen, Kommentare und sonstige Dateien.` },
+    { h: "4. Leistungen von help-app.online", p: "help-app.online stellt eine technische Plattform bereit, ueber die Personen Hilfeleistungen anbieten und suchen koennen. help-app.online ist nicht Partei eines Vertrages zwischen Helfer und Auftraggeber." },
+    { h: "5. Registrierung und Nutzerkonto", p: "Einige Funktionen koennen eine Registrierung erfordern. Nutzer sind verpflichtet, wahrheitsgemaesse Angaben zu machen und Zugangsdaten vertraulich zu behandeln. help-app.online kann Nutzerkonten bei begruendetem Verdacht auf Missbrauch sperren." },
+    { h: "6. Nutzerinhalte", p: "Nutzer sind fuer die von ihnen veroeffentlichten Inhalte allein verantwortlich. Unzulaessig sind Inhalte, die gegen Gesetze, Rechte Dritter oder die guten Sitten verstossen. help-app.online kann Inhalte bei Rechtsverletungen entfernen." },
+    { h: "7. Verbotene Nutzung", p: "Es ist untersagt, die Plattform fuer Belaestigung, Betrug, Taeuschung oder Spam zu nutzen sowie technische Schutzmassnahmen zu umgehen oder rechtswidrige Inhalte einzustellen." },
+    { h: "8. Verfügbarkeit", p: "help-app.online bemueht sich um hohe Verfuegbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Stoerungen koennen zu Ausfaellen fuehren." },
+    { h: "9. Haftung", p: "help-app.online haftet unbeschraenkt bei Vorsatz und grober Fahrlaessigkeit. Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten ist die Haftung auf den vertragstypischen Schaden begrenzt." },
+    { h: "10. Werbepartner", p: "Werbepartner erhalten gegen Zahlung der Jahresgebuehr einen Eintrag auf der Plattform. help-app.online uebernimmt keine Haftung fuer die Richtigkeit der Angaben von Werbepartnern." },
+    { h: "11. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die uebrigen Bestimmungen wirksam." },
   ];
 
   return (
