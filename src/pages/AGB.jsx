@@ -1041,7 +1041,19 @@ Ein Anspruch auf eine jederzeitige, ununterbrochene oder fehlerfreie Erreichbark
 Insbesondere können Wartungsarbeiten, Sicherheitsupdates, technische Weiterentwicklungen, Softwareaktualisierungen, Störungen von Telekommunikations- oder Datennetzen, Ausfälle externer Dienstleister, Ereignisse höherer Gewalt oder sonstige Umstände außerhalb des Einflussbereichs von help-app.online zu vorübergehenden Einschränkungen oder Ausfällen führen.
 
 Soweit gesetzlich zulässig, haftet help-app.online nicht für Schäden oder Nachteile, die aus einer vorübergehenden Nichtverfügbarkeit, Unterbrechung oder Einschränkung der Plattform entstehen, sofern diese nicht auf vorsätzlichem oder grob fahrlässigem Verhalten des Betreibers beruhen oder eine gesetzlich zwingende Haftung besteht.` },
-    { h: "23. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die übrigen Bestimmungen wirksam." },
+    { h: "23. Schlussbestimmungen", p: `23.1 Anwendbares Recht
+
+Für sämtliche Rechtsbeziehungen zwischen help-app.online und den Nutzern gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts (CISG).
+
+Zwingende Verbraucherschutzvorschriften des Staates, in dem ein Verbraucher seinen gewöhnlichen Aufenthalt hat, bleiben hiervon unberührt.
+
+23.2 Gerichtsstand
+
+Soweit gesetzlich zulässig, ist Gerichtsstand für sämtliche Streitigkeiten aus oder im Zusammenhang mit der Nutzung von help-app.online der Sitz des Betreibers in Gelsenkirchen.
+
+Dies gilt ausschließlich gegenüber Kaufleuten, juristischen Personen des öffentlichen Rechts, öffentlich-rechtlichen Sondervermögen oder Nutzern, die keinen allgemeinen Gerichtsstand in der Bundesrepublik Deutschland haben.
+
+Für Verbraucher gelten die gesetzlichen Gerichtsstandsregelungen.` },
   ];
 
   return (
