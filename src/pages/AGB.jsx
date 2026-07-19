@@ -985,8 +985,29 @@ Darüber hinaus besteht das Recht, eine erteilte Einwilligung jederzeit mit Wirk
 help-app.online trifft angemessene technische und organisatorische Maßnahmen, um personenbezogene Daten vor Verlust, Missbrauch, unbefugtem Zugriff, Veränderung oder unberechtigter Offenlegung zu schützen.
 
 Trotz aller Sicherheitsmaßnahmen kann ein vollständiger Schutz bei der Datenübertragung über das Internet nicht garantiert werden.` },
-    { h: "19. Verfügbarkeit der Plattform", p: "help-app.online bemüht sich um hohe Verfügbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Störungen können zu Ausfällen führen." },
-    { h: "20. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die übrigen Bestimmungen wirksam." },
+    { h: "19. Datenschutzerklärung und ergänzende Datenschutzbestimmungen", p: `19.1 Eigenständige Datenschutzerklärung
+
+Ergänzend zu diesen Allgemeinen Geschäftsbedingungen gilt die jeweils aktuelle Datenschutzerklärung von help-app.online.
+
+Die Datenschutzerklärung informiert die Nutzer insbesondere über Art, Umfang, Zwecke und Rechtsgrundlagen der Verarbeitung personenbezogener Daten sowie über die den betroffenen Personen zustehenden Rechte nach der Datenschutz-Grundverordnung (DSGVO) und den sonstigen anwendbaren Datenschutzvorschriften.
+
+19.2 Bestandteil des Informationsangebots
+
+Die Datenschutzerklärung ist jederzeit über die Internetseite von help-app.online abrufbar und bildet einen wesentlichen Bestandteil des Informationsangebots der Plattform.
+
+Mit der Nutzung von help-app.online bestätigt der Nutzer, die Datenschutzerklärung zur Kenntnis genommen zu haben.
+
+19.3 Änderungen der Datenschutzerklärung
+
+Der Betreiber behält sich vor, die Datenschutzerklärung anzupassen, soweit dies aufgrund gesetzlicher Änderungen, neuer technischer Entwicklungen oder einer Weiterentwicklung der Plattform erforderlich ist.
+
+Über wesentliche Änderungen werden registrierte Nutzer in geeigneter Weise informiert, sofern hierfür eine gesetzliche Verpflichtung besteht.
+
+19.4 Vorrang datenschutzrechtlicher Vorschriften
+
+Soweit Regelungen dieser Allgemeinen Geschäftsbedingungen und der Datenschutzerklärung dieselben Sachverhalte betreffen, gelten die datenschutzrechtlichen Bestimmungen der Datenschutzerklärung vorrangig, soweit zwingende datenschutzrechtliche Vorschriften dies erfordern.` },
+    { h: "20. Verfügbarkeit der Plattform", p: "help-app.online bemüht sich um hohe Verfügbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Störungen können zu Ausfällen führen." },
+    { h: "21. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die übrigen Bestimmungen wirksam." },
   ];
 
   return (
