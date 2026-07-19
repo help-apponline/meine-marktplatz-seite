@@ -1095,6 +1095,9 @@ Diese Allgemeinen Geschäftsbedingungen gelten ab ihrer Veröffentlichung auf he
             </div>
           </div>
         ))}
+        <div className="pt-8 border-t border-gray-100 text-gray-400 text-sm">
+          <p>Stand: Juli 2026 · Gelsenkirchen</p>
+        </div>
       </div>
     </section>
   );
