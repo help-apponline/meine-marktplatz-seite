@@ -801,8 +801,66 @@ Der Betreiber prüft eingehende Meldungen sorgfältig und trifft im Rahmen der g
 14.9 Zusammenarbeit mit Behörden
 
 Soweit gesetzlich vorgeschrieben oder aufgrund einer vollziehbaren behördlichen oder gerichtlichen Anordnung erforderlich, arbeitet help-app.online mit den zuständigen Behörden zusammen und erteilt die erforderlichen Auskünfte unter Beachtung der geltenden Datenschutz- und sonstigen Rechtsvorschriften.` },
-    { h: "15. Verfügbarkeit", p: "help-app.online bemüht sich um hohe Verfügbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Störungen können zu Ausfällen führen." },
-    { h: "16. Haftung", p: "help-app.online haftet unbeschränkt bei Vorsatz und grober Fahrlässigkeit. Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten ist die Haftung auf den vertragstypischen Schaden begrenzt." },
+    { h: "15. Haftung", p: `15.1 Vermittlerrolle
+
+help-app.online stellt ausschließlich eine technische Plattform zur Vermittlung von Kontakten zwischen Auftraggebern und Auftragnehmern (Helfern) zur Verfügung.
+
+Der Betreiber wird weder Vertragspartner der zwischen den Nutzern geschlossenen Vereinbarungen noch übernimmt er die Durchführung, Überwachung oder Kontrolle der vermittelten Dienstleistungen.
+
+15.2 Eigenverantwortung der Nutzer
+
+Für Inhalt, Durchführung, Qualität, Sicherheit, Rechtmäßigkeit sowie das Ergebnis eines vermittelten Auftrags sind ausschließlich die jeweiligen Auftraggeber und Auftragnehmer verantwortlich.
+
+help-app.online übernimmt insbesondere keine Gewähr für:
+
+- die Richtigkeit von Nutzerangaben,
+- die Qualifikation oder Zuverlässigkeit von Auftraggebern oder Auftragnehmern,
+- die ordnungsgemäße Durchführung eines Auftrags,
+- die Zahlungsfähigkeit oder Zahlungsbereitschaft der Nutzer,
+- die Qualität oder Eignung der angebotenen Leistungen.
+
+15.3 Haftung des Betreibers
+
+help-app.online haftet nach den gesetzlichen Vorschriften uneingeschränkt für Schäden:
+
+- die vorsätzlich oder grob fahrlässig verursacht wurden,
+- aus der Verletzung des Lebens, des Körpers oder der Gesundheit resultieren,
+- soweit eine Haftung nach zwingenden gesetzlichen Vorschriften besteht.
+
+Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten (Kardinalpflichten) ist die Haftung auf den vertragstypischen, vorhersehbaren Schaden begrenzt.
+
+Im Übrigen ist die Haftung für leicht fahrlässig verursachte Schäden ausgeschlossen, soweit gesetzlich zulässig.
+
+15.4 Technische Verfügbarkeit
+
+help-app.online bemüht sich um eine möglichst hohe Verfügbarkeit der Plattform.
+
+Eine jederzeitige, unterbrechungsfreie oder fehlerfreie Erreichbarkeit kann jedoch insbesondere aufgrund von Wartungsarbeiten, technischen Störungen, Sicherheitsmaßnahmen oder Ereignissen außerhalb des Einflussbereichs des Betreibers nicht gewährleistet werden.
+
+15.5 Inhalte Dritter
+
+Für Inhalte, Angaben, Bewertungen, Bilder, Anzeigen oder sonstige Informationen, die von Nutzern oder Dritten veröffentlicht werden, übernimmt help-app.online keine Verantwortung, soweit hierfür keine gesetzliche Verantwortlichkeit besteht.
+
+Die Verantwortung für solche Inhalte liegt ausschließlich bei deren jeweiligem Verfasser.
+
+15.6 Externe Links und Affiliate-Angebote
+
+Soweit help-app.online auf externe Internetseiten, Werbeanzeigen oder Affiliate-Angebote verweist oder diese einbindet, übernimmt der Betreiber keine Verantwortung für deren Inhalte, Produkte oder Dienstleistungen.
+
+Für Verträge, die zwischen Nutzern und externen Anbietern geschlossen werden, ist ausschließlich der jeweilige Drittanbieter verantwortlich.
+
+15.7 Haftung bei höherer Gewalt
+
+help-app.online haftet nicht für Verzögerungen oder Leistungsausfälle, die durch Ereignisse verursacht werden, die außerhalb des Einflussbereichs des Betreibers liegen.
+
+Hierzu zählen insbesondere Naturkatastrophen, Krieg, Terroranschläge, Streiks, behördliche Maßnahmen, Pandemien, Ausfälle von Telekommunikations- oder Energieversorgungsnetzen sowie sonstige Fälle höherer Gewalt.
+
+15.8 Gesetzliche Rechte
+
+Die vorstehenden Haftungsregelungen gelten ausschließlich im gesetzlich zulässigen Umfang.
+
+Zwingende gesetzliche Rechte der Nutzer, insbesondere nach den Vorschriften des Bürgerlichen Gesetzbuches (BGB), des Produkthaftungsgesetzes sowie anderer zwingender gesetzlicher Bestimmungen, bleiben unberührt.` },
+    { h: "16. Verfügbarkeit", p: "help-app.online bemüht sich um hohe Verfügbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Störungen können zu Ausfällen führen." },
     { h: "17. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die übrigen Bestimmungen wirksam." },
   ];
 
