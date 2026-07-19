@@ -888,8 +888,60 @@ Der Nutzer verpflichtet sich, help-app.online bei der Abwehr von Ansprüchen Dri
 Die vorstehenden Freistellungsregelungen gelten ausschließlich im gesetzlich zulässigen Umfang.
 
 Weitergehende gesetzliche Ansprüche des Betreibers sowie zwingende gesetzliche Rechte des Nutzers bleiben hiervon unberührt.` },
-    { h: "17. Verfügbarkeit der Plattform", p: "help-app.online bemüht sich um hohe Verfügbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Störungen können zu Ausfällen führen." },
-    { h: "18. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die übrigen Bestimmungen wirksam." },
+    { h: "17. Einschränkung, Sperrung und Beendigung von Nutzerkonten", p: `17.1 Maßnahmen des Betreibers
+
+help-app.online ist berechtigt, Nutzerkonten sowie einzelne Inhalte oder Funktionen vorübergehend oder dauerhaft einzuschränken, zu sperren oder zu entfernen, wenn hierfür ein sachlicher Grund besteht.
+
+Hierbei berücksichtigt der Betreiber insbesondere die Schwere des Verstoßes, die berechtigten Interessen aller Beteiligten sowie die geltenden gesetzlichen Vorschriften.
+
+17.2 Gründe für eine Einschränkung oder Sperrung
+
+Eine Einschränkung oder Sperrung kann insbesondere erfolgen, wenn:
+
+- gegen diese Allgemeinen Geschäftsbedingungen verstoßen wird,
+- gesetzliche Vorschriften verletzt werden,
+- rechtswidrige Inhalte veröffentlicht werden,
+- falsche oder irreführende Angaben gemacht werden,
+- Fake-Profile oder Mehrfachkonten verwendet werden,
+- das Bewertungssystem manipuliert wird,
+- andere Nutzer beleidigt, bedroht oder belästigt werden,
+- technische Sicherheitseinrichtungen umgangen oder missbraucht werden,
+- Spam oder automatisierte Inhalte verbreitet werden,
+- berechtigte Interessen des Betreibers oder anderer Nutzer erheblich beeinträchtigt werden.
+
+17.3 Entfernung von Inhalten
+
+Der Betreiber ist berechtigt, Inhalte, Aufträge, Bewertungen, Bilder oder sonstige Veröffentlichungen ganz oder teilweise zu entfernen oder auszublenden, wenn diese gegen gesetzliche Vorschriften, diese AGB oder Rechte Dritter verstoßen.
+
+17.4 Anhörung des Nutzers
+
+Soweit gesetzlich oder aufgrund besonderer Umstände nichts anderes erforderlich ist, wird der betroffene Nutzer vor einer dauerhaften Sperrung oder Kündigung über die wesentlichen Gründe informiert und erhält Gelegenheit zur Stellungnahme.
+
+Dies gilt nicht, wenn eine sofortige Maßnahme zum Schutz anderer Nutzer, zur Einhaltung gesetzlicher Verpflichtungen oder zur Abwehr erheblicher Risiken erforderlich ist.
+
+17.5 Löschung durch den Nutzer
+
+Nutzer können ihr Nutzerkonto grundsätzlich jederzeit über die hierfür vorgesehenen Funktionen löschen oder die Löschung beim Betreiber beantragen.
+
+Die Löschung lässt bereits bestehende vertragliche Verpflichtungen zwischen Auftraggebern und Auftragnehmern sowie gesetzliche Aufbewahrungs- und Nachweispflichten unberührt.
+
+17.6 Kündigung durch den Betreiber
+
+Der Betreiber ist berechtigt, das Nutzungsverhältnis aus wichtigem Grund mit sofortiger Wirkung zu kündigen.
+
+Ein wichtiger Grund liegt insbesondere vor, wenn dem Betreiber unter Berücksichtigung aller Umstände des Einzelfalls und der beiderseitigen Interessen eine Fortsetzung des Nutzungsverhältnisses nicht zugemutet werden kann.
+
+17.7 Folgen der Beendigung
+
+Mit Wirksamwerden der Kündigung oder Löschung endet das Recht des Nutzers, die Plattform mit seinem Nutzerkonto zu verwenden.
+
+Der Betreiber kann das Nutzerkonto deaktivieren sowie Inhalte löschen oder anonymisieren, soweit keine gesetzlichen Aufbewahrungspflichten oder sonstigen berechtigten Gründe einer Löschung entgegenstehen.
+
+17.8 Gesetzliche Rechte
+
+Gesetzliche Rechte des Betreibers und der Nutzer bleiben von den vorstehenden Regelungen unberührt.` },
+    { h: "18. Verfügbarkeit der Plattform", p: "help-app.online bemüht sich um hohe Verfügbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Störungen können zu Ausfällen führen." },
+    { h: "19. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die übrigen Bestimmungen wirksam." },
   ];
 
   return (
