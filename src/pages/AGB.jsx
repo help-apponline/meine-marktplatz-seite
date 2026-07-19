@@ -1034,8 +1034,14 @@ Soweit gesetzlich erforderlich oder vertraglich vorgesehen, wird der Nutzer ausd
 Soweit gesetzlich zulässig, gelten geänderte Allgemeine Geschäftsbedingungen als akzeptiert, wenn der Nutzer die Plattform nach Inkrafttreten der Änderungen weiterhin nutzt und hierauf zuvor hingewiesen wurde.
 
 Zwingende gesetzliche Vorschriften bleiben hiervon unberührt.` },
-    { h: "21. Verfügbarkeit der Plattform", p: "help-app.online bemüht sich um hohe Verfügbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Störungen können zu Ausfällen führen." },
-    { h: "22. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die übrigen Bestimmungen wirksam." },
+    { h: "22. Verfügbarkeit der Plattform", p: `help-app.online ist bemüht, die Plattform mit einer möglichst hohen Verfügbarkeit bereitzustellen und einen störungsfreien Betrieb sicherzustellen.
+
+Ein Anspruch auf eine jederzeitige, ununterbrochene oder fehlerfreie Erreichbarkeit der Plattform oder einzelner Funktionen besteht jedoch nicht.
+
+Insbesondere können Wartungsarbeiten, Sicherheitsupdates, technische Weiterentwicklungen, Softwareaktualisierungen, Störungen von Telekommunikations- oder Datennetzen, Ausfälle externer Dienstleister, Ereignisse höherer Gewalt oder sonstige Umstände außerhalb des Einflussbereichs von help-app.online zu vorübergehenden Einschränkungen oder Ausfällen führen.
+
+Soweit gesetzlich zulässig, haftet help-app.online nicht für Schäden oder Nachteile, die aus einer vorübergehenden Nichtverfügbarkeit, Unterbrechung oder Einschränkung der Plattform entstehen, sofern diese nicht auf vorsätzlichem oder grob fahrlässigem Verhalten des Betreibers beruhen oder eine gesetzlich zwingende Haftung besteht.` },
+    { h: "23. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die übrigen Bestimmungen wirksam." },
   ];
 
   return (
