@@ -860,8 +860,36 @@ Hierzu zählen insbesondere Naturkatastrophen, Krieg, Terroranschläge, Streiks,
 Die vorstehenden Haftungsregelungen gelten ausschließlich im gesetzlich zulässigen Umfang.
 
 Zwingende gesetzliche Rechte der Nutzer, insbesondere nach den Vorschriften des Bürgerlichen Gesetzbuches (BGB), des Produkthaftungsgesetzes sowie anderer zwingender gesetzlicher Bestimmungen, bleiben unberührt.` },
-    { h: "16. Verfügbarkeit", p: "help-app.online bemüht sich um hohe Verfügbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Störungen können zu Ausfällen führen." },
-    { h: "17. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die übrigen Bestimmungen wirksam." },
+    { h: "16. Freistellung", p: `16.1 Freistellung bei Pflichtverletzungen
+
+Verletzt ein Nutzer schuldhaft gesetzliche Vorschriften, diese Allgemeinen Geschäftsbedingungen oder Rechte Dritter und werden hierdurch Ansprüche gegen help-app.online geltend gemacht, stellt der betreffende Nutzer den Betreiber auf erstes berechtigtes Verlangen im gesetzlich zulässigen Umfang von diesen Ansprüchen frei.
+
+Dies gilt insbesondere für Ansprüche aufgrund von:
+
+- rechtswidrig veröffentlichten Inhalten,
+- Verletzungen von Urheber-, Marken-, Persönlichkeits-, Datenschutz- oder sonstigen Schutzrechten,
+- rechtswidrigen Aufträgen oder Dienstleistungen,
+- falschen oder irreführenden Angaben,
+- Verstößen gegen steuerliche oder sonstige gesetzliche Verpflichtungen,
+- sonstigen schuldhaften Pflichtverletzungen des Nutzers.
+
+16.2 Kosten der Rechtsverteidigung
+
+Die Freistellung umfasst auch die angemessenen und erforderlichen Kosten der Rechtsverteidigung, insbesondere Gerichts- und Anwaltskosten, soweit diese aufgrund der Pflichtverletzung des Nutzers entstehen.
+
+Der Betreiber wird den Nutzer über die Geltendmachung entsprechender Ansprüche unverzüglich informieren, soweit hierdurch die Rechtsverteidigung nicht beeinträchtigt wird.
+
+16.3 Mitwirkungspflicht
+
+Der Nutzer verpflichtet sich, help-app.online bei der Abwehr von Ansprüchen Dritter im angemessenen Umfang zu unterstützen und alle hierfür erforderlichen Informationen und Unterlagen bereitzustellen, soweit ihm dies zumutbar ist.
+
+16.4 Keine Einschränkung gesetzlicher Rechte
+
+Die vorstehenden Freistellungsregelungen gelten ausschließlich im gesetzlich zulässigen Umfang.
+
+Weitergehende gesetzliche Ansprüche des Betreibers sowie zwingende gesetzliche Rechte des Nutzers bleiben hiervon unberührt.` },
+    { h: "17. Verfügbarkeit der Plattform", p: "help-app.online bemüht sich um hohe Verfügbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Störungen können zu Ausfällen führen." },
+    { h: "18. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die übrigen Bestimmungen wirksam." },
   ];
 
   return (
