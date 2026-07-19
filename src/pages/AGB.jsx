@@ -722,9 +722,88 @@ Gesetzliche Ansprüche sowie weitergehende Rechte des Betreibers bleiben hiervon
 Soweit help-app.online hierzu gesetzlich verpflichtet ist oder eine vollziehbare behördliche oder gerichtliche Anordnung vorliegt, kann der Betreiber im Rahmen der geltenden Datenschutz- und sonstigen Rechtsvorschriften mit den zuständigen Behörden zusammenarbeiten und erforderliche Auskünfte erteilen.
 
 Dabei werden die berechtigten Interessen und Datenschutzrechte der Nutzer entsprechend den gesetzlichen Vorgaben berücksichtigt.` },
-    { h: "14. Verfügbarkeit", p: "help-app.online bemüht sich um hohe Verfügbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Störungen können zu Ausfällen führen." },
-    { h: "15. Haftung", p: "help-app.online haftet unbeschränkt bei Vorsatz und grober Fahrlässigkeit. Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten ist die Haftung auf den vertragstypischen Schaden begrenzt." },
-    { h: "16. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die übrigen Bestimmungen wirksam." },
+    { h: "14. Verbotene Inhalte und Dienstleistungen", p: `14.1 Grundsatz
+
+Über help-app.online dürfen ausschließlich rechtmäßige Dienstleistungen, Hilfsangebote und Aufträge veröffentlicht, vermittelt oder angenommen werden.
+
+Alle Nutzer verpflichten sich, bei der Nutzung der Plattform die geltenden gesetzlichen Vorschriften sowie die Rechte Dritter einzuhalten.
+
+14.2 Verbotene Dienstleistungen
+
+Insbesondere dürfen über help-app.online keine Aufträge oder Dienstleistungen angeboten, gesucht oder vermittelt werden, die:
+
+- gegen geltendes Recht verstoßen,
+- strafbare Handlungen fördern oder unterstützen,
+- gegen die öffentliche Ordnung oder die guten Sitten verstoßen,
+- behördliche Genehmigungen umgehen oder missachten,
+- ohne erforderliche gesetzliche Erlaubnisse durchgeführt werden sollen,
+- Leib, Leben oder Gesundheit anderer Personen gefährden.
+
+14.3 Unzulässige Inhalte
+
+Nicht zulässig sind insbesondere Inhalte oder Angebote im Zusammenhang mit:
+
+- Drogen oder sonstigen illegalen Betäubungsmitteln,
+- Waffen, Munition oder verbotenen Gegenständen,
+- Sprengstoffen oder explosionsgefährlichen Stoffen,
+- Menschenhandel oder Zwangsarbeit,
+- Schwarzarbeit oder sonstigen illegalen Beschäftigungsverhältnissen,
+- Geldwäsche oder Finanzbetrug,
+- Identitätsdiebstahl oder Datenmissbrauch,
+- sexuellen Dienstleistungen oder pornografischen Inhalten,
+- Glücksspiel ohne erforderliche behördliche Erlaubnis,
+- extremistischer, terroristischer oder verfassungsfeindlicher Propaganda,
+- Hassrede, Diskriminierung oder Volksverhetzung,
+- Gewaltverherrlichung oder Aufrufen zu Straftaten,
+- Verstößen gegen Urheber-, Marken-, Persönlichkeits- oder Datenschutzrechte.
+
+14.4 Schutzrechte Dritter
+
+Nutzer dürfen ausschließlich Inhalte veröffentlichen, an denen sie die erforderlichen Nutzungsrechte besitzen.
+
+Die Nutzung fremder Bilder, Texte, Marken, Logos, Videos oder sonstiger geschützter Inhalte ohne entsprechende Berechtigung ist unzulässig.
+
+14.5 Irreführende Angaben
+
+Es ist untersagt:
+
+- bewusst falsche Angaben zu machen,
+- Qualifikationen oder Genehmigungen vorzutäuschen,
+- Bewertungen zu manipulieren,
+- falsche Identitäten zu verwenden,
+- andere Nutzer über wesentliche Umstände eines Auftrags zu täuschen.
+
+14.6 Sicherheitsrelevante Tätigkeiten
+
+Aufträge oder Dienstleistungen, die besondere gesetzliche Qualifikationen, Genehmigungen oder behördliche Erlaubnisse voraussetzen, dürfen ausschließlich von entsprechend berechtigten Personen angeboten oder durchgeführt werden.
+
+Die Einhaltung sämtlicher gesetzlicher Anforderungen obliegt ausschließlich den jeweiligen Nutzern.
+
+14.7 Maßnahmen des Betreibers
+
+Bei einem Verstoß gegen diese Bestimmungen ist help-app.online berechtigt, insbesondere:
+
+- Inhalte oder Aufträge zu entfernen,
+- Anzeigen auszublenden,
+- Nutzerkonten vorübergehend oder dauerhaft einzuschränken oder zu sperren,
+- laufende Vermittlungen abzubrechen,
+- erforderliche Informationen zur Aufklärung anzufordern,
+- gesetzlich vorgeschriebene Maßnahmen zu ergreifen.
+
+Weitergehende gesetzliche Ansprüche bleiben hiervon unberührt.
+
+14.8 Meldeverfahren
+
+Nutzer können rechtswidrige oder gegen diese AGB verstoßende Inhalte über die vorgesehenen Meldefunktionen oder auf anderem geeigneten Weg an help-app.online melden.
+
+Der Betreiber prüft eingehende Meldungen sorgfältig und trifft im Rahmen der gesetzlichen Vorgaben angemessene Maßnahmen.
+
+14.9 Zusammenarbeit mit Behörden
+
+Soweit gesetzlich vorgeschrieben oder aufgrund einer vollziehbaren behördlichen oder gerichtlichen Anordnung erforderlich, arbeitet help-app.online mit den zuständigen Behörden zusammen und erteilt die erforderlichen Auskünfte unter Beachtung der geltenden Datenschutz- und sonstigen Rechtsvorschriften.` },
+    { h: "15. Verfügbarkeit", p: "help-app.online bemüht sich um hohe Verfügbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Störungen können zu Ausfällen führen." },
+    { h: "16. Haftung", p: "help-app.online haftet unbeschränkt bei Vorsatz und grober Fahrlässigkeit. Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten ist die Haftung auf den vertragstypischen Schaden begrenzt." },
+    { h: "17. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die übrigen Bestimmungen wirksam." },
   ];
 
   return (
