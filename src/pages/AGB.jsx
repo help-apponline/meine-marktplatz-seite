@@ -184,12 +184,85 @@ Die Löschung des Nutzerkontos berührt bereits bestehende vertragliche Verpflic
 help-app.online ist bemüht, die Plattform möglichst unterbrechungsfrei bereitzustellen.
 
 Ein Anspruch auf eine jederzeitige oder ununterbrochene Verfügbarkeit der Plattform oder einzelner Funktionen besteht jedoch nicht. Insbesondere können Wartungsarbeiten, technische Störungen, Sicherheitsmaßnahmen oder gesetzliche Vorgaben vorübergehende Einschränkungen oder Unterbrechungen erforderlich machen.` },
-    { h: "5. Nutzerinhalte", p: "Nutzer sind für die von ihnen veröffentlichten Inhalte allein verantwortlich. Unzulässig sind Inhalte, die gegen Gesetze, Rechte Dritter oder die guten Sitten verstoßen. help-app.online kann Inhalte bei Rechtsverletzungen entfernen." },
-    { h: "6. Verbotene Nutzung", p: "Es ist untersagt, die Plattform für Belästigung, Betrug, Täuschung oder Spam zu nutzen sowie technische Schutzmaßnahmen zu umgehen oder rechtswidrige Inhalte einzustellen." },
-    { h: "7. Verfügbarkeit", p: "help-app.online bemüht sich um hohe Verfügbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Störungen können zu Ausfällen führen." },
-    { h: "8. Haftung", p: "help-app.online haftet unbeschränkt bei Vorsatz und grober Fahrlässigkeit. Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten ist die Haftung auf den vertragstypischen Schaden begrenzt." },
-    { h: "9. Werbepartner", p: "Werbepartner erhalten gegen Zahlung der vereinbarten Gebühr einen Eintrag auf der Plattform. help-app.online übernimmt keine Haftung für die Richtigkeit der Angaben von Werbepartnern." },
-    { h: "10. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die übrigen Bestimmungen wirksam." },
+    { h: "5. Leistungen von help-app.online", p: `5.1 Gegenstand der Plattform
+
+help-app.online ist eine internetbasierte Vermittlungsplattform, die Auftraggeber und Auftragnehmer (Helfer) miteinander in Kontakt bringt.
+
+Die Plattform ermöglicht es Nutzern insbesondere, Hilfegesuche und Aufträge zu veröffentlichen, Aufträge zu suchen und anzunehmen, miteinander über das integrierte Nachrichtensystem zu kommunizieren, Bewertungen nach Abschluss eines Auftrags abzugeben, kostenpflichtige Premium-Leistungen zu nutzen sowie Werbemöglichkeiten für Unternehmen und Selbstständige in Anspruch zu nehmen.
+
+help-app.online entwickelt die angebotenen Funktionen kontinuierlich weiter und kann den Leistungsumfang jederzeit erweitern oder anpassen.
+
+5.2 Vermittlungsplattform
+
+help-app.online stellt ausschließlich die technische Infrastruktur zur Verfügung, über die Auftraggeber und Auftragnehmer miteinander in Kontakt treten können.
+
+Die Plattform übernimmt ausschließlich die Vermittlung von Kontakten.
+
+Verträge über Dienstleistungen oder sonstige Leistungen kommen ausschließlich zwischen dem jeweiligen Auftraggeber und dem jeweiligen Auftragnehmer zustande.
+
+help-app.online wird weder Vertragspartner der vermittelten Leistungen noch Arbeitgeber, Personalvermittler, Zeitarbeitsunternehmen oder Inkassodienstleister.
+
+5.3 Keine Prüfung der Nutzer
+
+help-app.online überprüft grundsätzlich weder die Identität, Qualifikation, Zuverlässigkeit, Bonität, Zahlungsfähigkeit noch die fachliche Eignung der Nutzer.
+
+Soweit freiwillige Verifizierungen oder Prüfungen angeboten werden, stellen diese keine Garantie für die Richtigkeit der Angaben oder die Qualität der angebotenen Leistungen dar.
+
+Jeder Nutzer ist selbst dafür verantwortlich, die Eignung seines Vertragspartners zu prüfen.
+
+5.4 Keine Erfolgsgarantie
+
+help-app.online übernimmt keine Gewähr dafür, dass ein Auftrag vermittelt, angenommen oder erfolgreich durchgeführt wird, dass Auftraggeber oder Helfer jederzeit verfügbar sind oder dass veröffentlichte Inhalte dauerhaft abrufbar bleiben.
+
+Ein Anspruch auf eine erfolgreiche Vermittlung oder den Abschluss eines Vertrages besteht nicht.
+
+5.5 Eigenverantwortung der Nutzer
+
+Auftraggeber und Auftragnehmer handeln eigenverantwortlich und auf eigenes Risiko. Sie sind insbesondere selbst verantwortlich für die Kommunikation miteinander, den Abschluss ihrer Vereinbarungen, die Durchführung des Auftrags, die vereinbarte Vergütung, die Einhaltung gesetzlicher Vorschriften, erforderliche Genehmigungen oder Qualifikationen, die ordnungsgemäße Versteuerung ihrer Einnahmen sowie die Erfüllung sonstiger gesetzlicher Pflichten.
+
+help-app.online übernimmt keine steuerliche, rechtliche oder wirtschaftliche Beratung.
+
+5.6 Kommunikation über die Plattform
+
+help-app.online stellt ein internes Nachrichtensystem zur Verfügung, um die Kommunikation zwischen Auftraggebern und Auftragnehmern zu erleichtern.
+
+Ein Anspruch auf eine jederzeitige Verfügbarkeit oder Speicherung sämtlicher Nachrichten besteht nicht.
+
+Der Betreiber behält sich vor, technische Änderungen am Nachrichtensystem vorzunehmen oder dessen Funktionen weiterzuentwickeln.
+
+5.7 Premium-Leistungen
+
+help-app.online kann kostenpflichtige Premium-Leistungen anbieten. Hierzu zählen insbesondere hervorgehobene Anzeigen, zusätzliche Funktionen, Premium-Mitgliedschaften, Werbeplatzierungen sowie weitere kostenpflichtige Zusatzleistungen.
+
+Die jeweils geltenden Preise sowie Leistungsbeschreibungen werden vor der Buchung transparent dargestellt.
+
+Die Zahlungsabwicklung erfolgt über einen externen Zahlungsdienstleister.
+
+5.8 Werbeanzeigen
+
+help-app.online ist berechtigt, auf der Plattform eigene Werbung sowie Werbung von Werbepartnern einzublenden. Werbeanzeigen können automatisiert und in rotierenden Werbebannern dargestellt werden.
+
+Ein Anspruch auf eine bestimmte Position, eine feste Einblendungshäufigkeit oder eine ausschließliche Darstellung besteht nur, wenn dies ausdrücklich schriftlich vereinbart wurde.
+
+5.9 Affiliate-Werbung
+
+help-app.online ist berechtigt, insbesondere im Footer oder an anderen geeigneten Bereichen der Plattform Affiliate-Werbung oder Werbung externer Partner einzubinden.
+
+Diese Werbeanzeigen werden von externen Werbenetzwerken oder Affiliate-Partnern bereitgestellt. help-app.online hat auf deren konkrete Inhalte, Produkte, Dienstleistungen oder Werbeaussagen grundsätzlich keinen Einfluss.
+
+Werbepartner von help-app.online haben keinen Anspruch darauf, innerhalb solcher Affiliate-Werbeflächen dargestellt oder bevorzugt berücksichtigt zu werden.
+
+5.10 Weiterentwicklung der Plattform
+
+Der Betreiber ist berechtigt, Funktionen, Inhalte, Design, technische Abläufe sowie den Leistungsumfang der Plattform jederzeit weiterzuentwickeln, anzupassen oder zu verändern.
+
+Soweit gesetzlich nichts anderes vorgeschrieben ist, besteht kein Anspruch auf die dauerhafte Bereitstellung einzelner Funktionen oder Inhalte.` },
+    { h: "6. Nutzerinhalte", p: "Nutzer sind für die von ihnen veröffentlichten Inhalte allein verantwortlich. Unzulässig sind Inhalte, die gegen Gesetze, Rechte Dritter oder die guten Sitten verstoßen. help-app.online kann Inhalte bei Rechtsverletzungen entfernen." },
+    { h: "7. Verbotene Nutzung", p: "Es ist untersagt, die Plattform für Belästigung, Betrug, Täuschung oder Spam zu nutzen sowie technische Schutzmaßnahmen zu umgehen oder rechtswidrige Inhalte einzustellen." },
+    { h: "8. Verfügbarkeit", p: "help-app.online bemüht sich um hohe Verfügbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Störungen können zu Ausfällen führen." },
+    { h: "9. Haftung", p: "help-app.online haftet unbeschränkt bei Vorsatz und grober Fahrlässigkeit. Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten ist die Haftung auf den vertragstypischen Schaden begrenzt." },
+    { h: "10. Werbepartner", p: "Werbepartner erhalten gegen Zahlung der vereinbarten Gebühr einen Eintrag auf der Plattform. help-app.online übernimmt keine Haftung für die Richtigkeit der Angaben von Werbepartnern." },
+    { h: "11. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die übrigen Bestimmungen wirksam." },
   ];
 
   return (
