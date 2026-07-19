@@ -361,12 +361,77 @@ Weder Auftraggeber noch Auftragnehmer haben einen Anspruch darauf, dass ein Auft
 Auftraggeber und Auftragnehmer verpflichten sich zu einem respektvollen, ehrlichen und fairen Umgang miteinander.
 
 Bewusst falsche Angaben, Belästigungen oder Diskriminierungen können zur Löschung von Inhalten sowie zur Sperrung des Nutzerkontos führen.` },
-    { h: "8. Nutzerinhalte", p: "Nutzer sind für die von ihnen veröffentlichten Inhalte allein verantwortlich. Unzulässig sind Inhalte, die gegen Gesetze, Rechte Dritter oder die guten Sitten verstoßen. help-app.online kann Inhalte bei Rechtsverletzungen entfernen." },
-    { h: "9. Verbotene Nutzung", p: "Es ist untersagt, die Plattform für Belästigung, Betrug, Täuschung oder Spam zu nutzen sowie technische Schutzmaßnahmen zu umgehen oder rechtswidrige Inhalte einzustellen." },
-    { h: "10. Verfügbarkeit", p: "help-app.online bemüht sich um hohe Verfügbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Störungen können zu Ausfällen führen." },
-    { h: "11. Haftung", p: "help-app.online haftet unbeschränkt bei Vorsatz und grober Fahrlässigkeit. Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten ist die Haftung auf den vertragstypischen Schaden begrenzt." },
-    { h: "12. Werbepartner", p: "Werbepartner erhalten gegen Zahlung der vereinbarten Gebühr einen Eintrag auf der Plattform. help-app.online übernimmt keine Haftung für die Richtigkeit der Angaben von Werbepartnern." },
-    { h: "13. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die übrigen Bestimmungen wirksam." },
+    { h: "8. Preise, kostenpflichtige Leistungen und Zahlungsabwicklung", p: `8.1 Grundsatz der Nutzung
+
+Die Nutzung von help-app.online ist grundsätzlich kostenlos, soweit für einzelne Leistungen oder Funktionen nicht ausdrücklich etwas anderes angegeben wird.
+
+Der Betreiber behält sich vor, bestehende kostenlose Leistungen beizubehalten, zu erweitern oder künftig ganz oder teilweise kostenpflichtig anzubieten.
+
+8.2 Kostenpflichtige Leistungen
+
+help-app.online kann kostenpflichtige Leistungen anbieten. Hierzu können insbesondere gehören: Premium-Mitgliedschaften, hervorgehobene Profile oder Anzeigen, Werbeleistungen, Vermittlungsgebühren, transaktionsbezogene Gebühren, Flatrates, Zusatzfunktionen sowie weitere digitale Dienstleistungen.
+
+Art, Umfang und Voraussetzungen der jeweiligen Leistungen ergeben sich aus der zum Zeitpunkt der Buchung gültigen Leistungsbeschreibung.
+
+8.3 Preise
+
+Die jeweils geltenden Preise werden vor Abschluss einer kostenpflichtigen Buchung transparent auf der Plattform angezeigt.
+
+Alle Preisangaben verstehen sich einschließlich der jeweils gesetzlich geltenden Umsatzsteuer, sofern nicht ausdrücklich etwas anderes angegeben ist.
+
+Der Nutzer erhält vor Abschluss einer kostenpflichtigen Bestellung die Möglichkeit, sämtliche Preisbestandteile einzusehen.
+
+8.4 Zustandekommen kostenpflichtiger Verträge
+
+Ein kostenpflichtiger Vertrag kommt erst zustande, wenn der Nutzer die Buchung ausdrücklich bestätigt und der Betreiber die Bestellung annimmt oder die gebuchte Leistung freischaltet.
+
+Vor Abschluss einer kostenpflichtigen Buchung werden dem Nutzer alle wesentlichen Informationen, insbesondere Preis, Leistungsumfang, Laufzeit und gegebenenfalls Kündigungsbedingungen, transparent angezeigt.
+
+8.5 Zahlungsabwicklung
+
+Die Zahlungsabwicklung für kostenpflichtige Leistungen erfolgt über den von help-app.online eingesetzten Zahlungsdienstleister. Der Betreiber beabsichtigt, hierfür insbesondere den Zahlungsdienstleister Stripe einzusetzen.
+
+Die Verarbeitung von Zahlungsdaten erfolgt ausschließlich durch den jeweiligen Zahlungsdienstleister nach dessen Datenschutz- und Nutzungsbedingungen.
+
+help-app.online speichert keine vollständigen Kreditkarten- oder vergleichbaren Zahlungsdaten der Nutzer.
+
+8.6 Zukünftige Gebührenmodelle
+
+Der Betreiber behält sich vor, künftig weitere kostenpflichtige Modelle einzuführen. Hierzu können insbesondere gehören: Gebühren für die Annahme von Aufträgen, Vermittlungsprovisionen, monatliche oder jährliche Mitgliedschaften, Flatrates, Unternehmenskonten, Premium-Angebote für private oder gewerbliche Nutzer sowie weitere kostenpflichtige Zusatzleistungen.
+
+Eine Verpflichtung zur Nutzung kostenpflichtiger Angebote besteht nur, wenn der jeweilige Nutzer diese ausdrücklich auswählt oder bucht.
+
+8.7 Änderungen von Preisen und Leistungen
+
+Der Betreiber ist berechtigt, Preise sowie den Umfang kostenpflichtiger Leistungen für zukünftige Buchungen anzupassen.
+
+Bereits abgeschlossene Verträge bleiben hiervon unberührt, soweit gesetzlich nichts anderes zulässig ist oder mit dem Nutzer ausdrücklich vereinbart wird.
+
+Über wesentliche Änderungen werden betroffene Nutzer rechtzeitig informiert.
+
+8.8 Zahlungsverzug
+
+Kommt ein Nutzer seinen Zahlungsverpflichtungen trotz Fälligkeit nicht nach, ist help-app.online berechtigt, den Zugang zu kostenpflichtigen Leistungen vorübergehend einzuschränken oder bis zum Ausgleich der offenen Forderung zu sperren.
+
+Weitergehende gesetzliche Ansprüche des Betreibers bleiben hiervon unberührt.
+
+8.9 Rückerstattungen
+
+Soweit gesetzlich oder vertraglich nichts anderes geregelt ist, besteht kein Anspruch auf eine vollständige oder teilweise Rückerstattung bereits gezahlter Entgelte.
+
+Hiervon unberührt bleiben zwingende gesetzliche Rechte der Nutzer, insbesondere gesetzliche Widerrufsrechte oder Ansprüche aufgrund zwingender verbraucherschutzrechtlicher Vorschriften.
+
+8.10 Rechnungen
+
+Soweit gesetzlich erforderlich oder technisch vorgesehen, stellt help-app.online dem Nutzer Rechnungen oder Zahlungsbelege in elektronischer Form zur Verfügung.
+
+Der Nutzer erklärt sich damit einverstanden, Rechnungen elektronisch zu erhalten, sofern keine gesetzliche Verpflichtung zur Übersendung in anderer Form besteht.` },
+    { h: "9. Nutzerinhalte", p: "Nutzer sind für die von ihnen veröffentlichten Inhalte allein verantwortlich. Unzulässig sind Inhalte, die gegen Gesetze, Rechte Dritter oder die guten Sitten verstoßen. help-app.online kann Inhalte bei Rechtsverletzungen entfernen." },
+    { h: "11. Verbotene Nutzung", p: "Es ist untersagt, die Plattform für Belästigung, Betrug, Täuschung oder Spam zu nutzen sowie technische Schutzmaßnahmen zu umgehen oder rechtswidrige Inhalte einzustellen." },
+    { h: "12. Verfügbarkeit", p: "help-app.online bemüht sich um hohe Verfügbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Störungen können zu Ausfällen führen." },
+    { h: "13. Haftung", p: "help-app.online haftet unbeschränkt bei Vorsatz und grober Fahrlässigkeit. Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten ist die Haftung auf den vertragstypischen Schaden begrenzt." },
+    { h: "14. Werbepartner", p: "Werbepartner erhalten gegen Zahlung der vereinbarten Gebühr einen Eintrag auf der Plattform. help-app.online übernimmt keine Haftung für die Richtigkeit der Angaben von Werbepartnern." },
+    { h: "15. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die übrigen Bestimmungen wirksam." },
   ];
 
   return (
