@@ -583,7 +583,9 @@ Ein Anspruch auf den Abschluss eines Werbevertrages besteht nicht.
 
 12.3 Rotierende Werbebanner
 
-Zur gleichmäßigen Darstellung gebuchter Werbeanzeigen kann help-app.online ein automatisiertes Rotationssystem einsetzen. Hierbei werden mehrere Werbeanzeigen innerhalb derselben Werbefläche wechselnd eingeblendet.
+Zur gleichmäßigen Darstellung gebuchter Werbeanzeigen kann help-app.online ein automatisiertes Rotationssystem einsetzen.
+
+Hierbei werden mehrere Werbeanzeigen innerhalb derselben Werbefläche wechselnd eingeblendet.
 
 Ein Anspruch auf eine dauerhafte, ausschließliche oder jederzeit sichtbare Darstellung besteht nicht, sofern keine ausdrücklich abweichende Vereinbarung getroffen wurde.
 
@@ -607,13 +609,28 @@ Verträge über Produkte oder Dienstleistungen, die über externe Werbeanzeigen 
 
 12.6 Änderungen des Werbekonzepts
 
-Der Betreiber ist berechtigt, das Werbekonzept der Plattform jederzeit weiterzuentwickeln. Dies umfasst insbesondere die Einführung neuer Werbeformate, zusätzliche Werbeflächen, Änderungen der Platzierung bestehender Werbeanzeigen, neue Premium-Werbemöglichkeiten, Affiliate-Programme, Sponsoring, Unternehmensprofile sowie zukünftige Werbe- und Vermarktungsmodelle.
+Der Betreiber ist berechtigt, das Werbekonzept der Plattform jederzeit weiterzuentwickeln.
+
+Dies umfasst insbesondere:
+- die Einführung neuer Werbeformate,
+- zusätzliche Werbeflächen,
+- Änderungen der Platzierung bestehender Werbeanzeigen,
+- neue Premium-Werbemöglichkeiten,
+- Affiliate-Programme,
+- Sponsoring,
+- Unternehmensprofile,
+- zukünftige Werbe- und Vermarktungsmodelle.
 
 Soweit bestehende vertragliche Vereinbarungen mit Werbepartnern betroffen sind, werden diese berücksichtigt.
 
 12.7 Ablehnung und Entfernung von Werbung
 
-help-app.online behält sich das Recht vor, Werbeanzeigen oder Werbepartner ohne Angabe von Gründen abzulehnen, zu sperren oder zu entfernen, insbesondere wenn gesetzliche Vorschriften verletzt werden, Inhalte gegen diese AGB verstoßen, Rechte Dritter beeinträchtigt werden, irreführende oder unlautere Werbung vorliegt oder die Werbung dem Ansehen oder den Interessen der Plattform erheblich schadet.
+help-app.online behält sich das Recht vor, Werbeanzeigen oder Werbepartner ohne Angabe von Gründen abzulehnen, zu sperren oder zu entfernen, insbesondere wenn:
+- gesetzliche Vorschriften verletzt werden,
+- Inhalte gegen diese AGB verstoßen,
+- Rechte Dritter beeinträchtigt werden,
+- irreführende oder unlautere Werbung vorliegt,
+- die Werbung dem Ansehen oder den Interessen der Plattform erheblich schadet.
 
 Bereits bestehende gesetzliche oder vertragliche Ansprüche bleiben hiervon unberührt.` },
     { h: "13. Verbotene Nutzung", p: "Es ist untersagt, die Plattform für Belästigung, Betrug, Täuschung oder Spam zu nutzen sowie technische Schutzmaßnahmen zu umgehen oder rechtswidrige Inhalte einzustellen." },
@@ -635,9 +652,19 @@ Bereits bestehende gesetzliche oder vertragliche Ansprüche bleiben hiervon unbe
           <div key={h}>
             <h3 className="font-bold text-gray-900 mb-1">{h}</h3>
             <div className="space-y-2">
-              {p.split(/\n\n+/).map((para, i) => (
-                <p key={i}>{para.trim()}</p>
-              ))}
+              {p.split(/\n\n+/).map((para, i) => {
+                const trimmed = para.trim();
+                const lines = trimmed.split("\n");
+                const isList = lines.every(l => l.startsWith("- "));
+                if (isList) {
+                  return (
+                    <ul key={i} className="list-disc list-inside space-y-1 pl-2">
+                      {lines.map((l, j) => <li key={j}>{l.slice(2)}</li>)}
+                    </ul>
+                  );
+                }
+                return <p key={i}>{trimmed}</p>;
+              })}
             </div>
           </div>
         ))}
