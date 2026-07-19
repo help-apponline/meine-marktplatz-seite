@@ -310,7 +310,58 @@ help-app.online ist nicht verpflichtet, Streitigkeiten zu schlichten oder Entsch
 Für Inhalt, Qualität, Rechtmäßigkeit, Durchführung oder Erfolg eines vermittelten Auftrags sind ausschließlich Auftraggeber und Auftragnehmer verantwortlich.
 
 help-app.online übernimmt hierfür keine Gewähr oder Haftung, soweit eine Haftung nicht gesetzlich zwingend vorgeschrieben ist.` },
-    { h: "7. Nutzerinhalte", p: "Nutzer sind für die von ihnen veröffentlichten Inhalte allein verantwortlich. Unzulässig sind Inhalte, die gegen Gesetze, Rechte Dritter oder die guten Sitten verstoßen. help-app.online kann Inhalte bei Rechtsverletzungen entfernen." },
+    { h: "7. Einstellen und Annehmen von Aufträgen", p: `7.1 Veröffentlichung von Aufträgen
+
+Registrierte Auftraggeber können über help-app.online Aufträge oder Hilfegesuche veröffentlichen.
+
+Die Beschreibung eines Auftrags muss vollständig, wahrheitsgemäß und verständlich sein.
+
+Der Auftraggeber ist verpflichtet, nur solche Aufträge einzustellen, deren Durchführung nach geltendem Recht zulässig ist.
+
+7.2 Annahme von Aufträgen
+
+Registrierte Auftragnehmer (Helfer) können veröffentlichte Aufträge annehmen oder ihr Interesse bekunden.
+
+Mit der Annahme verpflichtet sich der Auftragnehmer, die vereinbarten Leistungen nach bestem Wissen und Gewissen zu erbringen.
+
+7.3 Private und gewerbliche Auftragnehmer
+
+help-app.online steht sowohl privaten Personen als auch Selbstständigen, Gewerbetreibenden, Freiberuflern und Unternehmen offen.
+
+Gewerbliche Nutzer sind selbst verantwortlich, sämtliche gesetzlichen Vorschriften einzuhalten.
+
+7.4 Verantwortung für Aufträge
+
+Für Inhalt, Vollständigkeit und Richtigkeit eines Auftrags ist ausschließlich der jeweilige Auftraggeber verantwortlich.
+
+Der Auftragnehmer entscheidet eigenverantwortlich, ob er einen Auftrag annimmt und ob er die erforderlichen Kenntnisse und Qualifikationen besitzt.
+
+7.5 Änderungen und Löschung von Aufträgen
+
+Auftraggeber können veröffentlichte Aufträge bearbeiten oder löschen, solange keine bestehenden Vereinbarungen verletzt werden.
+
+help-app.online behält sich das Recht vor, Aufträge zu sperren oder zu entfernen, wenn diese gegen gesetzliche Vorschriften oder diese AGB verstoßen.
+
+7.6 Unzulässige Aufträge
+
+Nicht veröffentlicht werden dürfen insbesondere Aufträge, die gegen geltendes Recht verstoßen, diskriminierende oder sittenwidrige Inhalte enthalten, strafbare Handlungen fördern, gegen Jugendschutzbestimmungen verstoßen, unerlaubte oder gefährliche Tätigkeiten zum Gegenstand haben, gegen Schutzrechte Dritter verstoßen oder auf Betrug gerichtet sind.
+
+7.7 Vergütung und Zahlungsabwicklung
+
+Die Vergütung wird grundsätzlich zwischen Auftraggeber und Auftragnehmer vereinbart. Soweit keine eigene Zahlungsfunktion bereitgestellt wird, erfolgt die Bezahlung unmittelbar zwischen den Vertragsparteien.
+
+Der Betreiber behält sich vor, künftig eine eigene Zahlungsabwicklung einzuführen. Kostenpflichtige Leistungen werden ausschließlich nach ausdrücklicher Zustimmung des Nutzers in Anspruch genommen.
+
+7.8 Kein Anspruch auf Auftragsvermittlung
+
+Weder Auftraggeber noch Auftragnehmer haben einen Anspruch darauf, dass ein Auftrag vermittelt, angenommen oder erfolgreich durchgeführt wird.
+
+7.9 Fairer Umgang
+
+Auftraggeber und Auftragnehmer verpflichten sich zu einem respektvollen, ehrlichen und fairen Umgang miteinander.
+
+Bewusst falsche Angaben, Belästigungen oder Diskriminierungen können zur Löschung von Inhalten sowie zur Sperrung des Nutzerkontos führen.` },
+    { h: "8. Nutzerinhalte", p: "Nutzer sind für die von ihnen veröffentlichten Inhalte allein verantwortlich. Unzulässig sind Inhalte, die gegen Gesetze, Rechte Dritter oder die guten Sitten verstoßen. help-app.online kann Inhalte bei Rechtsverletzungen entfernen." },
     { h: "9. Verbotene Nutzung", p: "Es ist untersagt, die Plattform für Belästigung, Betrug, Täuschung oder Spam zu nutzen sowie technische Schutzmaßnahmen zu umgehen oder rechtswidrige Inhalte einzustellen." },
     { h: "10. Verfügbarkeit", p: "help-app.online bemüht sich um hohe Verfügbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Störungen können zu Ausfällen führen." },
     { h: "11. Haftung", p: "help-app.online haftet unbeschränkt bei Vorsatz und grober Fahrlässigkeit. Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten ist die Haftung auf den vertragstypischen Schaden begrenzt." },
