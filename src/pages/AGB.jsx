@@ -426,12 +426,55 @@ Hiervon unberührt bleiben zwingende gesetzliche Rechte der Nutzer, insbesondere
 Soweit gesetzlich erforderlich oder technisch vorgesehen, stellt help-app.online dem Nutzer Rechnungen oder Zahlungsbelege in elektronischer Form zur Verfügung.
 
 Der Nutzer erklärt sich damit einverstanden, Rechnungen elektronisch zu erhalten, sofern keine gesetzliche Verpflichtung zur Übersendung in anderer Form besteht.` },
-    { h: "9. Nutzerinhalte", p: "Nutzer sind für die von ihnen veröffentlichten Inhalte allein verantwortlich. Unzulässig sind Inhalte, die gegen Gesetze, Rechte Dritter oder die guten Sitten verstoßen. help-app.online kann Inhalte bei Rechtsverletzungen entfernen." },
-    { h: "11. Verbotene Nutzung", p: "Es ist untersagt, die Plattform für Belästigung, Betrug, Täuschung oder Spam zu nutzen sowie technische Schutzmaßnahmen zu umgehen oder rechtswidrige Inhalte einzustellen." },
-    { h: "12. Verfügbarkeit", p: "help-app.online bemüht sich um hohe Verfügbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Störungen können zu Ausfällen führen." },
-    { h: "13. Haftung", p: "help-app.online haftet unbeschränkt bei Vorsatz und grober Fahrlässigkeit. Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten ist die Haftung auf den vertragstypischen Schaden begrenzt." },
-    { h: "14. Werbepartner", p: "Werbepartner erhalten gegen Zahlung der vereinbarten Gebühr einen Eintrag auf der Plattform. help-app.online übernimmt keine Haftung für die Richtigkeit der Angaben von Werbepartnern." },
-    { h: "15. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die übrigen Bestimmungen wirksam." },
+    { h: "9. Steuerliche und gesetzliche Verantwortung der Nutzer", p: `9.1 Eigenverantwortung
+
+Auftraggeber und Auftragnehmer (Helfer) handeln bei der Nutzung von help-app.online eigenverantwortlich.
+
+Jeder Nutzer ist selbst dafür verantwortlich, sämtliche für ihn geltenden gesetzlichen Vorschriften einzuhalten. Dies gilt insbesondere für steuerliche, sozialversicherungsrechtliche, gewerberechtliche, berufsrechtliche sowie sonstige öffentlich-rechtliche Verpflichtungen.
+
+9.2 Steuerliche Verantwortung des Auftragnehmers
+
+Erhält ein Auftragnehmer (Helfer) für einen über help-app.online vermittelten Auftrag eine Vergütung oder sonstige geldwerte Vorteile, ist ausschließlich der Auftragnehmer für die ordnungsgemäße Erklärung und Versteuerung dieser Einnahmen verantwortlich.
+
+Dies gilt unabhängig davon, ob der Auftragnehmer die Tätigkeit privat, selbstständig, gewerblich oder im Rahmen einer sonstigen zulässigen Tätigkeit ausführt.
+
+9.3 Gewerbliche Nutzer
+
+Selbstständige, Freiberufler, Gewerbetreibende und Unternehmen sind verpflichtet, sämtliche für ihre Tätigkeit geltenden gesetzlichen Anforderungen eigenständig einzuhalten.
+
+Hierzu gehören insbesondere steuerliche Melde- und Erklärungspflichten, gewerberechtliche Vorschriften, berufsrechtliche Anforderungen sowie gegebenenfalls erforderliche Genehmigungen oder Eintragungen.
+
+9.4 Keine Steuer- oder Rechtsberatung
+
+help-app.online stellt ausschließlich eine Vermittlungsplattform zur Verfügung.
+
+Der Betreiber erbringt keine Steuerberatung, Rechtsberatung, Unternehmensberatung oder sonstige fachliche Beratung.
+
+Die auf der Plattform bereitgestellten Informationen dienen ausschließlich allgemeinen Informationszwecken und ersetzen keine individuelle Beratung durch entsprechend qualifizierte Fachpersonen.
+
+9.5 Keine steuerliche Mitwirkungspflicht
+
+help-app.online ist aufgrund seiner Rolle als Vermittlungsplattform grundsätzlich nicht verpflichtet, steuerliche Verpflichtungen der Nutzer zu überwachen, Einnahmen der Nutzer steuerlich zu bewerten, Steuererklärungen oder Meldungen für Nutzer zu erstellen, steuerliche Hinweise im Einzelfall zu erteilen oder die steuerliche Behandlung einzelner Aufträge zu prüfen.
+
+Soweit gesetzliche Mitwirkungs- oder Auskunftspflichten bestehen oder künftig eingeführt werden, bleiben diese hiervon unberührt.
+
+9.6 Gesetzliche Zulässigkeit von Tätigkeiten
+
+Jeder Nutzer ist selbst dafür verantwortlich zu prüfen, ob die angebotene oder beauftragte Tätigkeit nach den jeweils geltenden gesetzlichen Vorschriften zulässig ist.
+
+Erforderliche Genehmigungen, Zulassungen, Qualifikationen, Erlaubnisse oder Versicherungen sind eigenständig einzuholen und während der Ausübung der Tätigkeit aufrechtzuerhalten.
+
+9.7 Freistellung
+
+Verletzt ein Nutzer schuldhaft gesetzliche Pflichten und entstehen help-app.online hierdurch Ansprüche Dritter oder behördliche Maßnahmen, stellt der betreffende Nutzer den Betreiber im gesetzlichen Umfang von hieraus resultierenden Ansprüchen frei, soweit er die Pflichtverletzung zu vertreten hat.
+
+Weitergehende gesetzliche Ansprüche des Betreibers bleiben hiervon unberührt.` },
+    { h: "10. Nutzerinhalte", p: "Nutzer sind für die von ihnen veröffentlichten Inhalte allein verantwortlich. Unzulässig sind Inhalte, die gegen Gesetze, Rechte Dritter oder die guten Sitten verstoßen. help-app.online kann Inhalte bei Rechtsverletzungen entfernen." },
+    { h: "12. Verbotene Nutzung", p: "Es ist untersagt, die Plattform für Belästigung, Betrug, Täuschung oder Spam zu nutzen sowie technische Schutzmaßnahmen zu umgehen oder rechtswidrige Inhalte einzustellen." },
+    { h: "13. Verfügbarkeit", p: "help-app.online bemüht sich um hohe Verfügbarkeit, schuldet jedoch keine ununterbrochene Erreichbarkeit. Wartungen, Sicherheitsupdates oder Störungen können zu Ausfällen führen." },
+    { h: "14. Haftung", p: "help-app.online haftet unbeschränkt bei Vorsatz und grober Fahrlässigkeit. Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten ist die Haftung auf den vertragstypischen Schaden begrenzt." },
+    { h: "15. Werbepartner", p: "Werbepartner erhalten gegen Zahlung der vereinbarten Gebühr einen Eintrag auf der Plattform. help-app.online übernimmt keine Haftung für die Richtigkeit der Angaben von Werbepartnern." },
+    { h: "16. Schlussbestimmungen", p: "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleiben die übrigen Bestimmungen wirksam." },
   ];
 
   return (
