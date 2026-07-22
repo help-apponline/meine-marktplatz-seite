@@ -896,14 +896,7 @@ Der Nutzer verpflichtet sich, help-app.online bei der Abwehr von Ansprüchen Dri
 Die vorstehenden Freistellungsregelungen gelten ausschließlich im gesetzlich zulässigen Umfang.
 
 Weitergehende gesetzliche Ansprüche des Betreibers sowie zwingende gesetzliche Rechte des Nutzers bleiben hiervon unberührt.` },
-    { h: "17. Außergerichtliche Klärung von Rechtsverletzungen", p: `help-app.online ist bestrebt, etwaige Rechtsverletzungen schnell und außergerichtlich zu klären.
-
-Personen oder Unternehmen, die der Auffassung sind, dass Inhalte auf help-app.online ihre Rechte oder gesetzliche Vorschriften verletzen, werden gebeten, den Betreiber zunächst unter Angabe der beanstandeten Inhalte sowie einer nachvollziehbaren Begründung zu kontaktieren.
-
-Der Betreiber wird berechtigte Hinweise innerhalb angemessener Frist prüfen und – soweit erforderlich – geeignete Maßnahmen ergreifen, insbesondere beanstandete Inhalte sperren, entfernen oder anpassen.
-
-Diese Regelung dient ausschließlich der Förderung einer schnellen und außergerichtlichen Streitbeilegung. Gesetzliche Rechte, insbesondere das Recht zur Geltendmachung von Ansprüchen oder zur Einleitung gerichtlicher Verfahren, bleiben hiervon unberührt.` },
-    { h: "18. Einschränkung, Sperrung und Beendigung von Nutzerkonten", p: `18.1 Maßnahmen des Betreibers
+    { h: "17. Einschränkung, Sperrung und Beendigung von Nutzerkonten", p: `17.1 Maßnahmen des Betreibers
 
 help-app.online ist berechtigt, Nutzerkonten sowie einzelne Inhalte oder Funktionen vorübergehend oder dauerhaft einzuschränken, zu sperren oder zu entfernen, wenn hierfür ein sachlicher Grund besteht.
 
@@ -955,23 +948,23 @@ Der Betreiber kann das Nutzerkonto deaktivieren sowie Inhalte löschen oder anon
 17.8 Gesetzliche Rechte
 
 Gesetzliche Rechte des Betreibers und der Nutzer bleiben von den vorstehenden Regelungen unberührt.` },
-    { h: "19. Datenschutz", p: `19.1 Verarbeitung personenbezogener Daten
+    { h: "18. Datenschutz", p: `18.1 Verarbeitung personenbezogener Daten
 
 Der Schutz personenbezogener Daten hat für help-app.online einen hohen Stellenwert.
 
 Personenbezogene Daten werden ausschließlich im Einklang mit den jeweils geltenden datenschutzrechtlichen Vorschriften, insbesondere der Datenschutz-Grundverordnung (DSGVO) sowie den anwendbaren nationalen Datenschutzgesetzen, verarbeitet.
 
-19.2 Datenschutzerklärung
+18.2 Datenschutzerklärung
 
 Einzelheiten über Art, Umfang, Zwecke und Rechtsgrundlagen der Verarbeitung personenbezogener Daten sowie Informationen über die Rechte der betroffenen Personen ergeben sich aus der jeweils aktuellen Datenschutzerklärung von help-app.online.
 
 Die Datenschutzerklärung ist Bestandteil des Informationsangebots der Plattform und kann jederzeit über die entsprechende Seite auf help-app.online eingesehen werden.
 
-19.3 Verarbeitung zur Vertragserfüllung
+18.3 Verarbeitung zur Vertragserfüllung
 
 Soweit dies für die Registrierung, Nutzung der Plattform, Vermittlung von Aufträgen, Kommunikation zwischen Nutzern, Zahlungsabwicklung oder die Erfüllung gesetzlicher Pflichten erforderlich ist, verarbeitet help-app.online personenbezogene Daten im erforderlichen Umfang.
 
-19.4 Zahlungsdienstleister
+18.4 Zahlungsdienstleister
 
 Für kostenpflichtige Leistungen kann help-app.online externe Zahlungsdienstleister einsetzen.
 
@@ -979,49 +972,49 @@ Soweit Nutzer kostenpflichtige Leistungen in Anspruch nehmen, erfolgt die Verarb
 
 help-app.online speichert grundsätzlich keine vollständigen Kreditkarten- oder vergleichbaren Zahlungsdaten der Nutzer.
 
-19.5 Kommunikation
+18.5 Kommunikation
 
 Im Rahmen der Nutzung der Plattform können personenbezogene Daten verarbeitet werden, soweit dies für die Bereitstellung des Nachrichtensystems, die Kommunikation zwischen Nutzern oder die Bearbeitung von Supportanfragen erforderlich ist.
 
-19.6 Cookies und vergleichbare Technologien
+18.6 Cookies und vergleichbare Technologien
 
 help-app.online verwendet Cookies sowie vergleichbare Technologien, soweit diese für den technischen Betrieb der Plattform erforderlich sind oder der Nutzer hierin eingewilligt hat.
 
 Nähere Informationen hierzu enthält die Cookie-Richtlinie sowie die Datenschutzerklärung.
 
-19.7 Betroffenenrechte
+18.7 Betroffenenrechte
 
 Nutzer haben im Rahmen der gesetzlichen Bestimmungen insbesondere das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit sowie Widerspruch gegen die Verarbeitung ihrer personenbezogenen Daten.
 
 Darüber hinaus besteht das Recht, eine erteilte Einwilligung jederzeit mit Wirkung für die Zukunft zu widerrufen sowie eine Beschwerde bei einer zuständigen Datenschutzaufsichtsbehörde einzureichen.
 
-19.8 Datensicherheit
+18.8 Datensicherheit
 
 help-app.online trifft angemessene technische und organisatorische Maßnahmen, um personenbezogene Daten vor Verlust, Missbrauch, unbefugtem Zugriff, Veränderung oder unberechtigter Offenlegung zu schützen.
 
 Trotz aller Sicherheitsmaßnahmen kann ein vollständiger Schutz bei der Datenübertragung über das Internet nicht garantiert werden.` },
-    { h: "20. Datenschutzerklärung und ergänzende Datenschutzbestimmungen", p: `20.1 Eigenständige Datenschutzerklärung
+    { h: "19. Datenschutzerklärung und ergänzende Datenschutzbestimmungen", p: `19.1 Eigenständige Datenschutzerklärung
 
 Ergänzend zu diesen Allgemeinen Geschäftsbedingungen gilt die jeweils aktuelle Datenschutzerklärung von help-app.online.
 
 Die Datenschutzerklärung informiert die Nutzer insbesondere über Art, Umfang, Zwecke und Rechtsgrundlagen der Verarbeitung personenbezogener Daten sowie über die den betroffenen Personen zustehenden Rechte nach der Datenschutz-Grundverordnung (DSGVO) und den sonstigen anwendbaren Datenschutzvorschriften.
 
-20.2 Bestandteil des Informationsangebots
+19.2 Bestandteil des Informationsangebots
 
 Die Datenschutzerklärung ist jederzeit über die Internetseite von help-app.online abrufbar und bildet einen wesentlichen Bestandteil des Informationsangebots der Plattform.
 
 Mit der Nutzung von help-app.online bestätigt der Nutzer, die Datenschutzerklärung zur Kenntnis genommen zu haben.
 
-20.3 Änderungen der Datenschutzerklärung
+19.3 Änderungen der Datenschutzerklärung
 
 Der Betreiber behält sich vor, die Datenschutzerklärung anzupassen, soweit dies aufgrund gesetzlicher Änderungen, neuer technischer Entwicklungen oder einer Weiterentwicklung der Plattform erforderlich ist.
 
 Über wesentliche Änderungen werden registrierte Nutzer in geeigneter Weise informiert, sofern hierfür eine gesetzliche Verpflichtung besteht.
 
-20.4 Vorrang datenschutzrechtlicher Vorschriften
+19.4 Vorrang datenschutzrechtlicher Vorschriften
 
 Soweit Regelungen dieser Allgemeinen Geschäftsbedingungen und der Datenschutzerklärung dieselben Sachverhalte betreffen, gelten die datenschutzrechtlichen Bestimmungen der Datenschutzerklärung vorrangig, soweit zwingende datenschutzrechtliche Vorschriften dies erfordern.` },
-    { h: "21. Änderungen dieser Allgemeinen Geschäftsbedingungen", p: `21.1 Änderungsrecht
+    { h: "20. Änderungen dieser Allgemeinen Geschäftsbedingungen", p: `20.1 Änderungsrecht
 
 help-app.online entwickelt die Plattform kontinuierlich weiter und passt ihre Leistungen an technische, wirtschaftliche und gesetzliche Anforderungen an.
 
@@ -1038,31 +1031,31 @@ Sachliche Gründe können insbesondere sein:
 - Sicherheitsanforderungen,
 - Missbrauchsprävention.
 
-21.2 Information der Nutzer
+20.2 Information der Nutzer
 
 Über wesentliche Änderungen der Allgemeinen Geschäftsbedingungen werden registrierte Nutzer rechtzeitig in geeigneter Weise informiert.
 
 Soweit gesetzlich erforderlich oder vertraglich vorgesehen, wird der Nutzer ausdrücklich auf sein Widerspruchs- oder Kündigungsrecht hingewiesen.
 
-21.3 Fortgesetzte Nutzung
+20.3 Fortgesetzte Nutzung
 
 Soweit gesetzlich zulässig, gelten geänderte Allgemeine Geschäftsbedingungen als akzeptiert, wenn der Nutzer die Plattform nach Inkrafttreten der Änderungen weiterhin nutzt und hierauf zuvor hingewiesen wurde.
 
 Zwingende gesetzliche Vorschriften bleiben hiervon unberührt.` },
-    { h: "22. Verfügbarkeit der Plattform", p: `help-app.online ist bemüht, die Plattform mit einer möglichst hohen Verfügbarkeit bereitzustellen und einen störungsfreien Betrieb sicherzustellen.
+    { h: "21. Verfügbarkeit der Plattform", p: `help-app.online ist bemüht, die Plattform mit einer möglichst hohen Verfügbarkeit bereitzustellen und einen störungsfreien Betrieb sicherzustellen.
 
 Ein Anspruch auf eine jederzeitige, ununterbrochene oder fehlerfreie Erreichbarkeit der Plattform oder einzelner Funktionen besteht jedoch nicht.
 
 Insbesondere können Wartungsarbeiten, Sicherheitsupdates, technische Weiterentwicklungen, Softwareaktualisierungen, Störungen von Telekommunikations- oder Datennetzen, Ausfälle externer Dienstleister, Ereignisse höherer Gewalt oder sonstige Umstände außerhalb des Einflussbereichs von help-app.online zu vorübergehenden Einschränkungen oder Ausfällen führen.
 
 Soweit gesetzlich zulässig, haftet help-app.online nicht für Schäden oder Nachteile, die aus einer vorübergehenden Nichtverfügbarkeit, Unterbrechung oder Einschränkung der Plattform entstehen, sofern diese nicht auf vorsätzlichem oder grob fahrlässigem Verhalten des Betreibers beruhen oder eine gesetzlich zwingende Haftung besteht.` },
-    { h: "23. Schlussbestimmungen", p: `23.1 Anwendbares Recht
+    { h: "22. Schlussbestimmungen", p: `22.1 Anwendbares Recht
 
 Für sämtliche Rechtsbeziehungen zwischen help-app.online und den Nutzern gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts (CISG).
 
 Zwingende Verbraucherschutzvorschriften des Staates, in dem ein Verbraucher seinen gewöhnlichen Aufenthalt hat, bleiben hiervon unberührt.
 
-23.2 Gerichtsstand
+22.2 Gerichtsstand
 
 Soweit gesetzlich zulässig, ist Gerichtsstand für sämtliche Streitigkeiten aus oder im Zusammenhang mit der Nutzung von help-app.online der Sitz des Betreibers in Gelsenkirchen.
 
@@ -1070,19 +1063,27 @@ Dies gilt ausschließlich gegenüber Kaufleuten, juristischen Personen des öffe
 
 Für Verbraucher gelten die gesetzlichen Gerichtsstandsregelungen.
 
-23.3 Verbraucherstreitbeilegung
+22.3 Verbraucherstreitbeilegung
 
 Der Betreiber ist grundsätzlich nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen, sofern keine gesetzliche Verpflichtung hierzu besteht.
 
-23.4 Salvatorische Klausel
+22.4 Salvatorische Klausel
 
 Sollten einzelne Bestimmungen dieser Allgemeinen Geschäftsbedingungen ganz oder teilweise unwirksam oder undurchführbar sein oder werden, bleibt die Wirksamkeit der übrigen Bestimmungen hiervon unberührt.
 
 An die Stelle der unwirksamen oder undurchführbaren Bestimmung tritt die gesetzliche Regelung. Entsprechendes gilt für etwaige Regelungslücken.
 
-23.5 Inkrafttreten
+22.5 Inkrafttreten
 
-Diese Allgemeinen Geschäftsbedingungen gelten ab ihrer Veröffentlichung auf help-app.online und ersetzen alle früheren Fassungen.` },
+Diese Allgemeinen Geschäftsbedingungen gelten ab ihrer Veröffentlichung auf help-app.online und ersetzen alle früheren Fassungen.
+
+22.6 Außergerichtliche Klärung
+
+Personen oder Unternehmen, die der Auffassung sind, dass Inhalte auf help-app.online ihre Rechte oder gesetzliche Vorschriften verletzen, werden gebeten, vorrangig die auf der Plattform bereitgestellte Meldefunktion oder die angegebenen Kontaktmöglichkeiten zu nutzen.
+
+Der Betreiber ist bestrebt, berechtigte Hinweise zeitnah zu prüfen und – soweit erforderlich – angemessene Maßnahmen zu ergreifen.
+
+Diese Regelung dient der schnellen und außergerichtlichen Klärung möglicher Rechtsverletzungen. Gesetzliche Rechte, insbesondere das Recht zur Geltendmachung von Ansprüchen oder zur Einleitung gerichtlicher Verfahren, bleiben hiervon unberührt.` },
   ];
 
   return (
