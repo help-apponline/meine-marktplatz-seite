@@ -800,7 +800,15 @@ Der Betreiber prüft eingehende Meldungen sorgfältig und trifft im Rahmen der g
 
 14.9 Zusammenarbeit mit Behörden
 
-Soweit gesetzlich vorgeschrieben oder aufgrund einer vollziehbaren behördlichen oder gerichtlichen Anordnung erforderlich, arbeitet help-app.online mit den zuständigen Behörden zusammen und erteilt die erforderlichen Auskünfte unter Beachtung der geltenden Datenschutz- und sonstigen Rechtsvorschriften.` },
+Soweit gesetzlich vorgeschrieben oder aufgrund einer vollziehbaren behördlichen oder gerichtlichen Anordnung erforderlich, arbeitet help-app.online mit den zuständigen Behörden zusammen und erteilt die erforderlichen Auskünfte unter Beachtung der geltenden Datenschutz- und sonstigen Rechtsvorschriften.
+
+14.10 Meldung rechtswidriger Inhalte und außergerichtliche Klärung
+
+Meldesystem
+
+help-app.online stellt den Nutzern eine Meldefunktion zur Verfügung, über die rechtswidrige Inhalte, Verstöße gegen diese Allgemeinen Geschäftsbedingungen oder sonstiges missbräuchliches Verhalten gemeldet werden können.
+
+Jede Meldung wird vom Betreiber nach pflichtgemäßem Ermessen und unter Berücksichtigung der geltenden gesetzlichen Vorschriften geprüft. Soweit erforderlich, können Inhalte entfernt, eingeschränkt oder Nutzerkonten vorübergehend oder dauerhaft gesperrt werden.` },
     { h: "15. Haftung", p: `15.1 Vermittlerrolle
 
 help-app.online stellt ausschließlich eine technische Plattform zur Vermittlung von Kontakten zwischen Auftraggebern und Auftragnehmern (Helfern) zur Verfügung.
