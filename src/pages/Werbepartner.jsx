@@ -208,11 +208,20 @@ export default function Werbepartner() {
     showToast("Eintrag geladen — bitte oben bearbeiten und speichern.");
   }
 
+  const STRIPE_LINKS = {
+    year: "https://buy.stripe.com/bJefZhbTOcDXgno44E6c000",
+  };
+
   function handlePay() {
     if (!terms) { showToast("Bitte AGB akzeptieren."); return; }
     if (!title.trim()) { showToast("Bitte Überschrift ausfüllen."); return; }
     saveDraft("draft");
-    showToast(`Zahlung über ${moneyDE(totalPrice)} wird bald über unseren Zahlungsanbieter abgewickelt.`);
+    const link = STRIPE_LINKS[selectedPlan];
+    if (link) {
+      window.open(link, "_blank", "noopener,noreferrer");
+    } else {
+      showToast("Zahlung für dieses Paket wird in Kürze freigeschaltet.");
+    }
   }
 
   const myPartners = partners.filter(p => p.owner === (userEmail || "guest"));
@@ -412,7 +421,7 @@ export default function Werbepartner() {
               </button>
             </div>
             <p className="text-[11px] text-gray-400 text-center">
-              Zahlung über Stripe — kommt bald. Dein Entwurf wird bis dahin gespeichert.
+              Sichere Zahlung über unseren Zahlungsanbieter. Dein Entwurf wird gespeichert.
             </p>
             <p className="text-[11px] text-gray-400 text-center -mt-1">
               Das Abonnement verlängert sich automatisch zum Ende der Laufzeit. Jederzeit kündbar.
