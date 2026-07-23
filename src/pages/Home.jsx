@@ -2,10 +2,33 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router";
 import PartnerBanner from "../components/PartnerBanner.jsx";
 import Search from "icon:search";
+import Share2 from "icon:share-2";
+import Mail from "icon:mail";
+import X from "icon:x";
 
 export default function Home() {
   const [searchInput, setSearchInput] = useState("");
+  const [shareOpen, setShareOpen] = useState(false);
+  const [copied, setCopied] = useState(false);
   const navigate = useNavigate();
+
+  const shareUrl = "https://www.help-app.online";
+  const shareText = "Finde Hilfe oder werde Helfer in deiner Nähe – kostenlos auf help-app.online!";
+
+  function handleNativeShare() {
+    if (navigator.share) {
+      navigator.share({ title: "help-app.online", text: shareText, url: shareUrl });
+    } else {
+      setShareOpen(v => !v);
+    }
+  }
+
+  function copyLink() {
+    navigator.clipboard.writeText(shareUrl).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  }
 
   function handleSearch(e) {
     e.preventDefault();
@@ -72,6 +95,61 @@ export default function Home() {
             <h3 className="text-lg font-bold">{label}</h3>
           </Link>
         ))}
+      </section>
+
+      {/* Weiterempfehlen */}
+      <section className="px-5 max-w-6xl mx-auto w-full mb-6">
+        <div className="bg-orange-50 border border-orange-100 rounded-2xl p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div>
+            <p className="font-bold text-gray-900 text-base">help-app.online weiterempfehlen</p>
+            <p className="text-sm text-gray-500 mt-0.5">Teile die Plattform mit Freunden, Familie oder Bekannten.</p>
+          </div>
+          <div className="relative flex gap-2 flex-wrap justify-center sm:justify-end">
+            {/* Mobil: natives Teilen */}
+            <button
+              onClick={handleNativeShare}
+              className="flex items-center gap-2 px-4 py-2 bg-[#ff8a00] text-white font-semibold text-sm rounded-xl hover:bg-[#e67a00] transition-colors"
+            >
+              <Share2 size={15} /> Teilen
+            </button>
+
+            {/* Desktop: Menü aufklappen */}
+            <button
+              onClick={() => setShareOpen(v => !v)}
+              className="sm:hidden hidden items-center gap-2 px-4 py-2 bg-[#ff8a00] text-white font-semibold text-sm rounded-xl hover:bg-[#e67a00] transition-colors"
+            >
+              Weitere
+            </button>
+
+            {/* Direktlinks immer sichtbar auf Desktop */}
+            <a
+              href={`https://wa.me/?text=${encodeURIComponent(shareText + " " + shareUrl)}`}
+              target="_blank" rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-green-500 text-white font-semibold text-sm rounded-xl hover:bg-green-600 transition-colors"
+            >
+              WhatsApp
+            </a>
+            <a
+              href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`}
+              target="_blank" rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white font-semibold text-sm rounded-xl hover:bg-blue-700 transition-colors"
+            >
+              Facebook
+            </a>
+            <a
+              href={`mailto:?subject=${encodeURIComponent("Schau mal: help-app.online")}&body=${encodeURIComponent(shareText + "\n\n" + shareUrl)}`}
+              className="flex items-center gap-2 px-4 py-2 bg-gray-700 text-white font-semibold text-sm rounded-xl hover:bg-gray-800 transition-colors"
+            >
+              <Mail size={14} /> E-Mail
+            </a>
+            <button
+              onClick={copyLink}
+              className="flex items-center gap-2 px-4 py-2 border border-gray-200 text-gray-700 font-semibold text-sm rounded-xl hover:bg-gray-50 transition-colors"
+            >
+              {copied ? "✓ Kopiert!" : "Link kopieren"}
+            </button>
+          </div>
+        </div>
       </section>
 
       <div className="px-5 max-w-6xl mx-auto w-full mb-10">
