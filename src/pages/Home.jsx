@@ -23,7 +23,7 @@ export default function Home() {
           <img
             src="/static/logo.jpg"
             alt="help-app.online"
-            className="h-48 md:h-56 w-auto object-contain mb-3"
+            className="h-60 md:h-72 w-auto object-contain mb-3"
           />
           <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight">
             Finde Hilfe. Werde Helfer.
