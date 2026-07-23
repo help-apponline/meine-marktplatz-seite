@@ -210,6 +210,7 @@ export default function Werbepartner() {
 
   const STRIPE_LINKS = {
     year: "https://buy.stripe.com/bJefZhbTOcDXgno44E6c000",
+    halfyear: "https://buy.stripe.com/5kQ00j0b6bzTdbc44E6c001",
   };
 
   function handlePay() {
