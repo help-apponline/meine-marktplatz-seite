@@ -309,7 +309,7 @@ export function AuthProvider({ children }) {
       ));
 
       // Email notification via Make.com webhook
-      const WEBHOOK_URL = "https://hook.eu1.make.com/kn3xji4t64k8n6tk9kakq188ru81w3j9";
+      const WEBHOOK_URL = "https://hook.eu1.make.com/pco332kd86i2l5iri5nw2karxg9yzaok";
       fetch(WEBHOOK_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
