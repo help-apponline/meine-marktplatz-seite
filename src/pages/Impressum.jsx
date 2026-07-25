@@ -31,7 +31,7 @@ export default function Impressum() {
           <h3 className="font-bold text-gray-900 mb-1">Kontakt</h3>
           <p>
             Telefon: 0209 94574476<br />
-            E-Mail: <em>wird nachgereicht</em>
+            E-Mail: <a href="mailto:info@help-app.online" className="text-[#ff8a00] underline">info@help-app.online</a>
           </p>
         </div>
 
