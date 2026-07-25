@@ -293,8 +293,10 @@ export function AuthProvider({ children }) {
 
     // Notify all other participants
     try {
-      const chat = await pb.collection("chats").getOne(chatId);
+      const chat = await pb.collection("chats").getOne(chatId, { expand: "participants" });
       const others = (chat.participants || []).filter(uid => uid !== myId);
+
+      // In-app notifications
       await Promise.all(others.map(uid =>
         createNotification({
           userId: uid,
@@ -305,6 +307,20 @@ export function AuthProvider({ children }) {
           chatId,
         })
       ));
+
+      // Email notification via Make.com webhook
+      const WEBHOOK_URL = "https://hook.eu1.make.com/k1al7ogi8cpo89jpen977phnpp8hoq45";
+      fetch(WEBHOOK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          senderEmail: myEmail,
+          messagePreview: text.length > 200 ? text.slice(0, 200) + "…" : text,
+          chatLink: `https://www.help-app.online`,
+          chatId,
+          recipientCount: others.length,
+        }),
+      }).catch(() => {});
     } catch {}
 
     return msg;
