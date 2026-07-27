@@ -131,7 +131,34 @@ Die Verarbeitung erfolgt ausschließlich zum Zweck der Bereitstellung unserer Pl
 Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. b DSGVO, soweit die Benachrichtigungen zur Erfüllung des Nutzungsvertrages erforderlich sind, sowie Art. 6 Abs. 1 lit. f DSGVO aufgrund unseres berechtigten Interesses an einer sicheren und effizienten Kommunikation mit unseren Nutzern.
 
 Weitere Informationen zu den eingesetzten technischen Dienstleistern findest du unter Punkt 10 „Empfänger personenbezogener Daten und Auftragsverarbeiter" dieser Datenschutzerklärung.` },
-    { h: "7. Cookies / Local Storage", p: "Wir setzen Local-Storage ein, um grundlegende Funktionen bereitzustellen (Session-Status, Anzeigen, Chats). Soweit technisch erforderlich, erfolgt dies auf Basis von § 25 Abs. 2 TTDSG." },
+    { h: "7. Cookies und Local Storage", p: `help-app.online verwendet Cookies und den Local Storage des Browsers, um die Funktionsfähigkeit und Sicherheit der Plattform sicherzustellen.
+
+Technisch notwendige Cookies
+
+Technisch erforderliche Cookies werden eingesetzt, um grundlegende Funktionen der Plattform bereitzustellen. Hierzu gehören insbesondere:
+
+- Anmeldung und Authentifizierung von Nutzern,
+- Verwaltung von Sitzungen,
+- Sicherheitsfunktionen,
+- Schutz vor Missbrauch,
+- Speicherung technischer Einstellungen.
+
+Diese Cookies sind für den Betrieb der Plattform erforderlich und können nicht deaktiviert werden.
+
+Local Storage
+
+Darüber hinaus nutzt help-app.online den Local Storage des Webbrowsers, um bestimmte Informationen lokal auf dem Endgerät des Nutzers zu speichern. Dies dient insbesondere:
+
+- der Speicherung von Benutzereinstellungen,
+- der Bereitstellung von Plattformfunktionen,
+- der Zwischenspeicherung technischer Informationen,
+- der Verbesserung der Benutzerfreundlichkeit.
+
+Die im Local Storage gespeicherten Daten verbleiben grundsätzlich auf dem Endgerät des Nutzers und werden nicht automatisch an help-app.online übertragen.
+
+Rechtsgrundlage für den Einsatz technisch notwendiger Cookies und des Local Storage ist § 25 Abs. 2 TDDDG sowie Art. 6 Abs. 1 lit. f DSGVO, da diese Technologien für die sichere und ordnungsgemäße Bereitstellung der Plattform erforderlich sind.
+
+Sollten künftig Analyse-, Statistik- oder Marketing-Cookies eingesetzt werden, erfolgt deren Nutzung ausschließlich nach vorheriger Einwilligung des Nutzers gemäß § 25 Abs. 1 TDDDG sowie Art. 6 Abs. 1 lit. a DSGVO.` },
     { h: "8. Benachrichtigungen und Kommunikation", p: `help-app.online informiert Nutzer über wichtige Ereignisse im Zusammenhang mit der Nutzung der Plattform. Hierzu gehören insbesondere Benachrichtigungen über neue Chatnachrichten, Auftragsanfragen, Änderungen des Auftragsstatus, Bewertungen, sicherheitsrelevante Mitteilungen sowie weitere für die Nutzung der Plattform erforderliche Informationen.
 
 Die Benachrichtigungen können per E-Mail oder über andere innerhalb der Plattform bereitgestellte Kommunikationswege erfolgen.
