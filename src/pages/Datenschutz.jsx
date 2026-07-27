@@ -225,13 +225,15 @@ Je nach Nutzung der Plattform können insbesondere folgende Informationen für a
 - Angaben zum Einsatzgebiet oder Standort (soweit vom Nutzer freigegeben),
 - veröffentlichte Anzeigen und deren Inhalte.
 
-Im Rahmen einer Kontaktaufnahme oder eines angenommenen Auftrags können zusätzlich die zwischen den beteiligten Nutzern ausgetauschten Nachrichten sowie weitere vom Nutzer freiwillig übermittelte Informationen verarbeitet und dem jeweiligen Kommunikationspartner angezeigt werden.
+Die Kommunikation zwischen Nutzern erfolgt grundsätzlich über die integrierte Chatfunktion von help-app.online.
 
-Personenbezogene Daten werden ausschließlich in dem Umfang an andere Nutzer weitergegeben, der zur Nutzung der Plattform und zur Vermittlung zwischen Auftraggebern und Helfern erforderlich ist oder auf einer freiwilligen Eingabe des jeweiligen Nutzers beruht.
+Personenbezogene Kontaktdaten, insbesondere Name, E-Mail-Adresse und Telefonnummer, werden anderen Nutzern grundsätzlich erst nach Annahme eines Auftrags oder nach einer entsprechenden Freigabe innerhalb der Plattform zugänglich gemacht.
 
-help-app.online veröffentlicht oder übermittelt keine personenbezogenen Daten an andere Nutzer, soweit hierfür keine technische Notwendigkeit besteht oder keine ausdrückliche Einwilligung des betroffenen Nutzers vorliegt.
+Die Weitergabe dieser Daten erfolgt ausschließlich, soweit dies zur Durchführung des jeweiligen Auftrags oder der Nutzung der Plattform erforderlich ist.
 
-Nutzer sind selbst dafür verantwortlich, welche personenbezogenen Informationen sie innerhalb ihrer Anzeigen, ihres Profils oder im Rahmen der Kommunikation mit anderen Nutzern freiwillig preisgeben.` },
+Nutzer sind selbst dafür verantwortlich, welche personenbezogenen Informationen sie innerhalb ihrer Anzeigen, ihres Profils oder im Rahmen der Kommunikation freiwillig preisgeben.
+
+Sollten künftig kostenpflichtige Funktionen eingeführt werden, durch die ein Austausch von Kontaktdaten oder weitere Kommunikationsmöglichkeiten erst nach Abschluss einer kostenpflichtigen Buchung oder Freischaltung ermöglicht werden, wird die Datenverarbeitung entsprechend dieser Datenschutzerklärung sowie den jeweils gültigen Nutzungsbedingungen durchgeführt.` },
     { h: "12. Zahlungsabwicklung", p: `Für die Buchung kostenpflichtiger Leistungen, insbesondere Premium-Mitgliedschaften, Werbepartner-Abonnements oder sonstiger kostenpflichtiger Angebote, erfolgt die Zahlungsabwicklung über externe Zahlungsdienstleister.
 
 Im Rahmen der Zahlungsabwicklung werden ausschließlich die für die Durchführung der Zahlung erforderlichen personenbezogenen Daten an den jeweiligen Zahlungsdienstleister übermittelt. Hierzu können insbesondere folgende Daten gehören:
