@@ -214,7 +214,25 @@ Alle eingesetzten Dienstleister werden sorgfältig ausgewählt und – soweit ge
 Sofern personenbezogene Daten außerhalb der Europäischen Union oder des Europäischen Wirtschaftsraums verarbeitet werden, erfolgt dies ausschließlich unter Einhaltung der gesetzlichen Vorgaben der DSGVO. Insbesondere achten wir auf das Vorliegen eines Angemessenheitsbeschlusses der Europäischen Kommission oder geeigneter Garantien, wie beispielsweise den Abschluss von EU-Standardvertragsklauseln.
 
 Die jeweils eingesetzten Dienstleister können sich im Zuge der technischen Weiterentwicklung unserer Plattform ändern. Diese Datenschutzerklärung wird in diesem Fall entsprechend aktualisiert.` },
-    { h: "11. Zahlungsabwicklung", p: `Für die Buchung kostenpflichtiger Leistungen, insbesondere Premium-Mitgliedschaften, Werbepartner-Abonnements oder sonstiger kostenpflichtiger Angebote, erfolgt die Zahlungsabwicklung über externe Zahlungsdienstleister.
+    { h: "11. Weitergabe von Daten zwischen Nutzern", p: `help-app.online dient der Vermittlung zwischen Auftraggebern und Helfern. Damit die Nutzung der Plattform möglich ist, werden bestimmte personenbezogene Daten anderen Nutzern angezeigt oder im Rahmen der Kommunikation zugänglich gemacht.
+
+Je nach Nutzung der Plattform können insbesondere folgende Informationen für andere Nutzer sichtbar sein:
+
+- Benutzername,
+- Profilbild (sofern hinterlegt),
+- Profilbeschreibung,
+- Bewertungen und Rezensionen,
+- Angaben zum Einsatzgebiet oder Standort (soweit vom Nutzer freigegeben),
+- veröffentlichte Anzeigen und deren Inhalte.
+
+Im Rahmen einer Kontaktaufnahme oder eines angenommenen Auftrags können zusätzlich die zwischen den beteiligten Nutzern ausgetauschten Nachrichten sowie weitere vom Nutzer freiwillig übermittelte Informationen verarbeitet und dem jeweiligen Kommunikationspartner angezeigt werden.
+
+Personenbezogene Daten werden ausschließlich in dem Umfang an andere Nutzer weitergegeben, der zur Nutzung der Plattform und zur Vermittlung zwischen Auftraggebern und Helfern erforderlich ist oder auf einer freiwilligen Eingabe des jeweiligen Nutzers beruht.
+
+help-app.online veröffentlicht oder übermittelt keine personenbezogenen Daten an andere Nutzer, soweit hierfür keine technische Notwendigkeit besteht oder keine ausdrückliche Einwilligung des betroffenen Nutzers vorliegt.
+
+Nutzer sind selbst dafür verantwortlich, welche personenbezogenen Informationen sie innerhalb ihrer Anzeigen, ihres Profils oder im Rahmen der Kommunikation mit anderen Nutzern freiwillig preisgeben.` },
+    { h: "12. Zahlungsabwicklung", p: `Für die Buchung kostenpflichtiger Leistungen, insbesondere Premium-Mitgliedschaften, Werbepartner-Abonnements oder sonstiger kostenpflichtiger Angebote, erfolgt die Zahlungsabwicklung über externe Zahlungsdienstleister.
 
 Im Rahmen der Zahlungsabwicklung werden ausschließlich die für die Durchführung der Zahlung erforderlichen personenbezogenen Daten an den jeweiligen Zahlungsdienstleister übermittelt. Hierzu können insbesondere folgende Daten gehören:
 
@@ -242,9 +260,9 @@ Irland
 Weitere Informationen zur Datenverarbeitung durch Stripe findest du in der Datenschutzerklärung von Stripe.
 
 Sollten künftig weitere Zahlungsdienstleister eingesetzt werden, wird diese Datenschutzerklärung entsprechend ergänzt oder aktualisiert.` },
-    { h: "12. Deine Rechte", p: "Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21). Wende dich dazu an: info@help-app.online" },
-    { h: "13. Speicherdauer", p: "Wir speichern Daten nur so lange, wie es für die genannten Zwecke erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen." },
-    { h: "14. Beschwerderecht", p: "Du hast das Recht, dich bei einer Datenschutzaufsichtsbehörde zu beschweren. Die zuständige Behörde richtet sich nach deinem Wohnsitz oder dem Sitz unseres Unternehmens." },
+    { h: "13. Deine Rechte", p: "Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21). Wende dich dazu an: info@help-app.online" },
+    { h: "14. Speicherdauer", p: "Wir speichern Daten nur so lange, wie es für die genannten Zwecke erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen." },
+    { h: "15. Beschwerderecht", p: "Du hast das Recht, dich bei einer Datenschutzaufsichtsbehörde zu beschweren. Die zuständige Behörde richtet sich nach deinem Wohnsitz oder dem Sitz unseres Unternehmens." },
   ];
 
   return (
