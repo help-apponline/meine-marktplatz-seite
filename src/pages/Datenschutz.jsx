@@ -166,7 +166,25 @@ Die Benachrichtigungen können per E-Mail oder über andere innerhalb der Plattf
 Zur technischen Abwicklung und Zustellung der E-Mail-Benachrichtigungen kann help-app.online externe technische Dienstleister einsetzen. Die Verarbeitung erfolgt ausschließlich zum Zweck der Bereitstellung der jeweiligen Funktion und unter Beachtung der geltenden datenschutzrechtlichen Bestimmungen. Weitere Informationen hierzu sind der Datenschutzerklärung zu entnehmen.
 
 Der Nutzer ist verpflichtet, eine gültige E-Mail-Adresse anzugeben und diese regelmäßig abzurufen. Soweit Benachrichtigungen nicht gesetzlich oder vertraglich erforderlich sind, können diese – sofern technisch vorgesehen – vom Nutzer in den Kontoeinstellungen verwaltet oder deaktiviert werden.` },
-    { h: "9. Zahlungsabwicklung", p: `Für die Buchung kostenpflichtiger Leistungen, insbesondere Premium-Mitgliedschaften, Werbepartner-Abonnements oder sonstiger kostenpflichtiger Angebote, erfolgt die Zahlungsabwicklung über externe Zahlungsdienstleister.
+    { h: "9. Meldung rechtswidriger Inhalte und Missbrauch", p: `help-app.online stellt Nutzern eine Meldefunktion zur Verfügung, über die Anzeigen, Chatnachrichten, Nutzerprofile oder sonstige Inhalte gemeldet werden können, wenn der Verdacht besteht, dass diese gegen gesetzliche Vorschriften, Rechte Dritter oder die Nutzungsbedingungen von help-app.online verstoßen.
+
+Im Rahmen der Bearbeitung einer Meldung können insbesondere folgende personenbezogene Daten verarbeitet werden:
+
+- Angaben des meldenden Nutzers,
+- Angaben des betroffenen Nutzers,
+- Inhalt der Meldung,
+- gemeldete Anzeigen, Nachrichten oder Profilinhalte,
+- Datum und Uhrzeit der Meldung,
+- Bearbeitungs- und Prüfvermerke.
+
+Die Verarbeitung dieser Daten erfolgt ausschließlich zum Zweck der Prüfung, Bearbeitung und Dokumentation der Meldung, zur Gewährleistung einer sicheren Plattform, zur Verhinderung von Missbrauch sowie zur Erfüllung gesetzlicher Verpflichtungen.
+
+Soweit dies zur Bearbeitung einer Meldung erforderlich ist, können gemeldete Inhalte, einschließlich der betroffenen Chatnachrichten oder Anzeigen, durch autorisierte Mitarbeiter von help-app.online eingesehen werden. Eine allgemeine oder anlasslose Überwachung der Kommunikation zwischen Nutzern findet nicht statt.
+
+Sofern gesetzliche Verpflichtungen bestehen oder dies zur Durchsetzung oder Abwehr rechtlicher Ansprüche erforderlich ist, können die entsprechenden Informationen an zuständige Behörden oder andere berechtigte Stellen weitergegeben werden.
+
+Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO (Erfüllung gesetzlicher Verpflichtungen) sowie Art. 6 Abs. 1 lit. f DSGVO aufgrund unseres berechtigten Interesses an der Gewährleistung einer sicheren, vertrauenswürdigen und rechtskonformen Plattform.` },
+    { h: "10. Zahlungsabwicklung", p: `Für die Buchung kostenpflichtiger Leistungen, insbesondere Premium-Mitgliedschaften, Werbepartner-Abonnements oder sonstiger kostenpflichtiger Angebote, erfolgt die Zahlungsabwicklung über externe Zahlungsdienstleister.
 
 Im Rahmen der Zahlungsabwicklung werden ausschließlich die für die Durchführung der Zahlung erforderlichen personenbezogenen Daten an den jeweiligen Zahlungsdienstleister übermittelt. Hierzu können insbesondere folgende Daten gehören:
 
@@ -194,9 +212,9 @@ Irland
 Weitere Informationen zur Datenverarbeitung durch Stripe findest du in der Datenschutzerklärung von Stripe.
 
 Sollten künftig weitere Zahlungsdienstleister eingesetzt werden, wird diese Datenschutzerklärung entsprechend ergänzt oder aktualisiert.` },
-    { h: "10. Deine Rechte", p: "Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21). Wende dich dazu an: info@help-app.online" },
-    { h: "11. Speicherdauer", p: "Wir speichern Daten nur so lange, wie es für die genannten Zwecke erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen." },
-    { h: "12. Beschwerderecht", p: "Du hast das Recht, dich bei einer Datenschutzaufsichtsbehörde zu beschweren. Die zuständige Behörde richtet sich nach deinem Wohnsitz oder dem Sitz unseres Unternehmens." },
+    { h: "11. Deine Rechte", p: "Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21). Wende dich dazu an: info@help-app.online" },
+    { h: "12. Speicherdauer", p: "Wir speichern Daten nur so lange, wie es für die genannten Zwecke erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen." },
+    { h: "13. Beschwerderecht", p: "Du hast das Recht, dich bei einer Datenschutzaufsichtsbehörde zu beschweren. Die zuständige Behörde richtet sich nach deinem Wohnsitz oder dem Sitz unseres Unternehmens." },
   ];
 
   return (
