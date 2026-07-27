@@ -263,7 +263,20 @@ Weitere Informationen zur Datenverarbeitung durch Stripe findest du in der Daten
 
 Sollten künftig weitere Zahlungsdienstleister eingesetzt werden, wird diese Datenschutzerklärung entsprechend ergänzt oder aktualisiert.` },
     { h: "13. Deine Rechte", p: "Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21). Wende dich dazu an: info@help-app.online" },
-    { h: "14. Speicherdauer", p: "Wir speichern Daten nur so lange, wie es für die genannten Zwecke erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen." },
+    { h: "14. Speicherdauer", p: `Wir speichern personenbezogene Daten nur so lange, wie dies zur Erfüllung der in dieser Datenschutzerklärung genannten Zwecke erforderlich ist oder gesetzliche Aufbewahrungs- und Nachweispflichten bestehen.
+
+Die Speicherdauer richtet sich insbesondere nach:
+
+- der Dauer des Nutzungsverhältnisses,
+- gesetzlichen Aufbewahrungsfristen,
+- steuer- und handelsrechtlichen Vorschriften,
+- der Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen.
+
+Wird ein Nutzerkonto gelöscht oder die Löschung personenbezogener Daten verlangt, werden die betreffenden personenbezogenen Daten grundsätzlich gelöscht oder anonymisiert, sofern keine gesetzlichen Aufbewahrungspflichten oder sonstigen berechtigten Gründe einer Löschung entgegenstehen.
+
+Bestimmte Daten können über die Löschung des Nutzerkontos hinaus gespeichert werden, soweit dies zur Erfüllung gesetzlicher Verpflichtungen, zur Betrugsprävention, zur Missbrauchsbekämpfung oder zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen erforderlich ist.
+
+Nach Ablauf der jeweiligen gesetzlichen Aufbewahrungsfristen werden die entsprechenden personenbezogenen Daten gelöscht, sofern sie nicht mehr für die genannten Zwecke erforderlich sind.` },
     { h: "15. Beschwerderecht", p: "Du hast das Recht, dich bei einer Datenschutzaufsichtsbehörde zu beschweren. Die zuständige Behörde richtet sich nach deinem Wohnsitz oder dem Sitz unseres Unternehmens." },
   ];
 
