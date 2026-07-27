@@ -66,7 +66,31 @@ Deutschland
 Weitere Informationen zum Datenschutz bei IONOS findest du in der Datenschutzerklärung von IONOS.
 
 Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse besteht in der sicheren, stabilen und effizienten Bereitstellung unserer Online-Plattform.` },
-    { h: "4. Prototyp-Hinweis", p: "In diesem Prototyp werden Funktionen (z. B. Login/Chat) überwiegend clientseitig demonstriert. Für den Livebetrieb gelten die folgenden Regelungen." },
+    { h: "4. Nutzerkonto und Registrierung", p: `Für die Nutzung bestimmter Funktionen von help-app.online ist die Erstellung eines Nutzerkontos erforderlich.
+
+Im Rahmen der Registrierung verarbeiten wir insbesondere folgende personenbezogene Daten:
+
+- E-Mail-Adresse,
+- Benutzername,
+- verschlüsseltes Passwort (Passwort-Hash),
+- gewählte Nutzerrolle (z. B. Auftraggeber oder Helfer).
+
+Darüber hinaus können Nutzer freiwillig weitere Angaben in ihrem Profil hinterlegen, beispielsweise:
+
+- Vor- und Nachname,
+- Profilbild,
+- Beschreibung,
+- Telefonnummer,
+- Wohnort oder Einsatzgebiet,
+- weitere freiwillige Profilinformationen.
+
+Diese Angaben dienen der Nutzung und Personalisierung der Plattform sowie der Vermittlung zwischen Auftraggebern und Helfern.
+
+Der Nutzer ist verpflichtet, bei der Registrierung wahrheitsgemäße Angaben zu machen und seine Zugangsdaten vertraulich zu behandeln. Das Passwort wird ausschließlich in verschlüsselter Form gespeichert und ist für den Betreiber nicht im Klartext einsehbar.
+
+Die Verarbeitung der Registrierungs- und Profildaten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO zur Durchführung des Nutzungsvertrages sowie, soweit freiwillige Angaben gemacht werden, auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO.
+
+Der Nutzer kann seine Profildaten – soweit technisch vorgesehen – jederzeit selbst ändern oder die Löschung seines Nutzerkontos beantragen. Gesetzliche Aufbewahrungspflichten bleiben hiervon unberührt.` },
     { h: "5. Nutzerkonto und Profil", p: "Bei Registrierung verarbeiten wir E-Mail-Adresse, Passwort-Hash und Rollenangabe. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO." },
     { h: "6. Anzeigen und Kommunikation", p: "Wenn Nutzer Anzeigen erstellen oder Nachrichten senden, verarbeiten wir die übermittelten Inhalte und Metadaten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO." },
     { h: "7. Cookies / Local Storage", p: "Wir setzen Local-Storage ein, um grundlegende Funktionen bereitzustellen (Session-Status, Anzeigen, Chats). Soweit technisch erforderlich, erfolgt dies auf Basis von § 25 Abs. 2 TTDSG." },
