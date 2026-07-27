@@ -21,6 +21,7 @@ import UeberUns from "./pages/UeberUns.jsx";
 import Impressum from "./pages/Impressum.jsx";
 import Datenschutz from "./pages/Datenschutz.jsx";
 import AGB from "./pages/AGB.jsx";
+import CookieBanner from "./components/CookieBanner.jsx";
 
 function NotFound() {
   return (
@@ -66,6 +67,7 @@ export default function App() {
           </Route>
         </Routes>
       </FavoritesProvider>
+      <CookieBanner />
     </AuthProvider>
   );
 }
