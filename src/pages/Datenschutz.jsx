@@ -17,7 +17,30 @@ Vertretungsberechtigte Person:
 Heinz-Peter Bacha (Inhaber)
 
 Steuernummer: 319/5029/5935` },
-    { h: "2. Übersicht der Verarbeitungen", p: "Wir verarbeiten personenbezogene Daten, um die Plattform bereitzustellen, Anfragen zu beantworten und Nutzerkonten, Anzeigen und Kommunikation zu ermöglichen." },
+    { h: "2. Zwecke und Rechtsgrundlagen der Datenverarbeitung", p: `Wir verarbeiten personenbezogene Daten ausschließlich im Rahmen der geltenden datenschutzrechtlichen Vorschriften, insbesondere der Datenschutz-Grundverordnung (DSGVO) und des Bundesdatenschutzgesetzes (BDSG), soweit dieses Anwendung findet.
+
+Die Verarbeitung personenbezogener Daten erfolgt insbesondere zu folgenden Zwecken:
+
+- Bereitstellung und Betrieb der Plattform help-app.online,
+- Registrierung und Verwaltung von Nutzerkonten,
+- Erstellung, Veröffentlichung und Verwaltung von Anzeigen,
+- Vermittlung von Aufträgen zwischen Auftraggebern und Helfern,
+- Bereitstellung der Chat- und Kommunikationsfunktionen,
+- Versand von E-Mail-Benachrichtigungen und systemrelevanten Mitteilungen,
+- Durchführung und Abwicklung kostenpflichtiger Leistungen (z. B. Premium-Mitgliedschaften oder Werbepartner-Abonnements),
+- Bearbeitung von Supportanfragen,
+- Gewährleistung der Sicherheit und Funktionsfähigkeit der Plattform,
+- Erkennung, Verhinderung und Aufklärung von Missbrauch, Betrug und rechtswidrigen Aktivitäten,
+- Erfüllung gesetzlicher Verpflichtungen.
+
+Die Verarbeitung personenbezogener Daten erfolgt insbesondere auf Grundlage der folgenden Rechtsgrundlagen:
+
+- Art. 6 Abs. 1 lit. a DSGVO – Einwilligung der betroffenen Person,
+- Art. 6 Abs. 1 lit. b DSGVO – Erfüllung eines Vertrages oder Durchführung vorvertraglicher Maßnahmen,
+- Art. 6 Abs. 1 lit. c DSGVO – Erfüllung einer rechtlichen Verpflichtung,
+- Art. 6 Abs. 1 lit. f DSGVO – Wahrung berechtigter Interessen des Verantwortlichen, insbesondere zur Gewährleistung der Sicherheit, Stabilität und Weiterentwicklung der Plattform sowie zur Missbrauchs- und Betrugsprävention.
+
+Soweit für einzelne Verarbeitungsvorgänge eine Einwilligung erforderlich ist, kann diese jederzeit mit Wirkung für die Zukunft widerrufen werden. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung bleibt hiervon unberührt.` },
     { h: "3. Zugriffsdaten / Server-Logs", p: "Beim Aufruf der Website werden durch den Hosting-Anbieter in der Regel Server-Logfiles verarbeitet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO." },
     { h: "4. Prototyp-Hinweis", p: "In diesem Prototyp werden Funktionen (z. B. Login/Chat) überwiegend clientseitig demonstriert. Für den Livebetrieb gelten die folgenden Regelungen." },
     { h: "5. Nutzerkonto und Profil", p: "Bei Registrierung verarbeiten wir E-Mail-Adresse, Passwort-Hash und Rollenangabe. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO." },
