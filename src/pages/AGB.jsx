@@ -816,7 +816,44 @@ Meldesystem
 help-app.online stellt den Nutzern eine Meldefunktion zur Verfügung, über die rechtswidrige Inhalte, Verstöße gegen diese Allgemeinen Geschäftsbedingungen oder sonstiges missbräuchliches Verhalten gemeldet werden können.
 
 Jede Meldung wird vom Betreiber nach pflichtgemäßem Ermessen und unter Berücksichtigung der geltenden gesetzlichen Vorschriften geprüft. Soweit erforderlich, können Inhalte entfernt, eingeschränkt oder Nutzerkonten vorübergehend oder dauerhaft gesperrt werden.` },
-    { h: "16. Haftung", p: `15.1 Vermittlerrolle
+    { h: "16. Widerrufsrecht für Verbraucher", p: `16.1 Widerrufsrecht
+
+Verbrauchern im Sinne des § 13 BGB steht bei Abschluss eines entgeltlichen Vertrages über digitale Dienstleistungen grundsätzlich ein gesetzliches Widerrufsrecht von 14 Tagen zu.
+
+Die Widerrufsfrist beträgt 14 Tage ab dem Tag des Vertragsschlusses.
+
+Um das Widerrufsrecht auszuüben, muss der Verbraucher den Betreiber der Plattform mittels einer eindeutigen Erklärung (z. B. per E-Mail oder Brief) über seinen Entschluss, diesen Vertrag zu widerrufen, informieren.
+
+Der Widerruf ist zu richten an:
+
+help-app.online
+Inhaber: Heinz-Peter Bacha
+Passmannstr. 12
+45899 Gelsenkirchen
+Deutschland
+
+E-Mail: info@help-app.online
+
+Zur Wahrung der Widerrufsfrist genügt die rechtzeitige Absendung der Mitteilung über die Ausübung des Widerrufsrechts.
+
+16.2 Folgen des Widerrufs
+
+Wird ein Vertrag wirksam widerrufen, werden alle vom Verbraucher geleisteten Zahlungen unverzüglich und spätestens binnen 14 Tagen ab Eingang des Widerrufs erstattet. Für die Rückzahlung wird dasselbe Zahlungsmittel verwendet, das der Verbraucher bei der ursprünglichen Transaktion eingesetzt hat, sofern nichts anderes ausdrücklich vereinbart wurde.
+
+16.3 Erlöschen des Widerrufsrechts bei digitalen Dienstleistungen
+
+Das Widerrufsrecht erlischt vorzeitig, wenn:
+
+- der Verbraucher ausdrücklich zustimmt, dass der Betreiber bereits vor Ablauf der Widerrufsfrist mit der Ausführung der digitalen Dienstleistung beginnt,
+- der Verbraucher bestätigt, dass ihm bekannt ist, dass er durch diese Zustimmung sein Widerrufsrecht mit vollständiger Vertragserfüllung verliert,
+- und der Betreiber mit der Ausführung der digitalen Dienstleistung begonnen hat.
+
+Diese Zustimmung wird im Rahmen des Bestell- oder Buchungsvorgangs ausdrücklich eingeholt.
+
+16.4 Ausschluss
+
+Für die unentgeltliche Nutzung der Plattform besteht kein Widerrufsrecht, da insoweit kein entgeltlicher Verbrauchervertrag geschlossen wird.` },
+    { h: "17. Haftung", p: `15.1 Vermittlerrolle
 
 help-app.online stellt ausschließlich eine technische Plattform zur Vermittlung von Kontakten zwischen Auftraggebern und Auftragnehmern (Helfern) zur Verfügung.
 
@@ -875,7 +912,7 @@ Hierzu zählen insbesondere Naturkatastrophen, Krieg, Terroranschläge, Streiks,
 Die vorstehenden Haftungsregelungen gelten ausschließlich im gesetzlich zulässigen Umfang.
 
 Zwingende gesetzliche Rechte der Nutzer, insbesondere nach den Vorschriften des Bürgerlichen Gesetzbuches (BGB), des Produkthaftungsgesetzes sowie anderer zwingender gesetzlicher Bestimmungen, bleiben unberührt.` },
-    { h: "17. Freistellung", p: `16.1 Freistellung bei Pflichtverletzungen
+    { h: "18. Freistellung", p: `16.1 Freistellung bei Pflichtverletzungen
 
 Verletzt ein Nutzer schuldhaft gesetzliche Vorschriften, diese Allgemeinen Geschäftsbedingungen oder Rechte Dritter und werden hierdurch Ansprüche gegen help-app.online geltend gemacht, stellt der betreffende Nutzer den Betreiber auf erstes berechtigtes Verlangen im gesetzlich zulässigen Umfang von diesen Ansprüchen frei.
 
@@ -903,7 +940,7 @@ Der Nutzer verpflichtet sich, help-app.online bei der Abwehr von Ansprüchen Dri
 Die vorstehenden Freistellungsregelungen gelten ausschließlich im gesetzlich zulässigen Umfang.
 
 Weitergehende gesetzliche Ansprüche des Betreibers sowie zwingende gesetzliche Rechte des Nutzers bleiben hiervon unberührt.` },
-    { h: "18. Einschränkung, Sperrung und Beendigung von Nutzerkonten", p: `17.1 Maßnahmen des Betreibers
+    { h: "19. Einschränkung, Sperrung und Beendigung von Nutzerkonten", p: `17.1 Maßnahmen des Betreibers
 
 help-app.online ist berechtigt, Nutzerkonten sowie einzelne Inhalte oder Funktionen vorübergehend oder dauerhaft einzuschränken, zu sperren oder zu entfernen, wenn hierfür ein sachlicher Grund besteht.
 
@@ -955,7 +992,7 @@ Der Betreiber kann das Nutzerkonto deaktivieren sowie Inhalte löschen oder anon
 18.8 Gesetzliche Rechte
 
 Gesetzliche Rechte des Betreibers und der Nutzer bleiben von den vorstehenden Regelungen unberührt.` },
-    { h: "19. Datenschutz", p: `18.1 Verarbeitung personenbezogener Daten
+    { h: "20. Datenschutz", p: `18.1 Verarbeitung personenbezogener Daten
 
 Der Schutz personenbezogener Daten hat für help-app.online einen hohen Stellenwert.
 
@@ -1000,7 +1037,7 @@ Darüber hinaus besteht das Recht, eine erteilte Einwilligung jederzeit mit Wirk
 help-app.online trifft angemessene technische und organisatorische Maßnahmen, um personenbezogene Daten vor Verlust, Missbrauch, unbefugtem Zugriff, Veränderung oder unberechtigter Offenlegung zu schützen.
 
 Trotz aller Sicherheitsmaßnahmen kann ein vollständiger Schutz bei der Datenübertragung über das Internet nicht garantiert werden.` },
-    { h: "20. Datenschutzerklärung und ergänzende Datenschutzbestimmungen", p: `19.1 Eigenständige Datenschutzerklärung
+    { h: "21. Datenschutzerklärung und ergänzende Datenschutzbestimmungen", p: `19.1 Eigenständige Datenschutzerklärung
 
 Ergänzend zu diesen Allgemeinen Geschäftsbedingungen gilt die jeweils aktuelle Datenschutzerklärung von help-app.online.
 
@@ -1021,7 +1058,7 @@ Der Betreiber behält sich vor, die Datenschutzerklärung anzupassen, soweit die
 20.4 Vorrang datenschutzrechtlicher Vorschriften
 
 Soweit Regelungen dieser Allgemeinen Geschäftsbedingungen und der Datenschutzerklärung dieselben Sachverhalte betreffen, gelten die datenschutzrechtlichen Bestimmungen der Datenschutzerklärung vorrangig, soweit zwingende datenschutzrechtliche Vorschriften dies erfordern.` },
-    { h: "21. Änderungen dieser Allgemeinen Geschäftsbedingungen", p: `20.1 Änderungsrecht
+    { h: "22. Änderungen dieser Allgemeinen Geschäftsbedingungen", p: `20.1 Änderungsrecht
 
 help-app.online entwickelt die Plattform kontinuierlich weiter und passt ihre Leistungen an technische, wirtschaftliche und gesetzliche Anforderungen an.
 
@@ -1049,14 +1086,14 @@ Soweit gesetzlich erforderlich oder vertraglich vorgesehen, wird der Nutzer ausd
 Soweit gesetzlich zulässig, gelten geänderte Allgemeine Geschäftsbedingungen als akzeptiert, wenn der Nutzer die Plattform nach Inkrafttreten der Änderungen weiterhin nutzt und hierauf zuvor hingewiesen wurde.
 
 Zwingende gesetzliche Vorschriften bleiben hiervon unberührt.` },
-    { h: "22. Verfügbarkeit der Plattform", p: `help-app.online ist bemüht, die Plattform mit einer möglichst hohen Verfügbarkeit bereitzustellen und einen störungsfreien Betrieb sicherzustellen.
+    { h: "23. Verfügbarkeit der Plattform", p: `help-app.online ist bemüht, die Plattform mit einer möglichst hohen Verfügbarkeit bereitzustellen und einen störungsfreien Betrieb sicherzustellen.
 
 Ein Anspruch auf eine jederzeitige, ununterbrochene oder fehlerfreie Erreichbarkeit der Plattform oder einzelner Funktionen besteht jedoch nicht.
 
 Insbesondere können Wartungsarbeiten, Sicherheitsupdates, technische Weiterentwicklungen, Softwareaktualisierungen, Störungen von Telekommunikations- oder Datennetzen, Ausfälle externer Dienstleister, Ereignisse höherer Gewalt oder sonstige Umstände außerhalb des Einflussbereichs von help-app.online zu vorübergehenden Einschränkungen oder Ausfällen führen.
 
 Soweit gesetzlich zulässig, haftet help-app.online nicht für Schäden oder Nachteile, die aus einer vorübergehenden Nichtverfügbarkeit, Unterbrechung oder Einschränkung der Plattform entstehen, sofern diese nicht auf vorsätzlichem oder grob fahrlässigem Verhalten des Betreibers beruhen oder eine gesetzlich zwingende Haftung besteht.` },
-    { h: "23. Schlussbestimmungen", p: `22.1 Anwendbares Recht
+    { h: "24. Schlussbestimmungen", p: `22.1 Anwendbares Recht
 
 Für sämtliche Rechtsbeziehungen zwischen help-app.online und den Nutzern gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts (CISG).
 
