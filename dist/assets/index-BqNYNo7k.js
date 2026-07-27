@@ -557,7 +557,20 @@ Wird ein Nutzerkonto gelöscht oder die Löschung personenbezogener Daten verlan
 
 Bestimmte Daten können über die Löschung des Nutzerkontos hinaus gespeichert werden, soweit dies zur Erfüllung gesetzlicher Verpflichtungen, zur Betrugsprävention, zur Missbrauchsbekämpfung oder zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen erforderlich ist.
 
-Nach Ablauf der jeweiligen gesetzlichen Aufbewahrungsfristen werden die entsprechenden personenbezogenen Daten gelöscht, sofern sie nicht mehr für die genannten Zwecke erforderlich sind.`},{h:"16. Beschwerderecht",p:"Du hast das Recht, dich bei einer Datenschutzaufsichtsbehörde zu beschweren. Die zuständige Behörde richtet sich nach deinem Wohnsitz oder dem Sitz unseres Unternehmens."}];return i.jsxs("section",{className:"bg-white min-h-screen px-5 md:px-10 py-12 max-w-4xl mx-auto w-full",children:[i.jsx("h2",{className:"text-3xl font-extrabold text-gray-900 mb-2",children:"Datenschutz"}),i.jsx("p",{className:"text-gray-500 mb-8",children:"Datenschutzerklärung (Vorlage für den Prototyp)"}),i.jsxs("div",{className:"bg-amber-50 border border-amber-200 rounded-xl p-4 mb-8 text-amber-800 text-sm",children:[i.jsx("strong",{children:"Wichtiger Hinweis:"})," Diese Datenschutzerklärung ist eine Vorlage und keine Rechtsberatung. Für den Livebetrieb muss sie an die tatsächlichen Datenflüsse angepasst werden."]}),i.jsx("div",{className:"max-w-3xl text-gray-600 leading-relaxed space-y-6 text-sm",children:u.map(({h:a,p:c})=>i.jsxs("div",{children:[i.jsx("h3",{className:"font-bold text-gray-900 mb-1",children:a}),i.jsx("p",{children:c})]},a))})]})}function jv(){const u=[{h:"1. Präambel – Unsere Grundsätze",p:`Willkommen bei help-app.online.
+Nach Ablauf der jeweiligen gesetzlichen Aufbewahrungsfristen werden die entsprechenden personenbezogenen Daten gelöscht, sofern sie nicht mehr für die genannten Zwecke erforderlich sind.`},{h:"16. Beschwerderecht",p:`Unbeschadet anderweitiger verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe hast du das Recht, dich bei einer Datenschutzaufsichtsbehörde über die Verarbeitung deiner personenbezogenen Daten durch help-app.online zu beschweren, wenn du der Ansicht bist, dass diese gegen die Datenschutz-Grundverordnung (DSGVO) oder andere datenschutzrechtliche Vorschriften verstößt.
+
+Du kannst dich hierzu insbesondere an die Datenschutzaufsichtsbehörde deines gewöhnlichen Aufenthaltsortes, deines Arbeitsplatzes oder des Sitzes des Verantwortlichen wenden.
+
+Für help-app.online ist derzeit insbesondere folgende Aufsichtsbehörde zuständig:
+
+Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW)
+Kavalleriestraße 2–4
+40213 Düsseldorf
+Deutschland
+
+Telefon: +49 (0)211 38424-0
+
+Die jeweils aktuellen Kontaktdaten und weitere Informationen findest du auf der Internetseite der zuständigen Datenschutzaufsichtsbehörde.`}];return i.jsxs("section",{className:"bg-white min-h-screen px-5 md:px-10 py-12 max-w-4xl mx-auto w-full",children:[i.jsx("h2",{className:"text-3xl font-extrabold text-gray-900 mb-2",children:"Datenschutz"}),i.jsx("p",{className:"text-gray-500 mb-8",children:"Datenschutzerklärung (Vorlage für den Prototyp)"}),i.jsxs("div",{className:"bg-amber-50 border border-amber-200 rounded-xl p-4 mb-8 text-amber-800 text-sm",children:[i.jsx("strong",{children:"Wichtiger Hinweis:"})," Diese Datenschutzerklärung ist eine Vorlage und keine Rechtsberatung. Für den Livebetrieb muss sie an die tatsächlichen Datenflüsse angepasst werden."]}),i.jsx("div",{className:"max-w-3xl text-gray-600 leading-relaxed space-y-6 text-sm",children:u.map(({h:a,p:c})=>i.jsxs("div",{children:[i.jsx("h3",{className:"font-bold text-gray-900 mb-1",children:a}),i.jsx("p",{children:c})]},a))})]})}function jv(){const u=[{h:"1. Präambel – Unsere Grundsätze",p:`Willkommen bei help-app.online.
 
 help-app.online ist eine digitale Vermittlungsplattform, die Menschen zusammenbringt, die Unterstützung suchen, mit Menschen, die ihre Hilfe anbieten möchten. Ziel unserer Plattform ist es, das Finden und Anbieten von Dienstleistungen einfach, transparent und sicher zu gestalten.
 
