@@ -326,8 +326,7 @@ Elgendorfer Straße 57
 56410 Montabaur
 Deutschland
 
-Weitere Informationen zum Datenschutz bei IONOS findest du unter:
-https://www.ionos.de/terms-gtc/datenschutzerklaerung/
+Weitere Informationen zum Datenschutz bei IONOS findest du in der Datenschutzerklärung von IONOS.
 
 Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse besteht in der sicheren, stabilen und effizienten Bereitstellung unserer Online-Plattform.`},{h:"4. Prototyp-Hinweis",p:"In diesem Prototyp werden Funktionen (z. B. Login/Chat) überwiegend clientseitig demonstriert. Für den Livebetrieb gelten die folgenden Regelungen."},{h:"5. Nutzerkonto und Profil",p:"Bei Registrierung verarbeiten wir E-Mail-Adresse, Passwort-Hash und Rollenangabe. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO."},{h:"6. Anzeigen und Kommunikation",p:"Wenn Nutzer Anzeigen erstellen oder Nachrichten senden, verarbeiten wir die übermittelten Inhalte und Metadaten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO."},{h:"7. Cookies / Local Storage",p:"Wir setzen Local-Storage ein, um grundlegende Funktionen bereitzustellen (Session-Status, Anzeigen, Chats). Soweit technisch erforderlich, erfolgt dies auf Basis von § 25 Abs. 2 TTDSG."},{h:"8. Benachrichtigungen und Kommunikation",p:`help-app.online informiert Nutzer über wichtige Ereignisse im Zusammenhang mit der Nutzung der Plattform. Hierzu gehören insbesondere Benachrichtigungen über neue Chatnachrichten, Auftragsanfragen, Änderungen des Auftragsstatus, Bewertungen, sicherheitsrelevante Mitteilungen sowie weitere für die Nutzung der Plattform erforderliche Informationen.
 

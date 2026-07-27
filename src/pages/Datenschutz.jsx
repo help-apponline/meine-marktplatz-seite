@@ -63,8 +63,7 @@ Elgendorfer Straße 57
 56410 Montabaur
 Deutschland
 
-Weitere Informationen zum Datenschutz bei IONOS findest du unter:
-https://www.ionos.de/terms-gtc/datenschutzerklaerung/
+Weitere Informationen zum Datenschutz bei IONOS findest du in der Datenschutzerklärung von IONOS.
 
 Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse besteht in der sicheren, stabilen und effizienten Bereitstellung unserer Online-Plattform.` },
     { h: "4. Prototyp-Hinweis", p: "In diesem Prototyp werden Funktionen (z. B. Login/Chat) überwiegend clientseitig demonstriert. Für den Livebetrieb gelten die folgenden Regelungen." },
