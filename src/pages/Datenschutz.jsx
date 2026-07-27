@@ -110,7 +110,27 @@ Die Verarbeitung dieser Daten erfolgt ausschließlich zur Bereitstellung der Pla
 Nachrichten werden ausschließlich den jeweiligen Kommunikationspartnern sowie – soweit gesetzlich erforderlich oder zur Bearbeitung von Missbrauchsmeldungen notwendig – dem Betreiber der Plattform zugänglich gemacht.
 
 Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO zur Erfüllung des Nutzungsvertrages sowie auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO aufgrund unseres berechtigten Interesses an einer sicheren, zuverlässigen und funktionsfähigen Kommunikationsplattform.` },
-    { h: "6. Anzeigen und Kommunikation", p: "Wenn Nutzer Anzeigen erstellen oder Nachrichten senden, verarbeiten wir die übermittelten Inhalte und Metadaten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO." },
+    { h: "6. E-Mail-Benachrichtigungen", p: `Zur Bereitstellung unserer Plattformfunktionen versendet help-app.online automatisierte E-Mail-Benachrichtigungen.
+
+Hierzu gehören insbesondere:
+
+- Bestätigung der Registrierung,
+- Bestätigung der E-Mail-Adresse,
+- Benachrichtigungen über neue Chatnachrichten,
+- Benachrichtigungen über neue Auftragsanfragen,
+- Informationen über Änderungen des Auftragsstatus,
+- Passwort-Zurücksetzungen,
+- sicherheitsrelevante Mitteilungen,
+- Informationen zu Premium-Mitgliedschaften oder Werbepartner-Abonnements,
+- weitere für die Nutzung der Plattform erforderliche Systembenachrichtigungen.
+
+Für die technische Verarbeitung und den Versand der E-Mails setzen wir externe technische Dienstleister ein. Hierbei können insbesondere die E-Mail-Adresse, die Benutzerkennung sowie technische Versandinformationen (z. B. Versand- und Zustellstatus) verarbeitet werden.
+
+Die Verarbeitung erfolgt ausschließlich zum Zweck der Bereitstellung unserer Plattformfunktionen und einer zuverlässigen Kommunikation mit unseren Nutzern.
+
+Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. b DSGVO, soweit die Benachrichtigungen zur Erfüllung des Nutzungsvertrages erforderlich sind, sowie Art. 6 Abs. 1 lit. f DSGVO aufgrund unseres berechtigten Interesses an einer sicheren und effizienten Kommunikation mit unseren Nutzern.
+
+Weitere Informationen zu den eingesetzten technischen Dienstleistern findest du unter Punkt 10 „Empfänger personenbezogener Daten und Auftragsverarbeiter" dieser Datenschutzerklärung.` },
     { h: "7. Cookies / Local Storage", p: "Wir setzen Local-Storage ein, um grundlegende Funktionen bereitzustellen (Session-Status, Anzeigen, Chats). Soweit technisch erforderlich, erfolgt dies auf Basis von § 25 Abs. 2 TTDSG." },
     { h: "8. Benachrichtigungen und Kommunikation", p: `help-app.online informiert Nutzer über wichtige Ereignisse im Zusammenhang mit der Nutzung der Plattform. Hierzu gehören insbesondere Benachrichtigungen über neue Chatnachrichten, Auftragsanfragen, Änderungen des Auftragsstatus, Bewertungen, sicherheitsrelevante Mitteilungen sowie weitere für die Nutzung der Plattform erforderliche Informationen.
 
