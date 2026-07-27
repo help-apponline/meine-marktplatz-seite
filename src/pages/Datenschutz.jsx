@@ -166,9 +166,37 @@ Die Benachrichtigungen können per E-Mail oder über andere innerhalb der Plattf
 Zur technischen Abwicklung und Zustellung der E-Mail-Benachrichtigungen kann help-app.online externe technische Dienstleister einsetzen. Die Verarbeitung erfolgt ausschließlich zum Zweck der Bereitstellung der jeweiligen Funktion und unter Beachtung der geltenden datenschutzrechtlichen Bestimmungen. Weitere Informationen hierzu sind der Datenschutzerklärung zu entnehmen.
 
 Der Nutzer ist verpflichtet, eine gültige E-Mail-Adresse anzugeben und diese regelmäßig abzurufen. Soweit Benachrichtigungen nicht gesetzlich oder vertraglich erforderlich sind, können diese – sofern technisch vorgesehen – vom Nutzer in den Kontoeinstellungen verwaltet oder deaktiviert werden.` },
-    { h: "9. Deine Rechte", p: "Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21). Wende dich dazu an: info@help-app.online" },
-    { h: "10. Speicherdauer", p: "Wir speichern Daten nur so lange, wie es für die genannten Zwecke erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen." },
-    { h: "11. Beschwerderecht", p: "Du hast das Recht, dich bei einer Datenschutzaufsichtsbehörde zu beschweren. Die zuständige Behörde richtet sich nach deinem Wohnsitz oder dem Sitz unseres Unternehmens." },
+    { h: "9. Zahlungsabwicklung", p: `Für die Buchung kostenpflichtiger Leistungen, insbesondere Premium-Mitgliedschaften, Werbepartner-Abonnements oder sonstiger kostenpflichtiger Angebote, erfolgt die Zahlungsabwicklung über externe Zahlungsdienstleister.
+
+Im Rahmen der Zahlungsabwicklung werden ausschließlich die für die Durchführung der Zahlung erforderlichen personenbezogenen Daten an den jeweiligen Zahlungsdienstleister übermittelt. Hierzu können insbesondere folgende Daten gehören:
+
+- Vor- und Nachname,
+- Rechnungsanschrift,
+- E-Mail-Adresse,
+- Zahlungsbetrag,
+- Währung,
+- Transaktionsdaten,
+- Zahlungsstatus,
+- gegebenenfalls weitere für die Zahlungsabwicklung erforderliche Angaben.
+
+Die Zahlungsdaten selbst werden grundsätzlich nicht von help-app.online gespeichert oder verarbeitet, sondern ausschließlich durch den jeweiligen Zahlungsdienstleister entsprechend dessen Datenschutzbestimmungen verarbeitet.
+
+Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO zur Erfüllung des Nutzungsvertrages sowie gegebenenfalls aufgrund gesetzlicher Aufbewahrungspflichten gemäß Art. 6 Abs. 1 lit. c DSGVO.
+
+Soweit derzeit eingesetzt, erfolgt die Zahlungsabwicklung über:
+
+Stripe Payments Europe Ltd.
+The One Building
+1 Grand Canal Street Lower
+Dublin 2
+Irland
+
+Weitere Informationen zur Datenverarbeitung durch Stripe findest du in der Datenschutzerklärung von Stripe.
+
+Sollten künftig weitere Zahlungsdienstleister eingesetzt werden, wird diese Datenschutzerklärung entsprechend ergänzt oder aktualisiert.` },
+    { h: "10. Deine Rechte", p: "Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21). Wende dich dazu an: info@help-app.online" },
+    { h: "11. Speicherdauer", p: "Wir speichern Daten nur so lange, wie es für die genannten Zwecke erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen." },
+    { h: "12. Beschwerderecht", p: "Du hast das Recht, dich bei einer Datenschutzaufsichtsbehörde zu beschweren. Die zuständige Behörde richtet sich nach deinem Wohnsitz oder dem Sitz unseres Unternehmens." },
   ];
 
   return (
