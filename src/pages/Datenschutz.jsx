@@ -326,10 +326,7 @@ Die jeweils aktuellen Kontaktdaten und weitere Informationen findest du auf der 
   return (
     <section className="bg-white min-h-screen px-5 md:px-10 py-12 max-w-4xl mx-auto w-full">
       <h2 className="text-3xl font-extrabold text-gray-900 mb-2">Datenschutz</h2>
-      <p className="text-gray-500 mb-8">Datenschutzerklärung (Vorlage für den Prototyp)</p>
-      <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-8 text-amber-800 text-sm">
-        <strong>Wichtiger Hinweis:</strong> Diese Datenschutzerklärung ist eine Vorlage und keine Rechtsberatung. Für den Livebetrieb muss sie an die tatsächlichen Datenflüsse angepasst werden.
-      </div>
+      <p className="text-gray-500 mb-8">Datenschutzerklärung von help-app.online</p>
       <div className="max-w-3xl text-gray-600 leading-relaxed space-y-6 text-sm">
         {sections.map(({ h, p }) => (
           <div key={h}>
