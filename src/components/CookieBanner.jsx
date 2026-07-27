@@ -46,7 +46,7 @@ export default function CookieBanner() {
           onClick={accept}
           className="shrink-0 px-5 py-2 bg-[#ff8a00] hover:bg-[#e67a00] text-white font-semibold text-sm rounded-xl transition-colors whitespace-nowrap"
         >
-          Verstanden
+          Einwilligen
         </button>
       </div>
     </div>
