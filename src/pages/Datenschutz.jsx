@@ -271,7 +271,28 @@ Der Zugriff auf personenbezogene Daten ist ausschließlich den Personen gestatte
 Die Übertragung personenbezogener Daten zwischen deinem Endgerät und unserer Plattform erfolgt – soweit technisch möglich – über eine verschlüsselte Verbindung (SSL-/TLS-Verschlüsselung).
 
 Trotz aller technischen und organisatorischen Sicherheitsmaßnahmen kann die Datenübertragung im Internet Sicherheitslücken aufweisen. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist daher nicht in jedem Fall möglich.` },
-    { h: "14. Deine Rechte", p: "Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21). Wende dich dazu an: info@help-app.online" },
+    { h: "14. Rechte der betroffenen Personen", p: `Soweit wir personenbezogene Daten von dir verarbeiten, stehen dir nach den Bestimmungen der Datenschutz-Grundverordnung (DSGVO) folgende Rechte zu:
+
+- Recht auf Auskunft (Art. 15 DSGVO): Du hast das Recht, Auskunft darüber zu verlangen, ob und welche personenbezogenen Daten wir über dich verarbeiten.
+
+- Recht auf Berichtigung (Art. 16 DSGVO): Du hast das Recht, die Berichtigung unrichtiger oder die Vervollständigung unvollständiger personenbezogener Daten zu verlangen.
+
+- Recht auf Löschung (Art. 17 DSGVO): Du kannst unter den gesetzlichen Voraussetzungen die Löschung deiner personenbezogenen Daten verlangen.
+
+- Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO): Du hast das Recht, unter den gesetzlichen Voraussetzungen die Einschränkung der Verarbeitung deiner personenbezogenen Daten zu verlangen.
+
+- Recht auf Datenübertragbarkeit (Art. 20 DSGVO): Du hast das Recht, die dich betreffenden personenbezogenen Daten in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten oder deren Übermittlung an einen anderen Verantwortlichen zu verlangen, soweit die gesetzlichen Voraussetzungen vorliegen.
+
+- Recht auf Widerspruch (Art. 21 DSGVO): Soweit wir personenbezogene Daten auf Grundlage berechtigter Interessen (Art. 6 Abs. 1 lit. f DSGVO) verarbeiten, hast du das Recht, aus Gründen, die sich aus deiner besonderen Situation ergeben, jederzeit Widerspruch gegen diese Verarbeitung einzulegen.
+
+- Recht auf Widerruf einer Einwilligung: Eine erteilte Einwilligung kannst du jederzeit mit Wirkung für die Zukunft widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung bleibt hiervon unberührt.
+
+Zur Ausübung deiner Rechte genügt eine formlose Mitteilung an:
+
+help-app.online
+E-Mail: info@help-app.online
+
+Wir werden dein Anliegen entsprechend den gesetzlichen Vorgaben prüfen und bearbeiten.` },
     { h: "15. Speicherdauer", p: `Wir speichern personenbezogene Daten nur so lange, wie dies zur Erfüllung der in dieser Datenschutzerklärung genannten Zwecke erforderlich ist oder gesetzliche Aufbewahrungs- und Nachweispflichten bestehen.
 
 Die Speicherdauer richtet sich insbesondere nach:
