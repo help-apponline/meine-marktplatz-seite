@@ -91,7 +91,25 @@ Der Nutzer ist verpflichtet, bei der Registrierung wahrheitsgemäße Angaben zu 
 Die Verarbeitung der Registrierungs- und Profildaten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO zur Durchführung des Nutzungsvertrages sowie, soweit freiwillige Angaben gemacht werden, auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO.
 
 Der Nutzer kann seine Profildaten – soweit technisch vorgesehen – jederzeit selbst ändern oder die Löschung seines Nutzerkontos beantragen. Gesetzliche Aufbewahrungspflichten bleiben hiervon unberührt.` },
-    { h: "5. Nutzerkonto und Profil", p: "Bei Registrierung verarbeiten wir E-Mail-Adresse, Passwort-Hash und Rollenangabe. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO." },
+    { h: "5. Anzeigen und Kommunikation", p: `help-app.online ermöglicht registrierten Nutzern, Anzeigen zu erstellen, Aufträge zu veröffentlichen und mit anderen Nutzern über die integrierte Chatfunktion zu kommunizieren.
+
+Im Rahmen der Nutzung dieser Funktionen verarbeiten wir insbesondere folgende personenbezogene Daten:
+
+- Titel und Beschreibung von Anzeigen,
+- Kategorie und Art des Auftrags,
+- Standort oder Einsatzgebiet,
+- Preis- oder Vergütungsangaben,
+- hochgeladene Bilder oder sonstige Dateien,
+- Nachrichteninhalte innerhalb des Chats,
+- Datum und Uhrzeit der Kommunikation,
+- Benutzerkennung des Absenders und Empfängers,
+- Statusinformationen (z. B. gesendet, zugestellt oder gelesen, soweit technisch vorgesehen).
+
+Die Verarbeitung dieser Daten erfolgt ausschließlich zur Bereitstellung der Plattform, zur Vermittlung zwischen Auftraggebern und Helfern sowie zur Durchführung der Kommunikation zwischen den beteiligten Nutzern.
+
+Nachrichten werden ausschließlich den jeweiligen Kommunikationspartnern sowie – soweit gesetzlich erforderlich oder zur Bearbeitung von Missbrauchsmeldungen notwendig – dem Betreiber der Plattform zugänglich gemacht.
+
+Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO zur Erfüllung des Nutzungsvertrages sowie auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO aufgrund unseres berechtigten Interesses an einer sicheren, zuverlässigen und funktionsfähigen Kommunikationsplattform.` },
     { h: "6. Anzeigen und Kommunikation", p: "Wenn Nutzer Anzeigen erstellen oder Nachrichten senden, verarbeiten wir die übermittelten Inhalte und Metadaten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO." },
     { h: "7. Cookies / Local Storage", p: "Wir setzen Local-Storage ein, um grundlegende Funktionen bereitzustellen (Session-Status, Anzeigen, Chats). Soweit technisch erforderlich, erfolgt dies auf Basis von § 25 Abs. 2 TTDSG." },
     { h: "8. Benachrichtigungen und Kommunikation", p: `help-app.online informiert Nutzer über wichtige Ereignisse im Zusammenhang mit der Nutzung der Plattform. Hierzu gehören insbesondere Benachrichtigungen über neue Chatnachrichten, Auftragsanfragen, Änderungen des Auftragsstatus, Bewertungen, sicherheitsrelevante Mitteilungen sowie weitere für die Nutzung der Plattform erforderliche Informationen.
