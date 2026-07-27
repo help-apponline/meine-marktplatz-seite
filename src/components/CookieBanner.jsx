@@ -6,16 +6,12 @@ export default function CookieBanner() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const accepted = localStorage.getItem("cookie_accepted");
-    if (!accepted) {
-      // Small delay so it slides in after page load
-      const t = setTimeout(() => setVisible(true), 800);
-      return () => clearTimeout(t);
-    }
+    // Small delay so it slides in after page load
+    const t = setTimeout(() => setVisible(true), 800);
+    return () => clearTimeout(t);
   }, []);
 
   function accept() {
-    localStorage.setItem("cookie_accepted", "1");
     setVisible(false);
   }
 
