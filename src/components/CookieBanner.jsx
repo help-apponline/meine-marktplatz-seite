@@ -6,12 +6,19 @@ export default function CookieBanner() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    // Small delay so it slides in after page load
     const t = setTimeout(() => setVisible(true), 800);
     return () => clearTimeout(t);
   }, []);
 
-  function accept() {
+  function acceptAll() {
+    // Statistik-Cookies akzeptiert — hier später Google Analytics aktivieren
+    localStorage.setItem("cookie_statistics", "1");
+    setVisible(false);
+  }
+
+  function acceptNecessary() {
+    // Nur notwendige Cookies
+    localStorage.setItem("cookie_statistics", "0");
     setVisible(false);
   }
 
@@ -28,22 +35,33 @@ export default function CookieBanner() {
           to { transform: translateY(0); opacity: 1; }
         }
       `}</style>
-      <div className="max-w-4xl mx-auto bg-gray-900 text-white rounded-2xl shadow-2xl px-5 py-4 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-        <div className="flex items-start gap-3 flex-1">
+      <div className="max-w-4xl mx-auto bg-gray-900 text-white rounded-2xl shadow-2xl px-5 py-5 flex flex-col gap-4">
+        <div className="flex items-start gap-3">
           <Shield size={20} className="text-[#ff8a00] shrink-0 mt-0.5" />
-          <p className="text-sm text-gray-200 leading-relaxed">
-            help-app.online verwendet technisch notwendige Cookies, um die Plattform sicher und funktionsfähig bereitzustellen.{" "}
-            <Link to="/datenschutz" className="text-[#ff8a00] underline underline-offset-2 hover:text-orange-400 transition-colors">
-              Mehr erfahren
-            </Link>
-          </p>
+          <div className="flex-1">
+            <p className="text-sm font-semibold text-white mb-1">Deine Privatsphäre</p>
+            <p className="text-sm text-gray-300 leading-relaxed">
+              help-app.online verwendet technisch notwendige Cookies für den Betrieb der Plattform. Mit deiner Zustimmung nutzen wir zusätzlich Besucher-Statistiken, um die Seite zu verbessern.{" "}
+              <Link to="/datenschutz" className="text-[#ff8a00] underline underline-offset-2 hover:text-orange-400 transition-colors">
+                Datenschutzerklärung
+              </Link>
+            </p>
+          </div>
         </div>
-        <button
-          onClick={accept}
-          className="shrink-0 px-5 py-2 bg-[#ff8a00] hover:bg-[#e67a00] text-white font-semibold text-sm rounded-xl transition-colors whitespace-nowrap"
-        >
-          Einwilligen
-        </button>
+        <div className="flex flex-col sm:flex-row gap-2 sm:justify-end">
+          <button
+            onClick={acceptNecessary}
+            className="px-5 py-2 bg-gray-700 hover:bg-gray-600 text-gray-200 font-semibold text-sm rounded-xl transition-colors whitespace-nowrap"
+          >
+            Nur notwendige
+          </button>
+          <button
+            onClick={acceptAll}
+            className="px-5 py-2 bg-[#ff8a00] hover:bg-[#e67a00] text-white font-semibold text-sm rounded-xl transition-colors whitespace-nowrap"
+          >
+            Alle akzeptieren
+          </button>
+        </div>
       </div>
     </div>
   );
