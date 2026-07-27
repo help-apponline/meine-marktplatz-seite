@@ -41,7 +41,32 @@ Die Verarbeitung personenbezogener Daten erfolgt insbesondere auf Grundlage der 
 - Art. 6 Abs. 1 lit. f DSGVO – Wahrung berechtigter Interessen des Verantwortlichen, insbesondere zur Gewährleistung der Sicherheit, Stabilität und Weiterentwicklung der Plattform sowie zur Missbrauchs- und Betrugsprävention.
 
 Soweit für einzelne Verarbeitungsvorgänge eine Einwilligung erforderlich ist, kann diese jederzeit mit Wirkung für die Zukunft widerrufen werden. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung bleibt hiervon unberührt.` },
-    { h: "3. Zugriffsdaten / Server-Logs", p: "Beim Aufruf der Website werden durch den Hosting-Anbieter in der Regel Server-Logfiles verarbeitet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO." },
+    { h: "3. Hosting und Server-Logfiles", p: `Unsere Website und Plattform werden bei einem externen Hosting-Dienstleister betrieben. Im Rahmen des Hostings werden personenbezogene Daten verarbeitet, soweit dies für den sicheren und störungsfreien Betrieb der Website erforderlich ist.
+
+Beim Besuch unserer Website werden automatisch sogenannte Server-Logfiles erhoben und verarbeitet. Hierzu können insbesondere folgende Daten gehören:
+
+- IP-Adresse des anfragenden Endgeräts,
+- Datum und Uhrzeit des Zugriffs,
+- aufgerufene Seiten und Dateien,
+- Browsertyp und Browserversion,
+- verwendetes Betriebssystem,
+- Referrer-URL (zuvor besuchte Website),
+- Hostname des zugreifenden Rechners,
+- übertragene Datenmenge,
+- Meldungen über erfolgreiche oder fehlerhafte Zugriffe.
+
+Diese Daten werden ausschließlich zur Gewährleistung der Sicherheit, Stabilität und Funktionsfähigkeit der Plattform sowie zur Fehleranalyse und Missbrauchserkennung verarbeitet. Eine Zusammenführung dieser Daten mit anderen Datenquellen erfolgt grundsätzlich nicht.
+
+Hosting-Anbieter:
+IONOS SE
+Elgendorfer Straße 57
+56410 Montabaur
+Deutschland
+
+Weitere Informationen zum Datenschutz bei IONOS findest du unter:
+https://www.ionos.de/terms-gtc/datenschutzerklaerung/
+
+Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse besteht in der sicheren, stabilen und effizienten Bereitstellung unserer Online-Plattform.` },
     { h: "4. Prototyp-Hinweis", p: "In diesem Prototyp werden Funktionen (z. B. Login/Chat) überwiegend clientseitig demonstriert. Für den Livebetrieb gelten die folgenden Regelungen." },
     { h: "5. Nutzerkonto und Profil", p: "Bei Registrierung verarbeiten wir E-Mail-Adresse, Passwort-Hash und Rollenangabe. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO." },
     { h: "6. Anzeigen und Kommunikation", p: "Wenn Nutzer Anzeigen erstellen oder Nachrichten senden, verarbeiten wir die übermittelten Inhalte und Metadaten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO." },
