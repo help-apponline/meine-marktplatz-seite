@@ -42,7 +42,7 @@ export default function Impressum() {
 
         <div>
           <h3 className="font-bold text-gray-900 mb-1">Steuerliche Angaben</h3>
-          <p>Steuernummer: <em>wird nachgereicht</em></p>
+          <p>Steuernummer: 319/5029/5935</p>
         </div>
 
         <div>
