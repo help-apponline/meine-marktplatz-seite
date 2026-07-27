@@ -184,7 +184,37 @@ Soweit dies zur Bearbeitung einer Meldung erforderlich ist, können gemeldete In
 Sofern gesetzliche Verpflichtungen bestehen oder dies zur Durchsetzung oder Abwehr rechtlicher Ansprüche erforderlich ist, können die entsprechenden Informationen an zuständige Behörden oder andere berechtigte Stellen weitergegeben werden.
 
 Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO (Erfüllung gesetzlicher Verpflichtungen) sowie Art. 6 Abs. 1 lit. f DSGVO aufgrund unseres berechtigten Interesses an der Gewährleistung einer sicheren, vertrauenswürdigen und rechtskonformen Plattform.` },
-    { h: "10. Zahlungsabwicklung", p: `Für die Buchung kostenpflichtiger Leistungen, insbesondere Premium-Mitgliedschaften, Werbepartner-Abonnements oder sonstiger kostenpflichtiger Angebote, erfolgt die Zahlungsabwicklung über externe Zahlungsdienstleister.
+    { h: "10. Empfänger personenbezogener Daten und Auftragsverarbeiter", p: `Zur Bereitstellung und dem Betrieb von help-app.online arbeiten wir mit externen Dienstleistern zusammen, die personenbezogene Daten ausschließlich in unserem Auftrag oder im Rahmen der gesetzlichen Bestimmungen verarbeiten.
+
+Zu den Empfängern personenbezogener Daten können insbesondere gehören:
+
+IONOS SE
+Hosting der Website, der Datenbanken sowie der technischen Infrastruktur.
+
+Make.com
+Technische Automatisierung von Prozessen, insbesondere zur Verarbeitung und Ausführung automatisierter Abläufe innerhalb der Plattform.
+
+Brevo
+Versand von E-Mail-Benachrichtigungen und systemrelevanten Mitteilungen an Nutzer.
+
+Stripe Payments Europe Ltd.
+Abwicklung von Zahlungen im Zusammenhang mit kostenpflichtigen Leistungen der Plattform.
+
+Darüber hinaus können personenbezogene Daten an folgende Empfänger übermittelt werden, soweit dies gesetzlich vorgeschrieben oder zur Vertragserfüllung erforderlich ist:
+
+- Behörden und öffentliche Stellen,
+- Gerichte,
+- Steuerberater und Wirtschaftsprüfer,
+- IT- und Support-Dienstleister,
+- Rechtsanwälte,
+- sonstige Auftragsverarbeiter im Sinne des Art. 28 DSGVO.
+
+Alle eingesetzten Dienstleister werden sorgfältig ausgewählt und – soweit gesetzlich erforderlich – auf Grundlage eines Auftragsverarbeitungsvertrages gemäß Art. 28 DSGVO verpflichtet.
+
+Sofern personenbezogene Daten außerhalb der Europäischen Union oder des Europäischen Wirtschaftsraums verarbeitet werden, erfolgt dies ausschließlich unter Einhaltung der gesetzlichen Vorgaben der DSGVO. Insbesondere achten wir auf das Vorliegen eines Angemessenheitsbeschlusses der Europäischen Kommission oder geeigneter Garantien, wie beispielsweise den Abschluss von EU-Standardvertragsklauseln.
+
+Die jeweils eingesetzten Dienstleister können sich im Zuge der technischen Weiterentwicklung unserer Plattform ändern. Diese Datenschutzerklärung wird in diesem Fall entsprechend aktualisiert.` },
+    { h: "11. Zahlungsabwicklung", p: `Für die Buchung kostenpflichtiger Leistungen, insbesondere Premium-Mitgliedschaften, Werbepartner-Abonnements oder sonstiger kostenpflichtiger Angebote, erfolgt die Zahlungsabwicklung über externe Zahlungsdienstleister.
 
 Im Rahmen der Zahlungsabwicklung werden ausschließlich die für die Durchführung der Zahlung erforderlichen personenbezogenen Daten an den jeweiligen Zahlungsdienstleister übermittelt. Hierzu können insbesondere folgende Daten gehören:
 
@@ -212,9 +242,9 @@ Irland
 Weitere Informationen zur Datenverarbeitung durch Stripe findest du in der Datenschutzerklärung von Stripe.
 
 Sollten künftig weitere Zahlungsdienstleister eingesetzt werden, wird diese Datenschutzerklärung entsprechend ergänzt oder aktualisiert.` },
-    { h: "11. Deine Rechte", p: "Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21). Wende dich dazu an: info@help-app.online" },
-    { h: "12. Speicherdauer", p: "Wir speichern Daten nur so lange, wie es für die genannten Zwecke erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen." },
-    { h: "13. Beschwerderecht", p: "Du hast das Recht, dich bei einer Datenschutzaufsichtsbehörde zu beschweren. Die zuständige Behörde richtet sich nach deinem Wohnsitz oder dem Sitz unseres Unternehmens." },
+    { h: "12. Deine Rechte", p: "Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21). Wende dich dazu an: info@help-app.online" },
+    { h: "13. Speicherdauer", p: "Wir speichern Daten nur so lange, wie es für die genannten Zwecke erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen." },
+    { h: "14. Beschwerderecht", p: "Du hast das Recht, dich bei einer Datenschutzaufsichtsbehörde zu beschweren. Die zuständige Behörde richtet sich nach deinem Wohnsitz oder dem Sitz unseres Unternehmens." },
   ];
 
   return (
