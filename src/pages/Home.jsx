@@ -49,7 +49,7 @@ export default function Home() {
             className="h-60 md:h-72 w-auto object-contain mb-3"
           />
           <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight">
-            Finde Hilfe. Werde Helfer.
+            Finde Hilfe. Werde Helfer. Geld verdienen.
           </h1>
         </div>
         <p className="text-lg text-gray-500 max-w-xl mx-auto leading-relaxed mb-8">
