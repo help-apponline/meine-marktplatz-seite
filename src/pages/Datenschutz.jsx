@@ -262,7 +262,44 @@ Irland
 Weitere Informationen zur Datenverarbeitung durch Stripe findest du in der Datenschutzerklärung von Stripe.
 
 Sollten künftig weitere Zahlungsdienstleister eingesetzt werden, wird diese Datenschutzerklärung entsprechend ergänzt oder aktualisiert.` },
-    { h: "13. Datensicherheit", p: `Der Schutz deiner personenbezogenen Daten hat für help-app.online einen hohen Stellenwert. Wir treffen angemessene technische und organisatorische Maßnahmen, um personenbezogene Daten vor Verlust, Zerstörung, Manipulation sowie vor unbefugtem Zugriff, unbefugter Offenlegung oder sonstiger unrechtmäßiger Verarbeitung zu schützen.
+    { h: "13. Widerrufsrecht für Verbraucher", p: `16.1 Widerrufsrecht
+
+Verbrauchern im Sinne des § 13 BGB steht bei Abschluss eines entgeltlichen Vertrages über digitale Dienstleistungen grundsätzlich ein gesetzliches Widerrufsrecht von 14 Tagen zu.
+
+Die Widerrufsfrist beträgt 14 Tage ab dem Tag des Vertragsschlusses.
+
+Um das Widerrufsrecht auszuüben, muss der Verbraucher den Betreiber der Plattform mittels einer eindeutigen Erklärung (z. B. per E-Mail oder Brief) über seinen Entschluss, diesen Vertrag zu widerrufen, informieren.
+
+Der Widerruf ist zu richten an:
+
+help-app.online
+Inhaber: Heinz-Peter Bacha
+Passmannstr. 12
+45899 Gelsenkirchen
+Deutschland
+
+E-Mail: info@help-app.online
+
+Zur Wahrung der Widerrufsfrist genügt die rechtzeitige Absendung der Mitteilung über die Ausübung des Widerrufsrechts.
+
+16.2 Folgen des Widerrufs
+
+Wird ein Vertrag wirksam widerrufen, werden alle vom Verbraucher geleisteten Zahlungen unverzüglich und spätestens binnen 14 Tagen ab Eingang des Widerrufs erstattet. Für die Rückzahlung wird dasselbe Zahlungsmittel verwendet, das der Verbraucher bei der ursprünglichen Transaktion eingesetzt hat, sofern nichts anderes ausdrücklich vereinbart wurde.
+
+16.3 Erlöschen des Widerrufsrechts bei digitalen Dienstleistungen
+
+Das Widerrufsrecht erlischt vorzeitig, wenn:
+
+- der Verbraucher ausdrücklich zustimmt, dass der Betreiber bereits vor Ablauf der Widerrufsfrist mit der Ausführung der digitalen Dienstleistung beginnt,
+- der Verbraucher bestätigt, dass ihm bekannt ist, dass er durch diese Zustimmung sein Widerrufsrecht mit vollständiger Vertragserfüllung verliert,
+- und der Betreiber mit der Ausführung der digitalen Dienstleistung begonnen hat.
+
+Diese Zustimmung wird im Rahmen des Bestell- oder Buchungsvorgangs ausdrücklich eingeholt.
+
+16.4 Ausschluss
+
+Für die unentgeltliche Nutzung der Plattform besteht kein Widerrufsrecht, da insoweit kein entgeltlicher Verbrauchervertrag geschlossen wird.` },
+    { h: "14. Datensicherheit", p: `Der Schutz deiner personenbezogenen Daten hat für help-app.online einen hohen Stellenwert. Wir treffen angemessene technische und organisatorische Maßnahmen, um personenbezogene Daten vor Verlust, Zerstörung, Manipulation sowie vor unbefugtem Zugriff, unbefugter Offenlegung oder sonstiger unrechtmäßiger Verarbeitung zu schützen.
 
 Unsere Sicherheitsmaßnahmen orientieren sich am jeweiligen Stand der Technik und werden regelmäßig überprüft sowie bei Bedarf an technische und gesetzliche Entwicklungen angepasst.
 
@@ -271,7 +308,7 @@ Der Zugriff auf personenbezogene Daten ist ausschließlich den Personen gestatte
 Die Übertragung personenbezogener Daten zwischen deinem Endgerät und unserer Plattform erfolgt – soweit technisch möglich – über eine verschlüsselte Verbindung (SSL-/TLS-Verschlüsselung).
 
 Trotz aller technischen und organisatorischen Sicherheitsmaßnahmen kann die Datenübertragung im Internet Sicherheitslücken aufweisen. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist daher nicht in jedem Fall möglich.` },
-    { h: "14. Rechte der betroffenen Personen", p: `Soweit wir personenbezogene Daten von dir verarbeiten, stehen dir nach den Bestimmungen der Datenschutz-Grundverordnung (DSGVO) folgende Rechte zu:
+    { h: "15. Rechte der betroffenen Personen", p: `Soweit wir personenbezogene Daten von dir verarbeiten, stehen dir nach den Bestimmungen der Datenschutz-Grundverordnung (DSGVO) folgende Rechte zu:
 
 - Recht auf Auskunft (Art. 15 DSGVO): Du hast das Recht, Auskunft darüber zu verlangen, ob und welche personenbezogenen Daten wir über dich verarbeiten.
 
@@ -293,7 +330,7 @@ help-app.online
 E-Mail: info@help-app.online
 
 Wir werden dein Anliegen entsprechend den gesetzlichen Vorgaben prüfen und bearbeiten.` },
-    { h: "15. Speicherdauer", p: `Wir speichern personenbezogene Daten nur so lange, wie dies zur Erfüllung der in dieser Datenschutzerklärung genannten Zwecke erforderlich ist oder gesetzliche Aufbewahrungs- und Nachweispflichten bestehen.
+    { h: "16. Speicherdauer", p: `Wir speichern personenbezogene Daten nur so lange, wie dies zur Erfüllung der in dieser Datenschutzerklärung genannten Zwecke erforderlich ist oder gesetzliche Aufbewahrungs- und Nachweispflichten bestehen.
 
 Die Speicherdauer richtet sich insbesondere nach:
 
@@ -307,7 +344,7 @@ Wird ein Nutzerkonto gelöscht oder die Löschung personenbezogener Daten verlan
 Bestimmte Daten können über die Löschung des Nutzerkontos hinaus gespeichert werden, soweit dies zur Erfüllung gesetzlicher Verpflichtungen, zur Betrugsprävention, zur Missbrauchsbekämpfung oder zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen erforderlich ist.
 
 Nach Ablauf der jeweiligen gesetzlichen Aufbewahrungsfristen werden die entsprechenden personenbezogenen Daten gelöscht, sofern sie nicht mehr für die genannten Zwecke erforderlich sind.` },
-    { h: "16. Beschwerderecht", p: `Unbeschadet anderweitiger verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe hast du das Recht, dich bei einer Datenschutzaufsichtsbehörde über die Verarbeitung deiner personenbezogenen Daten durch help-app.online zu beschweren, wenn du der Ansicht bist, dass diese gegen die Datenschutz-Grundverordnung (DSGVO) oder andere datenschutzrechtliche Vorschriften verstößt.
+    { h: "17. Beschwerderecht", p: `Unbeschadet anderweitiger verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe hast du das Recht, dich bei einer Datenschutzaufsichtsbehörde über die Verarbeitung deiner personenbezogenen Daten durch help-app.online zu beschweren, wenn du der Ansicht bist, dass diese gegen die Datenschutz-Grundverordnung (DSGVO) oder andere datenschutzrechtliche Vorschriften verstößt.
 
 Du kannst dich hierzu insbesondere an die Datenschutzaufsichtsbehörde deines gewöhnlichen Aufenthaltsortes, deines Arbeitsplatzes oder des Sitzes des Verantwortlichen wenden.
 
