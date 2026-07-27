@@ -1,6 +1,22 @@
 export default function Datenschutz() {
   const sections = [
-    { h: "1. Verantwortlicher", p: "Verantwortlich im Sinne der DSGVO: [Unternehmensname / Name], [Straße Hausnummer], [PLZ Ort], E-Mail: [E-Mail-Adresse]" },
+    { h: "1. Verantwortlicher", p: `Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) sowie sonstiger datenschutzrechtlicher Bestimmungen ist:
+
+help-app.online
+
+Betreiber / Diensteanbieter
+Heinz-Peter Bacha
+Passmannstr. 12
+45899 Gelsenkirchen
+Deutschland
+
+Telefon: +49 (0)209 94574476
+E-Mail: info@help-app.online
+
+Vertretungsberechtigte Person:
+Heinz-Peter Bacha (Inhaber)
+
+Steuernummer: 319/5029/5935` },
     { h: "2. Übersicht der Verarbeitungen", p: "Wir verarbeiten personenbezogene Daten, um die Plattform bereitzustellen, Anfragen zu beantworten und Nutzerkonten, Anzeigen und Kommunikation zu ermöglichen." },
     { h: "3. Zugriffsdaten / Server-Logs", p: "Beim Aufruf der Website werden durch den Hosting-Anbieter in der Regel Server-Logfiles verarbeitet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO." },
     { h: "4. Prototyp-Hinweis", p: "In diesem Prototyp werden Funktionen (z. B. Login/Chat) überwiegend clientseitig demonstriert. Für den Livebetrieb gelten die folgenden Regelungen." },
