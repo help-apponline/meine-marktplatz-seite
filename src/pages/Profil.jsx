@@ -311,13 +311,11 @@ export default function Profil() {
         <h3 className="font-bold text-gray-900 mb-1 flex items-center gap-2">
           <span>📧</span> E-Mail-Benachrichtigungen
         </h3>
-        <div className="bg-amber-50 border border-amber-200 rounded-xl px-4 py-3 mb-4">
-          <p className="text-xs text-amber-700 leading-relaxed">
-            <span className="font-semibold">Hinweis:</span> Ohne E-Mail-Benachrichtigungen wirst du über neue Chats nur informiert, wenn die Website oder App geöffnet ist. Alternativ erhältst du bei installierter App eine Push-Benachrichtigung.
-          </p>
-        </div>
-        <p className="text-xs text-gray-500 mb-4 leading-relaxed">
+        <p className="text-xs text-gray-500 mb-1 leading-relaxed">
           Wenn du eine neue Nachricht im Chat erhältst, schicken wir dir eine E-Mail-Benachrichtigung.
+        </p>
+        <p className="text-xs mb-4 leading-relaxed">
+          <span className="text-[#ff8a00] font-semibold">Hinweis:</span> <span className="text-gray-500">Ohne E-Mail-Benachrichtigungen wirst du über neue Chats nur informiert, wenn die Website oder App geöffnet ist. Alternativ erhältst du bei installierter App eine Push-Benachrichtigung.</span>
         </p>
         <div className="flex items-center justify-between">
           <span className="text-sm font-medium text-gray-700">
