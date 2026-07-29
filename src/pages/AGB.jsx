@@ -368,19 +368,19 @@ Die Benachrichtigungen können per E-Mail oder über andere innerhalb der Plattf
 Zur technischen Abwicklung und Zustellung der E-Mail-Benachrichtigungen kann help-app.online externe technische Dienstleister einsetzen. Die Verarbeitung erfolgt ausschließlich zum Zweck der Bereitstellung der jeweiligen Funktion und unter Beachtung der geltenden datenschutzrechtlichen Bestimmungen. Weitere Informationen hierzu sind der Datenschutzerklärung zu entnehmen.
 
 Der Nutzer ist verpflichtet, eine gültige E-Mail-Adresse anzugeben und diese regelmäßig abzurufen. Soweit Benachrichtigungen nicht gesetzlich oder vertraglich erforderlich sind, können diese – sofern technisch vorgesehen – vom Nutzer in den Kontoeinstellungen verwaltet oder deaktiviert werden.` },
-    { h: "9. Preise, kostenpflichtige Leistungen und Zahlungsabwicklung", p: `8.1 Grundsatz der Nutzung
+    { h: "9. Preise, kostenpflichtige Leistungen und Zahlungsabwicklung", p: `9.1 Grundsatz der Nutzung
 
 Die Nutzung von help-app.online ist grundsätzlich kostenlos, soweit für einzelne Leistungen oder Funktionen nicht ausdrücklich etwas anderes angegeben wird.
 
 Der Betreiber behält sich vor, bestehende kostenlose Leistungen beizubehalten, zu erweitern oder künftig ganz oder teilweise kostenpflichtig anzubieten.
 
-8.2 Kostenpflichtige Leistungen
+9.2 Kostenpflichtige Leistungen
 
 help-app.online kann kostenpflichtige Leistungen anbieten. Hierzu können insbesondere gehören: Premium-Mitgliedschaften, hervorgehobene Profile oder Anzeigen, Werbeleistungen, Vermittlungsgebühren, transaktionsbezogene Gebühren, Flatrates, Zusatzfunktionen sowie weitere digitale Dienstleistungen.
 
 Art, Umfang und Voraussetzungen der jeweiligen Leistungen ergeben sich aus der zum Zeitpunkt der Buchung gültigen Leistungsbeschreibung.
 
-8.3 Preise
+9.3 Preise
 
 Die jeweils geltenden Preise werden vor Abschluss einer kostenpflichtigen Buchung transparent auf der Plattform angezeigt.
 
@@ -388,13 +388,13 @@ Alle Preisangaben verstehen sich einschließlich der jeweils gesetzlich geltende
 
 Der Nutzer erhält vor Abschluss einer kostenpflichtigen Bestellung die Möglichkeit, sämtliche Preisbestandteile einzusehen.
 
-8.4 Zustandekommen kostenpflichtiger Verträge
+9.4 Zustandekommen kostenpflichtiger Verträge
 
 Ein kostenpflichtiger Vertrag kommt erst zustande, wenn der Nutzer die Buchung ausdrücklich bestätigt und der Betreiber die Bestellung annimmt oder die gebuchte Leistung freischaltet.
 
 Vor Abschluss einer kostenpflichtigen Buchung werden dem Nutzer alle wesentlichen Informationen, insbesondere Preis, Leistungsumfang, Laufzeit und gegebenenfalls Kündigungsbedingungen, transparent angezeigt.
 
-8.5 Zahlungsabwicklung
+9.5 Zahlungsabwicklung
 
 Die Zahlungsabwicklung für kostenpflichtige Leistungen erfolgt über den von help-app.online eingesetzten Zahlungsdienstleister. Der Betreiber beabsichtigt, hierfür insbesondere den Zahlungsdienstleister Stripe einzusetzen.
 
@@ -402,13 +402,13 @@ Die Verarbeitung von Zahlungsdaten erfolgt ausschließlich durch den jeweiligen 
 
 help-app.online speichert keine vollständigen Kreditkarten- oder vergleichbaren Zahlungsdaten der Nutzer.
 
-8.6 Zukünftige Gebührenmodelle
+9.6 Zukünftige Gebührenmodelle
 
 Der Betreiber behält sich vor, künftig weitere kostenpflichtige Modelle einzuführen. Hierzu können insbesondere gehören: Gebühren für die Annahme von Aufträgen, Vermittlungsprovisionen, monatliche oder jährliche Mitgliedschaften, Flatrates, Unternehmenskonten, Premium-Angebote für private oder gewerbliche Nutzer sowie weitere kostenpflichtige Zusatzleistungen.
 
 Eine Verpflichtung zur Nutzung kostenpflichtiger Angebote besteht nur, wenn der jeweilige Nutzer diese ausdrücklich auswählt oder bucht.
 
-8.7 Änderungen von Preisen und Leistungen
+9.7 Änderungen von Preisen und Leistungen
 
 Der Betreiber ist berechtigt, Preise sowie den Umfang kostenpflichtiger Leistungen für zukünftige Buchungen anzupassen.
 
@@ -416,24 +416,24 @@ Bereits abgeschlossene Verträge bleiben hiervon unberührt, soweit gesetzlich n
 
 Über wesentliche Änderungen werden betroffene Nutzer rechtzeitig informiert.
 
-8.8 Zahlungsverzug
+9.8 Zahlungsverzug
 
 Kommt ein Nutzer seinen Zahlungsverpflichtungen trotz Fälligkeit nicht nach, ist help-app.online berechtigt, den Zugang zu kostenpflichtigen Leistungen vorübergehend einzuschränken oder bis zum Ausgleich der offenen Forderung zu sperren.
 
 Weitergehende gesetzliche Ansprüche des Betreibers bleiben hiervon unberührt.
 
-8.9 Rückerstattungen
+9.9 Rückerstattungen
 
 Soweit gesetzlich oder vertraglich nichts anderes geregelt ist, besteht kein Anspruch auf eine vollständige oder teilweise Rückerstattung bereits gezahlter Entgelte.
 
 Hiervon unberührt bleiben zwingende gesetzliche Rechte der Nutzer, insbesondere gesetzliche Widerrufsrechte oder Ansprüche aufgrund zwingender verbraucherschutzrechtlicher Vorschriften.
 
-8.10 Rechnungen
+9.10 Rechnungen
 
 Soweit gesetzlich erforderlich oder technisch vorgesehen, stellt help-app.online dem Nutzer Rechnungen oder Zahlungsbelege in elektronischer Form zur Verfügung.
 
 Der Nutzer erklärt sich damit einverstanden, Rechnungen elektronisch zu erhalten, sofern keine gesetzliche Verpflichtung zur Übersendung in anderer Form besteht.` },
-    { h: "10. Steuerliche und gesetzliche Verantwortung der Nutzer", p: `9.1 Eigenverantwortung
+    { h: "10. Steuerliche und gesetzliche Verantwortung der Nutzer", p: `10.1 Eigenverantwortung
 
 Auftraggeber und Auftragnehmer (Helfer) handeln bei der Nutzung von help-app.online eigenverantwortlich.
 
@@ -476,7 +476,7 @@ Erforderliche Genehmigungen, Zulassungen, Qualifikationen, Erlaubnisse oder Vers
 Verletzt ein Nutzer schuldhaft gesetzliche Pflichten und entstehen help-app.online hierdurch Ansprüche Dritter oder behördliche Maßnahmen, stellt der betreffende Nutzer den Betreiber im gesetzlichen Umfang von hieraus resultierenden Ansprüchen frei, soweit er die Pflichtverletzung zu vertreten hat.
 
 Weitergehende gesetzliche Ansprüche des Betreibers bleiben hiervon unberührt.` },
-    { h: "11. Bewertungen und Bewertungssystem", p: `10.1 Zweck des Bewertungssystems
+    { h: "11. Bewertungen und Bewertungssystem", p: `11.1 Zweck des Bewertungssystems
 
 help-app.online stellt ein Bewertungssystem zur Verfügung, um Auftraggebern und Auftragnehmern (Helfern) die Möglichkeit zu geben, ihre Erfahrungen nach Abschluss eines vermittelten Auftrags miteinander zu teilen.
 
@@ -527,7 +527,7 @@ Bewertungen geben ausschließlich die persönliche Meinung oder Erfahrung des je
 Nutzer können Bewertungen, die ihrer Ansicht nach gegen gesetzliche Vorschriften oder diese AGB verstoßen, über die hierfür vorgesehenen Meldefunktionen oder auf anderem geeigneten Weg an help-app.online melden.
 
 Der Betreiber wird gemeldete Bewertungen im Rahmen der gesetzlichen Vorgaben prüfen und gegebenenfalls geeignete Maßnahmen ergreifen.` },
-    { h: "12. Inhalte, Fotos und Nutzungsrechte", p: `11.1 Verantwortung für Inhalte
+    { h: "12. Inhalte, Fotos und Nutzungsrechte", p: `12.1 Verantwortung für Inhalte
 
 Jeder Nutzer ist ausschließlich selbst für die von ihm veröffentlichten oder hochgeladenen Inhalte verantwortlich.
 
@@ -572,7 +572,7 @@ Der Betreiber ist berechtigt, Inhalte insbesondere dann ganz oder teilweise zu e
 Der Nutzer stellt help-app.online von sämtlichen Ansprüchen Dritter frei, die aufgrund rechtswidrig veröffentlichter Inhalte gegen den Betreiber geltend gemacht werden, soweit der Nutzer die Rechtsverletzung zu vertreten hat.
 
 Dies umfasst auch angemessene Kosten der Rechtsverteidigung, soweit diese erforderlich sind.` },
-    { h: "13. Werbung, Werbepartner und Affiliate-Programme", p: `12.1 Werbung auf der Plattform
+    { h: "13. Werbung, Werbepartner und Affiliate-Programme", p: `13.1 Werbung auf der Plattform
 
 help-app.online finanziert sich unter anderem durch Werbeanzeigen sowie kostenpflichtige Werbeleistungen.
 
@@ -640,7 +640,7 @@ help-app.online behält sich das Recht vor, Werbeanzeigen oder Werbepartner ohne
 - die Werbung dem Ansehen oder den Interessen der Plattform erheblich schadet.
 
 Bereits bestehende gesetzliche oder vertragliche Ansprüche bleiben hiervon unberührt.` },
-    { h: "14. Pflichten der Nutzer", p: `13.1 Allgemeine Verhaltenspflichten
+    { h: "14. Pflichten der Nutzer", p: `14.1 Allgemeine Verhaltenspflichten
 
 Alle Nutzer verpflichten sich, help-app.online verantwortungsvoll, fair und unter Beachtung der geltenden Gesetze sowie dieser Allgemeinen Geschäftsbedingungen zu nutzen.
 
@@ -729,7 +729,7 @@ Gesetzliche Ansprüche sowie weitergehende Rechte des Betreibers bleiben hiervon
 Soweit help-app.online hierzu gesetzlich verpflichtet ist oder eine vollziehbare behördliche oder gerichtliche Anordnung vorliegt, kann der Betreiber im Rahmen der geltenden Datenschutz- und sonstigen Rechtsvorschriften mit den zuständigen Behörden zusammenarbeiten und erforderliche Auskünfte erteilen.
 
 Dabei werden die berechtigten Interessen und Datenschutzrechte der Nutzer entsprechend den gesetzlichen Vorgaben berücksichtigt.` },
-    { h: "15. Verbotene Inhalte und Dienstleistungen", p: `14.1 Grundsatz
+    { h: "15. Verbotene Inhalte und Dienstleistungen", p: `15.1 Grundsatz
 
 Über help-app.online dürfen ausschließlich rechtmäßige Dienstleistungen, Hilfsangebote und Aufträge veröffentlicht, vermittelt oder angenommen werden.
 
@@ -853,7 +853,7 @@ Diese Zustimmung wird im Rahmen des Bestell- oder Buchungsvorgangs ausdrücklich
 16.4 Ausschluss
 
 Für die unentgeltliche Nutzung der Plattform besteht kein Widerrufsrecht, da insoweit kein entgeltlicher Verbrauchervertrag geschlossen wird.` },
-    { h: "17. Haftung", p: `15.1 Vermittlerrolle
+    { h: "17. Haftung", p: `17.1 Vermittlerrolle
 
 help-app.online stellt ausschließlich eine technische Plattform zur Vermittlung von Kontakten zwischen Auftraggebern und Auftragnehmern (Helfern) zur Verfügung.
 
@@ -912,7 +912,7 @@ Hierzu zählen insbesondere Naturkatastrophen, Krieg, Terroranschläge, Streiks,
 Die vorstehenden Haftungsregelungen gelten ausschließlich im gesetzlich zulässigen Umfang.
 
 Zwingende gesetzliche Rechte der Nutzer, insbesondere nach den Vorschriften des Bürgerlichen Gesetzbuches (BGB), des Produkthaftungsgesetzes sowie anderer zwingender gesetzlicher Bestimmungen, bleiben unberührt.` },
-    { h: "18. Freistellung", p: `16.1 Freistellung bei Pflichtverletzungen
+    { h: "18. Freistellung", p: `18.1 Freistellung bei Pflichtverletzungen
 
 Verletzt ein Nutzer schuldhaft gesetzliche Vorschriften, diese Allgemeinen Geschäftsbedingungen oder Rechte Dritter und werden hierdurch Ansprüche gegen help-app.online geltend gemacht, stellt der betreffende Nutzer den Betreiber auf erstes berechtigtes Verlangen im gesetzlich zulässigen Umfang von diesen Ansprüchen frei.
 
@@ -940,7 +940,7 @@ Der Nutzer verpflichtet sich, help-app.online bei der Abwehr von Ansprüchen Dri
 Die vorstehenden Freistellungsregelungen gelten ausschließlich im gesetzlich zulässigen Umfang.
 
 Weitergehende gesetzliche Ansprüche des Betreibers sowie zwingende gesetzliche Rechte des Nutzers bleiben hiervon unberührt.` },
-    { h: "19. Einschränkung, Sperrung und Beendigung von Nutzerkonten", p: `17.1 Maßnahmen des Betreibers
+    { h: "19. Einschränkung, Sperrung und Beendigung von Nutzerkonten", p: `19.1 Maßnahmen des Betreibers
 
 help-app.online ist berechtigt, Nutzerkonten sowie einzelne Inhalte oder Funktionen vorübergehend oder dauerhaft einzuschränken, zu sperren oder zu entfernen, wenn hierfür ein sachlicher Grund besteht.
 
@@ -992,7 +992,7 @@ Der Betreiber kann das Nutzerkonto deaktivieren sowie Inhalte löschen oder anon
 18.8 Gesetzliche Rechte
 
 Gesetzliche Rechte des Betreibers und der Nutzer bleiben von den vorstehenden Regelungen unberührt.` },
-    { h: "20. Datenschutz", p: `18.1 Verarbeitung personenbezogener Daten
+    { h: "20. Datenschutz", p: `20.1 Verarbeitung personenbezogener Daten
 
 Der Schutz personenbezogener Daten hat für help-app.online einen hohen Stellenwert.
 
@@ -1037,7 +1037,22 @@ Darüber hinaus besteht das Recht, eine erteilte Einwilligung jederzeit mit Wirk
 help-app.online trifft angemessene technische und organisatorische Maßnahmen, um personenbezogene Daten vor Verlust, Missbrauch, unbefugtem Zugriff, Veränderung oder unberechtigter Offenlegung zu schützen.
 
 Trotz aller Sicherheitsmaßnahmen kann ein vollständiger Schutz bei der Datenübertragung über das Internet nicht garantiert werden.` },
-    { h: "21. Datenschutzerklärung und ergänzende Datenschutzbestimmungen", p: `19.1 Eigenständige Datenschutzerklärung
+    { h: "21. Feedback und Verbesserungsvorschläge", p: `21.1 Freiwillige Übermittlung
+
+Nutzer können help-app.online jederzeit freiwillig Feedback, Verbesserungsvorschläge, Ideen, Anregungen oder Fehlermeldungen zur Plattform übermitteln.
+
+21.2 Nutzung der Vorschläge
+
+Soweit gesetzlich zulässig, räumt der Nutzer help-app.online mit der Übermittlung das unentgeltliche, nicht ausschließliche, zeitlich, räumlich und inhaltlich unbeschränkte Recht ein, diese Vorschläge zur Weiterentwicklung, Verbesserung und Optimierung der Plattform zu prüfen, zu nutzen, zu bearbeiten, umzusetzen und zu veröffentlichen.
+
+21.3 Kein Vergütungsanspruch
+
+Aus der Übermittlung von Feedback, Ideen oder Verbesserungsvorschlägen entstehen keine Ansprüche auf Vergütung, Beteiligung, Lizenzgebühren oder sonstige Gegenleistungen, sofern nicht ausdrücklich etwas anderes schriftlich vereinbart wurde.
+
+21.4 Gesetzliche Rechte
+
+Die gesetzlichen Urheberrechte und sonstigen Schutzrechte des Nutzers an eigenständigen, urheberrechtlich geschützten Werken bleiben unberührt. Dieser Abschnitt bezieht sich ausschließlich auf freiwillig übermittelte Vorschläge und Anregungen zur Verbesserung der Plattform.` },
+    { h: "22. Datenschutzerklärung und ergänzende Datenschutzbestimmungen", p: `22.1 Eigenständige Datenschutzerklärung
 
 Ergänzend zu diesen Allgemeinen Geschäftsbedingungen gilt die jeweils aktuelle Datenschutzerklärung von help-app.online.
 
@@ -1058,7 +1073,7 @@ Der Betreiber behält sich vor, die Datenschutzerklärung anzupassen, soweit die
 20.4 Vorrang datenschutzrechtlicher Vorschriften
 
 Soweit Regelungen dieser Allgemeinen Geschäftsbedingungen und der Datenschutzerklärung dieselben Sachverhalte betreffen, gelten die datenschutzrechtlichen Bestimmungen der Datenschutzerklärung vorrangig, soweit zwingende datenschutzrechtliche Vorschriften dies erfordern.` },
-    { h: "22. Änderungen dieser Allgemeinen Geschäftsbedingungen", p: `20.1 Änderungsrecht
+    { h: "23. Änderungen dieser Allgemeinen Geschäftsbedingungen", p: `23.1 Änderungsrecht
 
 help-app.online entwickelt die Plattform kontinuierlich weiter und passt ihre Leistungen an technische, wirtschaftliche und gesetzliche Anforderungen an.
 
@@ -1086,14 +1101,14 @@ Soweit gesetzlich erforderlich oder vertraglich vorgesehen, wird der Nutzer ausd
 Soweit gesetzlich zulässig, gelten geänderte Allgemeine Geschäftsbedingungen als akzeptiert, wenn der Nutzer die Plattform nach Inkrafttreten der Änderungen weiterhin nutzt und hierauf zuvor hingewiesen wurde.
 
 Zwingende gesetzliche Vorschriften bleiben hiervon unberührt.` },
-    { h: "23. Verfügbarkeit der Plattform", p: `help-app.online ist bemüht, die Plattform mit einer möglichst hohen Verfügbarkeit bereitzustellen und einen störungsfreien Betrieb sicherzustellen.
+    { h: "24. Verfügbarkeit der Plattform", p: `help-app.online ist bemüht, die Plattform mit einer möglichst hohen Verfügbarkeit bereitzustellen und einen störungsfreien Betrieb sicherzustellen.
 
 Ein Anspruch auf eine jederzeitige, ununterbrochene oder fehlerfreie Erreichbarkeit der Plattform oder einzelner Funktionen besteht jedoch nicht.
 
 Insbesondere können Wartungsarbeiten, Sicherheitsupdates, technische Weiterentwicklungen, Softwareaktualisierungen, Störungen von Telekommunikations- oder Datennetzen, Ausfälle externer Dienstleister, Ereignisse höherer Gewalt oder sonstige Umstände außerhalb des Einflussbereichs von help-app.online zu vorübergehenden Einschränkungen oder Ausfällen führen.
 
 Soweit gesetzlich zulässig, haftet help-app.online nicht für Schäden oder Nachteile, die aus einer vorübergehenden Nichtverfügbarkeit, Unterbrechung oder Einschränkung der Plattform entstehen, sofern diese nicht auf vorsätzlichem oder grob fahrlässigem Verhalten des Betreibers beruhen oder eine gesetzlich zwingende Haftung besteht.` },
-    { h: "24. Schlussbestimmungen", p: `22.1 Anwendbares Recht
+    { h: "25. Schlussbestimmungen", p: `25.1 Anwendbares Recht
 
 Für sämtliche Rechtsbeziehungen zwischen help-app.online und den Nutzern gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts (CISG).
 
