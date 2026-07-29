@@ -423,7 +423,7 @@ Die Benachrichtigungen können per E-Mail oder über andere innerhalb der Plattf
 
 Zur technischen Abwicklung und Zustellung der E-Mail-Benachrichtigungen kann help-app.online externe technische Dienstleister einsetzen. Die Verarbeitung erfolgt ausschließlich zum Zweck der Bereitstellung der jeweiligen Funktion und unter Beachtung der geltenden datenschutzrechtlichen Bestimmungen. Weitere Informationen hierzu sind der Datenschutzerklärung zu entnehmen.
 
-Der Nutzer ist verpflichtet, eine gültige E-Mail-Adresse anzugeben und diese regelmäßig abzurufen. Soweit Benachrichtigungen nicht gesetzlich oder vertraglich erforderlich sind, können diese – sofern technisch vorgesehen – vom Nutzer in den Kontoeinstellungen verwaltet oder deaktiviert werden.`},{h:"9. Meldung rechtswidriger Inhalte und Missbrauch",p:`help-app.online stellt Nutzern eine Meldefunktion zur Verfügung, über die Anzeigen, Chatnachrichten, Nutzerprofile oder sonstige Inhalte gemeldet werden können, wenn der Verdacht besteht, dass diese gegen gesetzliche Vorschriften, Rechte Dritter oder die Nutzungsbedingungen von help-app.online verstoßen.
+Der Nutzer ist verpflichtet, eine gültige E-Mail-Adresse anzugeben und diese regelmäßig abzurufen. Soweit Benachrichtigungen nicht gesetzlich oder vertraglich erforderlich sind, können diese – sofern technisch vorgesehen – vom Nutzer in den Kontoeinstellungen verwaltet oder deaktiviert werden.`},{h:"9. Feedback und Verbesserungsvorschläge",p:"Wenn Nutzer uns Feedback, Verbesserungsvorschläge oder Fehlermeldungen übermitteln, verarbeiten wir die dabei angegebenen personenbezogenen Daten ausschließlich zur Bearbeitung der Anfrage sowie zur Weiterentwicklung und Verbesserung der Plattform. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO aufgrund unseres berechtigten Interesses an der kontinuierlichen Verbesserung unseres Angebots."},{h:"10. Meldung rechtswidriger Inhalte und Missbrauch",p:`help-app.online stellt Nutzern eine Meldefunktion zur Verfügung, über die Anzeigen, Chatnachrichten, Nutzerprofile oder sonstige Inhalte gemeldet werden können, wenn der Verdacht besteht, dass diese gegen gesetzliche Vorschriften, Rechte Dritter oder die Nutzungsbedingungen von help-app.online verstoßen.
 
 Im Rahmen der Bearbeitung einer Meldung können insbesondere folgende personenbezogene Daten verarbeitet werden:
 
@@ -440,7 +440,7 @@ Soweit dies zur Bearbeitung einer Meldung erforderlich ist, können gemeldete In
 
 Sofern gesetzliche Verpflichtungen bestehen oder dies zur Durchsetzung oder Abwehr rechtlicher Ansprüche erforderlich ist, können die entsprechenden Informationen an zuständige Behörden oder andere berechtigte Stellen weitergegeben werden.
 
-Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO (Erfüllung gesetzlicher Verpflichtungen) sowie Art. 6 Abs. 1 lit. f DSGVO aufgrund unseres berechtigten Interesses an der Gewährleistung einer sicheren, vertrauenswürdigen und rechtskonformen Plattform.`},{h:"10. Empfänger personenbezogener Daten und Auftragsverarbeiter",p:`Zur Bereitstellung und dem Betrieb von help-app.online arbeiten wir mit externen Dienstleistern zusammen, die personenbezogene Daten ausschließlich in unserem Auftrag oder im Rahmen der gesetzlichen Bestimmungen verarbeiten.
+Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO (Erfüllung gesetzlicher Verpflichtungen) sowie Art. 6 Abs. 1 lit. f DSGVO aufgrund unseres berechtigten Interesses an der Gewährleistung einer sicheren, vertrauenswürdigen und rechtskonformen Plattform.`},{h:"11. Empfänger personenbezogener Daten und Auftragsverarbeiter",p:`Zur Bereitstellung und dem Betrieb von help-app.online arbeiten wir mit externen Dienstleistern zusammen, die personenbezogene Daten ausschließlich in unserem Auftrag oder im Rahmen der gesetzlichen Bestimmungen verarbeiten.
 
 Zu den Empfängern personenbezogener Daten können insbesondere gehören:
 
@@ -469,7 +469,7 @@ Alle eingesetzten Dienstleister werden sorgfältig ausgewählt und – soweit ge
 
 Sofern personenbezogene Daten außerhalb der Europäischen Union oder des Europäischen Wirtschaftsraums verarbeitet werden, erfolgt dies ausschließlich unter Einhaltung der gesetzlichen Vorgaben der DSGVO. Insbesondere achten wir auf das Vorliegen eines Angemessenheitsbeschlusses der Europäischen Kommission oder geeigneter Garantien, wie beispielsweise den Abschluss von EU-Standardvertragsklauseln.
 
-Die jeweils eingesetzten Dienstleister können sich im Zuge der technischen Weiterentwicklung unserer Plattform ändern. Diese Datenschutzerklärung wird in diesem Fall entsprechend aktualisiert.`},{h:"11. Weitergabe von Daten zwischen Nutzern",p:`help-app.online dient der Vermittlung zwischen Auftraggebern und Helfern. Damit die Nutzung der Plattform möglich ist, werden bestimmte personenbezogene Daten anderen Nutzern angezeigt oder im Rahmen der Kommunikation zugänglich gemacht.
+Die jeweils eingesetzten Dienstleister können sich im Zuge der technischen Weiterentwicklung unserer Plattform ändern. Diese Datenschutzerklärung wird in diesem Fall entsprechend aktualisiert.`},{h:"12. Weitergabe von Daten zwischen Nutzern",p:`help-app.online dient der Vermittlung zwischen Auftraggebern und Helfern. Damit die Nutzung der Plattform möglich ist, werden bestimmte personenbezogene Daten anderen Nutzern angezeigt oder im Rahmen der Kommunikation zugänglich gemacht.
 
 Je nach Nutzung der Plattform können insbesondere folgende Informationen für andere Nutzer sichtbar sein:
 
@@ -488,7 +488,7 @@ Die Weitergabe dieser Daten erfolgt ausschließlich, soweit dies zur Durchführu
 
 Nutzer sind selbst dafür verantwortlich, welche personenbezogenen Informationen sie innerhalb ihrer Anzeigen, ihres Profils oder im Rahmen der Kommunikation freiwillig preisgeben.
 
-Sollten künftig kostenpflichtige Funktionen eingeführt werden, durch die ein Austausch von Kontaktdaten oder weitere Kommunikationsmöglichkeiten erst nach Abschluss einer kostenpflichtigen Buchung oder Freischaltung ermöglicht werden, wird die Datenverarbeitung entsprechend dieser Datenschutzerklärung sowie den jeweils gültigen Nutzungsbedingungen durchgeführt.`},{h:"12. Zahlungsabwicklung",p:`Für die Buchung kostenpflichtiger Leistungen, insbesondere Premium-Mitgliedschaften, Werbepartner-Abonnements oder sonstiger kostenpflichtiger Angebote, erfolgt die Zahlungsabwicklung über externe Zahlungsdienstleister.
+Sollten künftig kostenpflichtige Funktionen eingeführt werden, durch die ein Austausch von Kontaktdaten oder weitere Kommunikationsmöglichkeiten erst nach Abschluss einer kostenpflichtigen Buchung oder Freischaltung ermöglicht werden, wird die Datenverarbeitung entsprechend dieser Datenschutzerklärung sowie den jeweils gültigen Nutzungsbedingungen durchgeführt.`},{h:"13. Zahlungsabwicklung",p:`Für die Buchung kostenpflichtiger Leistungen, insbesondere Premium-Mitgliedschaften, Werbepartner-Abonnements oder sonstiger kostenpflichtiger Angebote, erfolgt die Zahlungsabwicklung über externe Zahlungsdienstleister.
 
 Im Rahmen der Zahlungsabwicklung werden ausschließlich die für die Durchführung der Zahlung erforderlichen personenbezogenen Daten an den jeweiligen Zahlungsdienstleister übermittelt. Hierzu können insbesondere folgende Daten gehören:
 
@@ -515,7 +515,7 @@ Irland
 
 Weitere Informationen zur Datenverarbeitung durch Stripe findest du in der Datenschutzerklärung von Stripe.
 
-Sollten künftig weitere Zahlungsdienstleister eingesetzt werden, wird diese Datenschutzerklärung entsprechend ergänzt oder aktualisiert.`},{h:"13. Widerrufsrecht für Verbraucher",p:`16.1 Widerrufsrecht
+Sollten künftig weitere Zahlungsdienstleister eingesetzt werden, wird diese Datenschutzerklärung entsprechend ergänzt oder aktualisiert.`},{h:"14. Widerrufsrecht für Verbraucher",p:`16.1 Widerrufsrecht
 
 Verbrauchern im Sinne des § 13 BGB steht bei Abschluss eines entgeltlichen Vertrages über digitale Dienstleistungen grundsätzlich ein gesetzliches Widerrufsrecht von 14 Tagen zu.
 
@@ -551,7 +551,7 @@ Diese Zustimmung wird im Rahmen des Bestell- oder Buchungsvorgangs ausdrücklich
 
 16.4 Ausschluss
 
-Für die unentgeltliche Nutzung der Plattform besteht kein Widerrufsrecht, da insoweit kein entgeltlicher Verbrauchervertrag geschlossen wird.`},{h:"14. Datensicherheit",p:`Der Schutz deiner personenbezogenen Daten hat für help-app.online einen hohen Stellenwert. Wir treffen angemessene technische und organisatorische Maßnahmen, um personenbezogene Daten vor Verlust, Zerstörung, Manipulation sowie vor unbefugtem Zugriff, unbefugter Offenlegung oder sonstiger unrechtmäßiger Verarbeitung zu schützen.
+Für die unentgeltliche Nutzung der Plattform besteht kein Widerrufsrecht, da insoweit kein entgeltlicher Verbrauchervertrag geschlossen wird.`},{h:"15. Datensicherheit",p:`Der Schutz deiner personenbezogenen Daten hat für help-app.online einen hohen Stellenwert. Wir treffen angemessene technische und organisatorische Maßnahmen, um personenbezogene Daten vor Verlust, Zerstörung, Manipulation sowie vor unbefugtem Zugriff, unbefugter Offenlegung oder sonstiger unrechtmäßiger Verarbeitung zu schützen.
 
 Unsere Sicherheitsmaßnahmen orientieren sich am jeweiligen Stand der Technik und werden regelmäßig überprüft sowie bei Bedarf an technische und gesetzliche Entwicklungen angepasst.
 
@@ -559,7 +559,7 @@ Der Zugriff auf personenbezogene Daten ist ausschließlich den Personen gestatte
 
 Die Übertragung personenbezogener Daten zwischen deinem Endgerät und unserer Plattform erfolgt – soweit technisch möglich – über eine verschlüsselte Verbindung (SSL-/TLS-Verschlüsselung).
 
-Trotz aller technischen und organisatorischen Sicherheitsmaßnahmen kann die Datenübertragung im Internet Sicherheitslücken aufweisen. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist daher nicht in jedem Fall möglich.`},{h:"15. Rechte der betroffenen Personen",p:`Soweit wir personenbezogene Daten von dir verarbeiten, stehen dir nach den Bestimmungen der Datenschutz-Grundverordnung (DSGVO) folgende Rechte zu:
+Trotz aller technischen und organisatorischen Sicherheitsmaßnahmen kann die Datenübertragung im Internet Sicherheitslücken aufweisen. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist daher nicht in jedem Fall möglich.`},{h:"16. Rechte der betroffenen Personen",p:`Soweit wir personenbezogene Daten von dir verarbeiten, stehen dir nach den Bestimmungen der Datenschutz-Grundverordnung (DSGVO) folgende Rechte zu:
 
 - Recht auf Auskunft (Art. 15 DSGVO): Du hast das Recht, Auskunft darüber zu verlangen, ob und welche personenbezogenen Daten wir über dich verarbeiten.
 
@@ -580,7 +580,7 @@ Zur Ausübung deiner Rechte genügt eine formlose Mitteilung an:
 help-app.online
 E-Mail: info@help-app.online
 
-Wir werden dein Anliegen entsprechend den gesetzlichen Vorgaben prüfen und bearbeiten.`},{h:"16. Speicherdauer",p:`Wir speichern personenbezogene Daten nur so lange, wie dies zur Erfüllung der in dieser Datenschutzerklärung genannten Zwecke erforderlich ist oder gesetzliche Aufbewahrungs- und Nachweispflichten bestehen.
+Wir werden dein Anliegen entsprechend den gesetzlichen Vorgaben prüfen und bearbeiten.`},{h:"17. Speicherdauer",p:`Wir speichern personenbezogene Daten nur so lange, wie dies zur Erfüllung der in dieser Datenschutzerklärung genannten Zwecke erforderlich ist oder gesetzliche Aufbewahrungs- und Nachweispflichten bestehen.
 
 Die Speicherdauer richtet sich insbesondere nach:
 
@@ -593,7 +593,7 @@ Wird ein Nutzerkonto gelöscht oder die Löschung personenbezogener Daten verlan
 
 Bestimmte Daten können über die Löschung des Nutzerkontos hinaus gespeichert werden, soweit dies zur Erfüllung gesetzlicher Verpflichtungen, zur Betrugsprävention, zur Missbrauchsbekämpfung oder zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen erforderlich ist.
 
-Nach Ablauf der jeweiligen gesetzlichen Aufbewahrungsfristen werden die entsprechenden personenbezogenen Daten gelöscht, sofern sie nicht mehr für die genannten Zwecke erforderlich sind.`},{h:"17. Beschwerderecht",p:`Unbeschadet anderweitiger verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe hast du das Recht, dich bei einer Datenschutzaufsichtsbehörde über die Verarbeitung deiner personenbezogenen Daten durch help-app.online zu beschweren, wenn du der Ansicht bist, dass diese gegen die Datenschutz-Grundverordnung (DSGVO) oder andere datenschutzrechtliche Vorschriften verstößt.
+Nach Ablauf der jeweiligen gesetzlichen Aufbewahrungsfristen werden die entsprechenden personenbezogenen Daten gelöscht, sofern sie nicht mehr für die genannten Zwecke erforderlich sind.`},{h:"18. Beschwerderecht",p:`Unbeschadet anderweitiger verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe hast du das Recht, dich bei einer Datenschutzaufsichtsbehörde über die Verarbeitung deiner personenbezogenen Daten durch help-app.online zu beschweren, wenn du der Ansicht bist, dass diese gegen die Datenschutz-Grundverordnung (DSGVO) oder andere datenschutzrechtliche Vorschriften verstößt.
 
 Du kannst dich hierzu insbesondere an die Datenschutzaufsichtsbehörde deines gewöhnlichen Aufenthaltsortes, deines Arbeitsplatzes oder des Sitzes des Verantwortlichen wenden.
 
