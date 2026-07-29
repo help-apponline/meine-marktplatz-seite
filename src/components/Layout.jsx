@@ -197,7 +197,8 @@ export default function Layout() {
         <Link to="/ueber-uns" className="text-[#aaa] hover:text-white no-underline mx-1" style={{ textDecoration: "none" }}>Über uns</Link> ·{" "}
         <Link to="/impressum" className="text-[#aaa] hover:text-white no-underline mx-1" style={{ textDecoration: "none" }}>Impressum</Link> ·{" "}
         <Link to="/datenschutz" className="text-[#aaa] hover:text-white no-underline mx-1" style={{ textDecoration: "none" }}>Datenschutz</Link> ·{" "}
-        <Link to="/agb" className="text-[#aaa] hover:text-white no-underline mx-1" style={{ textDecoration: "none" }}>AGB</Link>
+        <Link to="/agb" className="text-[#aaa] hover:text-white no-underline mx-1" style={{ textDecoration: "none" }}>AGB</Link> ·{" "}
+        <Link to="/feedback" className="text-[#aaa] hover:text-white no-underline mx-1" style={{ textDecoration: "none" }}>Kontakt & Feedback</Link>
       </footer>
 
       {showAuth && (
