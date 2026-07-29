@@ -389,9 +389,13 @@ Für die technische Verarbeitung und den Versand der E-Mails setzen wir externe 
 
 Die Verarbeitung erfolgt ausschließlich zum Zweck der Bereitstellung unserer Plattformfunktionen und einer zuverlässigen Kommunikation mit unseren Nutzern.
 
+Soweit technisch vorgesehen, können Nutzer den Erhalt bestimmter optionaler E-Mail-Benachrichtigungen – insbesondere Benachrichtigungen über neue Chatnachrichten – jederzeit in den Kontoeinstellungen aktivieren oder deaktivieren.
+
+Von dieser Einstellung unberührt bleiben E-Mails, die zur Erfüllung des Nutzungsvertrages, zur Erfüllung gesetzlicher Verpflichtungen oder aus Sicherheitsgründen erforderlich sind. Hierzu gehören insbesondere Registrierungs- und E-Mail-Bestätigungen, Passwort-Zurücksetzungen, Zahlungsinformationen, sicherheitsrelevante Mitteilungen sowie sonstige wichtige Informationen zum Nutzerkonto oder zur Nutzung der Plattform. Diese Benachrichtigungen können nicht deaktiviert werden.
+
 Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. b DSGVO, soweit die Benachrichtigungen zur Erfüllung des Nutzungsvertrages erforderlich sind, sowie Art. 6 Abs. 1 lit. f DSGVO aufgrund unseres berechtigten Interesses an einer sicheren und effizienten Kommunikation mit unseren Nutzern.
 
-Weitere Informationen zu den eingesetzten technischen Dienstleistern findest du unter Punkt 10 „Empfänger personenbezogener Daten und Auftragsverarbeiter" dieser Datenschutzerklärung.`},{h:"7. Cookies und Local Storage",p:`help-app.online verwendet Cookies und den Local Storage des Browsers, um die Funktionsfähigkeit und Sicherheit der Plattform sicherzustellen.
+Weitere Informationen zu den eingesetzten technischen Dienstleistern findest du unter Punkt 11 „Empfänger personenbezogener Daten und Auftragsverarbeiter" dieser Datenschutzerklärung.`},{h:"7. Cookies und Local Storage",p:`help-app.online verwendet Cookies und den Local Storage des Browsers, um die Funktionsfähigkeit und Sicherheit der Plattform sicherzustellen.
 
 Technisch notwendige Cookies
 
