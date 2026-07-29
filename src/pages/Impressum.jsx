@@ -1,6 +1,12 @@
+import { Link } from "react-router";
+import ArrowLeft from "icon:arrow-left";
+
 export default function Impressum() {
   return (
     <section className="bg-white min-h-screen px-5 md:px-10 py-12 max-w-4xl mx-auto w-full">
+      <Link to="/" className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-800 transition-colors mb-10" style={{ textDecoration: "none" }}>
+        <ArrowLeft size={14} /> Zurück zur Startseite
+      </Link>
       <h2 className="text-3xl font-extrabold text-gray-900 mb-2">Impressum</h2>
       <p className="text-gray-500 mb-8">Angaben gemäß § 5 TMG und § 18 Abs. 2 MStV</p>
       <div className="max-w-3xl text-gray-600 leading-relaxed space-y-6 text-sm">
