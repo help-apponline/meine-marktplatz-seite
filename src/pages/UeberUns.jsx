@@ -26,15 +26,33 @@ export default function UeberUns() {
         </p>
       </div>
 
-      {/* Mission */}
-      <div className="bg-gray-50 rounded-2xl px-6 py-6 mb-8">
-        <h2 className="font-bold text-gray-900 mb-3">Unsere Mission</h2>
-        <p className="text-gray-600 text-sm leading-relaxed">
-          Ob Gartenarbeit, Einkaufen, Umzugshilfe oder einfach eine helfende Hand —
-          auf unserer Plattform finden Auftraggeber und Auftragnehmer schnell und
-          einfach zueinander. Wir glauben daran, dass gegenseitige Hilfe das
-          Zusammenleben in jeder Gemeinschaft stärkt.
-        </p>
+      {/* Die Idee */}
+      <div className="space-y-5 text-gray-700 text-sm leading-relaxed mb-10">
+        <h2 className="text-xl font-extrabold text-gray-900">Die Idee hinter der Help App</h2>
+
+        <p>Die Idee zur Help App ist nicht am Schreibtisch entstanden, sondern aus dem ganz normalen Alltag.</p>
+
+        <p>Immer wieder gab es Situationen, in denen wir selbst kurzfristig Hilfe gebraucht haben. Mal musste etwas transportiert werden, mal fehlte jemand für eine kleine handwerkliche Aufgabe oder es war einfach niemand da, der beim Einkaufen oder im Garten helfen konnte. Gleichzeitig haben wir uns oft gedacht: <strong>Eigentlich könnten wir anderen in genau solchen Situationen selbst helfen.</strong></p>
+
+        <p>Ich selbst hätte zum Beispiel kein Problem damit, mit einem Hund Gassi zu gehen, einen kleinen Transport zu übernehmen oder jemandem den Einkauf nach Hause zu bringen. An Tagen, an denen ich Zeit habe und nichts geplant ist, wäre es doch schön, diese Zeit sinnvoll zu nutzen, anderen zu helfen und sich gleichzeitig ein kleines Taschengeld dazuzuverdienen.</p>
+
+        <p>Als ich mit Freunden darüber gesprochen habe, wurde mir schnell klar, dass ich damit nicht allein bin. Ein Bekannter wäscht in seiner Freizeit gerne Autos und hätte nichts dagegen, dies auch für andere zu tun. Ein anderer arbeitet gerne im Garten und mäht mit Freude Rasen. Wieder jemand anderes hilft gerne beim Möbelaufbau oder übernimmt kleine Reparaturen.</p>
+
+        <p>So entstand die Frage:</p>
+
+        <div className="border-l-4 border-[#ff8a00] pl-4 py-1">
+          <p className="font-bold text-gray-900"><strong>Warum gibt es keine einfache Plattform, auf der Menschen genau diese Hilfe anbieten oder finden können?</strong></p>
+        </div>
+
+        <p>Nicht jeder möchte einen großen Handwerksbetrieb beauftragen oder lange im Internet suchen. Oft geht es um kleine Aufgaben, die schnell erledigt werden könnten – von Menschen aus der eigenen Region.</p>
+
+        <p>Genau daraus entstand die Help App.</p>
+
+        <p>Unsere Vision ist es, Menschen unkompliziert zusammenzubringen. Jeder soll schnell Hilfe finden oder selbst Helfer werden können. Manche möchten sich etwas dazuverdienen, andere helfen einfach gerne oder möchten ihre freie Zeit sinnvoll nutzen. Beides hat bei uns seinen Platz.</p>
+
+        <p>Denn wir sind überzeugt: Fast jeder Mensch kann etwas besonders gut – und genau diese Fähigkeiten können für jemand anderen eine große Hilfe sein.</p>
+
+        <p>Mit der Help App möchten wir Nachbarschaftshilfe, kleine Dienstleistungen und spontane Unterstützung einfacher, schneller und moderner machen. So profitieren am Ende alle: Diejenigen, die Hilfe benötigen, und diejenigen, die ihre Zeit, ihr Können oder ihre Erfahrung einbringen möchten.</p>
       </div>
 
       {/* Values */}
@@ -71,14 +89,6 @@ export default function UeberUns() {
             damit beide Seiten wissen, mit wem sie es zu tun haben.
           </p>
         </div>
-      </div>
-
-      {/* Placeholder for real content */}
-      <div className="border-l-4 border-[#ff8a00] pl-4 mb-10">
-        <p className="text-gray-400 text-xs italic">
-          Hier kannst du deinen eigenen Text über das Unternehmen, die Geschichte
-          oder das Team eintragen — einfach Bescheid geben.
-        </p>
       </div>
 
       {/* CTA */}
