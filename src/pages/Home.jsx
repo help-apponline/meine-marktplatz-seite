@@ -12,7 +12,7 @@ export default function Home() {
   const [copied, setCopied] = useState(false);
   const navigate = useNavigate();
 
-  const shareUrl = "https://www.help-app.online";
+  const shareUrl = typeof window !== "undefined" ? window.location.origin : "https://www.help-app.online";
   const shareText = "Finde Hilfe oder werde Helfer in deiner Nähe – kostenlos auf help-app.online!";
 
   function handleNativeShare() {
