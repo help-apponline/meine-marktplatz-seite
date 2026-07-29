@@ -121,7 +121,7 @@ export default function AuthModal({ onClose, hint = "", initialMode = "login" })
                 </div>
                 <span className="text-xs text-gray-500 leading-relaxed">
                   Ich möchte E-Mail-Benachrichtigungen erhalten, wenn ich neue Chat-Nachrichten bekomme.
-                  <span className="block text-gray-400 mt-0.5">Ohne diese Benachrichtigungen erfährst du von neuen Chats nur über das Glöckchen in der App. Du kannst diese Einstellung jederzeit in deinem Profil ändern.</span>
+                  <span className="block text-gray-400 mt-0.5">Ohne E-Mail-Benachrichtigungen wirst du über neue Chats nur informiert, wenn die Website oder App geöffnet ist. Alternativ erhältst du bei installierter App eine Push-Benachrichtigung. Du kannst diese Einstellung jederzeit in deinem Profil ändern.</span>
                 </span>
               </label>
             </>
