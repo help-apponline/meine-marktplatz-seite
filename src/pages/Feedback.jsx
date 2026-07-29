@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Link } from "react-router";
+import ArrowLeft from "icon:arrow-left";
 import PartnerBanner from "../components/PartnerBanner.jsx";
 
 const TOPICS = [
@@ -44,6 +46,9 @@ export default function Feedback() {
   return (
     <section className="min-h-screen bg-gray-50 py-12 px-4">
       <div className="max-w-2xl mx-auto">
+        <Link to="/" className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-800 transition-colors mb-10" style={{ textDecoration: "none" }}>
+          <ArrowLeft size={14} /> Zurück zur Startseite
+        </Link>
         <div className="text-center mb-10">
           <h1 className="text-3xl font-extrabold text-gray-900 mb-2">Kontakt, Feedback & Verbesserungen</h1>
           <p className="text-gray-500 text-sm leading-relaxed">
