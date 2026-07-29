@@ -17,19 +17,20 @@ Vertretungsberechtigte Person:
 Heinz-Peter Bacha (Inhaber)
 
 Steuernummer: 319/5029/5935` },
-    { h: "2. Zwecke und Rechtsgrundlagen der Datenverarbeitung", p: `Wir verarbeiten personenbezogene Daten ausschließlich im Rahmen der geltenden datenschutzrechtlichen Vorschriften, insbesondere der Datenschutz-Grundverordnung (DSGVO) und des Bundesdatenschutzgesetzes (BDSG), soweit dieses Anwendung findet.
+    { h: "2. Zwecke und Rechtsgrundlagen der Datenverarbeitung", p: `Wir verarbeiten personenbezogene Daten ausschließlich im Rahmen der geltenden datenschutzrechtlichen Vorschriften, insbesondere der Datenschutz-Grundverordnung (DSGVO) sowie des Bundesdatenschutzgesetzes (BDSG), soweit dieses Anwendung findet.
 
 Die Verarbeitung personenbezogener Daten erfolgt insbesondere zu folgenden Zwecken:
 
-- Bereitstellung und Betrieb der Plattform help-app.online,
-- Registrierung und Verwaltung von Nutzerkonten,
+- Bereitstellung, Betrieb und Weiterentwicklung der Plattform help-app.online,
+- Registrierung, Verwaltung und Pflege von Nutzerkonten,
 - Erstellung, Veröffentlichung und Verwaltung von Anzeigen,
 - Vermittlung von Aufträgen zwischen Auftraggebern und Helfern,
 - Bereitstellung der Chat- und Kommunikationsfunktionen,
-- Versand von E-Mail-Benachrichtigungen und systemrelevanten Mitteilungen,
+- Versand von E-Mail-Benachrichtigungen und sonstigen systemrelevanten Mitteilungen,
 - Durchführung und Abwicklung kostenpflichtiger Leistungen (z. B. Premium-Mitgliedschaften oder Werbepartner-Abonnements),
 - Bearbeitung von Supportanfragen,
-- Gewährleistung der Sicherheit und Funktionsfähigkeit der Plattform,
+- Bearbeitung von Feedback, Verbesserungsvorschlägen, Ideen und Fehlermeldungen sowie zur kontinuierlichen Weiterentwicklung und Optimierung unserer Plattform,
+- Gewährleistung der Sicherheit, Stabilität und Funktionsfähigkeit der Plattform,
 - Erkennung, Verhinderung und Aufklärung von Missbrauch, Betrug und rechtswidrigen Aktivitäten,
 - Erfüllung gesetzlicher Verpflichtungen.
 
@@ -38,7 +39,7 @@ Die Verarbeitung personenbezogener Daten erfolgt insbesondere auf Grundlage der 
 - Art. 6 Abs. 1 lit. a DSGVO – Einwilligung der betroffenen Person,
 - Art. 6 Abs. 1 lit. b DSGVO – Erfüllung eines Vertrages oder Durchführung vorvertraglicher Maßnahmen,
 - Art. 6 Abs. 1 lit. c DSGVO – Erfüllung einer rechtlichen Verpflichtung,
-- Art. 6 Abs. 1 lit. f DSGVO – Wahrung berechtigter Interessen des Verantwortlichen, insbesondere zur Gewährleistung der Sicherheit, Stabilität und Weiterentwicklung der Plattform sowie zur Missbrauchs- und Betrugsprävention.
+- Art. 6 Abs. 1 lit. f DSGVO – Wahrung berechtigter Interessen des Verantwortlichen, insbesondere zur Gewährleistung der Sicherheit, Stabilität und Weiterentwicklung der Plattform, zur Bearbeitung von Feedback und Verbesserungsvorschlägen sowie zur Missbrauchs- und Betrugsprävention.
 
 Soweit für einzelne Verarbeitungsvorgänge eine Einwilligung erforderlich ist, kann diese jederzeit mit Wirkung für die Zukunft widerrufen werden. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung bleibt hiervon unberührt.` },
     { h: "3. Hosting und Server-Logfiles", p: `Unsere Website und Plattform werden bei einem externen Hosting-Dienstleister betrieben. Im Rahmen des Hostings werden personenbezogene Daten verarbeitet, soweit dies für den sicheren und störungsfreien Betrieb der Website erforderlich ist.
