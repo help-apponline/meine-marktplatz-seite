@@ -10,6 +10,7 @@ export default function AuthModal({ onClose, hint = "", initialMode = "login" })
   const [pw, setPw] = useState("");
   const [pw2, setPw2] = useState("");
   const [role, setRole] = useState("customer");
+  const [emailConsent, setEmailConsent] = useState(true);
   const [error, setError] = useState(hint || "");
   const [success, setSuccess] = useState("");
   const [loading, setLoading] = useState(false);
@@ -34,7 +35,7 @@ export default function AuthModal({ onClose, hint = "", initialMode = "login" })
       if (err) { setError(err); return; }
       onClose();
     } else {
-      err = await register(email.trim().toLowerCase(), pw, pw2, role);
+      err = await register(email.trim().toLowerCase(), pw, pw2, role, emailConsent);
       setLoading(false);
       if (err) { setError(err); return; }
       // After register: show verification notice instead of closing immediately
@@ -108,6 +109,21 @@ export default function AuthModal({ onClose, hint = "", initialMode = "login" })
                   ))}
                 </div>
               </div>
+              {/* E-Mail-Benachrichtigungen Einwilligung */}
+              <label className="flex items-start gap-3 cursor-pointer group">
+                <div className="mt-0.5 shrink-0">
+                  <input
+                    type="checkbox"
+                    checked={emailConsent}
+                    onChange={e => setEmailConsent(e.target.checked)}
+                    className="w-4 h-4 accent-[#ff8a00] cursor-pointer"
+                  />
+                </div>
+                <span className="text-xs text-gray-500 leading-relaxed">
+                  Ich möchte E-Mail-Benachrichtigungen erhalten, wenn ich neue Chat-Nachrichten bekomme.
+                  <span className="block text-gray-400 mt-0.5">Ohne diese Benachrichtigungen erfährst du von neuen Chats nur über das Glöckchen in der App. Du kannst diese Einstellung jederzeit in deinem Profil ändern.</span>
+                </span>
+              </label>
             </>
           )}
 

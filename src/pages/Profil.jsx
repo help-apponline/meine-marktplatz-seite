@@ -11,7 +11,7 @@ import Heart from "icon:heart";
 import MessageCircle from "icon:message-circle";
 
 export default function Profil() {
-  const { loggedIn, userEmail, userRole, userId, verified, avatarUrl, setAvatarUrl, getAvatarUrl } = useAuth();
+  const { loggedIn, userEmail, userRole, userId, verified, avatarUrl, setAvatarUrl, getAvatarUrl, emailNotifications, setEmailNotifications } = useAuth();
 
   // Avatar state
   const avatarRef = useRef(null);
@@ -304,6 +304,35 @@ export default function Profil() {
           ))}
         </div>
         {nutzertypMsg && <p className="text-green-600 text-xs mt-2">{nutzertypMsg}</p>}
+      </div>
+
+      {/* E-Mail-Benachrichtigungen */}
+      <div className="border border-gray-100 rounded-2xl p-6">
+        <h3 className="font-bold text-gray-900 mb-1 flex items-center gap-2">
+          <span>📧</span> E-Mail-Benachrichtigungen
+        </h3>
+        <p className="text-xs text-gray-500 mb-4 leading-relaxed">
+          Wenn du eine neue Nachricht im Chat erhältst, schicken wir dir eine E-Mail-Benachrichtigung.
+          <br />
+          <span className="text-amber-600 font-medium">Hinweis:</span> Ohne E-Mail-Benachrichtigungen erfährst du von neuen Chats nur über das Glöckchen in der App — oder durch eine Push-Benachrichtigung bei installierten Apps.
+        </p>
+        <div className="flex items-center justify-between">
+          <span className="text-sm font-medium text-gray-700">
+            {emailNotifications ? "Eingeschaltet" : "Ausgeschaltet"}
+          </span>
+          <button
+            onClick={async () => {
+              const newVal = !emailNotifications;
+              try {
+                await pb.collection("users").update(userId, { email_notifications: newVal });
+                setEmailNotifications(newVal);
+              } catch {}
+            }}
+            className={`relative w-12 h-6 rounded-full transition-colors ${emailNotifications ? "bg-[#ff8a00]" : "bg-gray-300"}`}
+          >
+            <span className={`absolute top-1 w-4 h-4 bg-white rounded-full shadow transition-transform ${emailNotifications ? "translate-x-7" : "translate-x-1"}`} />
+          </button>
+        </div>
       </div>
 
       {/* Password change */}

@@ -11,6 +11,7 @@ export function AuthProvider({ children }) {
   const [userId, setUserId] = useState(() => pb.authStore.record?.id || "");
   const [verified, setVerified] = useState(() => pb.authStore.record?.verified || false);
   const [isAdmin, setIsAdmin] = useState(() => !!pb.authStore.record?.is_admin);
+  const [emailNotifications, setEmailNotifications] = useState(() => pb.authStore.record?.email_notifications !== false);
 
   function getAvatarUrl(record) {
     if (!record?.avatar) return "";
@@ -27,6 +28,7 @@ export function AuthProvider({ children }) {
       setUserId(pb.authStore.record?.id || "");
       setVerified(pb.authStore.record?.verified || false);
       setIsAdmin(!!pb.authStore.record?.is_admin);
+      setEmailNotifications(pb.authStore.record?.email_notifications !== false);
       setAvatarUrl(getAvatarUrl(pb.authStore.record));
     });
     return () => unsub();
@@ -60,11 +62,11 @@ export function AuthProvider({ children }) {
     }
   }, []);
 
-  const register = useCallback(async (email, password, password2, role) => {
+  const register = useCallback(async (email, password, password2, role, emailConsent = true) => {
     if (password.length < 6) return "Passwort muss mindestens 6 Zeichen haben.";
     if (password !== password2) return "Passwörter stimmen nicht überein.";
     try {
-      await pb.collection("users").create({ email, password, passwordConfirm: password2, role });
+      await pb.collection("users").create({ email, password, passwordConfirm: password2, role, email_notifications: emailConsent });
       await pb.collection("users").authWithPassword(email, password);
       // Request verification email — silently ignore if SMTP not yet configured
       try { await pb.collection("users").requestVerification(email); } catch {}
@@ -308,19 +310,25 @@ export function AuthProvider({ children }) {
         })
       ));
 
-      // Email notification via Make.com webhook
+      // Email notification via Make.com webhook — only for users who have enabled it
       const WEBHOOK_URL = "https://hook.eu1.make.com/pco332kd86i2l5iri5nw2karxg9yzaok";
-      fetch(WEBHOOK_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          senderEmail: myEmail,
-          messagePreview: text.length > 200 ? text.slice(0, 200) + "…" : text,
-          chatLink: `https://www.help-app.online`,
-          chatId,
-          recipientCount: others.length,
-        }),
-      }).catch(() => {});
+      for (const uid of others) {
+        try {
+          const recipient = await pb.collection("users").getOne(uid);
+          if (recipient.email_notifications === false) continue;
+          fetch(WEBHOOK_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              senderEmail: myEmail,
+              recipientEmail: recipient.email,
+              messagePreview: text.length > 200 ? text.slice(0, 200) + "…" : text,
+              chatLink: `https://www.help-app.online`,
+              chatId,
+            }),
+          }).catch(() => {});
+        } catch {}
+      }
     } catch {}
 
     return msg;
@@ -331,6 +339,7 @@ export function AuthProvider({ children }) {
   return (
     <AuthContext.Provider value={{
       loggedIn, userEmail, userRole, userId, verified, isAdmin, avatarUrl, setAvatarUrl, getAvatarUrl,
+      emailNotifications, setEmailNotifications,
       login, register, logout,
       resendVerification, requestPasswordReset,
       loadAds, createAd, loadMyAds, getAd, updateAd, deleteAd, setAdStatus,
