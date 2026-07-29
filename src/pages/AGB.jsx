@@ -370,7 +370,11 @@ Die Benachrichtigungen können per E-Mail oder über andere innerhalb der Plattf
 
 Zur technischen Abwicklung und Zustellung der E-Mail-Benachrichtigungen kann help-app.online externe technische Dienstleister einsetzen. Die Verarbeitung erfolgt ausschließlich zum Zweck der Bereitstellung der jeweiligen Funktion und unter Beachtung der geltenden datenschutzrechtlichen Bestimmungen. Weitere Informationen hierzu sind der Datenschutzerklärung zu entnehmen.
 
-Der Nutzer ist verpflichtet, eine gültige E-Mail-Adresse anzugeben und diese regelmäßig abzurufen. Soweit Benachrichtigungen nicht gesetzlich oder vertraglich erforderlich sind, können diese – sofern technisch vorgesehen – vom Nutzer in den Kontoeinstellungen verwaltet oder deaktiviert werden.` },
+Der Nutzer ist verpflichtet, eine gültige E-Mail-Adresse anzugeben und diese regelmäßig abzurufen.
+
+Soweit technisch vorgesehen, können Nutzer den Erhalt bestimmter optionaler Benachrichtigungen – insbesondere über neue Chatnachrichten – in den Kontoeinstellungen aktivieren oder deaktivieren.
+
+Von dieser Einstellung unberührt bleiben Benachrichtigungen, die für die Durchführung des Nutzungsvertrages, zur Erfüllung gesetzlicher Verpflichtungen oder aus Sicherheitsgründen erforderlich sind. Hierzu zählen insbesondere Registrierungs- und E-Mail-Bestätigungen, Passwort-Zurücksetzungen, Zahlungsbestätigungen, sicherheitsrelevante Mitteilungen sowie sonstige wichtige Informationen zum Nutzerkonto oder zur Nutzung der Plattform.` },
     { h: "9. Preise, kostenpflichtige Leistungen und Zahlungsabwicklung", p: `9.1 Grundsatz der Nutzung
 
 Die Nutzung von help-app.online ist grundsätzlich kostenlos, soweit für einzelne Leistungen oder Funktionen nicht ausdrücklich etwas anderes angegeben wird.
